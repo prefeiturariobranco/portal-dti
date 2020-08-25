@@ -1,0 +1,132 @@
+/*login*/
+.textura {
+    /* padding-top: 1.5rem; */
+    background-image: url(/assets/images/novo_fundo.png);
+    background-repeat: repeat;
+    display: block;
+    opacity: 0.8;
+    margin-top: -2%;
+    margin-bottom: -1.5%;
+    /* margin-top: -32px; */
+}
+
+.caixa-textura {
+    background-color: white;
+    padding: 5% 0;
+    box-shadow: 13px 3px 8px -9px rgba(0,0,0,0.10), -13px 3px 8px -9px rgba(0,0,0,0.10);
+}
+
+@media (min-width: 992px) {
+    .caixa-textura {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.dti-separador p:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #fec332;
+    margin-top: 2px;
+
+}
+
+.dti-separador p, cite {
+    color: #727376;
+    padding-right: 5px;
+}
+
+.dti-separador p {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.dti-container-login {
+    width: 65%;
+    margin: auto;
+}
+
+.btn-primary {
+    margin-top: 5px;
+    color: #fff;
+    border-color: #fec332;
+    background: #fec332;
+}
+
+.dti-form > .form-control:first-child {
+    margin-top: 30px;
+}
+
+.dti-login {
+    height: 240px;
+    padding: 0 40px;
+    padding-top: 40px;
+    box-shadow: 3px 3px 20px 12px rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+    background: white;
+}
+
+.nao_tenho_acesso{
+    text-align: center;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+.dti-container-login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.wrap-input100 {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.input100 {
+    font-size: 15px;
+    line-height: 1.2;
+    color: #5a6268;
+    display: block;
+    width: 100%;
+    background: rgba(0, 0, 255, 0.05);
+    height: 35px;
+    border-radius: 7px;
+    padding: 0 30px 0 30px;
+}
+
+.symbol-input100 {
+    font-size: 15px;
+    color: #6e7f99;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 0.5em;
+    pointer-events: none;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.card-title, .card-subtitle
+{
+    color: #6c757d !important;
+}
+

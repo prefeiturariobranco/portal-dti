@@ -1,0 +1,200 @@
+.profile-user-info {
+    display: table;
+    width: 98%;
+    width: calc(100% - 24px);
+    margin: 0 auto
+}
+
+.profile-info-row {
+    display: table-row
+}
+
+.profile-info-name,
+.profile-info-value {
+    display: table-cell;
+    border-top: 1px dotted #D5E4F1
+}
+
+.profile-info-name {
+    text-align: right;
+    padding: 6px 10px 6px 4px;
+    font-weight: 400;
+    color: #667E99;
+    background-color: transparent;
+    width: 110px;
+    vertical-align: middle
+}
+
+.profile-info-value {
+    padding: 6px 4px 6px 6px
+}
+
+.profile-info-value > span + span:before {
+    display: inline;
+    content: ",";
+    margin-left: 1px;
+    margin-right: 3px;
+    color: #666;
+    border-bottom: 1px solid #FFF
+}
+
+.profile-info-row:first-child .profile-info-name,
+.profile-info-row:first-child .profile-info-value {
+    border-top: none
+}
+
+.profile-user-info-striped .profile-info-name {
+    color: #336199;
+    background-color: #EDF3F4;
+    border-top: 1px solid #F7FBFF
+}
+
+.profile-user-info-striped .profile-info-value {
+    border-top: 1px dotted #DCEBF7;
+    padding-left: 12px
+}
+
+.profile-activity img {
+    border: 2px solid #C9D6E5;
+    border-radius: 100%;
+    width: 200%;
+    margin-right: 10px;
+    margin-left: 0;
+    box-shadow: none
+}
+
+
+.user-profile .ace-thumbnails li {
+    border: 1px solid #CCC;
+    padding: 3px;
+    margin: 6px
+}
+
+
+.profile-social-links > a {
+    text-decoration: none;
+    margin: 0 1px
+}
+
+.profile-users .user img {
+    padding: 2px;
+    border-radius: 100%;
+    border: 1px solid #AAA;
+    max-width: none;
+    width: 100%;
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s
+}
+
+.profile-users .user img:hover {
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .33);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .33)
+}
+
+.profile-users .memberdiv .tools > a {
+    margin: 0 2px
+}
+
+@media only screen and (max-width: 480px) {
+    .profile-info-name {
+        width: 80px
+    }
+
+    .profile-user-info-striped .profile-info-name {
+        float: none;
+        width: auto;
+        text-align: left;
+        padding: 6px 4px 6px 10px;
+        display: block
+    }
+
+    .profile-user-info-striped .profile-info-value {
+        margin-left: 10px;
+        display: block
+    }
+}
+
+.itemdiv > .user > img {
+    border-radius: 100%;
+    border: 2px solid #5293C4;
+    max-width: 40px;
+    position: relative
+}
+
+
+.itemdiv > .body > .name > b {
+    color: #777
+}
+
+
+.itemdiv.dialogdiv > .user > img {
+    border-color: #C9D6E5
+}
+
+.itemdiv.memberdiv > .user > img {
+    border-color: #DCE3ED
+}
+
+
+.itemdiv.memberdiv > .body > .name > a {
+    display: inline-block;
+    max-width: 100px;
+    max-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all
+}
+
+
+.item-list > li {
+    padding: 9px;
+    background-color: #FFF;
+    margin-top: -1px;
+    position: relative
+}
+
+
+.item-list > li label {
+    font-size: 13px
+}
+
+
+.ace-thumbnails > li,
+.ace-thumbnails > li > :first-child {
+    display: block;
+    position: relative
+}
+
+
+.ace-thumbnails > li {
+    float: left;
+    overflow: hidden;
+    margin: 2px;
+    border: 2px solid #333
+}
+
+.ace-thumbnails > li > :first-child:focus {
+    outline: 0
+}
+
+
+.ace-thumbnails > li > .tools > a,
+.ace-thumbnails > li > :first-child .inner a {
+    display: inline-block;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 4px
+}
+
+.ace-thumbnails > li > .tools > a:hover,
+.ace-thumbnails > li > :first-child .inner a:hover {
+    text-decoration: none;
+    color: #C9E2EA
+}
+
+.ace-thumbnails > li .tools.tools-bottom > a,
+.ace-thumbnails > li .tools.tools-top > a {
+    display: inline-block
+}
