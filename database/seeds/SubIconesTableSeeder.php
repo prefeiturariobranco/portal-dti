@@ -163,7 +163,7 @@ class SubIconesTableSeeder extends Seeder
         Sub_Icone::create([
             'nome' => 'SitGeo',
             'caminho' => '/images/icones/icon-solicitacao-acesso.png',
-            'link' => 'http://www.riobranco.ac.gov.br/images/formularios/sistemas/SITGEO1.pdf',
+            'link' => '/pdf/FORMULARIO-SITGEO1.pdf',
             'ocultar' => 0,
             'icones_id' => 1,
         ]);
