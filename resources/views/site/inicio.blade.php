@@ -96,13 +96,13 @@
             <div class="row featurette">
                 <div class="col-md-6 mb-3">
                     <a href="/novidade/{{$postagem[0]['id']}}">
-                        <img class="d-block w-100" src="/storage/banner/{{$postagem[0]['imagem']}}" alt="{{$postagem[0]['titulo']}}" />
+                        <img class="d-block w-100" src="/images/{{$postagem[0]['imagem']}}" alt="{{$postagem[0]['titulo']}}" />
                     </a>
                 </div>
 
                 <div class="col-md-6 mb-3">
                     <a href="/novidade/{{$postagem[1]['id']}}">
-                        <img class="d-block w-100" src="/storage/banner/{{$postagem[1]['imagem']}}" alt="{{$postagem[0]['titulo']}}" />
+                        <img class="d-block w-100" src="/images/{{$postagem[1]['imagem']}}" alt="{{$postagem[1]['titulo']}}" />
                     </a>
                 </div>
 
