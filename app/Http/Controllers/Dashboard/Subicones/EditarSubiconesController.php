@@ -42,6 +42,7 @@ class EditarSubiconesController extends Controller
             'caminho'=> $request->post('caminho'),
             'link'=> $request->post('link'),
             'icones_id'=> $request->post('icones_id'),
+            'ocultar' => $request->post('ocultar')
         ]);
 
         $resultado['error'] = 1;

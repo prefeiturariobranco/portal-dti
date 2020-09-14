@@ -87,7 +87,10 @@ class SubmenuController extends Controller
     }
 
     public function submenu($id){
-        $sub_icones = Sub_Icone::where('icones_id', $id)->get();
+        $sub_icones = Sub_Icone::where([
+            ['icones_id', $id],
+            ['ocultar', 0]
+        ])->get();
 
         if (count($sub_icones) <= 0) {
             return redirect('/');

@@ -17,7 +17,7 @@ class ListarSubiconesController extends Controller
     {
         //
         return view('painel.subicones.lista', [
-            'subicones' => Sub_Icone::where('ocultar', 0)->get(),
+            'subicones' => Sub_Icone::all(),
         ]);
     }
 
