@@ -20,7 +20,12 @@
                             <label>Departamento:</label>
                             <select name="departamento_id" id="departamento" class="form-control">
                                 @foreach($departamentos as $departamento)
-                                    <option value="{{ $departamento->id }}">{{ $departamento->nome }}</option>
+                                    @if($contato->departamento_id===$departamento->id)
+                                        <option selected value="{{ $departamento->id }}">{{ $departamento->nome }}</option>
+                                    @else
+                                        <option value="{{ $departamento->id }}">{{ $departamento->nome }}</option>
+                                    @endif
+
                                 @endforeach
                             </select>
                             <span class="system_error text-danger">{{$errors->first('departamento_id')}}</span>
@@ -31,7 +36,11 @@
                             <label>Cargo:</label>
                             <select name="cargo_id" class="form-control">
                                 @foreach($cargos as $cargo)
-                                    <option value="{{ $cargo->id }}">{{ $cargo->nome }}</option>
+                                    @if($contato->cargos_id===$cargo->id)
+                                        <option selected value="{{ $cargo->id }}">{{ $cargo->nome }}</option>
+                                    @else
+                                        <option value="{{ $cargo->id }}">{{ $cargo->nome }}</option>
+                                    @endif
                                 @endforeach
                             </select>
                             <span class="system_error text-danger">{{$errors->first('cargo_id')}}</span>
