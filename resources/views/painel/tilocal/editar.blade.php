@@ -47,6 +47,13 @@
                                 <span class="system_error text-danger">{{$errors->first('email')}}</span>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Ocultar:</label>
+                                <input type="number" name="ocultar" class="form-control" value="{{ $tiLocal->ocultar }}" min="0" max="1">
+
+                            </div>
+                        </div>
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <input type="submit" class="btn btn-primary" value="Alterar">

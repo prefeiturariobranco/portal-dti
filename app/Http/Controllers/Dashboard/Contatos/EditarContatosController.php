@@ -44,6 +44,7 @@ class EditarContatosController extends Controller
             'nome' => $request->post('nome'),
             'email' => $request->post('email'),
             'telefone' => $request->post('telefone'),
+            'ocultar' => $request->post('ocultar')
         ]);
 
         $resultado['error'] = 1;

@@ -20,6 +20,7 @@ class ContatosController extends Controller
     public function index()
     {
         //
+
         return view('site/contatos', [
             'icones' => Icones::where('ocultar', 0)->get(),
             'categorias' => Icones_categorias::where('ocultar', 0)->get(),
@@ -27,6 +28,8 @@ class ContatosController extends Controller
             'departamentos' => Departamentos::all(),
             'contatos' => Contatos::all(),
         ]);
+
+
     }
 
     /**

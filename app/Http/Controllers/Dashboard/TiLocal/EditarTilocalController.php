@@ -43,6 +43,7 @@ class EditarTilocalController extends Controller
             'telefone' => $request->post('telefone'),
             'email' => $request->post('email'),
             'secretaria_id' => $request->post('secretaria_id'),
+            'ocultar' => $request->post('ocultar')
         ]);
 
         $resultado['error'] = 1;

@@ -124,6 +124,7 @@ class ContatosTableSeeder extends Seeder
             'nome'  => 'Thiago Franco',
             'telefone'  => '3211 - 3974',
             'email' => 'thiago.franco@riobranco.ac.gov.br',
+
         ]);
     }
 }

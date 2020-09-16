@@ -17,7 +17,7 @@ class ListarContatosController extends Controller
     {
         //
         return view('painel.contatos.lista', [
-            'contatos' => Contatos::where('ocultar', 0)->get(),
+            'contatos' => Contatos::all(),
         ]);
     }
 
