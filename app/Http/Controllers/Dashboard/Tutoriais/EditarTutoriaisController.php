@@ -8,6 +8,7 @@ use App\Model\Tutoriais;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class EditarTutoriaisController extends Controller
 {
@@ -35,10 +36,21 @@ class EditarTutoriaisController extends Controller
     public function update(TutoriaisFormRequest $request)
     {
         //
-        $tutorial = Tutoriais::where('id', $request->post('tutorial_id'))->update([
-            'titulo' => $request->post('titulo'),
-            'conteudo' => $request->post('conteudo'),
-        ]);
+        $tutorial = Tutoriais::where('id', $request->post('tutorial_id'))->first();
+
+        $tutorial->titulo = $request->post('titulo');
+        $tutorial->conteudo = $request->post('conteudo');
+
+        if(!empty($tutorial->imagem)){
+            Storage::delete($tutorial->imagem);
+        }
+        $tutorial->imagem = $request->file('imagem')->store('anexos');
+
+        if(!empty($tutorial->video)){
+            Storage::delete($tutorial->video);
+        }
+        $tutorial->video = $request->file('video')->store('anexos');
+
 
         $resultado['error'] = 1;
         $resultado['msg'] = "Tutoriais alterado com sucesso!";
@@ -47,6 +59,8 @@ class EditarTutoriaisController extends Controller
             $resultado['error'] = 2;
             $resultado['msg'] = "Falha alterar tutoriais";
         }
+
+        $tutorial->save();
 
         Session::flash('erro_msg', $resultado);
         return Redirect::to('painel/tutoriais');

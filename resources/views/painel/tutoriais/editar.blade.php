@@ -24,7 +24,7 @@
                         Alterar de Notícias
                     </div>
                     <hr>
-                    <form action="/painel/tutoriais/alterar" method="post">
+                    <form action="/painel/tutoriais/alterar" method="post" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="tutorial_id" value="{{ $tutorial->id }}">
                         <div class="row">
@@ -38,9 +38,25 @@
                             <div class="col-md-12">
                                 <strong>Conteúdo: </strong>
                                 <div>
-                                    <textarea id="noticias-conteudo" name="conteudo" class="form-control" rows="20">{{ $tutorial->conteudo }}</textarea>
+                                    <textarea id="noticias-conteudo" name="conteudo" class="form-control" rows="5">{{ $tutorial->conteudo }}</textarea>
                                     <span class="system_error text-danger">{{$errors->first('conteudo')}}</span>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Imagem:</label>
+                                <input type="file" name="imagem" class="form-control" placeholder="Digite o título">
+                                <span class="system_error text-danger">{{$errors->first('imagem')}}</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Video:</label>
+                                <input type="file" name="video" class="form-control" placeholder="Digite o título">
+                                <span class="system_error text-danger">{{$errors->first('video')}}</span>
                             </div>
                         </div>
 

@@ -24,7 +24,7 @@
                     Cadastro de Notícias
                 </div>
                 <hr>
-                <form action="/painel/tutoriais/salvar" method="post">
+                <form action="/painel/tutoriais/salvar" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                         <div class="col-md-4">
@@ -37,12 +37,27 @@
                         <div class="col-md-12">
                             <strong>Conteúdo: </strong>
                             <div>
-                                <textarea id="noticias-conteudo" name="conteudo" class="form-control" rows="20"></textarea>
+                                <textarea id="noticias-conteudo" name="conteudo" class="form-control" rows="5"></textarea>
                                 <span class="system_error text-danger">{{$errors->first('conteudo')}}</span>
                             </div>
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Imagem:</label>
+                            <input type="file" name="imagem" class="form-control" placeholder="Digite o título">
+                            <span class="system_error text-danger">{{$errors->first('imagem')}}</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Video:</label>
+                            <input type="file" name="video" class="form-control" placeholder="Digite o título">
+                            <span class="system_error text-danger">{{$errors->first('video')}}</span>
+                        </div>
+                    </div>
 
                     <div class="row mt-3">
                         <div class="col-md-4">

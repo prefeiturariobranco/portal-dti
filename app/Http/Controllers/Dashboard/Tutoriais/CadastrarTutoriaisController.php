@@ -31,11 +31,13 @@ class CadastrarTutoriaisController extends Controller
     public function store(TutoriaisFormRequest $request)
     {
         //
+
         $tutoriais = Tutoriais::create([
             'titulo' => $request->post('titulo'),
             'conteudo' => $request->post('conteudo'),
-            'imagem' => NULL,
+            'imagem' => null,
             'criado_por' => Session::get('usuario')->id,
+            'video' => null
         ]);
 
         $resultado['error'] = 1;
@@ -45,6 +47,15 @@ class CadastrarTutoriaisController extends Controller
             $resultado['error'] = 2;
             $resultado['msg'] = "Falha cadastrar tutoriais";
         }
+
+        if (!empty($request->file('imagem'))) {
+            $tutoriais->imagem = $request->file('imagem')->store('anexos');
+        }
+        if (!empty($request->file('video'))) {
+            $tutoriais->video = $request->file('video')->store('anexos');
+        }
+
+        $tutoriais->save();
 
         Session::flash('erro_msg', $resultado);
         return Redirect::to('painel/tutoriais');

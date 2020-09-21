@@ -17,6 +17,10 @@
                         <p>{{strip_tags($tutorial->conteudo)}}</p>
                     </div>
 
+                    <div>
+                        <img src="{{url("/storage/".$tutorial->imagem)}}"/>
+                    </div>
+
                 </div>
             </div>
         </div>

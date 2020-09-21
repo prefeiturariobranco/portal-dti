@@ -8,5 +8,5 @@ class Tutoriais extends Model
 {
     //
     protected $table = 'tutoriais';
-    protected $fillable = ['id', 'imagem', 'titulo', 'conteudo', 'ocultar', 'criado_por'];
+    protected $fillable = ['id', 'imagem', 'titulo', 'conteudo', 'ocultar', 'criado_por', 'video'];
 }
