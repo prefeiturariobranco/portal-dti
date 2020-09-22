@@ -53,6 +53,41 @@ class EditarTutoriaisController extends Controller
             $tutorial->imagem = $request->file('imagem')->store('anexos');
         }
 
+        if(!empty($request->file('imagem1'))){
+            if(!empty($tutorial->imagem1)){
+                Storage::delete($tutorial->imagem1);
+            }
+            $tutorial->imagem1 = $request->file('imagem1')->store('anexos');
+        }
+
+        if(!empty($request->file('imagem2'))){
+            if(!empty($tutorial->imagem2)){
+                Storage::delete($tutorial->imagem2);
+            }
+            $tutorial->imagem2 = $request->file('imagem2')->store('anexos');
+        }
+
+        if(!empty($request->file('imagem3'))){
+            if(!empty($tutorial->imagem3)){
+                Storage::delete($tutorial->imagem3);
+            }
+            $tutorial->imagem3 = $request->file('imagem3')->store('anexos');
+        }
+
+        if(!empty($request->file('imagem4'))){
+            if(!empty($tutorial->imagem4)){
+                Storage::delete($tutorial->imagem4);
+            }
+            $tutorial->imagem4 = $request->file('imagem4')->store('anexos');
+        }
+
+        if(!empty($request->file('imagem5'))){
+            if(!empty($tutorial->imagem5)){
+                Storage::delete($tutorial->imagem5);
+            }
+            $tutorial->imagem5 = $request->file('imagem5')->store('anexos');
+        }
+
         if(!empty($request->file('video'))){
             if(!empty($tutorial->video)){
                 Storage::delete($tutorial->video);

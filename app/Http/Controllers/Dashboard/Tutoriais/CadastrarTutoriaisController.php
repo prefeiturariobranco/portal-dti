@@ -36,6 +36,11 @@ class CadastrarTutoriaisController extends Controller
             'titulo' => $request->post('titulo'),
             'conteudo' => $request->post('conteudo'),
             'imagem' => null,
+            'imagem1' => null,
+            'imagem2' => null,
+            'imagem3' => null,
+            'imagem4' => null,
+            'imagem5' => null,
             'criado_por' => Session::get('usuario')->id,
             'video' => null
         ]);
@@ -51,6 +56,22 @@ class CadastrarTutoriaisController extends Controller
         if (!empty($request->file('imagem'))) {
             $tutoriais->imagem = $request->file('imagem')->store('anexos');
         }
+        if (!empty($request->file('imagem1'))) {
+            $tutoriais->imagem1 = $request->file('imagem1')->store('anexos');
+        }
+        if (!empty($request->file('imagem2'))) {
+            $tutoriais->imagem2 = $request->file('imagem2')->store('anexos');
+        }
+        if (!empty($request->file('imagem3'))) {
+            $tutoriais->imagem3 = $request->file('imagem3')->store('anexos');
+        }
+        if (!empty($request->file('imagem4'))) {
+            $tutoriais->imagem4 = $request->file('imagem4')->store('anexos');
+        }
+        if (!empty($request->file('imagem5'))) {
+            $tutoriais->imagem5 = $request->file('imagem5')->store('anexos');
+        }
+
         if (!empty($request->file('video'))) {
             $tutoriais->video = $request->file('video')->store('anexos');
         }
