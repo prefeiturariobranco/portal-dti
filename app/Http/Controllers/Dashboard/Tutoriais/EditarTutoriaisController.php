@@ -38,19 +38,27 @@ class EditarTutoriaisController extends Controller
         //
         $tutorial = Tutoriais::where('id', $request->post('tutorial_id'))->first();
 
-        $tutorial->titulo = $request->post('titulo');
-        $tutorial->conteudo = $request->post('conteudo');
-
-        if(!empty($tutorial->imagem)){
-            Storage::delete($tutorial->imagem);
+        if(!empty($request->post('titulo'))){
+            $tutorial->titulo = $request->post('titulo');
         }
-        $tutorial->imagem = $request->file('imagem')->store('anexos');
 
-        if(!empty($tutorial->video)){
-            Storage::delete($tutorial->video);
+        if(!empty($request->post('conteudo'))){
+            $tutorial->conteudo = $request->post('conteudo');
         }
-        $tutorial->video = $request->file('video')->store('anexos');
 
+        if(!empty($request->file('imagem'))){
+            if(!empty($tutorial->imagem)){
+                Storage::delete($tutorial->imagem);
+            }
+            $tutorial->imagem = $request->file('imagem')->store('anexos');
+        }
+
+        if(!empty($request->file('video'))){
+            if(!empty($tutorial->video)){
+                Storage::delete($tutorial->video);
+            }
+            $tutorial->video = $request->file('video')->store('anexos');
+        }
 
         $resultado['error'] = 1;
         $resultado['msg'] = "Tutoriais alterado com sucesso!";

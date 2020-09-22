@@ -4,7 +4,6 @@
 @section('js')@endsection
 @section('content')
 <div class="content__inner container">
-
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
@@ -17,9 +16,18 @@
                         <p>{{strip_tags($tutorial->conteudo)}}</p>
                     </div>
 
-                    <div>
-                        <img src="{{url("/storage/".$tutorial->imagem)}}"/>
-                    </div>
+                    @if($tutorial->imagem!=NULL)
+                        <div>
+                            <img src="{{asset('/storage/'.$tutorial->imagem)}}"/>
+                        </div>
+                    @endif
+
+                    @if($tutorial->video!=NULL)
+                        <div>
+                            <video width="100%" controls>
+                            <source src="{{asset('/storage/'.$tutorial->video)}}" type="video/mp4"/>
+                        </div>
+                    @endif
 
                 </div>
             </div>
