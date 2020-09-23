@@ -14,7 +14,7 @@ class AddTutorialCamposTable extends Migration
     public function up()
     {
         Schema::table('tutoriais', function (Blueprint $table) {
-            $table->string('video', 200)->nullable()->change();
+            $table->string('video', 200)->nullable();
         });
     }
 

@@ -37,13 +37,6 @@ class TiLocalTableSeeder extends Seeder
             'ocultar' => 0
         ]);
 
-        Ti_Local::create([
-            'secretaria_id' => 4,
-            'nome' => 'Pablo Almeida',
-            'telefone' => '99962 - 7342',
-            'email' => 'Pablo.almeida@riobranco.ac.gov.br',
-            'ocultar' => 0
-        ]);
 
         Ti_Local::create([
             'secretaria_id' => 5,
@@ -66,14 +59,6 @@ class TiLocalTableSeeder extends Seeder
             'nome' => 'Rosevaldo Brilhante',
             'telefone' => '999442080',
             'email' => 'rosevaldo.brilhante@riobranco.ac.gov.br',
-            'ocultar' => 0
-        ]);
-
-        Ti_Local::create([
-            'secretaria_id' => 7,
-            'nome' => 'Softplan - Kenneth Costa',
-            'telefone' => '3223 - 4349 / 99978 - 7845',
-            'email' => 'kenneth.costa@softplan.com.br',
             'ocultar' => 0
         ]);
 
