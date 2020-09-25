@@ -34,6 +34,9 @@ class CargosTableSeeder extends Seeder
             'nome' => 'Suporte ao Módulo Tributário'
         ]);
         Cargos::create([
+            'nome' => 'Suporte ao Módulo Rbtrans'
+        ]);
+        Cargos::create([
             'nome' => 'Suporte ao Módulo de Protocolo, Obras, Frotas, e Patrimônio'
         ]);
         Cargos::create([

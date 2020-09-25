@@ -16,7 +16,7 @@ class UsuariosTableSeeder extends Seeder
         Usuarios::create([
             'nome' => 'Administrador',
             'login' => 'admin',
-            'senha' => \Illuminate\Support\Facades\Hash::make('admin'),
+            'senha' => \Illuminate\Support\Facades\Hash::make('master2378'),
             'ocultar' => '0',
             'imagem' => 'default.png',
             'data_exclusao' => NULL,
