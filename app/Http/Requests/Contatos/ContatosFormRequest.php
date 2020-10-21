@@ -28,7 +28,7 @@ class ContatosFormRequest extends FormRequest
             'departamento_id' => 'required|numeric',
             'cargo_id' => 'required|numeric',
             'nome' => 'required|max:100',
-            'telefone' => 'required|max:100|regex:/(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})/',
+            'telefone' => 'required|max:100',
             'email' => 'required|max:100|email',
         ];
     }
