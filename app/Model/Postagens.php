@@ -8,6 +8,6 @@ use Illuminate\Support\Facades\DB;
 class Postagens extends Model
 {
     //
-    protected $fillable = ['id', 'imagem', 'titulo', 'conteudo', 'criado_por', 'ocultar', 'created_at'];
+    protected $fillable = ['id', 'imagem', 'titulo', 'url_documento', 'conteudo', 'criado_por', 'ocultar', 'created_at'];
     protected $table = 'postagens';
 }

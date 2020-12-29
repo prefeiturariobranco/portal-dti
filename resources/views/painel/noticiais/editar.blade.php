@@ -49,11 +49,27 @@
                                 <img src="/storage/banner/{{ $noticia->imagem}}" class="img-fluid">
                             </div>
                         </div>
+
                         <div class="row mt-3">
+                            <label style="margin-left: 20px">Banner: </label>
                             <div class="col-md-4">
                                 <input type="file" name="banner" class="">
                             </div>
                         </div>
+                        @if(!is_null($noticia->url_documento))
+                            <div class="row mt-3">
+                                <div class="col-md-5">
+                                    <a href="/storage/pdf/{{$noticia->url_documento}}" style="margin-left: 10px; color: blue" target="_blank">Arquivo</a>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <label style="margin-left: 20px">PDF: </label>
+                                <div class="col-md-4">
+                                    <input type="file" name="pdf" class="">
+                                </div>
+                            </div>
+                        @endif
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <input type="submit" class="btn btn-primary" value="Alterar">

@@ -13,7 +13,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <a href="/novidade/#">
+                                <a href="/novidade/{{$postagem->id}}">
                                     <h4 class="card-title">{{$postagem->titulo}}</h4>
                                 </a>
                                 <h6 class="card-subtitle">postado em {{$postagem->created_at}}</h6>

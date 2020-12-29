@@ -15,7 +15,9 @@
                         <div class="mt-3">
                             <p>{{strip_tags($novidade->conteudo)}}</p>
                         </div>
-
+                        @if(!is_null($novidade->url_documento))
+                            <a href="/storage/pdf/{{$novidade->url_documento}}" target="_blank" style="color: blue">Clique aqui para baixar o anexo.</a>
+                        @endif
                     </div>
                 </div>
             </div>

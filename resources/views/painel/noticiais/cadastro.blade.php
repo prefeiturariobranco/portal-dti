@@ -48,9 +48,16 @@
                         </div>
                     </div>
                     <div class="row mt-3">
+                        <label style="margin-left: 20px">Banner: </label>
                         <div class="col-md-4">
+                           <input type="file" name="banner" class="">
+                        </div>
+                    </div>
 
-                            <input type="file" name="banner" class="">
+                    <div class="row mt-3">
+                        <label style="margin-left: 20px">PDF: </label>
+                        <div class="col-md-4">
+                            <input type="file" name="pdf" class="">
                         </div>
                     </div>
                     <div class="row mt-3">

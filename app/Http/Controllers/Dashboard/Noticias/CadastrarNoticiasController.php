@@ -32,6 +32,7 @@ class CadastrarNoticiasController extends Controller
     public function store(NoticiasFormRequest $request)
     {
         //
+
         $noticia = Postagens::create([
             'titulo' => $request->post('titulo'),
             'conteudo' => $request->post('conteudo'),
@@ -42,12 +43,23 @@ class CadastrarNoticiasController extends Controller
         $resultado['msg'] = "Notícia cadastrada com sucesso!";
 
         $arquivos = $request->file('banner');
+        $arquivo_achou = 0;
+        if(!is_null($request->file('pdf'))){
+            $arquivo_pdf = $request->file('pdf');
+            $arquivo_achou = 1;
+        }
 
         if (!$noticia) {
             $resultado['error'] = 2;
             $resultado['msg'] = "Falha cadastrar notícia";
         } else if ($arquivos->storePubliclyAs('public/banner/', $arquivos->getClientOriginalName())){
             $noticia->imagem = $arquivos->getClientOriginalName();
+
+            if($arquivo_achou == 1){
+                $arquivo_pdf->storePubliclyAs('public/pdf/', $arquivo_pdf->getClientOriginalName());
+                $noticia->url_documento = $arquivo_pdf->getClientOriginalName();
+            }
+
             $noticia->save();
         }
 
