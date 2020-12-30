@@ -32,7 +32,7 @@ class InicioController extends Controller
 
         return view('site/inicio', [
             'categorias' => $this->retornaCategoriaIcone(),
-            'postagem' => Postagens::all()
+            'postagem' => Postagens::where('ocultar', 0)->get(),
         ]);
 
     }
