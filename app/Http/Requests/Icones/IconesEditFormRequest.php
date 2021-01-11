@@ -29,7 +29,7 @@ class IconesEditFormRequest extends FormRequest
             'caminho' => 'required|max:100',
             'link' => 'required|max:1024',
             'nome' => 'required|max:100',
-            'subtitulo' => 'required|max:100',
+            'subtitulo' => 'max:100',
             'dinamico' => 'required|numeric'
 
         ];
@@ -46,7 +46,7 @@ class IconesEditFormRequest extends FormRequest
             'link.max' => 'O campo link só pode ter no máximo 1024 caracteres',
             'nome.required' => 'O campo nome é de preenchimento obrigatório.',
             'nome.max' => 'O campo nome só pode ter no máximo 100 caracteres.',
-            'subtitulo.required' => 'O campo subtítulo é de preenchimento obrigatório.',
+//            'subtitulo.required' => 'O campo subtítulo é de preenchimento obrigatório.',
             'subtitulo.max' => 'O campo subtítulo só pode ter no máximo 100 caracteres.',
             'dinamico.required' => 'O campo site externo é de preenchimento obrigatório.',
             'dinamico.numeric' => 'O campo site externo só aceita valores númericos',
