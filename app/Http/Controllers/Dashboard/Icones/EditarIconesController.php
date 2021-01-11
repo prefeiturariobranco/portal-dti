@@ -37,19 +37,27 @@ class EditarIconesController extends Controller
     public function update(IconesEditFormRequest $request)
     {
         //
+        if (is_null($request->post('subtitulo'))) {
+            $subtitulo = "";
+        }
+        else {
+            $subtitulo = $request->post('subtitulo');
+        }
+
         $icone = Icones::where('id', $request->post('icone_id'))->update([
             'icones_categorias_id' => $request->post('icones_categorias_id'),
             'caminho' => $request->post('caminho'),
             'link' => $request->post('link'),
             'nome' => $request->post('nome'),
-            'subtitulo' => $request->post('subtitulo'),
+            'subtitulo' => $subtitulo,
             'dinamico' => $request->post('dinamico'),
         ]);
+
 
         $resultado['error'] = 1;
         $resultado['msg'] = 'Ícone alterado com sucesso!';
 
-        if ($icone) {
+        if ($icone != 1) {
             $resultado['error'] = 2;
             $resultado['msg'] = 'Falha alterar ícone';
         }
