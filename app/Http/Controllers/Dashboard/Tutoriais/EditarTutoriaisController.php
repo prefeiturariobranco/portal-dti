@@ -46,53 +46,44 @@ class EditarTutoriaisController extends Controller
             $tutorial->conteudo = $request->post('conteudo');
         }
 
-        if(!empty($request->file('imagem'))){
-            if(!empty($tutorial->imagem)){
-                Storage::delete($tutorial->imagem);
-            }
-            $tutorial->imagem = $request->file('imagem')->store('anexos');
+        if (!empty($request->file('imagem'))) {
+            $fileName = time() . '.' . $request->file('imagem')->extension();
+            $tutorial->imagem = $fileName;
+            $request->imagem->move(public_path('images'), $fileName);
+        }
+        if (!empty($request->file('imagem1'))) {
+            $fileName = time() . '1.' . $request->file('imagem1')->extension();
+            $tutorial->imagem1 = $fileName;
+            $request->imagem2->move(public_path('images'), $fileName);
+        }
+        if (!empty($request->file('imagem2'))) {
+            $fileName = time() . '2.' . $request->file('imagem2')->extension();
+            $tutorial->imagem2 = $fileName;
+            $request->imagem3->move(public_path('images'), $fileName);
+        }
+        if (!empty($request->file('imagem3'))) {
+            $fileName = time() . '3.' . $request->file('imagem3')->extension();
+            $tutorial->imagem3 = $fileName;
+            $request->imagem3->move(public_path('images'), $fileName);
+        }
+        if (!empty($request->file('imagem4'))) {
+            $fileName = time() . '4.' . $request->file('imagem4')->extension();
+            $tutorial->imagem4 = $fileName;
+            $request->imagem4->move(public_path('images'), $fileName);
+        }
+        if (!empty($request->file('imagem5'))) {
+            $fileName = time() . '5.' . $request->file('imagem5')->extension();
+            $tutorial->imagem5 = $fileName;
+            $request->imagem5->move(public_path('images'), $fileName);
         }
 
-        if(!empty($request->file('imagem1'))){
-            if(!empty($tutorial->imagem1)){
-                Storage::delete($tutorial->imagem1);
-            }
-            $tutorial->imagem1 = $request->file('imagem1')->store('anexos');
-        }
-
-        if(!empty($request->file('imagem2'))){
-            if(!empty($tutorial->imagem2)){
-                Storage::delete($tutorial->imagem2);
-            }
-            $tutorial->imagem2 = $request->file('imagem2')->store('anexos');
-        }
-
-        if(!empty($request->file('imagem3'))){
-            if(!empty($tutorial->imagem3)){
-                Storage::delete($tutorial->imagem3);
-            }
-            $tutorial->imagem3 = $request->file('imagem3')->store('anexos');
-        }
-
-        if(!empty($request->file('imagem4'))){
-            if(!empty($tutorial->imagem4)){
-                Storage::delete($tutorial->imagem4);
-            }
-            $tutorial->imagem4 = $request->file('imagem4')->store('anexos');
-        }
-
-        if(!empty($request->file('imagem5'))){
-            if(!empty($tutorial->imagem5)){
-                Storage::delete($tutorial->imagem5);
-            }
-            $tutorial->imagem5 = $request->file('imagem5')->store('anexos');
-        }
-
-        if(!empty($request->file('video'))){
-            if(!empty($tutorial->video)){
-                Storage::delete($tutorial->video);
-            }
-            $tutorial->video = $request->file('video')->store('anexos');
+        if (!empty($request->file('video'))) {
+//            dd($request->all());
+            $videoFile = $request->file('video');
+            $fileNameVideo = time() . $videoFile->getClientOriginalName();
+            $path = public_path() . '/videos/';
+            $videoFile->move($path, $fileNameVideo);
+            $tutorial->video = $fileNameVideo;
         }
 
         $resultado['error'] = 1;
