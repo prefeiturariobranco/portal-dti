@@ -48,37 +48,44 @@ class EditarTutoriaisController extends Controller
 
         if (!empty($request->file('imagem'))) {
             $fileName = time() . '.' . $request->file('imagem')->extension();
+            \File::delete($tutorial->imagem);
             $tutorial->imagem = $fileName;
             $request->imagem->move(public_path('images'), $fileName);
         }
         if (!empty($request->file('imagem1'))) {
             $fileName = time() . '1.' . $request->file('imagem1')->extension();
+            \File::delete($tutorial->imagem1);
             $tutorial->imagem1 = $fileName;
-            $request->imagem2->move(public_path('images'), $fileName);
+            $request->imagem1->move(public_path('images'), $fileName);
         }
         if (!empty($request->file('imagem2'))) {
             $fileName = time() . '2.' . $request->file('imagem2')->extension();
+            \File::delete($tutorial->imagem2);
             $tutorial->imagem2 = $fileName;
-            $request->imagem3->move(public_path('images'), $fileName);
+            $request->imagem2->move(public_path('images'), $fileName);
         }
         if (!empty($request->file('imagem3'))) {
             $fileName = time() . '3.' . $request->file('imagem3')->extension();
+            \File::delete($tutorial->imagem3);
             $tutorial->imagem3 = $fileName;
             $request->imagem3->move(public_path('images'), $fileName);
         }
         if (!empty($request->file('imagem4'))) {
             $fileName = time() . '4.' . $request->file('imagem4')->extension();
+            \File::delete($tutorial->imagem4);
             $tutorial->imagem4 = $fileName;
             $request->imagem4->move(public_path('images'), $fileName);
         }
         if (!empty($request->file('imagem5'))) {
             $fileName = time() . '5.' . $request->file('imagem5')->extension();
+            \File::delete($tutorial->imagem5);
             $tutorial->imagem5 = $fileName;
             $request->imagem5->move(public_path('images'), $fileName);
         }
 
         if (!empty($request->file('video'))) {
 //            dd($request->all());
+            \File::delete($tutorial->video);
             $videoFile = $request->file('video');
             $fileNameVideo = time() . $videoFile->getClientOriginalName();
             $path = public_path() . '/videos/';
