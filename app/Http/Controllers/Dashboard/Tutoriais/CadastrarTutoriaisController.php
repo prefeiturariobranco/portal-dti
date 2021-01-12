@@ -8,6 +8,7 @@ use App\Model\Tutoriais;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
+use function GuzzleHttp\Promise\all;
 
 class CadastrarTutoriaisController extends Controller
 {
@@ -31,7 +32,7 @@ class CadastrarTutoriaisController extends Controller
     public function store(TutoriaisFormRequest $request)
     {
         //
-
+//        dd($request->all());
         $tutoriais = Tutoriais::create([
             'titulo' => $request->post('titulo'),
             'conteudo' => $request->post('conteudo'),
@@ -54,26 +55,43 @@ class CadastrarTutoriaisController extends Controller
         }
 
         if (!empty($request->file('imagem'))) {
-            $tutoriais->imagem = $request->file('imagem')->store('anexos');
+            $fileName = time() . '.' . $request->file('imagem')->extension();
+            $tutoriais->imagem = $fileName;
+            $request->imagem->move(public_path('images'), $fileName);
         }
         if (!empty($request->file('imagem1'))) {
-            $tutoriais->imagem1 = $request->file('imagem1')->store('anexos');
+            $fileName = time() . '1.' . $request->file('imagem1')->extension();
+            $tutoriais->imagem1 = $fileName;
+            $request->imagem2->move(public_path('images'), $fileName);
         }
         if (!empty($request->file('imagem2'))) {
-            $tutoriais->imagem2 = $request->file('imagem2')->store('anexos');
+            $fileName = time() . '2.' . $request->file('imagem2')->extension();
+            $tutoriais->imagem2 = $fileName;
+            $request->imagem3->move(public_path('images'), $fileName);
         }
         if (!empty($request->file('imagem3'))) {
-            $tutoriais->imagem3 = $request->file('imagem3')->store('anexos');
+            $fileName = time() . '3.' . $request->file('imagem3')->extension();
+            $tutoriais->imagem3 = $fileName;
+            $request->imagem3->move(public_path('images'), $fileName);
         }
         if (!empty($request->file('imagem4'))) {
-            $tutoriais->imagem4 = $request->file('imagem4')->store('anexos');
+            $fileName = time() . '4.' . $request->file('imagem4')->extension();
+            $tutoriais->imagem4 = $fileName;
+            $request->imagem4->move(public_path('images'), $fileName);
         }
         if (!empty($request->file('imagem5'))) {
-            $tutoriais->imagem5 = $request->file('imagem5')->store('anexos');
+            $fileName = time() . '5.' . $request->file('imagem5')->extension();
+            $tutoriais->imagem5 = $fileName;
+            $request->imagem5->move(public_path('images'), $fileName);
         }
 
         if (!empty($request->file('video'))) {
-            $tutoriais->video = $request->file('video')->store('anexos');
+//            dd($request->all());
+            $videoFile = $request->file('video');
+            $fileNameVideo = time() . $videoFile->getClientOriginalName();
+            $path = public_path() . '/videos/';
+            $videoFile->move($path, $fileNameVideo);
+            $tutoriais->video = $fileNameVideo;
         }
 
         $tutoriais->save();
