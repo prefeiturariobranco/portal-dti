@@ -1,6 +1,6 @@
 @extends('templates/layout-principal')
 @section('css')
-    <link href="assets/css/novo_layout.css" rel="stylesheet">
+{{--    <link href="assets/css/novo_layout.css" rel="stylesheet">--}}
 @endsection
 
 @section('js')
