@@ -13,7 +13,7 @@ class PostagensTableSeeder extends Seeder
     {
         //
         Postagens::create([
-            'imagem' => 'iptuappbanco.jpeg',
+            'imagem' => 'https://blog.emania.com.br/wp-content/uploads/2016/02/direitos-autorais-e-de-imagem.jpg',
             'titulo' => 'Melhorias na conectividade da Cidade Digital',
             'conteudo' => '<p>A rede própria de comunicação de dados via rádio de transmissão, batizado de “Cidade Digital”, é responsável pela conexão em cerca de 60 prédios públicos municipais. A Prefeitura realizou entre os meses de fevereiro e junho, intervenções na rede comunicação de dados, que proporcionaram ganho significativo de performance e estabilidade na conexão de rede. O Cidade Digital é formado por sete Estações de Rádio Base (ERB) que trasmitem o sinal de rádio para todas as regionais da cidade. Devido aos constantes problemas de energia, foi instalado em cada ERB, um banco de baterias com autonomia de energia de até 2h. A Diretoria de Tecnologia da Informação (DTI) conta com uma equipe de campo, que visita as unidades que recebem sinal de internet por meio do Cidade Digital. Em média são visitados quatro prédios diariamente, na ocasião são realizados serviços de manutenção preventiva e corretiva nos equipamentos de rádio e torre. Além da equipe de campo, a DTI conta também com os técnicos que monitoram a rede no Núcleo Operacional de Controle (NOC), com a ajuda de softwares específicos, é possível antecipar problemas e ter uma resposta bem mais rápida.</p>',
             'criado_por' => 1,

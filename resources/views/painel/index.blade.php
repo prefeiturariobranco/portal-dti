@@ -27,7 +27,7 @@
                             <i class="fas fa-globe-americas fa-3x"></i>
                         </div>
                         <h5 class="font-16 text-uppercase mt-0">Acessos Intranet</h5>
-                        <h4 class="font-500">{{ $contadorPainel }} <i class="mdi mdi-arrow-up text-success ml-2"></i></h4>
+{{--                        <h4 class="font-500">{{ $contadorPainel }} <i class="mdi mdi-arrow-up text-success ml-2"></i></h4>--}}
                     </div>
                 </div>
             </div>
@@ -69,13 +69,11 @@
                             <i class="fas fa-sort-amount-up-alt fa-3x"></i>
                         </div>
                         <h5 class="font-16 text-uppercase mt-0">Acessos {{date('d/m/Y')}}</h5>
-                        <h4 class="font-500">{{ $contadorAcessosDia }} <i class="mdi mdi-arrow-up text-success ml-2"></i></h4>
+{{--                        <h4 class="font-500">{{ $contadorAcessosDia }} <i class="mdi mdi-arrow-up text-success ml-2"></i></h4>--}}
                     </div>
                 </div>
             </div>
         </div>
-
-
 
 
     </div>
