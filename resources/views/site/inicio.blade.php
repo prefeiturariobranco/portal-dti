@@ -1,6 +1,6 @@
 @extends('templates/layout-principal')
 @section('css')
-{{--    <link href="assets/css/novo_layout.css" rel="stylesheet">--}}
+    <link href="assets/css/novo_layout.css" rel="stylesheet">
 @endsection
 
 @section('js')
@@ -18,20 +18,9 @@
                     @foreach($postagem as $key => $slider)
                         <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
                             <a href="/novidade/{{$slider->id}}">
-                                <img src="/storage/banner/{{$slider->imagem}}" class="d-block w-100" height="209px"
-                                     alt="...">
+                                <img src="/storage/banner/{{$slider->imagem}}" height="100%" alt="...">
                             </a>
                         </div>
-                        {{--<div class="carousel-item active {{$key == 0 ? 'active' : '' }}">--}}
-                        {{--     <div class="carousel-background">--}}
-                        {{--          <img src="/storage/banner/{{$slider->imagem}}">--}}
-                        {{--     </div>--}}
-                        {{--<div class="carousel-container">--}}
-                        {{--     <div class="carousel-content">--}}
-                        {{--          <a  href="/novidade/{{$slider->id}}"  class="btn-get-started animate__animated animate__fadeInUp scrollto">--}}
-                        {{--                                  Get Started</a>--}}
-                        {{--     </div>--}}
-                        {{-- </div>--}}
                     @endforeach
 
                     <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
@@ -47,27 +36,6 @@
             </div>
         </div>
     </section>
-
-    <div class="container pt-5">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                @foreach($postagem as $key => $slider)
-                    <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
-                        <a href="/novidade/{{$slider->id}}"><img src="/storage/banner/{{$slider->imagem}}"
-                                                                 class="d-block w-100" height="209px" alt="..."></a>
-                    </div>
-                @endforeach
-            </div>
-            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true">     </span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
 
     <main id="main">
         <section id="services" class="services section-bg">
@@ -85,12 +53,15 @@
                                         @else
                                             <a href="{{$icons['link']}}" target="_blank">
                                                 @endif
-                                                <div class="col-md-6 col-lg-3 align-items-stretch mb-5 mb-lg-0" style="padding: 10px;">
+                                                <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0"
+                                                     style="padding: 10px;">
                                                     <div class="icon-box">
                                                         <div class="icon">
-                                                            <img style="width: 40px" src="{{$icons['caminho']}}" title="" alt=""/>
+                                                            <img style="width: 40px" src="{{$icons['caminho']}}"
+                                                                 title="" alt=""/>
                                                         </div>
-                                                        <h4 class="title"><a href="{{$icons['link']}}">{{$icons['nome']}}</a></h4>
+                                                        <h4 class="title"><a
+                                                                href="{{$icons['link']}}">{{$icons['nome']}}</a></h4>
                                                     </div>
                                                 </div>
                                             </a>
@@ -103,6 +74,44 @@
 
             </div>
         </section>
+
+        <section class="more-services section-bg">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Tutoriais</h2>
+                </div>
+                <div class="row">
+                    <?php $contarTutorial = 1; ?>
+                    @foreach($tutoriais as $tutorial )
+                        @if($contarTutorial <= 3)
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+                            <div class="card">
+                                @isset($tutorial->imagem)
+                                    <div class="carousel-item active">
+                                        <img src="{{asset('images/'.$tutorial->imagem)}}" class="d-block w-100"
+                                             alt="...">
+                                    </div>
+                                @endisset
+                                <div class="card-body">
+                                    <a href="/tutorial/{{ $tutorial->id }}">
+                                        <h4 class="card-title">{{ $tutorial->titulo }}</h4>
+                                    </a>
+                                    <h6 class="card-subtitle">postado em {{ $tutorial->created_at }}</h6>
+                                    <p class="card-text mt-3">{{ substr(strip_tags($tutorial->conteudo), 0, 200 ) }}
+                                        ...</p>
+                                    <a href="/tutorial/{{ $tutorial->id }}" title="" class="btn ">Mostrar Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php $contarTutorial++; ?>
+                        @endif
+                    @endforeach
+                </div>
+
+
+            </div>
+        </section><!-- End More Services Section -->
 
     </main>
 @endsection

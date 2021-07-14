@@ -30,5 +30,11 @@ class IconesCategoriasTableSeeder extends Seeder
             'status' => 1,
             'ocultar' => 0
         ]);
+
+        Icones_categorias::create([
+            'nome' => 'Serviços',
+            'status' => 1,
+            'ocultar' => 0
+        ]);
     }
 }

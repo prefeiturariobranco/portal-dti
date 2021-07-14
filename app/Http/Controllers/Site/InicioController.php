@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use App\Model\Icones;
 use App\Model\Postagens;
+use App\Model\Tutoriais;
+
 use App\Model\Usuarios;
 use App\User;
 use Illuminate\Http\Request;
@@ -33,6 +35,7 @@ class InicioController extends Controller
         return view('site/inicio', [
             'categorias' => $this->retornaCategoriaIcone(),
             'postagem' => Postagens::where('ocultar', 0)->get(),
+            'tutoriais' => Tutoriais::all(),
         ]);
 
     }

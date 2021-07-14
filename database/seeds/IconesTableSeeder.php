@@ -19,7 +19,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-solicitacao-acesso.png',
             'link' => '/submenu/1',
             'ocultar' => 0,
-            'icones_categorias_id' => 1
+            'icones_categorias_id' => 4
         ]);
 
         Icones::create([
@@ -29,7 +29,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-solicitacao-acesso.png',
             'link' => 'https://docs.google.com/forms/d/17PzbYgi01nE4OUUJU6QIvDwTE9kQ7-ow8cicNpkfd6E/viewform',
             'ocultar' => 0,
-            'icones_categorias_id' => 1
+            'icones_categorias_id' => 4
         ]);
         Icones::create([
             'dinamico' => 2,
@@ -38,7 +38,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-sua.png',
             'link' => 'http://sua.riobranco.ac.gov.br',
             'ocultar' => 0,
-            'icones_categorias_id' => 1,
+            'icones_categorias_id' => 4,
         ]);
         Icones::create([
             'dinamico' => 2,
@@ -47,7 +47,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-especificacoes-tecnicas.png',
             'link' => '/especificacoes-ti',
             'ocultar' => 0,
-            'icones_categorias_id' => 1,
+            'icones_categorias_id' => 4,
         ]);
         Icones::create([
             'dinamico' => 2,
@@ -56,7 +56,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-tutoriais-wiki.png',
             'link' => '/tutoriais',
             'ocultar' => 0,
-            'icones_categorias_id' => 1,
+            'icones_categorias_id' => null,
         ]);
         Icones::create([
             'dinamico' => 2,
@@ -74,7 +74,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-perguntas-respostas.png',
             'link' => '/perguntas',
             'ocultar' => 0,
-            'icones_categorias_id' => 1,
+            'icones_categorias_id' => null,
         ]);
         Icones::create([
             'id' => 8,
@@ -84,7 +84,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-softwarelivres.png',
             'link' => '/submenu/8',
             'ocultar' => 0,
-            'icones_categorias_id' => 1,
+            'icones_categorias_id' => 4,
         ]);
         Icones::create([
             'dinamico' => 3,
@@ -93,7 +93,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-intranet.png',
             'link' => '/login',
             'ocultar' => 0,
-            'icones_categorias_id' => 2,
+            'icones_categorias_id' => 4,
         ]);
         Icones::create([
             'dinamico' => 1,
@@ -102,7 +102,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-sistemas.png',
             'link' => '/submenu/10',
             'ocultar' => 0,
-            'icones_categorias_id' => 2,
+            'icones_categorias_id' => 4,
         ]);
         Icones::create([
             'dinamico' => 2,
@@ -111,7 +111,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-webpublico.png',
             'link' => 'http://webpublico.riobranco.ac.gov.br',
             'ocultar' => 0,
-            'icones_categorias_id' => 2,
+            'icones_categorias_id' => 4,
         ]);
         Icones::create([
             'dinamico' =>2,
@@ -120,7 +120,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-portal-transparencia.png',
             'link' => 'http://transparencia.riobranco.ac.gov.br',
             'ocultar' => 0,
-            'icones_categorias_id' => 3,
+            'icones_categorias_id' => null,
         ]);
         Icones::create([
             'dinamico' => 1,
@@ -129,7 +129,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-aplicativo.png',
             'link' => '/submenu/13',
             'ocultar' => 0,
-            'icones_categorias_id' => 2,
+            'icones_categorias_id' => null,
         ]);
         Icones::create([
             'dinamico' => 2,
@@ -138,7 +138,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-portal-transporte.png',
             'link' => 'http://transportes.riobranco.ac.gov.br',
             'ocultar' => 0,
-            'icones_categorias_id' => 3,
+            'icones_categorias_id' => null,
         ]);
         Icones::create([
             'dinamico' => 2,
@@ -147,7 +147,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-portal-transporte.png',
             'link' => 'http://transportes.riobranco.ac.gov.br',
             'ocultar' => 0,
-            'icones_categorias_id' => 3,
+            'icones_categorias_id' => null,
         ]);
         Icones::create([
             'dinamico' => '2',
@@ -156,7 +156,7 @@ class IconesTableSeeder extends Seeder
             'caminho' => '/images/icones/icon-email.png',
             'link' => 'https://webmail.riobranco.ac.gov.br',
             'ocultar' => 0,
-            'icones_categorias_id' => 1,
+            'icones_categorias_id' => null,
         ]);
     }
 }
