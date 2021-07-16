@@ -1,20 +1,26 @@
-@extends('templates/layout-submenu')
+@extends('templates/layout-principal')
 
-@section('css')@endsection
+@section('css')
+    <link href="assets/css/style.css" rel="stylesheet">
+@endsection
+
 @section('js')@endsection
+
 @section('content')
-<h1 class="titulo_pagina text-capitalize">{{$titulo}}</h1>
 
-<br>
-
-<div class="boxers">
-    @foreach($subIcones as $subIcone)
-        <a href="{{$subIcone['link']}}" title="">
-            <img src="{{$subIcone['caminho']}}" title="" alt=""/>
-            <span class="bx">{{$subIcone['nome']}}</span>
-        </a>
-
-    @endforeach
-</div>
-
+    <section id="services" class="services section-bg">
+        <div class="container">
+            <div class="row">
+            @foreach($subIcones as $subIcone)
+                    <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0" style="padding: 10px;">
+                        <div class="icon-box">
+                            <div class="icon">
+                                <img style="width: 40px" src="{{$subIcone['caminho']}}" title="" alt=""/>
+                            </div>
+                            <h4 class="title"><a href="{{$subIcone['link']}}">{{$subIcone['nome']}}</a></h4></div>
+                    </div>
+            @endforeach
+            </div>
+        </div>
+    </section>
 @endsection

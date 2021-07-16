@@ -1,36 +1,39 @@
-@extends('templates/layout-submenu')
+@extends('templates/layout-principal')
 @section('css')@endsection
 @section('js')@endsection
 @section('content')
-    @section('titulo') Especificações Tecnicas @endsection
-    <h1 class="titulo_pagina text-capitalize">Especificações Tecnicas</h1>
-    <br>
 
-    <table class="table">
-        <thead>
-        <tr class="text-dark">
-            <th class>Arquivo</th>
-            <th class="text-center" width="20%">Ações</th>
-        </tr>
-        </thead>
-        <tbody>
+<section id="services" class="services section-bg">
+    <div class="container">
+        <h2 class="section-title">Especificações Tecnicas</h2>
 
-       @foreach($especificacoes as $especificao)
+        <table class="table" >
+            <thead>
             <tr class="text-dark">
-                <td>
-                    {{$especificao->nome}}
-                </td>
-                <td class="text-center">
-                    <a href="{{$especificao->arquivo}}">
-                        <button class="btn btn-primary">
-                            Download
-                        </button>
-                    </a>
-                </td>
+                <th class>Arquivo</th>
+                <th class="text-center" width="20%">Ações</th>
             </tr>
-            ,
-        @endforeach
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+
+            @foreach($especificacoes as $especificao)
+                <tr class="">
+                    <td>
+                        {{$especificao->nome}}
+                    </td>
+                    <td class="text-center">
+                        <a href="{{$especificao->arquivo}}">
+                            <button class="btn btn-primary">
+                                Download
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
+</section>
+
 @endsection
 

@@ -1656,5 +1656,17 @@ section {
   margin-bottom: 20px;
 }
 
-/* ============================== /ESTILOS DE CONTATOS ============================== */
+#services .table{
+    background-color: white;
+    border-radius: 10px;'
+}
+
+#services .table td, .table th{
+    border-top:none !important;
+    border-bottom: 1px solid #dee2e6;
+    padding-left: 30px;
+
+}
+
+
 

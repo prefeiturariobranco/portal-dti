@@ -11,9 +11,11 @@
 }
 
 .caixa-textura {
-    background-color: white;
+    background: aliceblue;
     padding: 5% 0;
     box-shadow: 13px 3px 8px -9px rgba(0,0,0,0.10), -13px 3px 8px -9px rgba(0,0,0,0.10);
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 @media (min-width: 992px) {
@@ -28,13 +30,13 @@
     display: block;
     width: 60px;
     height: 3px;
-    background: #fec332;
+    background: #356EB1;
     margin-top: 2px;
 
 }
 
 .dti-separador p, cite {
-    color: #727376;
+    color: rgba(0,0,0,0.64);
     padding-right: 5px;
 }
 
@@ -51,8 +53,6 @@
 .btn-primary {
     margin-top: 5px;
     color: #fff;
-    border-color: #fec332;
-    background: #fec332;
 }
 
 .dti-form > .form-control:first-child {
@@ -88,6 +88,7 @@ input {
     position: relative;
     width: 100%;
     z-index: 1;
+    margin-bottom: 10px;
 }
 
 .input100 {

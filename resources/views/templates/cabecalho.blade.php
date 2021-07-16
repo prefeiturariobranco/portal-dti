@@ -2,12 +2,12 @@
     <div class="container d-flex">
 
         <div class="logo mr-auto">
-            <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+            <a href={{'/'}}><img src={{ URL::asset('assets/img/logo.png') }} alt="" class="img-fluid"></a>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li class="active"><a href="index.html">Noticias</a></li>
+                <li class="active"><a href="">Noticias</a></li>
                 <li><a href="#services">Serviços</a></li>
                 <li><a href="tutoriais.html">Tutoriais</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>

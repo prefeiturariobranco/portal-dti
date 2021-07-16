@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')
+    <!-- Carousel Section -->
     <section id="hero">
         <div class="hero-container">
             <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -18,7 +19,7 @@
                     @foreach($postagem as $key => $slider)
                         <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
                             <a href="/novidade/{{$slider->id}}">
-                                <img src="/storage/banner/{{$slider->imagem}}" height="100%" alt="...">
+                                <img src="/storage/images{{$slider->imagem}}" height="100%" alt="...">
                             </a>
                         </div>
                     @endforeach
@@ -36,8 +37,11 @@
             </div>
         </div>
     </section>
+    <!-- End Carousel Section -->
 
     <main id="main">
+
+        <!-- Serviços Section -->
         <section id="services" class="services section-bg">
             <div class="container">
                 <?php $contarCategoria = 1; ?>
@@ -74,7 +78,9 @@
 
             </div>
         </section>
+        <!-- End Serviços Section -->
 
+        <!-- Tutoriais Section -->
         <section class="more-services section-bg">
             <div class="container">
 
@@ -95,7 +101,7 @@
                                 @endisset
                                 <div class="card-body">
                                     <a href="/tutorial/{{ $tutorial->id }}">
-                                        <h4 class="card-title">{{ $tutorial->titulo }}</h4>
+                                        <h5 class="card-title">{{ $tutorial->titulo }}</h5>
                                     </a>
                                     <h6 class="card-subtitle">postado em {{ $tutorial->created_at }}</h6>
                                     <p class="card-text mt-3">{{ substr(strip_tags($tutorial->conteudo), 0, 200 ) }}
@@ -108,10 +114,79 @@
                         @endif
                     @endforeach
                 </div>
+            </div>
+        </section>
+        <!-- End More Services Section -->
 
+        <!-- ======= Our Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio section-bg">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Nosso Portfolio</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="portfolio-flters">
+                            <li data-filter="*" class="filter-active">Todos</li>
+                            <li data-filter=".filter-app">App</li>
+                            <li data-filter=".filter-web">Web</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row portfolio-container">
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/portfolio/meuonibus.png" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/meuonibus.png" data-gall="portfolioGallery" class="venobox"
+                                   title="App 1"><i class="bx bx-plus"></i></a>
+                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/portfolio/alertario.jpeg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Web 3</h4>
+                                <p>Web</p>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/alertario.jpeg" data-gall="portfolioGallery" class="venobox"
+                                   title="Web 3"><i class="bx bx-plus"></i></a>
+                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/portfolio/zonaazul.png" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 2</h4>
+                                <p>App</p>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/zonaazul.png" data-gall="portfolioGallery" class="venobox"
+                                   title="App 2"><i class="bx bx-plus"></i></a>
+                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
-        </section><!-- End More Services Section -->
+        </section><!-- End Our Portfolio Section -->
 
     </main>
 @endsection
