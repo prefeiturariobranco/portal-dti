@@ -630,7 +630,7 @@ section {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background: #356EB1;
+  background: #c7e6fd;
   transition: all 0.3s ease-in-out;
 }
 
@@ -1675,6 +1675,11 @@ section {
 }
 
 .services .btn:hover {
+    color: #fff;
+    background: #356EB1;
+}
+
+.services .btn:active{
     color: #fff;
     background: #356EB1;
 }

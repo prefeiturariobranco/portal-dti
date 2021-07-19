@@ -7,25 +7,19 @@
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li class="active"><a href="{{'/novidades'}}">Noticias</a></li>
-                <li><a href="#services">Serviços</a></li>
+                <li><a href="{{'/'}}">Inicio</a></li>
+                <li><a href="{{'/novidades'}}">Novidades</a></li>
                 <li><a href="{{'/tutoriais'}}">Tutoriais</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li class="drop-down"><a href="">Drop Down</a>
+                <li class="drop-down"><a href="">Mais</a>
                     <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li class="drop-down"><a href="#">Drop Down 2</a>
+                        <li><a href="#">E-mail Intitucional</a></li>
+                        <li class="drop-down"><a href="#">Portais</a>
                             <ul>
-                                <li><a href="#">Deep Drop Down 1</a></li>
-                                <li><a href="#">Deep Drop Down 2</a></li>
-                                <li><a href="#">Deep Drop Down 3</a></li>
-                                <li><a href="#">Deep Drop Down 4</a></li>
-                                <li><a href="#">Deep Drop Down 5</a></li>
+                                <li><a href="#">Cidadão</a></li>
+                                <li><a href="#">Transparencia</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Drop Down 3</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
-                        <li><a href="#">Drop Down 5</a></li>
                     </ul>
                 </li>
                 <li><a href="{{'/login'}}">Intranet</a></li>

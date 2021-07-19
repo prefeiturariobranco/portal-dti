@@ -19,7 +19,7 @@
                     @foreach($postagem as $key => $slider)
                         <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
                             <a href="/novidade/{{$slider->id}}">
-                                <img src="/storage/images{{$slider->imagem}}" height="100%" alt="...">
+                                <img src="/storage/banner/{{$slider->imagem}}" width="100%" alt="...">
                             </a>
                         </div>
                     @endforeach
@@ -184,6 +184,41 @@
 
             </div>
         </section><!-- End Our Portfolio Section -->
+
+
+        <!-- ======= F.A.Q Section ======= -->
+        <section id="faq" class="faq section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <a href="{{'/perguntas'}}"><h2>PERGUNTAS FREQUENTES</h2></a>
+
+                </div>
+
+                <?php $contarPerguntas = 1; ?>
+                @foreach($perguntas as $pergunta)
+                    @if($contarPerguntas <= 5)
+                <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
+                    <li>
+                        <button class="btn text-left col-md-12" type="button" data-toggle="collapse"
+                                data-target="#collapseExample{{$pergunta->id}}"
+                                aria-expanded="true" aria-controls="collapseExample{{$pergunta->id}}">
+                            <i class="fa fa-plus"></i>
+                            <span class="pergunta-titulo">{{$pergunta->titulo}}</span>
+                        </button>
+                        <div class="collapse" id="collapseExample{{$pergunta->id}}">
+                            <div class="card card-body pergunta-fundo">
+                                <p>{{$pergunta->conteudo}}</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                        <?php $contarPerguntas++; ?>
+                    @endif
+                @endforeach
+
+            </div>
+        </section><!-- End F.A.Q Section -->
 
     </main>
 @endsection

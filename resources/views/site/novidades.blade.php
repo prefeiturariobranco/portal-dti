@@ -4,13 +4,16 @@
 
 @section('content')
     <section id="services" class="services section-bg">
-        <div class="container">
+        <div class="container" >
+            <div class="section-title">
+                <h2>Novidades</h2>
+            </div>
             @if (empty($postagens[0]))
                 <p class="card-text mt-3">Nenhum Resultado Encontrado Busque Novamente</p>
             @endif
 
             @foreach($postagens as $postagem)
-                <div class="row">
+                <div class="row" style="margin-bottom: 20px">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">

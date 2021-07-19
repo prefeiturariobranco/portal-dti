@@ -1,9 +1,10 @@
-@extends('templates/layout-submenu')
+@extends('templates/layout-principal')
 @section('css')@endsection
 @section('js')@endsection
 
 @section('content')
-    <div class="content__inner container">
+    <section id="services" class="services section-bg">
+        <div class="container" >
 
         <div class="row">
             <div class="co-lg-12">
@@ -15,13 +16,17 @@
                         <div class="mt-3">
                             <p>{{strip_tags($novidade->conteudo)}}</p>
                         </div>
-                        @if(!is_null($novidade->url_documento))
-                            <a href="/storage/pdf/{{$novidade->url_documento}}" target="_blank" style="color: blue">Clique aqui para baixar o anexo.</a>
-                        @endif
+                        <div class="row justify-content-center">
+                            @if(!is_null($novidade->url_documento))
+                                <a href="/storage/pdf/{{$novidade->url_documento}}" class="btn" >Baixar o anexo</a>
+                            @endif
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
+    </section>
 @endsection
