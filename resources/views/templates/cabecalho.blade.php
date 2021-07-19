@@ -7,9 +7,9 @@
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li class="active"><a href="">Noticias</a></li>
+                <li class="active"><a href="{{'/novidades'}}">Noticias</a></li>
                 <li><a href="#services">Serviços</a></li>
-                <li><a href="tutoriais.html">Tutoriais</a></li>
+                <li><a href="{{'/tutoriais'}}">Tutoriais</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li class="drop-down"><a href="">Drop Down</a>
                     <ul>
@@ -28,7 +28,7 @@
                         <li><a href="#">Drop Down 5</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html">Contatos</a></li>
+                <li><a href="{{'/login'}}">Intranet</a></li>
 
             </ul>
         </nav><!-- .nav-menu -->

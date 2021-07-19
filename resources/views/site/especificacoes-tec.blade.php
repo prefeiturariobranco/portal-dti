@@ -23,7 +23,7 @@
                     </td>
                     <td class="text-center">
                         <a href="{{$especificao->arquivo}}">
-                            <button class="btn btn-primary">
+                            <button class="btn">
                                 Download
                             </button>
                         </a>

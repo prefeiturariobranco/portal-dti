@@ -1645,7 +1645,6 @@ section {
   font-weight: bold;
 }
 
-
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   color: #356EB1;
   background-color: #fff;
@@ -1668,5 +1667,16 @@ section {
 
 }
 
+
+.services .btn {
+    border-radius: 50px;
+    padding: 4px 30px 6px 30px;
+    border: 2px solid #356EB1;
+}
+
+.services .btn:hover {
+    color: #fff;
+    background: #356EB1;
+}
 
 

@@ -57,15 +57,13 @@
                                         @else
                                             <a href="{{$icons['link']}}" target="_blank">
                                                 @endif
-                                                <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0"
-                                                     style="padding: 10px;">
+                                                <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0" style="padding: 10px;">
                                                     <div class="icon-box">
                                                         <div class="icon">
                                                             <img style="width: 40px" src="{{$icons['caminho']}}"
                                                                  title="" alt=""/>
                                                         </div>
-                                                        <h4 class="title"><a
-                                                                href="{{$icons['link']}}">{{$icons['nome']}}</a></h4>
+                                                        <h4 class="title"><a href="{{$icons['link']}}">{{$icons['nome']}}</a></h4>
                                                     </div>
                                                 </div>
                                             </a>
@@ -83,9 +81,8 @@
         <!-- Tutoriais Section -->
         <section class="more-services section-bg">
             <div class="container">
-
                 <div class="section-title">
-                    <h2>Tutoriais</h2>
+                    <a href="{{'/tutoriais'}}"><h2>Tutoriais</h2></a>
                 </div>
                 <div class="row">
                     <?php $contarTutorial = 1; ?>
@@ -95,8 +92,7 @@
                             <div class="card">
                                 @isset($tutorial->imagem)
                                     <div class="carousel-item active">
-                                        <img src="{{asset('images/'.$tutorial->imagem)}}" class="d-block w-100"
-                                             alt="...">
+                                        <img src="{{asset('images/'.$tutorial->imagem)}}" class="d-block w-100" alt="...">
                                     </div>
                                 @endisset
                                 <div class="card-body">
@@ -104,15 +100,16 @@
                                         <h5 class="card-title">{{ $tutorial->titulo }}</h5>
                                     </a>
                                     <h6 class="card-subtitle">postado em {{ $tutorial->created_at }}</h6>
-                                    <p class="card-text mt-3">{{ substr(strip_tags($tutorial->conteudo), 0, 200 ) }}
-                                        ...</p>
-                                    <a href="/tutorial/{{ $tutorial->id }}" title="" class="btn ">Mostrar Mais</a>
+                                    <p class="card-text mt-3">{{ substr(strip_tags($tutorial->conteudo), 0, 200 ) }}...</p>
                                 </div>
                             </div>
                         </div>
                         <?php $contarTutorial++; ?>
                         @endif
                     @endforeach
+                    <div class="container-fluid" style="text-align: center">
+                        <a href="{{'/tutoriais'}}" title="" class="btn ">Mostrar Mais</a>
+                    </div>
                 </div>
             </div>
         </section>
