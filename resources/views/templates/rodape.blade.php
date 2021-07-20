@@ -23,21 +23,21 @@
                 <div class="col-lg-4 col-md-4 footer-links">
                     <h4>Links Uteis</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Webpublico</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Sistemas</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Software Livre</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">E-mail Institucional</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{'/'}}">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="http://webpublico.riobranco.ac.gov.br/faces/login.xhtml">Webpublico</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{'/submenu/10'}}">Sistemas</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{'/submenu/8'}}">Software Livre</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://webmail.riobranco.ac.gov.br">E-mail Institucional</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-2 footer-links">
                     <h4>Nossos Serviços</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#"></a>Intranet</li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{'/login'}}"></a>Intranet</li>
                         <li><i class="bx bx-chevron-right"></i> <a href="#">Nossos Sistemas</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Perguntas Frequentes</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Tutoriais</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="{{'/perguntas'}}">Perguntas Frequentes</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{'/tutoriais'}}">Tutoriais</a></li>
                     </ul>
                 </div>
 

@@ -7,7 +7,9 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>@yield('title')</title>
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
+    <link rel="icon" href="{{ URL::asset('favicon.ico') }}" type="image/x-icon"/>
+
+
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
