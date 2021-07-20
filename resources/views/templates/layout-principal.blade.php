@@ -26,9 +26,8 @@
 
     <link  href="/css/login.css" rel="stylesheet">
 
-    @section('css')
-    @endsection
 
+    @stack('css')
 </head>
 
 <body>

@@ -10,7 +10,7 @@
                 <li><a href="{{'/'}}">Inicio</a></li>
                 <li><a href="{{'/novidades'}}">Novidades</a></li>
                 <li><a href="{{'/tutoriais'}}">Tutoriais</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="{{'/contatos'}}">Contatos</a></li>
                 <li class="drop-down"><a href="">Mais</a>
                     <ul>
                         <li><a href="#">E-mail Intitucional</a></li>

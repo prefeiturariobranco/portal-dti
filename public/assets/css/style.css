@@ -1573,86 +1573,15 @@ section {
 # Footer
 --------------------------------------------------------------*/
 
-.contatos #contatos-flters {
-  padding: 0;
-  margin: 0 auto 35px auto;
-  list-style: none;
-  text-align: center;
-  background: #fff;
-  border-radius: 50px;
-  padding: 2px 15px;
-}
-
-.contatos #contatos-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 15px 8px 15px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #334240;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-
-.contatos #contatos-flters li:hover, .contatos #contatos-flters li.filter-active {
-  color: #356EB1;
-
-}
-
-.contatos #contatos-flters li:last-child {
-  margin-right: 0;
-}
-
-.nome-departamento{
-  font-size: 20px;
-}
-
-.contatos .contato {
-  padding: 20px;
-}
-
-.contatos .filter-ti{
-  display: flex;
-  justify-content: center
-}
-
-/* ============================== ESTILOS DE CONTATOS ============================== */
-
-.departamento p {
-  color: #6c757d;
-}
-
-.departamento .contato {
-  margin-top: 4%;
-  padding-bottom: 2%;
-  border-bottom: 2px solid #ddd;
-}
-
-.departamento .contato p,
-.departamento .contato i {
-  line-height: 80%;
-}
-
-.departamento .nome-departamento {
-  font-size: 150%;
-  text-transform: uppercase;
-}
-
-.departamento .contato .cargo {
-  font-weight: bold;
-}
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  color: #356EB1;
-  background-color: #fff;
+    color: #356EB1;
+    background-color: #fff;
 }
 
 .nav-link{
-  font-size: 20px;
-  margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 #services .table{
@@ -1666,7 +1595,6 @@ section {
     padding-left: 30px;
 
 }
-
 
 .services .btn {
     border-radius: 50px;
@@ -1683,5 +1611,3 @@ section {
     color: #fff;
     background: #356EB1;
 }
-
-

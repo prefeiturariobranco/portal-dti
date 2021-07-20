@@ -8,6 +8,7 @@ use App\Model\Contatos;
 use App\Model\Departamentos;
 use App\Model\Icones;
 use App\Model\Icones_categorias;
+use App\Model\Secretarias;
 use Illuminate\Http\Request;
 
 class ContatosController extends Controller
@@ -26,6 +27,7 @@ class ContatosController extends Controller
             'categorias' => Icones_categorias::where('ocultar', 0)->get(),
             'titulo' => '',
             'departamentos' => Departamentos::all(),
+            'secretarias' => Secretarias::all(),
             'contatos' => Contatos::all(),
         ]);
 
