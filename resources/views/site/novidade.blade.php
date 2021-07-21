@@ -6,8 +6,8 @@
     <section id="services" class="services section-bg">
         <div class="container" >
 
-        <div class="row">
-            <div class="co-lg-12">
+        <div class="row" style="place-content: center">
+            <div class="col-md-10">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">{{$novidade->titulo}}</h4>

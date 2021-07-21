@@ -13,8 +13,8 @@
             @endif
 
             @foreach($postagens as $postagem)
-                <div class="row" style="margin-bottom: 20px">
-                    <div class="col-lg-12">
+                <div class="row" style="margin-bottom: 20px; place-content: center">
+                    <div class="col-lg-10">
                         <div class="card">
                             <div class="card-body">
                                 <a href="/novidade/{{$postagem->id}}">

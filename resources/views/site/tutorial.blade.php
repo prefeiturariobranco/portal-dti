@@ -5,8 +5,8 @@
 @section('content')
     <section id="services" class="services section-bg">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
+            <div class="row" style="place-content: center">
+                <div class="col-lg-10">
                     <div class="card">
 
                         <div class="card-body">

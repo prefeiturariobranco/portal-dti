@@ -11,8 +11,8 @@
             </div>
             @foreach($tutoriais as $tutorial)
 
-                <div class="row">
-                    <div class="col-lg-12" style="margin-bottom: 20px">
+                <div class="row" style="place-content: center">
+                    <div class="col-lg-10" style="margin-bottom: 20px">
                         <div class="card">
                             <div class="card-body">
                                 <a href="/tutorial/{{ $tutorial->id }}">
