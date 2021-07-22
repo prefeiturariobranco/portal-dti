@@ -1,4 +1,5 @@
 @extends('templates/layout-principal')
+
 @section('css')
     <link href="assets/css/novo_layout.css" rel="stylesheet">
 @endsection
@@ -57,18 +58,20 @@
                                         @else
                                             <a href="{{$icons['link']}}" target="_blank">
                                                 @endif
-                                                <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0" style="padding: 10px;">
+                                                <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0"
+                                                     style="padding: 10px;">
                                                     <div class="icon-box">
                                                         <div class="icon">
                                                             <img style="width: 40px" src="{{$icons['caminho']}}"
                                                                  title="" alt=""/>
                                                         </div>
-                                                        <h4 class="title"><a href="{{$icons['link']}}">{{$icons['nome']}}</a></h4>
+                                                        <h4 class="title"><a
+                                                                href="{{$icons['link']}}">{{$icons['nome']}}</a></h4>
                                                     </div>
                                                 </div>
                                             </a>
                                     </a>
-                            @endforeach
+                                    @endforeach
                         </div>
                     @endif
                     <?php $contarCategoria++; ?>
@@ -88,23 +91,25 @@
                     <?php $contarTutorial = 1; ?>
                     @foreach($tutoriais as $tutorial )
                         @if($contarTutorial <= 3)
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
-                            <div class="card">
-                                @isset($tutorial->imagem)
-                                    <div class="carousel-item active">
-                                        <img src="{{asset('images/'.$tutorial->imagem)}}" class="d-block w-100" alt="...">
+                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+                                <div class="card">
+                                    @isset($tutorial->imagem)
+                                        <div class="carousel-item active">
+                                            <img src="{{asset('images/'.$tutorial->imagem)}}" class="d-block w-100"
+                                                 alt="...">
+                                        </div>
+                                    @endisset
+                                    <div class="card-body">
+                                        <a href="/tutorial/{{ $tutorial->id }}">
+                                            <h5 class="card-title">{{ $tutorial->titulo }}</h5>
+                                        </a>
+                                        <h6 class="card-subtitle">postado em {{ $tutorial->created_at }}</h6>
+                                        <p class="card-text mt-3">{{ substr(strip_tags($tutorial->conteudo), 0, 200 ) }}
+                                            ...</p>
                                     </div>
-                                @endisset
-                                <div class="card-body">
-                                    <a href="/tutorial/{{ $tutorial->id }}">
-                                        <h5 class="card-title">{{ $tutorial->titulo }}</h5>
-                                    </a>
-                                    <h6 class="card-subtitle">postado em {{ $tutorial->created_at }}</h6>
-                                    <p class="card-text mt-3">{{ substr(strip_tags($tutorial->conteudo), 0, 200 ) }}...</p>
                                 </div>
                             </div>
-                        </div>
-                        <?php $contarTutorial++; ?>
+                            <?php $contarTutorial++; ?>
                         @endif
                     @endforeach
                     <div class="container-fluid" style="text-align: center">
@@ -127,98 +132,68 @@
                     <div class="col-lg-12 d-flex justify-content-center">
                         <ul id="portfolio-flters">
                             <li data-filter="*" class="filter-active">Todos</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-web">Web</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="row portfolio-container">
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/meuonibus.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                            </div>
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/meuonibus.png" data-gall="portfolioGallery" class="venobox"
-                                   title="App 1"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
+                    @foreach($aplicativos as $aplicativo)
                     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                         <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/alertario.jpeg" class="img-fluid" alt="">
+                            @isset($aplicativo->imagem)
+                                <img src="{{asset('images/'.$aplicativo->imagem)}}" class="img-fluid" alt="">
                             <div class="portfolio-info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
+                                <h4>{{$aplicativo->titulo}}</h4>
                             </div>
                             <div class="portfolio-links">
-                                <a href="assets/img/portfolio/alertario.jpeg" data-gall="portfolioGallery" class="venobox"
-                                   title="Web 3"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                <a href="{{asset('images/'.$aplicativo->imagem)}}" data-gall="portfolioGallery"
+                                   class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
+                                <a href="{{$aplicativo->url}}" title="More Details"><i class="bx bx-link"></i></a>
                             </div>
+                            @endisset
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/zonaazul.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
-                            </div>
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/zonaazul.png" data-gall="portfolioGallery" class="venobox"
-                                   title="App 2"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
-
             </div>
-        </section><!-- End Our Portfolio Section -->
+        </section>
+        <!-- End Our Portfolio Section -->
 
 
-        <!-- ======= F.A.Q Section ======= -->
+        <!-- ======= Perguntas Section ======= -->
         <section id="faq" class="faq section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
                     <a href="{{'/perguntas'}}"><h2>PERGUNTAS FREQUENTES</h2></a>
-
                 </div>
 
                 <?php $contarPerguntas = 1; ?>
                 @foreach($perguntas as $pergunta)
                     @if($contarPerguntas <= 5)
-                <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
-                    <li>
-                        <button class="btn text-left col-md-12" type="button" data-toggle="collapse"
-                                data-target="#collapseExample{{$pergunta->id}}"
-                                aria-expanded="true" aria-controls="collapseExample{{$pergunta->id}}">
-                            <i class="fa fa-plus"></i>
-                            <span class="pergunta-titulo">{{$pergunta->titulo}}</span>
-                        </button>
-                        <div class="collapse" id="collapseExample{{$pergunta->id}}">
-                            <div class="card card-body pergunta-fundo">
-                                <p>{{$pergunta->conteudo}}</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
+                            <li>
+                                <button class="btn text-left col-md-12" type="button" data-toggle="collapse"
+                                        data-target="#collapseExample{{$pergunta->id}}"
+                                        aria-expanded="true" aria-controls="collapseExample{{$pergunta->id}}">
+                                    <i class="fa fa-plus"></i>
+                                    <span class="pergunta-titulo">{{$pergunta->titulo}}</span>
+                                </button>
+                                <div class="collapse" id="collapseExample{{$pergunta->id}}">
+                                    <div class="card card-body pergunta-fundo">
+                                        <p>{{$pergunta->conteudo}}</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                         <?php $contarPerguntas++; ?>
                     @endif
                 @endforeach
-
             </div>
-        </section><!-- End F.A.Q Section -->
+        </section>
+        <!-- End Perguntas Section -->
 
     </main>
 @endsection

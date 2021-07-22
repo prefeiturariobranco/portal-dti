@@ -101,6 +101,11 @@ Route::post('/painel/icones/alterar', 'Dashboard\Icones\EditarIconesController@u
 #Novidade
 Route::get('/painel/novidades', 'Dashboard\NovidadesController@index')->middleware('logado');
 
+#Aplicativos
+Route::get('/painel/aplicativos', 'Dashboard\Aplicativos\ListarAplicativosController@index')->middleware('logado');
+Route::get('/painel/aplicativos/cadastro', 'Dashboard\Aplicativos\CadastrarAplicativosController@index')->middleware('logado');
+Route::post('/painel/aplicativos/salvar', 'Dashboard\Aplicativos\CadastrarAplicativosController@store')->middleware('logado');
+
 #Categorias
 Route::get('/painel/categorias', 'Dashboard\Categorias\ListarCategoriasController@index')->middleware('logado');
 Route::get('/painel/categorias/cadastro', 'Dashboard\Categorias\CadastrarCategoriasController@index')->middleware('logado');

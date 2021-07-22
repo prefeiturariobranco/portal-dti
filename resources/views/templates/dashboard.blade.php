@@ -300,13 +300,22 @@
                                             </a>
                                         </li>
                                     </ul>
-                                <li>
+                                </li>
+                                 <li>
                                     <a href="/painel/planejamentos" class="waves-effect">
                                         <i class="far fa-calendar-alt"></i>
                                         <span>Planejamento</span>
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="/painel/aplicativos" class="waves-effect">
+                                        <i class="fas fa-archive"></i>
+                                        <span>Aplicativos</span>
+                                    </a>
                                 </li>
+
+
+                            </li>
                                 <!-- Fim infra -->
 
 
