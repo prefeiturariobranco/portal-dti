@@ -7,8 +7,8 @@
                 <div class="col-lg-4 col-md-4 footer-info">
                     <h3>Portal DTI</h3>
                     <p>
-                        A108 Adam Street <br>
-                        NY 535022, USA<br><br>
+                        R. Goldwasser Santos - Bosque <br>
+                        Rio Branco - AC, 69908-400<br><br>
                         <strong>Phone:</strong> +1 5589 55488 55<br>
                         <strong>Email:</strong> info@example.com<br>
                     </p>
@@ -35,7 +35,6 @@
                     <h4>Nossos Serviços</h4>
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/login'}}"></a>Intranet</li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{'/submenu/13'}}">Nossos Sistemas</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/perguntas'}}">Perguntas Frequentes</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/tutoriais'}}">Tutoriais</a></li>
                     </ul>
