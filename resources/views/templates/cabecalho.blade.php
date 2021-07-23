@@ -19,6 +19,8 @@
                                 <li><a href="http://portalcidadao.riobranco.ac.gov.br/todos-servicos/">Cidadão</a></li>
                                 <li><a href="http://transparencia.riobranco.ac.gov.br">Transparencia</a></li>
                             </ul>
+                        <li><a href="http://ponto.riobranco.ac.gov.br/">Ponto Eletrônico</a></li>
+
                         </li>
                     </ul>
                 </li>

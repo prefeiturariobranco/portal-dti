@@ -9,8 +9,8 @@
                     <p>
                         R. Goldwasser Santos - Bosque <br>
                         Rio Branco - AC, 69908-400<br><br>
-                        <strong>Phone:</strong> +1 5589 55488 55<br>
-                        <strong>Email:</strong> info@example.com<br>
+                        <strong>Telefone:</strong><br>
+                        <strong>Email:</strong> dti@riobranco.ac.gov.br<br>
                     </p>
                     <div class="social-links mt-3">
                         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -34,9 +34,10 @@
                 <div class="col-lg-4 col-md-2 footer-links">
                     <h4>Nossos Serviços</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{'/login'}}"></a>Intranet</li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{'/login'}}">Intranet</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/perguntas'}}">Perguntas Frequentes</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/tutoriais'}}">Tutoriais</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="http://ponto.riobranco.ac.gov.br/">Ponto Eletrônico</a></li>
                     </ul>
                 </div>
 
