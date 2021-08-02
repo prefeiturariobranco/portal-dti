@@ -1,26 +1,33 @@
-@extends('templates/layout-submenu')
+@extends('templates/layout-principal')
 
 @section('css')@endsection
 
 @section('content')
 
-<div class="content__inner container">
-    @foreach($tutoriais as $tutorial)
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="/tutorial/{{ $tutorial->id }}">
-                            <h4 class="card-title">{{ $tutorial->titulo }}</h4>
-                        </a>
-                        <h6 class="card-subtitle">postado em {{ $tutorial->created_at }}</h6>
-                        <p class="card-text mt-3">{{ substr(strip_tags($tutorial->conteudo), 0, 200 ) }} ...</p>
-                        <a href="/tutorial/{{ $tutorial->id }}" title="" class="btn btn-primary">Mostrar Mais</a>
+    <section id="services" class="services section-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tutoriais</h2>
+            </div>
+            @foreach($tutoriais as $tutorial)
+
+                <div class="row" style="place-content: center">
+                    <div class="col-lg-10" style="margin-bottom: 20px">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="/tutorial/{{ $tutorial->id }}">
+                                    <h4 class="card-title">{{ $tutorial->titulo }}</h4>
+                                </a>
+                                <h6 class="card-subtitle">postado em {{ $tutorial->created_at }}</h6>
+                                <p class="card-text mt-3">{{ substr(strip_tags($tutorial->conteudo), 0, 200 ) }} ...</p>
+                                <a href="/tutorial/{{ $tutorial->id }}" title="" class="btn">Mostrar Mais</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
         </div>
-    @endforeach
+    </section>
 
 </div>
 

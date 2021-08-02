@@ -8,7 +8,16 @@ use Illuminate\Support\Facades\DB;
 class Icones extends Model
 {
     //
-    protected $fillable = ['id', 'dinamico', 'nome', 'subtitulo', 'caminho', 'link', 'ocultar', 'icones_categorias_id'];
+    protected $fillable = [
+        'id',
+        'dinamico',
+        'nome',
+        'subtitulo',
+        'caminho',
+        'link',
+        'ocultar',
+        'icones_categorias_id'
+    ];
     protected $table = 'icones';
 
     public function buscar(){

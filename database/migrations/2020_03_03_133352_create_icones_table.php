@@ -21,7 +21,7 @@ class CreateIconesTable extends Migration
             $table->string('caminho', 100);
             $table->string('link', 1024);
             $table->string('ocultar', 100)->default(0);
-            $table->unsignedBigInteger('icones_categorias_id');
+            $table->unsignedBigInteger('icones_categorias_id')->nullable();
             $table->foreign('icones_categorias_id')->references('id')->on('icones_categorias')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });

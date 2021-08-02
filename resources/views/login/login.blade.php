@@ -6,11 +6,11 @@
 
 @section('js')@endsection
 @section('content')
-    <div class="caixa-textura">
+    <div class="caixa-textura" style="margin-top: 50px; margin-bottom: 50px;">
         <div class="dti-container-login">
             <div class="row" style="align-items: center;">
                 <div class="col-md-6 dti-separador">
-                    <p style="line-height: 100%;">BEM-VINDO A <br> NOSSA INTRANET!</p>
+                    <p style="line-height: 100%; margin-left: 0px">BEM-VINDO A <br> NOSSA INTRANET!</p>
                     <cite>Essa área é exclusiva para os <br> setores e departamento de Tecnologia.</cite>
                 </div>
                 <div class="col-md-6 dti-login">
@@ -31,8 +31,8 @@
 							    <i class="fa fa-lock"></i>
 						    </span>
                         </div>
-                        <div>
-                            <strong class="text-danger">{{$erro_msg}}<!--AQUI FICARIA O ERRO--></strong>
+                        <div style="text-align-last: center;">
+                            <p class="text-danger">{{$erro_msg}}<!--AQUI FICARIA O ERRO--></p>
                         </div>
 
                         <div>
@@ -40,9 +40,6 @@
                         </div>
 
                         <br>
-                        <div class="nao_tenho_acesso">
-                            <a class="naotenhoacesso" title="Não tenho acesso?" href="#"> Não tenho acesso, e agora?</a>
-                        </div>
 
                     </form>
 

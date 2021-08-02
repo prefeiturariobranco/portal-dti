@@ -32,7 +32,7 @@ class CadastrarTutoriaisController extends Controller
     public function store(TutoriaisFormRequest $request)
     {
         //
-//        dd($request->all());
+
         $tutoriais = Tutoriais::create([
             'titulo' => $request->post('titulo'),
             'conteudo' => $request->post('conteudo'),

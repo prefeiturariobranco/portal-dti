@@ -46,11 +46,11 @@ class DashboardController extends Controller
 
         $contadorTotalEquipe = $configEquipe->num_comissionados + $configEquipe->num_terceirizados + $configEquipe->num_estagiarios + $configEquipe->num_efetivos;
         $contadorUsuarios = $usuario->count();
-        $contadorAcessoDoDia = Contadores_painel::where('data_criacao', date('Y-m-d'))->count();
+//        $contadorAcessoDoDia = Contadores_painel::where('data_criacao', date('Y-m-d'))->count();
 
        return view('painel/index', [
            'contadorSite' => Contadores_site::all()->count(),
-           'contadorPainel' => Contadores_painel::all()->count(),
+//           'contadorPainel' => Contadores_painel::all()->count(),
            'estatisticasWebPublico' => Sistemas_Webpublico::all()->last(),
            'infraConfig' => Infra_config::all()->last(),
            'investTotalPMAT' => $investTotalPMAT,
@@ -61,7 +61,7 @@ class DashboardController extends Controller
            'contadorContratos' => $contadorContratos,
            'configEquipe' => $configEquipe,
            'contadorTotalEquipe' => $contadorTotalEquipe,
-           'contadorAcessosDia' => $contadorAcessoDoDia
+//           'contadorAcessosDia' => $contadorAcessoDoDia
        ]);
 
     }

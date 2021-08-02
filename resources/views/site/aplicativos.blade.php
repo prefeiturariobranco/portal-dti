@@ -1,5 +1,6 @@
 @extends('templates/layout-submenu')
-@section('css')@endsection
+@section('css')
+@endsection
 @section('js')@endsection
 
 @section('content')

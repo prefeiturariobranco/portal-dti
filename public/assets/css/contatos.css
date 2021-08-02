@@ -1,0 +1,123 @@
+.main{
+    background-color: #f2f5f4;
+}
+
+.container .contatos{
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #f2f5f4;
+}
+
+.contatos .row{
+    display: flex;
+    padding-left: 0px;
+}
+
+.contatos .sidenav{
+    margin-top: 10px;
+    background-color: white;
+    margin-right: 15px;
+}
+
+.contatos .sidenav .nav {
+    padding-top: 20px;
+    margin: 20px;
+}
+
+.contatos .departamento{
+    background-color: white;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.contatos .sidenav .nav-link{
+    color: #1b1e21;
+}
+
+.contatos .sidenav .nav-link:hover, .contatos .sidenav .active{
+    border-left: 5px solid #356EB1;
+}
+
+.contatos .departamento .contato .bx{
+    color: #356EB1;
+}
+
+.contatos .departamento .contato .nome-contato{
+    font-size: 18px;
+}
+
+
+.departamento p {
+    color: #6c757d;
+}
+
+.departamento .contato {
+    padding-bottom: 2%;
+    border-bottom: 2px solid #ddd;
+}
+
+.departamento .contato p,
+.departamento .contato i {
+    line-height: 80%;
+}
+
+
+.departamento .nome-departamento {
+    font-size: 150%;
+    color: #356EB1;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+.departamento .contato .cargo {
+    font-weight: bold;
+}
+
+.contatos #contatos-flters {
+    padding: 0;
+    margin: 0 auto 35px auto;
+    list-style: none;
+    text-align: center;
+    background: #fff;
+    border-radius: 50px;
+    padding: 2px 15px;
+}
+
+.contatos #contatos-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px 8px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #334240;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.contatos #contatos-flters li:hover, .contatos #contatos-flters li.filter-active {
+    color: #356EB1;
+
+}
+
+.contatos #contatos-flters li:last-child {
+    margin-right: 0;
+}
+
+.nome-departamento{
+    font-size: 20px;
+}
+
+.contatos .contato {
+    padding: 20px;
+}
+
+.contatos .filter-ti{
+    display: flex;
+    justify-content: center
+}
+
+
+
