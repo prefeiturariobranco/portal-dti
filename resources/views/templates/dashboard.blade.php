@@ -256,6 +256,12 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="/painel/novidades">
+                                        <i class="far fa-id-card"></i>
+                                        <span>Novidades</span>
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="/painel/investimentos" class="waves-effect">
                                         <i class="fas fa-file-invoice-dollar"></i>
                                         <span>Investimentos </span>
