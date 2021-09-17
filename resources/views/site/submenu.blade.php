@@ -13,7 +13,7 @@
             <div class="row">
             @foreach($subIcones as $subIcone)
                     <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0" style="padding: 10px;">
-                        <div class="icon-box">
+                        <div class="icon-box" onclick=location.href="{{$subIcone['link']}}" style="cursor: pointer">
                             <div class="icon">
                                 <img style="width: 40px" src="{{$subIcone['caminho']}}" title="" alt=""/>
                             </div>
