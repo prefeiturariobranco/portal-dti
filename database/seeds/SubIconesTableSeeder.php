@@ -112,50 +112,11 @@ class SubIconesTableSeeder extends Seeder
             'ocultar' => 0,
             'icones_id' => 8,
         ]);
-        Sub_Icone::create([
-            'nome' => 'Gestão de Materiais',
-            'caminho' => '/images/icones/icon-controle-materiais.png',
-            'link' => 'http://aplicacao.riobranco.ac.gov.br/SISTEMAS/SMAT_RB/',
-            'ocultar' => 0,
-            'icones_id' => 10,
-        ]);
 
         Sub_Icone::create([
-            'nome' => 'Orçamentário e Contábil',
+            'nome' => 'Formulário Webpúblico - Geral dpt Sistemas',
             'caminho' => '/images/icones/icon-solicitacao-acesso.png',
-            'link' => '/pdf/FORMULARIO-CONTABIL.pdf',
-            'ocultar' => 0,
-            'icones_id' => 1,
-        ]);
-
-        Sub_Icone::create([
-            'nome' => 'Recursos Humanos',
-            'caminho' => '/images/icones/icon-solicitacao-acesso.png',
-            'link' => '/pdf/FORMULARIO-RH.pdf',
-            'ocultar' => 0,
-            'icones_id' => 1,
-        ]);
-
-        Sub_Icone::create([
-            'nome' => 'Sistemas Administrativos',
-            'caminho' => '/images/icones/icon-solicitacao-acesso.png',
-            'link' => '/pdf/FORMULARIO-ADMINISTRATIVO.pdf',
-            'ocultar' => 0,
-            'icones_id' => 1,
-        ]);
-
-        Sub_Icone::create([
-            'nome' => 'Tributário',
-            'caminho' => '/images/icones/icon-solicitacao-acesso.png',
-            'link' => '/pdf/FORMULARIO-TRIBUT%c3%81RIO.pdf',
-            'ocultar' => 0,
-            'icones_id' => 1,
-        ]);
-
-        Sub_Icone::create([
-            'nome' => 'Transportes',
-            'caminho' => '/images/icones/icon-solicitacao-acesso.png',
-            'link' => '/pdf/FORMULARIO-RBTRANS.pdf',
+            'link' => 'http://sua.riobranco.ac.gov.br/plugins/formcreator/front/formdisplay.php?id=20',
             'ocultar' => 0,
             'icones_id' => 1,
         ]);

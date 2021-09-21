@@ -1,6 +1,40 @@
 # Changelog
 
-All notable changes to `ignition` will be documented in this file
+All notable changes to `ignition` will be documented in this fil
+
+## 2.13.1 - 2021-09-13
+
+- fix namespace of `SentReports` in facade
+
+## 2.13.0 - 2021-09-13
+
+- add tracking uuid (#418)
+
+## 2.12.1 - 2021-09-08
+
+- add support for VS Codium editor (#417)
+
+## 2.12.0 - 2021-08-24
+
+- add support for collecting information about jobs (#412)
+
+## 2.11.4 - 2021-08-16
+
+- use npm ci instead of install (#411)
+
+## 2.11.3 - 2021-08-16
+
+- fix issues with circular dependencies in model route parameters (#408)
+- remove notice about dirty git state in context
+- wrap `AddGitInformation` middleware in try-catch
+
+## 2.11.2 - 2021-07-20
+
+- fix issues introduced in 2.11.1 (#403)
+
+## 2.11.1 - 2021-07-20
+
+- fix sending queued reports on Laravel Vapor queues (#398)
 
 ## 2.11.0 - 2021-07-12
 
