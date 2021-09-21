@@ -11,6 +11,10 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #334240;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f5f4 !important;
 }
 
 a {
@@ -1361,6 +1365,7 @@ section {
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
+    margin-top: auto;
 }
 
 #footer .footer-top {
