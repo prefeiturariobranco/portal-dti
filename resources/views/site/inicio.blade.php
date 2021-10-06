@@ -90,28 +90,32 @@
                 <div class="row">
                     <?php $contarTutorial = 1; ?>
                     @foreach($tutoriais as $tutorial )
-                        @if($contarTutorial <= 3)
-                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
-                                <div class="card">
-                                    @isset($tutorial->imagem)
-                                        <div class="carousel-item active">
-                                            <img src="{{asset('images/'.$tutorial->imagem)}}" class="d-block w-100"
-                                                 alt="...">
+                        @if($tutorial->ocultar == 0)
+
+                            @if($contarTutorial <= 3)
+                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+                                    <div class="card">
+                                        @isset($tutorial->imagem)
+                                            <div class="carousel-item active">
+                                                <img src="{{asset('images/'.$tutorial->imagem)}}" class="d-block w-100"
+                                                     alt="...">
+                                            </div>
+                                        @endisset
+                                        <div class="card-body">
+                                            <a href="/tutorial/{{ $tutorial->id }}">
+                                                <h5 class="card-title">{{ $tutorial->titulo }}</h5>
+                                            </a>
+                                            <h6 class="card-subtitle">postado em {{ $tutorial->created_at }}</h6>
+                                            <p class="card-text mt-3">{{ substr(strip_tags($tutorial->conteudo), 0, 200 ) }}
+                                                ...</p>
                                         </div>
-                                    @endisset
-                                    <div class="card-body">
-                                        <a href="/tutorial/{{ $tutorial->id }}">
-                                            <h5 class="card-title">{{ $tutorial->titulo }}</h5>
-                                        </a>
-                                        <h6 class="card-subtitle">postado em {{ $tutorial->created_at }}</h6>
-                                        <p class="card-text mt-3">{{ substr(strip_tags($tutorial->conteudo), 0, 200 ) }}
-                                            ...</p>
                                     </div>
                                 </div>
-                            </div>
-                            <?php $contarTutorial++; ?>
+                                <?php $contarTutorial++; ?>
+                            @endif
                         @endif
                     @endforeach
+
                     <div class="container-fluid" style="text-align: center">
                         <a href="{{'/tutoriais'}}" title="" class="btn ">Mostrar Mais</a>
                     </div>
@@ -139,21 +143,22 @@
                 <div class="row portfolio-container">
 
                     @foreach($aplicativos as $aplicativo)
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            @isset($aplicativo->imagem)
-                                <img src="{{asset('images/'.$aplicativo->imagem)}}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>{{$aplicativo->titulo}}</h4>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                            <div class="portfolio-wrap">
+                                @isset($aplicativo->imagem)
+                                    <img src="{{asset('images/'.$aplicativo->imagem)}}" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>{{$aplicativo->titulo}}</h4>
+                                    </div>
+                                    <div class="portfolio-links">
+                                        <a href="{{asset('images/'.$aplicativo->imagem)}}" data-gall="portfolioGallery"
+                                           class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
+                                        <a href="{{$aplicativo->url}}" title="More Details"><i
+                                                class="bx bx-link"></i></a>
+                                    </div>
+                                @endisset
                             </div>
-                            <div class="portfolio-links">
-                                <a href="{{asset('images/'.$aplicativo->imagem)}}" data-gall="portfolioGallery"
-                                   class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                <a href="{{$aplicativo->url}}" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                            @endisset
                         </div>
-                    </div>
                     @endforeach
 
                 </div>
