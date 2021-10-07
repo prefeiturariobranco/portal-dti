@@ -90,26 +90,29 @@
                 <div class="row">
                     <?php $contarTutorial = 1; ?>
                     @foreach($tutoriais as $tutorial )
-                        @if($contarTutorial <= 3)
-                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
-                                <div class="card">
-                                    @isset($tutorial->imagem)
-                                        <div class="carousel-item active">
-                                            <img src="{{asset('images/'.$tutorial->imagem)}}" class="d-block w-100"
-                                                 alt="...">
+                        @if($tutorial->ocultar == 0)
+
+                            @if($contarTutorial <= 3)
+                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+                                    <div class="card">
+                                        @isset($tutorial->imagem)
+                                            <div class="carousel-item active">
+                                                <img src="{{asset('images/'.$tutorial->imagem)}}" class="d-block w-100"
+                                                     alt="...">
+                                            </div>
+                                        @endisset
+                                        <div class="card-body">
+                                            <a href="/tutorial/{{ $tutorial->id }}">
+                                                <h5 class="card-title">{{ $tutorial->titulo }}</h5>
+                                            </a>
+                                            <h6 class="card-subtitle">postado em {{ $tutorial->created_at }}</h6>
+                                            <p class="card-text mt-3">{{ substr(strip_tags($tutorial->conteudo), 0, 200 ) }}
+                                                ...</p>
                                         </div>
-                                    @endisset
-                                    <div class="card-body">
-                                        <a href="/tutorial/{{ $tutorial->id }}">
-                                            <h5 class="card-title">{{ $tutorial->titulo }}</h5>
-                                        </a>
-                                        <h6 class="card-subtitle">postado em {{ $tutorial->created_at }}</h6>
-                                        <p class="card-text mt-3">{{ substr(strip_tags($tutorial->conteudo), 0, 200 ) }}
-                                            ...</p>
                                     </div>
                                 </div>
-                            </div>
-                            <?php $contarTutorial++; ?>
+                                <?php $contarTutorial++; ?>
+                            @endif
                         @endif
                     @endforeach
                     <div class="container-fluid" style="text-align: center">
