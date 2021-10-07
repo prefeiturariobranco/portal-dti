@@ -55,14 +55,15 @@
                             @foreach($cat['icone'] as $icons)
                                 @if($icons['dinamico'] == 1)
                                     <a href="{{$icons['link']}}">
-{{--                                        @dd($_SERVER['SERVER_NAME'],$icons['link'])--}}
+                                        {{--                                        @dd($_SERVER['SERVER_NAME'],$icons['link'])--}}
                                         @else
                                             <a href="{{$icons['link']}}" target="_blank">
 
                                                 @endif
                                                 <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0"
                                                      style="padding: 10px;">
-                                                    <div class="icon-box" onclick=location.href="{{$icons['link']}}" style="cursor: pointer">
+                                                    <div class="icon-box" onclick=location.href="{{$icons['link']}}"
+                                                         style="cursor: pointer">
                                                         <a class="icon">
                                                             <img style="width: 40px" src="{{$icons['caminho']}}"
                                                                  title="" alt=""/>
@@ -139,27 +140,28 @@
                     </div>
                 </div>
 
-                <div class="row portfolio-container">
-
-                    @foreach($aplicativos as $aplicativo)
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <div class="portfolio-wrap">
-                                @isset($aplicativo->imagem)
-                                    <img src="{{asset('images/'.$aplicativo->imagem)}}" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>{{$aplicativo->titulo}}</h4>
-                                    </div>
-                                    <div class="portfolio-links">
-                                        <a href="{{asset('images/'.$aplicativo->imagem)}}" data-gall="portfolioGallery"
-                                           class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                        <a href="{{$aplicativo->url}}" title="More Details"><i
-                                                class="bx bx-link"></i></a>
-                                    </div>
-                                @endisset
+                <div class="row ">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        @foreach($aplicativos as $aplicativo)
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                                <div class="justify-content-center">
+                                    @isset($aplicativo->imagem)
+                                        <img src="{{asset('images/'.$aplicativo->imagem)}}" width="50%" alt="">
+                                        <div class="portfolio-info">
+                                            <h4>{{$aplicativo->titulo}}</h4>
+                                        </div>
+                                        <div class="portfolio-links">
+                                            <a href="{{asset('images/'.$aplicativo->imagem)}}"
+                                               data-gall="portfolioGallery"
+                                               class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
+                                            <a href="{{$aplicativo->url}}" title="More Details"><i
+                                                    class="bx bx-link"></i></a>
+                                        </div>
+                                    @endisset
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
-
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </section>
