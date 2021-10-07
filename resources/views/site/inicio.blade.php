@@ -142,12 +142,12 @@
                     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                         <div class="portfolio-wrap">
                             @isset($aplicativo->imagem)
-                                <img src="{{asset('images/'.$aplicativo->imagem)}}" class="img-fluid" alt="">
+                                <img src="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>{{$aplicativo->titulo}}</h4>
                             </div>
                             <div class="portfolio-links">
-                                <a href="{{asset('images/'.$aplicativo->imagem)}}" data-gall="portfolioGallery"
+                                <a href="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem)}}" data-gall="portfolioGallery"
                                    class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
                                 <a href="{{$aplicativo->url}}" title="More Details"><i class="bx bx-link"></i></a>
                             </div>
