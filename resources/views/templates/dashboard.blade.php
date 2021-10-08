@@ -152,7 +152,7 @@
                         <li>
                             <a href="/painel/informacoes/historia" class="waves-effect">
                                 <i class="far fa-hourglass"></i>
-                                <span>Linha do Tempo DTI</span>
+                                <span>Linha do Tempo</span>
                             </a>
                         </li>
                         <li>
