@@ -48,6 +48,7 @@ class CadastrarAplicativosController extends Controller
 
         if (!empty($request->file('imagem'))) {
             $fileName =  $request->file('imagem')->store('public/aplicativos');
+            dd($fileName);
             $aplicativos->imagem = $fileName;
         }
 
