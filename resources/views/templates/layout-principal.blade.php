@@ -59,6 +59,7 @@
 <script src="/assets/js/main.js"></script>
 @section('js')
 @endsection
+@stack('script')
 </body>
 
 </html>

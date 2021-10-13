@@ -3,11 +3,11 @@
 @section('css')
     <link href="assets/css/novo_layout.css" rel="stylesheet">
 @endsection
-@section('js')
-    <script src="/js/site/inicio.js"></script>
-@endsection
-@section('title') Portal DTI @endsection
 
+@section('js')
+@section('title') Portal DTI @endsection
+<script src="/js/site/inicio.js"></script>
+@endsection
 
 @section('content')
     <!-- Carousel Section -->
@@ -51,31 +51,20 @@
                         <div class="section-title">
                             <h2>{{$cat['nomeCategoria']['nomeCategoria']}}</h2>
                         </div>
-                        <div class="row" style="margin-bottom: 30px">
+                        <div class="row" style="margin-bottom: 30px ">
                             @foreach($cat['icone'] as $icons)
-                                @if($icons['dinamico'] == 1)
-                                    <a href="{{$icons['link']}}">
-                                        {{--                                        @dd($_SERVER['SERVER_NAME'],$icons['link'])--}}
-                                        @else
-                                            <a href="{{$icons['link']}}" target="_blank">
-
-                                                @endif
-                                                <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0"
-                                                     style="padding: 10px;">
-                                                    <div class="icon-box" onclick=location.href="{{$icons['link']}}"
-                                                         style="cursor: pointer">
-                                                        <a class="icon">
-                                                            <img style="width: 40px" src="{{$icons['caminho']}}"
-                                                                 title="" alt=""/>
-                                                        </a><h4 class="title">
-                                                            <a href="{{$icons['link']}}">{{$icons['nome']}}</a>
-                                                        </h4>
-                                                    </div>
-
-                                                </div>
-                                            </a>
-                                    </a>
-                                    @endforeach
+                                <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0"
+                                     style="padding: 10px; cursor: pointer"
+                                     @if($icons['dinamico'] == 2) onclick="window.open('{{$icons['link']}}', '_blank')"
+                                     @else onclick="window.location.assign('{{$icons['link']}}')" @endif>
+                                    <div class="icon-box">
+                                        <div class="icon">
+                                            <img style="width: 40px" src="{{$icons['caminho']}}" title="" alt=""/>
+                                        </div>
+                                        <h4 class="title"><a href="{{$icons['link']}}">{{$icons['nome']}}</a></h4>
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
                     @endif
                     <?php $contarCategoria++; ?>
@@ -143,45 +132,29 @@
                     </div>
                 </div>
 
-<<<<<<< HEAD
-                <div class="row ">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        @foreach($aplicativos as $aplicativo)
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                                <div class="justify-content-center">
-                                    @isset($aplicativo->imagem)
-                                        <img src="{{asset('images/'.$aplicativo->imagem)}}" width="50%" alt="">
-                                        <div class="portfolio-info">
-                                            <h4>{{$aplicativo->titulo}}</h4>
-                                        </div>
-                                        <div class="portfolio-links">
-                                            <a href="{{asset('images/'.$aplicativo->imagem)}}"
-                                               data-gall="portfolioGallery"
-                                               class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                            <a href="{{$aplicativo->url}}" title="More Details"><i
-                                                    class="bx bx-link"></i></a>
-                                        </div>
-                                    @endisset
-                                </div>
-=======
                 <div class="row portfolio-container">
 
                     @foreach($aplicativos as $aplicativo)
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            @isset($aplicativo->imagem)
-                                <img src="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>{{$aplicativo->titulo}}</h4>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                            <div class="portfolio-wrap">
+                                @isset($aplicativo->imagem)
+                                    <img src="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}"
+                                         class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>{{$aplicativo->titulo}}</h4>
+                                    </div>
+                                    <div class="portfolio-links">
+                                        <a href="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}"
+                                           data-gall="portfolioGallery"
+                                           class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
+                                        <a href="{{$aplicativo->url}}" title="More Details"><i
+                                                class="bx bx-link"></i></a>
+                                    </div>
+                                @endisset
                             </div>
-                            <div class="portfolio-links">
-                                <a href="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}" data-gall="portfolioGallery"
-                                   class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                <a href="{{$aplicativo->url}}" title="More Details"><i class="bx bx-link"></i></a>
->>>>>>> origin/develop
-                            </div>
-                        @endforeach
-                    </div>
+                        </div>
+                    @endforeach
+
                 </div>
             </div>
         </section>
@@ -223,4 +196,3 @@
 
     </main>
 @endsection
-
