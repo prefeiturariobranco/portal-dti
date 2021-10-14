@@ -13,3 +13,6 @@ $(document).ready(function () {
         $('.imagem' + numeroSlide).show();
     });
 });
+function teste(){
+    console.log(1)
+}
