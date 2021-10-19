@@ -37,11 +37,10 @@ class EditarAplicativosController extends Controller
     public function update(AplicativosFormRequest $request)
     {
         //
-        $aplicativos = Aplicativos::where('id', $request->post('aplicativos_id'))->update([
-            'titulo' => $request->post('titulo'),
-            'url' => $request->post('url'),
-        ]);
-
+        $aplicativos = Aplicativos::where('id', $request->aplicativo_id)->first();
+        $aplicativos->titulo = $request->post('titulo');
+        $aplicativos->url= $request->post('url');
+        $aplicativos->update();
         if (!empty($request->file('imagem'))) {
             $fileName = time() . '.' . $request->file('imagem')->extension();
             \File::delete($aplicativos->imagem);

@@ -48,7 +48,7 @@
 
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong><span>DTI</span></strong>. All Rights Reserved
+            &copy; Copyright 2021 <strong><span>Diretoria de Tecnologia da Informação</span></strong>. All Rights Reserved
         </div>
     </div>
 </footer><!-- End Footer -->

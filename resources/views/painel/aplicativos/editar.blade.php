@@ -23,9 +23,9 @@
                         Alterar Aplicativo
                     </div>
                     <hr>
-                    <form action="/painel/aplicativos/alterar" method="post" enctype="multipart/form-data">
+                    <form action="{{route('aplicativo.update')}}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <input type="hidden" name="tutorial_id" value="{{ $aplicativos->id }}">
+                        <input type="hidden" name="aplicativo_id" class="form-control" value="{{ $aplicativos->id }}" placeholder="Digite o título">
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Título:</label>

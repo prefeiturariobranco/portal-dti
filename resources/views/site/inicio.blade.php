@@ -121,7 +121,7 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Nosso Portfolio</h2>
+                    <h2>Nosso Portfólio</h2>
                 </div>
 
                 <div class="row">

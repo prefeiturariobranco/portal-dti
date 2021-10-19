@@ -107,7 +107,7 @@ Route::get('/painel/aplicativos/cadastro', 'Dashboard\Aplicativos\CadastrarAplic
 Route::get('/painel/aplicativos/editar/{id}', 'Dashboard\Aplicativos\EditarAplicativosController@show')->middleware('logado');
 Route::get('/painel/aplicativos/deletar/{id}', 'Dashboard\Aplicativos\DeletarAplicativosController@destroy')->middleware('logado');
 Route::post('/painel/aplicativos/salvar', 'Dashboard\Aplicativos\CadastrarAplicativosController@store')->middleware('logado');
-Route::post('/painel/aplicativos/alterar', 'Dashboard\Aplicativos\EditarAplicativosController@update')->middleware('logado');
+Route::post('/painel/aplicativos/alterar', 'Dashboard\Aplicativos\EditarAplicativosController@update')->middleware('logado')->name('aplicativo.update');
 
 #Categorias
 Route::get('/painel/categorias', 'Dashboard\Categorias\ListarCategoriasController@index')->middleware('logado');

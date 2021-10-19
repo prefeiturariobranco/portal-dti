@@ -20,7 +20,7 @@
             <div class="topbar-left">
                 <a href="/painel" class="logo">
                     <span>
-                        <img src="/images/logo-portal-branca.png" style="width: 8em;">
+                        <img src="/images/DTI-branca.png" style="width: 8em;">
                     </span>
                     <i>
                         <img src="/images/logo-sm.png" alt="" height="22">
