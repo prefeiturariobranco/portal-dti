@@ -20,7 +20,7 @@
     <br>
     <div class="row">
         <div class="col-xl-3 col-md-6">
-            <div class="card mini-stat bg-primary text-white">
+            <div class="card mini-stat bg-primary text-white" style="height: 80%">
                 <div class="card-body">
                     <div class="mb-1">
                         <div class="float-left mr-4">
@@ -34,7 +34,7 @@
         </div>
 
         <div class="col-xl-3 col-md-6">
-            <div class="card mini-stat bg-primary text-white">
+            <div class="card mini-stat bg-primary text-white" style="height: 80%">
                 <div class="card-body">
                     <div class="mb-1">
                         <div class="float-left mr-4">
@@ -48,7 +48,7 @@
         </div>
 
         <div class="col-xl-3 col-md-6">
-            <div class="card mini-stat bg-primary text-white">
+            <div class="card mini-stat bg-primary text-white" style="height: 80%">
                 <div class="card-body">
                     <div class="mb-1">
                         <div class="float-left mr-4">
@@ -62,7 +62,7 @@
         </div>
 
         <div class="col-xl-3 col-md-6">
-            <div class="card mini-stat bg-primary text-white">
+            <div class="card mini-stat bg-primary text-white" style="height: 80%">
                 <div class="card-body">
                     <div class="mb-1">
                         <div class="float-left mr-4">
