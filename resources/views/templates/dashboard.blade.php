@@ -23,7 +23,7 @@
                         <img src="/images/DTI-branca.png" style="width: 8em;">
                     </span>
                     <i>
-                        <img src="/images/logo-sm.png" alt="" height="22">
+                        <img src="/images/icon-brasao.png" alt="" height="40">
                     </i>
                 </a>
             </div>

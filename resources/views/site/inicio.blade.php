@@ -147,8 +147,8 @@
                                         <a href="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}"
                                            data-gall="portfolioGallery"
                                            class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                        <a href="{{$aplicativo->url}}" title="More Details"><i
-                                                class="bx bx-link"></i></a>
+                                        <a href="{{$aplicativo->url}}" title="Mais Detalhes">
+                                            <i class="bx bx-link"></i></a>
                                     </div>
                                 @endisset
                             </div>

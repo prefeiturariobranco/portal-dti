@@ -14,6 +14,13 @@ class ContatosTableSeeder extends Seeder
     {
         //
         Contatos::create([
+            'departamento_id' => 1,
+            'cargos_id'  => 1,
+            'nome'  => 'Mark',
+            'telefone'  => '3211 - 2212',
+            'email' => 'luiz.aguirre@riobranco.ac.gov.br',
+        ]);
+        Contatos::create([
             'departamento_id' => 2,
             'cargos_id'  => 2,
             'nome'  => 'Luiz Aguirre',
