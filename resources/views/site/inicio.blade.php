@@ -136,10 +136,10 @@
 
                     @foreach($aplicativos as $aplicativo)
                         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <div class="portfolio-wrap">
+                            <div class="portfolio-wrap ml-5 col-8">
                                 @isset($aplicativo->imagem)
                                     <img src="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}"
-                                         class="img-fluid" alt="">
+                                         class="img-fluid " alt="">
                                     <div class="portfolio-info">
                                         <h4>{{$aplicativo->titulo}}</h4>
                                     </div>
