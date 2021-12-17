@@ -206,6 +206,11 @@ Route::post('/painel/sistemas/webpublico/salvar', 'Dashboard\Sistemas\Webpublico
 # Imagens
 Route::get('/img/perfil/{name}', 'Utils\ImageController@getProfileImage')->middleware('logado');
 Route::get('/banner/{name}', 'Utils\ImageController@getBannerImage')->middleware('logado');
+#Cargos
+Route::get('/painel/cargos', 'Dashboard\Cargos\CargoController@index')->name('lista.cargos')->middleware('logado');
+Route::get('/painel/cargos/deletar/{id}','Dashboard\Cargos\CargoController@delete')->name('deleta.cargos')->middleware('logado');
+Route::get('/painel/cargos/editar/{id}','Dashboard\Cargos\CargoController@edit')->name('edita.cargos')->middleware('logado');
+Route::get('/painel/cargos/cadastro', 'Dashboard\Cargos\CargoController@cadcreate')->name('cadastro.cargos')->middleware('logado');
 
 # API
 Route::get('/api/investimentos/{id}', 'Dashboard\Investimentos\ApiInvestimentosController@investimentosRealizados')->middleware('logado');

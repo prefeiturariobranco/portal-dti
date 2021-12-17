@@ -239,6 +239,13 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="{{route('lista.cargos')}}">
+                                        <i class="fas fa-briefcase"></i>
+                                        <span>Cargos</span>
+                                    </a>
+                                </li>
+
+                                <li>
                                     <a href="/painel/perguntas"><i class="far fa-question-circle"></i>
                                         <span>Perguntas</span>
                                     </a>

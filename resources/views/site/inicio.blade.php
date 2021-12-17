@@ -1,9 +1,5 @@
 @extends('templates/layout-principal')
 
-@section('css')
-    <link href="assets/css/novo_layout.css" rel="stylesheet">
-@endsection
-
 @section('js')
 @section('title') Portal DTI @endsection
 <script src="/js/site/inicio.js"></script>
