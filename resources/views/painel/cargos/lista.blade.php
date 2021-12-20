@@ -5,7 +5,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Cargos</h4>
+                    <h4 class="font-weight-bold text-dark">Cargos</h4>
                 </div>
                 <div class="card-body">
                     <!-- Message -->

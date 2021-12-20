@@ -4,27 +4,15 @@ namespace App\Http\Controllers\Dashboard\Cargos;
 
 use App\Model\Cargos;
 use App\Http\Controllers\Controller;
-use App\Model\Departamentos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use App\Http\Requests\Cargos\CargosFormResquest;//Usar para retornar mensagens
+use Illuminate\Support\Facades\Session;
+use PHPUnit\Exception;
 
 class CargoController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
-    public function create(Request $request)
-    {
-        //
-    }
-
-    public function cadcreate()
-    {
-        return view('painel.cargos.cadastro');
-    }
-
+    //Lista todos os cargos atuais
     public function index()
     {
         return view('painel.cargos.lista', [
@@ -32,14 +20,82 @@ class CargoController extends Controller
         ]);
     }
 
-    public function delete($id)
+    /**
+     * Handle the incoming request.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    //salva no banco novo cargo
+    public function create(Request $request)
     {
-        dd('delete', $id);
-
+        $valited = $request->validate([
+            'nome' => 'required|max:255',
+        ]);
+        if (!empty($request->nome)) {
+            $cargo = Cargos::create([
+                'nome' => $request->nome,
+            ]);
+        } else {
+            return redirect()->route('cadastro.cargos');
+        }
+        $resultado['error'] = 0;
+        $resultado['msg'] = 'Cargo cadastrado com sucesso!';
+        if (!$cargo) {
+            $resultado['error'] = 1;
+            $resultado['msg'] = 'Falha cadastrar cargo!';
+        }
+        Session::flash('erro_msg', $resultado);
+        return Redirect::to('/painel/cargos');
     }
 
+//Retorna tela para cadastro
+    public function cadcreate()
+    {
+        return view('painel.cargos.cadastro');
+    }
+
+    //Função que deleta cargo
+    public function delete($id)
+    {
+        //adcionar mensagem de exclusão concluida com sucesso
+        if (!is_null($id)) {
+            Cargos::where('id', $id)->delete();
+            return redirect()->route('lista.cargos');
+        } else {
+            //mensagem, não foi possivel excluir esse registro
+            return redirect()->route('lista.cargos');
+        }
+
+    }
+    //Função que retorna a view de formulario para editar cargo
     public function edit($id)
     {
-        dd('edita', $id);
+        return view('painel.cargos.edita', [
+            'cargos' => Cargos::where('id', $id)->first(),
+        ]);
+
+    }
+    //edita cargo
+    public function update(Request $request ){
+        try {
+            $id = $request->id;
+            $nome = $request->nome;
+            if (!empty($nome) && !empty($id)) {
+              Cargos::where('id', $id )->update([
+                    'nome' => $nome,
+                    'id' => $id
+                ]);
+            } else {
+                return redirect()->route('edita.cargos');
+            }
+            return redirect()->route('lista.cargos');
+
+        }catch (Exception $exception){
+            //mensagen de erro
+            return redirect()->route('edita.cargos');
+        }
+
+
     }
 }
