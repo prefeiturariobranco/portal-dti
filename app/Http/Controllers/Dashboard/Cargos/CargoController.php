@@ -84,7 +84,6 @@ class CargoController extends Controller
             if (!empty($nome) && !empty($id)) {
               Cargos::where('id', $id )->update([
                     'nome' => $nome,
-                    'id' => $id
                 ]);
             } else {
                 return redirect()->route('edita.cargos');
