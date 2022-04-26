@@ -1,37 +1,40 @@
 @extends('templates/layout-principal')
 
 @section('js')
-@section('title') Portal DTI @endsection
-<script src="/js/site/inicio.js"></script>
+    @section('title')
+        Portal DTI
+    @endsection
+    <script src="/js/site/inicio.js"></script>
 @endsection
 
 @section('content')
     <!-- Carousel Section -->
     <section id="hero">
-        <div class="hero-container">
-            <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="hero-container" style="cursor: pointer">
+                <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 
-                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-                <div class="carousel-inner" role="listbox">
-                    @foreach($postagem as $key => $slider)
-                        <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
-                            <a href="/novidade/{{$slider->id}}">
-                                <img src="/storage/banner/{{$slider->imagem}}" width="100%" alt="...">
-                            </a>
-                        </div>
-                    @endforeach
+                    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+                    <div class="carousel-inner" role="listbox">
+                        @foreach($postagem as $key => $slider)
+                            <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
+                                <a href="/novidade/{{$slider->id}}">
+                                    <img src="/storage/banner/{{$slider->imagem}}" width="100%" alt="...">
+                                </a>
+                            </div>
+                        @endforeach
 
-                    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
+                        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
 
-                    <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon icofont-thin-double-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon icofont-thin-double-right"
+                                  aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
         </div>
     </section>
     <!-- End Carousel Section -->
@@ -57,7 +60,7 @@
                                         <div class="icon">
                                             <img style="width: 40px" src="{{$icons['caminho']}}" title="" alt=""/>
                                         </div>
-                                        <h4 class="title"><a href="{{$icons['link']}}">{{$icons['nome']}}</a></h4>
+                                        <h4 class="title">{{$icons['nome']}}</h4>
                                     </div>
                                 </div>
                             @endforeach
