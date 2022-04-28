@@ -175,6 +175,7 @@
                                         aria-expanded="true" aria-controls="collapseExample{{$pergunta->id}}">
                                     <i class="fa fa-plus"></i>
                                     <span class="pergunta-titulo">{{$pergunta->titulo}}</span>
+                                    <i class='fas fa-chevron-down'></i>
                                 </button>
                                 <div class="collapse" id="collapseExample{{$pergunta->id}}">
                                     <div class="card card-body pergunta-fundo">

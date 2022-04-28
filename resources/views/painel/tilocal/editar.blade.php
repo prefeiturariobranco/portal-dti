@@ -1,5 +1,5 @@
 @extends('templates.dashboard')
-@section('titulo')Ti Local @endsection
+@section('titulo')TI Local @endsection
 
 @section('content')
     <div class="row">

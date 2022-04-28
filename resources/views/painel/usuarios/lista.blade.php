@@ -1,5 +1,5 @@
 @extends('templates.dashboard')
-@section('titulo')Intranet :: Novidades @endsection
+@section('titulo')Intranet :: Usuários @endsection
 
 @section('js')
 <script>

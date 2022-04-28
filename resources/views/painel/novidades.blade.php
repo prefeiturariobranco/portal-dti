@@ -49,7 +49,14 @@
                                             <button class="btn btn-primary waves-effect waves-light" type="button" data-toggle="modal" data-target="#modalEdit">Editar
                                             </button>
                                             <button class="btn btn-danger waves-effect waves-light" type="button" data-toggle="modal" data-target="#modalDelete">Excluir
-                                            </button>
+
+        return view('painel.novidades', [
+            'postagens' => Postagens::all(),
+        ]);
+    }
+
+    /**
+     * Show the form for creating a new resource.                </button>
                                         </td>
                                     </tr>
                                 @endforeach

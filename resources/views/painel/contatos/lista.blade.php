@@ -1,6 +1,6 @@
 @extends('templates.dashboard')
-@section('titulos')Contatos @endsection
 
+@section('titulo')Contatos @endsection
 @section('css')
 <style>
     .pagination.page-link {

@@ -4,6 +4,8 @@
 <link rel="stylesheet" href="/css/login.css">
 @endsection
 
+@section('title') Portal DTI @endsection
+
 @section('js')@endsection
 @section('content')
     <div class="caixa-textura" style="margin-top: 50px; margin-bottom: 50px;">

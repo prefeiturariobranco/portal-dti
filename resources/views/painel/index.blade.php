@@ -54,7 +54,7 @@
                         <div class="float-left mr-4">
                             <i class="fas fa-users fa-3x"></i>
                         </div>
-                        <h5 class="font-16 text-uppercase mt-0">Usuarios Portal DTI</h5>
+                        <h5 class="font-16 text-uppercase mt-0">Usuários Portal DTI</h5>
                         <h4 class="font-500">{{ $contadorUsuarios }} <i class="mdi mdi-arrow-up text-success ml-2"></i></h4>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-lg-3 text-center">
                                 <div>
-                                    <strong>Numero de Contratos</strong>
+                                    <strong>Número de Contratos</strong>
                                     <h5 class="mb-4 text-success">{{ $contadorContratos }}</h5>
                                 </div>
                             </div>
@@ -211,7 +211,7 @@
             <div class="card">
                 <div class="card-body">
                     <div>
-                        <h3 class="mt-0  mb-4">Webpublico</h3>
+                        <h3 class="mt-0  mb-4">Webpúblico</h3>
                     </div>
                     <div class="wid-peity mb-1">
                         <div class="row">
@@ -223,7 +223,7 @@
                             </div>
                             <div class="col-xs-12 col-lg-2 text-center">
                                 <div>
-                                    <strong>Linhas de Codigo</strong>
+                                    <strong>Linhas de Código</strong>
                                     <h5 class="mb-6 text-success">{{$estatisticasWebPublico->num_linhas_codigo}}</h5>
                                 </div>
                             </div>
@@ -240,7 +240,7 @@
                                 <h5 class="mb-6 text-success">{{$estatisticasWebPublico->num_horas}}/sem</h5>
                             </div>
                             <div class="col-xs-12 col-lg-2 text-center">
-                                <strong>Areas de Gestão</strong>
+                                <strong>Áreas de Gestão</strong>
                                 <h5 class="mb-6 text-success">{{$estatisticasWebPublico->num_areas_gestao}}</h5>
                             </div>
                         </div>
@@ -360,7 +360,7 @@
                             </div>
 
                             <div class="col-xs-12 col-lg-2 text-center">
-                                <strong>Servidores Fisicos</strong>
+                                <strong>Servidores Físicos</strong>
                                 <h5 class="mb-6 text-success">{{$infraConfig->num_servidores_fisicos}}</h5>
                             </div>
 

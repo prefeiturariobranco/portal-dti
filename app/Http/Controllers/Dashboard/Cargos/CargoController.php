@@ -59,13 +59,18 @@ class CargoController extends Controller
     public function delete($id)
     {
         //adcionar mensagem de exclusão concluida com sucesso
-        if (!is_null($id)) {
-            Cargos::where('id', $id)->delete();
-            return redirect()->route('lista.cargos');
-        } else {
-            //mensagem, não foi possivel excluir esse registro
-            return redirect()->route('lista.cargos');
+        try {
+            if (!is_null($id)) {
+                Cargos::where('id', $id)->delete();
+                return redirect()->route('lista.cargos');
+            } else {
+                //mensagem, não foi possivel excluir esse registro
+                return redirect()->route('lista.cargos');
+            }
+        } catch (\Exception $exception){
+            return redirect()->route('lista.cargos')->withErrors(['error' => $exception->getMessage()]);
         }
+
 
     }
     //Função que retorna a view de formulario para editar cargo

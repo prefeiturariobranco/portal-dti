@@ -11,7 +11,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h4>Estatísticas Webpublico</h4>
+                        <h4>Estatísticas Webpúblico</h4>
                     </div>
                 </div>
                 <hr>
@@ -23,7 +23,7 @@
                         @csrf
                             <div class="row mt-12">
                                 <div class="col-md-3">
-                                    <label>Numero de usuários: </label>
+                                    <label>Número de usuários: </label>
                                 </div>
                                 <div class="col-md-3">
                                     <input type="number" name="num_usuarios" class="form-control form-control-sm" value="{{ $config->num_usuarios }}">
@@ -33,7 +33,7 @@
 
                             <div class="row mt-3">
                                 <div class="col-md-3">
-                                    <label>Numero de Linhas de Código: </label>
+                                    <label>Número de Linhas de Código: </label>
                                 </div>
                                 <div class="col-md-3">
                                     <input type="number" name="num_linhas_codigo" class="form-control form-control-sm" value="{{ $config->num_linhas_codigo }}">
@@ -43,7 +43,7 @@
 
                             <div class="row mt-3">
                                 <div class="col-md-3">
-                                    <label>Modulos do Sistema: </label>
+                                    <label>Módulos do Sistema: </label>
                                 </div>
                                 <div class="col-md-3">
                                     <input type="number" name="num_modulos" class="form-control form-control-sm" value="{{ $config->num_modulos }}">
@@ -53,7 +53,7 @@
 
                             <div class="row mt-3">
                                 <div class="col-md-3">
-                                    <label>Numero de Telas do Sistema: </label>
+                                    <label>Número de Telas do Sistema: </label>
                                 </div>
                                 <div class="col-md-3">
                                     <input type="number" name="num_telas" class="form-control form-control-sm" value="{{ $config->num_telas }}">
@@ -73,7 +73,7 @@
 
                             <div class="row mt-3">
                                 <div class="col-md-3">
-                                    <label>Numero de Horas: </label>
+                                    <label>Número de Horas: </label>
                                 </div>
                                 <div class="col-md-3">
                                     <input type="number" name="num_horas" class="form-control form-control-sm" value="{{ $config->num_horas }}">
@@ -83,7 +83,7 @@
 
                             <div class="row mt-3">
                                 <div class="col-md-3">
-                                    <label>Numero Areas Atuação: </label>
+                                    <label>Número Areas Atuação: </label>
                                 </div>
                                 <div class="col-md-3">
                                     <input type="number" name="num_areas_gestao" class="form-control form-control-sm" value="{{ $config->num_areas_gestao }}">
@@ -127,7 +127,7 @@
 
                             <div class="row mt-3">
                                 <div class="col-md-3">
-                                    <label>Chamados Contabil: </label>
+                                    <label>Chamados Contábil: </label>
                                 </div>
                                 <div class="col-md-2">
                                     <input type="number" name="ch_contabil" class="form-control form-control-sm" value="{{ $config->ch_contabil }}">
