@@ -3,6 +3,8 @@
     <link href="assets/css/contatos.css" rel="stylesheet">
 @endpush
 @section('js')@endsection
+@section('title') Portal DTI @endsection
+
 @section('content')
     <div class="main">
         <section class="container contatos">

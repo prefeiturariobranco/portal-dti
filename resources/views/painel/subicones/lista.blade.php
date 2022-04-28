@@ -1,5 +1,5 @@
 @extends('templates.dashboard')
-@section('titulo') Subicones @endsection
+@section('titulo') Sub-ícones @endsection
 
 @section('css')
     <style>

@@ -70,7 +70,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Anexos: </label>
-                            <input type="file" name="arquivo_documento[]" multiple class="form-control">
+                            <input type="file" name="arquivo_documento[]" multiple class="form-control" accept="application/pdf">
                             <span class="system_error text-danger">{{$errors->first('arquivo_documento')}}</span>
                         </div>
                     </div>

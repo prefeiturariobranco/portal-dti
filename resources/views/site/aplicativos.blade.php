@@ -2,6 +2,7 @@
 @section('css')
 @endsection
 @section('js')@endsection
+@section('title') Portal DTI @endsection
 
 @section('content')
 <h1 class="titulo_pagina">Aplicativos</h1>

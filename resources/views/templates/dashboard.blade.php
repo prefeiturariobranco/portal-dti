@@ -164,7 +164,7 @@
                         <li>
                             <a href="/painel/noticias">
                                 <i class="far fa-id-card"></i>
-                                <span>Noticias</span>
+                                <span>Notícias</span>
                             </a>
                         </li>
 

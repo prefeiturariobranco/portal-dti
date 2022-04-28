@@ -1,5 +1,5 @@
 @extends('templates.dashboard')
-@section('titulos')Cadastrar Cargos @endsection
+@section('titulo')Cargos @endsection
 @section('content')
     <div class="py-4"></div>
     <div class="container">

@@ -34,11 +34,11 @@ class ApiSistemasController extends Controller
 
         $resultado[] = ['label'=>"Recursos Humanos", 'value'=>$config->ch_recursos_humanos];
         $resultado[] = ['label'=>"Administrativo", 'value'=>$config->ch_administrativo];
-        $resultado[] = ['label'=>"Contabil", 'value'=>$config->ch_contabil];
+        $resultado[] = ['label'=>"Contábil", 'value'=>$config->ch_contabil];
         $resultado[] = ['label'=>"Transporte", 'value'=>$config->ch_transporte];
         $resultado[] = ['label'=>"Portais", 'value'=>$config->ch_portais];
-        $resultado[] = ['label'=>"Previdenciario", 'value'=>$config->ch_previdenciario];
-        $resultado[] = ['label'=>"Tributario", 'value'=>$config->ch_tributario];
+        $resultado[] = ['label'=>"Previdenciário", 'value'=>$config->ch_previdenciario];
+        $resultado[] = ['label'=>"Tributário", 'value'=>$config->ch_tributario];
 
         echo json_encode($this->formatToChart($resultado));
     }
@@ -48,11 +48,11 @@ class ApiSistemasController extends Controller
 
         $resultado[] = ['label'=>"Recursos Humanos", 'value'=>$config->hr_recursos_humanos];
         $resultado[] = ['label'=>"Administrativo", 'value'=>$config->hr_administrativo];
-        $resultado[] = ['label'=>"Contabil", 'value'=>$config->hr_contabil];
+        $resultado[] = ['label'=>"Contábil", 'value'=>$config->hr_contabil];
         $resultado[] = ['label'=>"Transporte", 'value'=>$config->hr_transporte];
         $resultado[] = ['label'=>"Portais", 'value'=>$config->hr_portais];
-        $resultado[] = ['label'=>"Previdenciario", 'value'=>$config->hr_previdenciario];
-        $resultado[] = ['label'=>"Tributario", 'value'=>$config->hr_tributario];
+        $resultado[] = ['label'=>"Previdenciário", 'value'=>$config->hr_previdenciario];
+        $resultado[] = ['label'=>"Tributário", 'value'=>$config->hr_tributario];
 
         echo json_encode($this->formatToChart($resultado));
     }
@@ -62,11 +62,11 @@ class ApiSistemasController extends Controller
 
         $resultado[] = ['label'=>"Recursos Humanos", 'value'=>$config->ch_recursos_humanos];
         $resultado[] = ['label'=>"Administrativo", 'value'=>$config->ch_administrativo];
-        $resultado[] = ['label'=>"Contabil", 'value'=>$config->ch_contabil];
+        $resultado[] = ['label'=>"Contábil", 'value'=>$config->ch_contabil];
         $resultado[] = ['label'=>"Transporte", 'value'=>$config->ch_transporte];
         $resultado[] = ['label'=>"Portais", 'value'=>$config->ch_geral];
-        $resultado[] = ['label'=>"Previdenciario", 'value'=>$config->ch_previdenciario];
-        $resultado[] = ['label'=>"Tributario", 'value'=>$config->ch_tributario];
+        $resultado[] = ['label'=>"Previdenciário", 'value'=>$config->ch_previdenciario];
+        $resultado[] = ['label'=>"Tributário", 'value'=>$config->ch_tributario];
 
         echo json_encode($this->formatToChart($resultado));
     }
