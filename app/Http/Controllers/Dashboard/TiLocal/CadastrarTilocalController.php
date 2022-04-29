@@ -42,11 +42,11 @@ class CadastrarTilocalController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = 'Tilocal cadastrado com sucesso!';
+        $resultado['msg'] = 'Ti local cadastrado com sucesso!';
 
         if (!$tiLocal) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Falha cadastrar tilocal';
+            $resultado['msg'] = 'Falha cadastrar TI local';
         }
 
         Session::flash('erro_msg', $resultado);
