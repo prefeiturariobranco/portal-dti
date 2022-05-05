@@ -43,6 +43,7 @@
 
         <!-- Serviços Section -->
         <section id="services" class="services section-bg">
+￼
             <div class="container">
                 <?php $contarCategoria = 1; ?>
                 @foreach($categorias as $cat)
@@ -126,7 +127,7 @@
                 <div class="row">
                     <div class="col-lg-12 d-flex justify-content-center">
                         <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">Todos</li>
+                            <a href="{{'$/aplicativos'}}"><li data-filter="*" class="filter-active">Todos</li></a>
                         </ul>
                     </div>
                 </div>
