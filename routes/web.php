@@ -223,7 +223,3 @@ Route::get('/api/sistemas/chamados/horas', 'Dashboard\Sistemas\ApiSistemasContro
 Route::get('/api/sistemas/chamados/ciclo', 'Dashboard\Sistemas\ApiSistemasController@horasPorCiclo')->middleware('logado');
 Route::get('/api/infra/fibra', 'Dashboard\Infraestrutura\Fibra\ApiController@evolucaoMalhaFibra')->middleware('logado');
 Route::get('/api/infra/conexao/unidades', 'Dashboard\Infraestrutura\Fibra\ApiController@tipoConexaoUnidades')->middleware('logado');
-
-Route::get('/teste/php', function (){
-   phpinfo();
-});

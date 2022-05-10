@@ -87,7 +87,7 @@
 {{--                                <!-- item-->--}}
 {{--                                <a href="javascript:void(0);" class="dropdown-item notify-item">--}}
 {{--                                    <div class="notify-icon bg-danger"><i class="mdi mdi-message-text-outline"></i></div>--}}
-{{--                                    <p class="notify-details">New Message received<span class="text-muted">You have 87 unread messages</span>--}}
+{{--                                    <pfa-user class="notify-details">New Message received<span class="text-muted">You have 87 unread messages</span>--}}
 {{--                                    </p>--}}
 {{--                                </a>--}}
 {{--                            </div>--}}
@@ -101,7 +101,7 @@
                     <li class="dropdown notification-list">
                         <div class="dropdown notification-list nav-pro-img">
                             <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="/storage/usuarios/{{\Illuminate\Support\Facades\Session::get('usuario')->imagem}}" alt="Minha Conta" class="rounded-circle" />
+                                <i class="mdi mdi-account-circle mdi-24px"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown">
                                 <!-- item-->

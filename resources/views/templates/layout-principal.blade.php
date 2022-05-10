@@ -26,7 +26,7 @@
     <!-- Template Main CSS File -->
     <link  href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet">
 
-    <link  href="/css/login.css" rel="stylesheet">
+    <link  href="css/login.css" rel="stylesheet">
 
 
     @stack('css')
@@ -54,12 +54,10 @@
 <script src="/assets/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="/assets/owl.carousel/owl.carousel.min.js"></script>
 <script src="/assets/venobox/venobox.min.js"></script>
-
-<!-- Template Main JS File -->
-<script src="/assets/js/main.js"></script>
-@section('js')
-@endsection
+<script src="https://kit.fontawesome.com/2f020faf6d.js" crossorigin="anonymous"></script>
 @stack('script')
+<!-- Template Main JS File -->
+<script src="{{asset('assets/js/main.js')}}"></script>
 </body>
 
 </html>

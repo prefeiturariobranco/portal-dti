@@ -885,7 +885,7 @@ section {
   margin-bottom: 30px;
 }
 
-.portfolio #portfolio-flters {
+.portfolio #portfolio-flters, .portfolio #filter-active {
   margin: 0 auto 35px auto;
   list-style: none;
   text-align: center;
@@ -905,16 +905,17 @@ section {
   text-transform: uppercase;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
+  /*color: #212529;*/
 }
 
 
 .portfolio #portfolio-flters:hover{
-  color: #FFF;
+  color: #FFFFFF;
   background: #356EB1;
 
 }
 .portifolio #portfolio-flters:active{
-    color: #fff;
+    color: #FFFFFF;
     background: #356EB1
 }
 
@@ -1543,11 +1544,16 @@ section {
   transition: 0.3s;
 }
 
-.faq .faq-list i {
-  font-size: 16px;
-  position: absolute;
-  left: 0;
-  top: -2px;
+/*.faq .faq-list i {*/
+/*!*  font-size: 16px;*!*/
+/*!*  position: absolute;*!*/
+/*!*  left: 0;*!*/
+/*!*  top: -2px;*!*/
+/*}*/
+
+.questionCollapse span {
+    width: 100%;
+    margin-right: 50%;
 }
 
 .faq .faq-list p {
@@ -1576,6 +1582,7 @@ section {
   display: none;
   transition: 0.6s;
 }
+
 
 
 /*--------------------------------------------------------------

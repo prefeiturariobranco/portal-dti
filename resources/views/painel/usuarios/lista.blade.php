@@ -1,18 +1,15 @@
 @extends('templates.dashboard')
 @section('titulo')Intranet :: Usuários @endsection
 
-@section('js')
-<script>
-    $(document).ready(function() {
+@push()
+    <style>
+        .pagination.page-link {
+            border-top-right-radius: .2rem;
+            border-bottom-right-radius: .2rem;
+        }
+    </style>
+@endpush('css')
 
-        $('#tech-companies-1').DataTable({
-            language: {
-                url: '/json/Portuguese-Brasil.json'
-            }
-        });
-    });
-</script>
-@endsection
 
 @section('content')
     <div class="row">
@@ -104,4 +101,16 @@
             </div>
         </div>
     </div>
+@endsection
+@section('js')
+    <script>
+        $(document).ready(function() {
+
+            $('#tech-companies-1').DataTable({
+                language: {
+                    url: '/json/Portuguese-Brasil.json'
+                }
+            });
+        });
+    </script>
 @endsection
