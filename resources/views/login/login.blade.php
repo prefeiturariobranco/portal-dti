@@ -16,7 +16,8 @@
                     <cite>Essa área é exclusiva para os <br> setores e departamento de Tecnologia.</cite>
                 </div>
                 <div class="col-md-6 dti-login">
-                    <form target="_blank" action="/login/verificar" method="post" >
+                    <form target="_self" action="/login/verificar" method="post" >
+                    <form target="_self" action="/login/verificar" method="post" >
                         @csrf
                         <div class="wrap-input100 validate-input m-b-10" data-validate="Username is required">
                             <input class="input100" type="text" name="usuario" placeholder="Usuário">

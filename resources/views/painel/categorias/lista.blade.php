@@ -1,7 +1,7 @@
 @extends('templates.dashboard')
 
 @section('titulo')Categorias @endsection
-@section('css')
+@push('css')
 <style>
     .pagination.page-link {
         border-top-right-radius: .2rem;
@@ -9,19 +9,8 @@
     }
 </style>
 
-@endsection
+@endpush
 
-@section('js')
-<script>
-    $(document).ready(function() {
-        $('#tech-companies-1').DataTable({
-            language: {
-                url: '/json/Portuguese-Brasil.json'
-            }
-        });
-    });
-</script>
-@endsection
 
 @section('content')
 <div class="row">
@@ -44,7 +33,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="table table-responsive mb-0" data-pattern="priority-columns">
-                            <table id="tech-companies-1" class="table table-striped" style="text-align: center;">
+                            <table id="tech-companies-1_wrapper" class="table table-striped" style="text-align: center;">
                                 <thead>
                                 <tr>
                                     <th>Nome</th>
@@ -81,3 +70,15 @@
     </div> <!-- end col -->
 </div> <!-- end row -->
 @endsection
+@push('js')
+    <script>
+        $(document).ready(function() {
+
+            $('#tech-companies-1').DataTable({
+                language: {
+                    url: '/json/Portuguese-Brasil.json'
+                }
+            });
+        });
+    </script>
+@endpush

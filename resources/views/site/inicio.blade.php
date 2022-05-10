@@ -1,40 +1,42 @@
 @extends('templates/layout-principal')
 
-@section('js')
-    @section('title')
-        Portal DTI
-    @endsection
-    <script src="/js/site/inicio.js"></script>
+@section('title')
+    Portal DTI
 @endsection
+
+@push('css')
+    <link href="public/css/icons.css">
+@endpush
+
 
 @section('content')
     <!-- Carousel Section -->
     <section id="hero">
         <div class="hero-container" style="cursor: pointer">
-                <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 
-                    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-                    <div class="carousel-inner" role="listbox">
-                        @foreach($postagem as $key => $slider)
-                            <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
-                                <a href="/novidade/{{$slider->id}}">
-                                    <img src="/storage/banner/{{$slider->imagem}}" width="100%" alt="...">
-                                </a>
-                            </div>
-                        @endforeach
+                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+                <div class="carousel-inner" role="listbox">
+                    @foreach($postagem as $key => $slider)
+                        <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
+                            <a href="/novidade/{{$slider->id}}">
+                                <img src="/storage/banner/{{$slider->imagem}}" width="100%" alt="...">
+                            </a>
+                        </div>
+                    @endforeach
 
-                        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
+                    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
 
-                        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
                             <span class="carousel-control-next-icon icofont-thin-double-right"
                                   aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
+            </div>
         </div>
     </section>
     <!-- End Carousel Section -->
@@ -43,6 +45,7 @@
 
         <!-- Serviços Section -->
         <section id="services" class="services section-bg">
+            ￼
             <div class="container">
                 <?php $contarCategoria = 1; ?>
                 @foreach($categorias as $cat)
@@ -126,7 +129,9 @@
                 <div class="row">
                     <div class="col-lg-12 d-flex justify-content-center">
                         <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">Todos</li>
+                            <a href="{{'$/aplicativos'}}">
+                                <li data-filter="*" class="filter-active">Todos</li>
+                            </a>
                         </ul>
                     </div>
                 </div>
@@ -168,27 +173,35 @@
                     <a href="{{'/perguntas'}}"><h2>PERGUNTAS FREQUENTES</h2></a>
                 </div>
 
-                <?php $contarPerguntas = 1; ?>
                 @foreach($perguntas as $pergunta)
-                    @if($contarPerguntas <= 5)
-                        <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
-                            <li>
-                                <button class="btn text-left col-md-12" type="button" data-toggle="collapse"
+                    <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
+                        <li class="row">
+                            <div class="col col-12">
+                                <button class="btn text-left questionCollapse w-100" type="button"
+                                        data-toggle="collapse"
                                         data-target="#collapseExample{{$pergunta->id}}"
                                         aria-expanded="true" aria-controls="collapseExample{{$pergunta->id}}">
-                                    <i class="fa fa-plus"></i>
-                                    <span class="pergunta-titulo">{{$pergunta->titulo}}</span>
-                                    <i class='fas fa-chevron-down'></i>
+                                    <div class="row">
+                                        <div class="col col-10">
+                                            <span class="pergunta-titulo">{{$pergunta->titulo}}</span>
+                                        </div>
+                                        <div class="col col-2 text-right">
+                                            <i class="fa fa-plus"></i>
+                                        </div>
+                                    </div>
+
                                 </button>
+                            </div>
+                            <div class="col col-12">
                                 <div class="collapse" id="collapseExample{{$pergunta->id}}">
                                     <div class="card card-body pergunta-fundo">
                                         <p>{{$pergunta->conteudo}}</p>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
-                        <?php $contarPerguntas++; ?>
-                    @endif
+                            </div>
+                        </li>
+                    </ul>
+
                 @endforeach
             </div>
         </section>
@@ -196,3 +209,8 @@
 
     </main>
 @endsection
+
+@push('script')
+    <script src="/js/site/inicio.js"></script>
+    <script src="{{asset('js/site/perguntas.js')}}"></script>
+@endpush

@@ -1,10 +1,26 @@
-/* Script usado em perguntass frequentes */
-$(document).on('click', 'button[data-toggle="collapse"]', function (e) {
-    var $this = $(this);
+$('.questionCollapse').click(function () {
+    let i = $(this).find('i')
+    // console.log($(this).attr('aria-controls'))
+    setTimeout(() => { }, 3000);
+    if($('#' + $(this).attr('aria-controls')).hasClass('show')) {
+        i.addClass('fa-plus')
+        i.removeClass('fa-minus')
+    }
+    else if (!$('#' + $(this).attr('aria-controls')).hasClass('show')) {
+        i.removeClass('fa-plus')
+        i.addClass('fa-minus')
+    }
+})
 
-    if ($this.find('i').hasClass('fa-plus')) {
-        $this.find('i').removeClass('fa-plus').addClass('fa-minus');
-    } else {
-        $this.find('i').removeClass('fa-minus').addClass('fa-plus');
+
+$('.faq-list').on('shown.bs.collapse', function() {
+    if($('#' + $(this).attr('aria-controls')).hasClass('show')) {
+        i.addClass('fa-plus')
+        i.removeClass('fa-minus')
+    }
+}).on('show.bs.collapse', function() {
+    if (!$('#' + $(this).attr('aria-controls')).hasClass('show')) {
+        i.removeClass('fa-plus')
+        i.addClass('fa-minus')
     }
 });
