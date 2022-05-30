@@ -11,48 +11,47 @@
 
 @section('content')
     <!-- Carousel Section -->
-    <section id="hero">
-        <div class="hero-container" style="cursor: pointer">
-            <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+{{--    <section id="hero">--}}
+{{--        <div class="hero-container" style="cursor: pointer">--}}
+{{--                <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">--}}
 
-                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-                <div class="carousel-inner" role="listbox">
-                    @foreach($postagem as $key => $slider)
-                        <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
-                            <a href="/novidade/{{$slider->id}}">
-                                <img src="/storage/banner/{{$slider->imagem}}" width="100%" alt="...">
-                            </a>
-                        </div>
-                    @endforeach
+{{--                    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>--}}
+{{--                    <div class="carousel-inner" role="listbox">--}}
+{{--                        @foreach($postagem as $key => $slider)--}}
+{{--                            <div class="carousel-item {{$key == 0 ? 'active' : '' }}">--}}
+{{--                                <a href="/novidade/{{$slider->id}}">--}}
+{{--                                    <img src="/storage/banner/{{$slider->imagem}}" width="100%" alt="...">--}}
+{{--                                </a>--}}
+{{--                            </div>--}}
+{{--                        @endforeach--}}
 
-                    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
+{{--                        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">--}}
+{{--                            <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>--}}
+{{--                            <span class="sr-only">Previous</span>--}}
+{{--                        </a>--}}
 
-                    <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon icofont-thin-double-right"
-                                  aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--                        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">--}}
+{{--                            <span class="carousel-control-next-icon icofont-thin-double-right"--}}
+{{--                                  aria-hidden="true"></span>--}}
+{{--                            <span class="sr-only">Next</span>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <!-- End Carousel Section -->
 
     <main id="main">
 
         <!-- Serviços Section -->
         <section id="services" class="services section-bg">
-            ￼
             <div class="container">
                 <?php $contarCategoria = 1; ?>
                 @foreach($categorias as $cat)
                     @if($cat['nomeCategoria']['nomeCategoria'] == 'Serviços')
-                        <div class="section-title">
-                            <h2>{{$cat['nomeCategoria']['nomeCategoria']}}</h2>
-                        </div>
+{{--                        <div class="section-title">--}}
+{{--                            <h2>{{$cat['nomeCategoria']['nomeCategoria']}}</h2>--}}
+{{--                        </div>--}}
                         <div class="row" style="margin-bottom: 30px ">
                             @foreach($cat['icone'] as $icons)
                                 <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0"
@@ -173,6 +172,7 @@
                     <a href="{{'/perguntas'}}"><h2>PERGUNTAS FREQUENTES</h2></a>
                 </div>
 
+                <?php $contarPerguntas = 1; ?>
                 @foreach($perguntas as $pergunta)
                     <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
                         <li class="row">
