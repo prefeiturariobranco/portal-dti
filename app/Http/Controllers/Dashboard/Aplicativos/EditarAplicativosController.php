@@ -38,15 +38,15 @@ class EditarAplicativosController extends Controller
     {
         //
         $aplicativos = Aplicativos::where('id', $request->aplicativo_id)->first();
+
+        if (!empty($request->file('imagem'))) {
+            \Storage::delete($aplicativos->imagem);
+            $fileName = $request->imagem->store('public/aplicativos');
+            $aplicativos->imagem = $fileName;
+        }
+
         $aplicativos->titulo = $request->post('titulo');
         $aplicativos->url= $request->post('url');
-        $aplicativos->update();
-        if (!empty($request->file('imagem'))) {
-            $fileName = time() . '.' . $request->file('imagem')->extension();
-            \File::delete($aplicativos->imagem);
-            $aplicativos->imagem = $fileName;
-            $request->imagem->move(public_path('images'), $fileName);
-        }
 
         $resultado['error'] = 1;
         $resultado['msg'] = "Aplicativo alterado com sucesso!";
@@ -55,6 +55,8 @@ class EditarAplicativosController extends Controller
             $resultado['error'] = 2;
             $resultado['msg'] = "Falha alterar aplicativo";
         }
+        $aplicativos->save();
+
 
         Session::flash('erro_msg', $resultado);
         return  Redirect::to('painel/aplicativos');
