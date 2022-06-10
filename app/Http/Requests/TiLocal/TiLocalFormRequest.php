@@ -27,7 +27,7 @@ class TiLocalFormRequest extends FormRequest
             //
             'secretaria_id' => 'required|numeric',
             'nome' => 'required|max:100',
-            'telefone' => 'required|max:100|regex:/(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})/',
+            'telefone' => 'required|max:100|regex:/^[-0-9\+]+$/',
             'email' => 'required|email|max:100',
         ];
     }
