@@ -910,7 +910,7 @@ section {
 
 
 .portfolio #portfolio-flters:hover{
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   background: #356EB1;
 
 }
@@ -1617,9 +1617,19 @@ section {
     padding: 4px 30px 6px 30px;
     border: 2px solid #356EB1;
 }
+.btns {
+    border-radius: 50px;
+    padding: 4px 30px 6px 30px;
+    border: 2px solid #356EB1;
+}
 
 .services .btn:hover {
-    color: #fff;
+    color: #fff !important;
+    background: #356EB1;
+}
+
+.btns:hover {
+    color: #fff !important;
     background: #356EB1;
 }
 

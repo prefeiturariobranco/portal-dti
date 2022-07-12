@@ -24,8 +24,8 @@ Route::get('/novidade/{id}', 'Site\NovidadeController@show');
 Route::get('/tutoriais', 'Site\TutoriaisController@tutoriais');
 Route::get('/tutorial/{id}', 'Site\TutorialController@show');
 Route::get('/especificacoes-ti', 'Site\EspecificacaoController@index');
-Route::get('/aplicativos', 'Site\AplicativosController@index');
-Route::get('/aplicativos/{id}', 'Site\AplicativosController@show');
+Route::get('/aplicativos', 'Site\AplicativosController@index')->name('apps');
+Route::get('/aplicativos/{id}', 'Site\AplicativosController@show')->name('site.app');
 
 Route::get('/error/404', 'Utils\ErrorController@error404');
 Route::get('/error/500', 'Utils\ErrorController@error500');

@@ -37,7 +37,7 @@ class InicioController extends Controller
             'postagem' => Postagens::where('ocultar', 0)->get(),
             'tutoriais' => Tutoriais::all(),
             'perguntas' => Perguntas::where('ocultar', 0)->limit(5)->get(),
-            'aplicativos' => Aplicativos::where('ocultar', 0)->get(),
+            'aplicativos' => Aplicativos::where('ocultar', 0)->limit(3)->get(),
         ]);
 
     }

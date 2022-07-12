@@ -17,12 +17,12 @@
                     @endif
                     @foreach($aplicativos as $aplicativo)
                         <div class="portfolio-info mt-3" style="text-align: center">
-                            <a href="">
+                            <a href="{{$aplicativo->url}}">
                             <h4>{{$aplicativo->titulo}}</h4>
                         <img src="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}"
                              class="img-fluid text-lg-center" width="50%" alt="">
                         </a>
                 </div>
                 @endforeach
-        </div>
+                </div>
 @endsection
