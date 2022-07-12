@@ -1,19 +1,28 @@
-@extends('templates/layout-submenu')
-@section('css')
-@endsection
+
+@extends('templates.layout-principal')
+@section('css')@endsection
 @section('js')@endsection
 @section('title') Portal DTI @endsection
 
 @section('content')
-<h1 class="titulo_pagina">Aplicativos</h1>
-<p class="subtitulo_pagina">Conheça os aplicativos criados para ajudar a sociedade acreana...</p>
-
-<div class="boxers">
-    <!-- FOREACH COM ICONES -->
-    <a href="#" title="">
-        <img src="#" title="" alt=""/>
-        <span class="bx">#</span>
-    </a>
-
-</div>
+    <section id="services" class="services section-bg">
+        <div class="container" >
+            <div class="section-title">
+                <h2>Aplicativos</h2>
+            </div>
+            @if (empty($aplicativos[0]))
+                <div>
+                    <img src="{{ asset('/assets/images/notfound.png') }}" width="50%">
+                    <p class="card-text mt-3">Nenhum Resultado Encontrado Busque Novamente</p>
+                    @endif
+                    @foreach($aplicativos as $aplicativo)
+                        <div class="portfolio-info mt-3" style="text-align: center">
+                            <a href="">
+                            <h4>{{$aplicativo->titulo}}</h4>
+                        <img src="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}"
+                             class="img-fluid text-lg-center" width="50%" alt="">
+                        </a>
+                </div>
+                @endforeach
+        </div>
 @endsection

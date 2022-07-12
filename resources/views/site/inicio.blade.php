@@ -128,7 +128,7 @@
                 <div class="row">
                     <div class="col-lg-12 d-flex justify-content-center">
                         <ul id="portfolio-flters">
-                            <a href="{{'$/aplicativos'}}">
+                            <a href="aplicativos/">
                                 <li data-filter="*" class="filter-active">Todos</li>
                             </a>
                         </ul>
