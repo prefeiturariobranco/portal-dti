@@ -133,7 +133,7 @@
                             <div class="portfolio-wrap ml-5 col-8">
                                 @isset($aplicativo->imagem)
                                     <img src="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}"
-                                         class="img-fluid " alt="" width="50%">
+                                         class="img-fluid " alt="" >
                                     <div class="portfolio-info">
                                         <h4>{{$aplicativo->titulo}}</h4>
                                     </div>
