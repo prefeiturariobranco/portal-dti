@@ -10,35 +10,35 @@
 
 
 @section('content')
-    <!-- Carousel Section -->
-{{--    <section id="hero">--}}
-{{--        <div class="hero-container" style="cursor: pointer">--}}
-{{--                <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">--}}
+{{--    <!-- Carousel Section -->--}}
+{{--        <section id="hero">--}}
+{{--            <div class="hero-container" style="cursor: pointer">--}}
+{{--                    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">--}}
 
-{{--                    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>--}}
-{{--                    <div class="carousel-inner" role="listbox">--}}
-{{--                        @foreach($postagem as $key => $slider)--}}
-{{--                            <div class="carousel-item {{$key == 0 ? 'active' : '' }}">--}}
-{{--                                <a href="/novidade/{{$slider->id}}">--}}
-{{--                                    <img src="/storage/banner/{{$slider->imagem}}" width="100%" alt="...">--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                        @endforeach--}}
+{{--                        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>--}}
+{{--                        <div class="carousel-inner" role="listbox">--}}
+{{--                            @foreach($postagem as $key => $slider)--}}
+{{--                                <div class="carousel-item {{$key == 0 ? 'active' : '' }}">--}}
+{{--                                    <a href="/novidade/{{$slider->id}}">--}}
+{{--                                        <img src="/storage/banner/{{$slider->imagem}}" width="100%" alt="...">--}}
+{{--                                    </a>--}}
+{{--                                </div>--}}
+{{--                            @endforeach--}}
 
-{{--                        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">--}}
-{{--                            <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>--}}
-{{--                            <span class="sr-only">Previous</span>--}}
-{{--                        </a>--}}
+{{--                            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">--}}
+{{--                                <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>--}}
+{{--                                <span class="sr-only">Previous</span>--}}
+{{--                            </a>--}}
 
-{{--                        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">--}}
-{{--                            <span class="carousel-control-next-icon icofont-thin-double-right"--}}
-{{--                                  aria-hidden="true"></span>--}}
-{{--                            <span class="sr-only">Next</span>--}}
-{{--                        </a>--}}
+{{--                            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">--}}
+{{--                                <span class="carousel-control-next-icon icofont-thin-double-right"--}}
+{{--                                      aria-hidden="true"></span>--}}
+{{--                                <span class="sr-only">Next</span>--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
 {{--                    </div>--}}
-{{--                </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
+{{--            </div>--}}
+{{--        </section>--}}
     <!-- End Carousel Section -->
 
     <main id="main">
@@ -49,9 +49,9 @@
                 <?php $contarCategoria = 1; ?>
                 @foreach($categorias as $cat)
                     @if($cat['nomeCategoria']['nomeCategoria'] == 'Serviços')
-{{--                        <div class="section-title">--}}
-{{--                            <h2>{{$cat['nomeCategoria']['nomeCategoria']}}</h2>--}}
-{{--                        </div>--}}
+                        {{--                        <div class="section-title">--}}
+                        {{--                            <h2>{{$cat['nomeCategoria']['nomeCategoria']}}</h2>--}}
+                        {{--                        </div>--}}
                         <div class="row" style="margin-bottom: 30px ">
                             @foreach($cat['icone'] as $icons)
                                 <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0"
@@ -110,7 +110,7 @@
                         @endif
                     @endforeach
                     <div class="container-fluid" style="text-align: center">
-                        <a href="{{'/tutoriais'}}" title="" class="btn ">Mostrar Mais</a>
+                        <a href="{{'/tutoriais'}}" title="" class="btn">Mostrar Mais</a>
                     </div>
                 </div>
             </div>
@@ -122,34 +122,26 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Nosso Portfólio</h2>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="portfolio-flters">
-                            <a href="{{'$/aplicativos'}}">
-                                <li data-filter="*" class="filter-active">Todos</li>
-                            </a>
-                        </ul>
-                    </div>
+                    <a href="{{ route('apps') }}"><h2>Nosso Portfólio</h2></a>
                 </div>
 
                 <div class="row portfolio-container">
 
+                    <?php $contarAplicativos = 1; ?>
                     @foreach($aplicativos as $aplicativo)
                         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                             <div class="portfolio-wrap ml-5 col-8">
                                 @isset($aplicativo->imagem)
                                     <img src="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}"
-                                         class="img-fluid " alt="">
+                                         class="img-fluid " alt="" >
                                     <div class="portfolio-info">
                                         <h4>{{$aplicativo->titulo}}</h4>
                                     </div>
                                     <div class="portfolio-links">
                                         <a href="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}"
                                            data-gall="portfolioGallery"
-                                           class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
+                                           class="venobox" title="{{ $aplicativo->titulo }}">
+                                            <i class="bx bx-plus"></i></a>
                                         <a href="{{$aplicativo->url}}" title="Mais Detalhes">
                                             <i class="bx bx-link"></i></a>
                                     </div>
@@ -157,9 +149,15 @@
                             </div>
                         </div>
                     @endforeach
-
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <a href="{{ route('apps') }}" class="btns" style="color: #0b0b0b">Mostrar mais</a>
+                </div>
+            </div>
+
         </section>
         <!-- End Our Portfolio Section -->
 
@@ -171,6 +169,7 @@
                 <div class="section-title">
                     <a href="{{'/perguntas'}}"><h2>PERGUNTAS FREQUENTES</h2></a>
                 </div>
+                <?php $contarPerguntas = 1; ?>
 
                 <?php $contarPerguntas = 1; ?>
                 @foreach($perguntas as $pergunta)
@@ -201,8 +200,10 @@
                             </div>
                         </li>
                     </ul>
-
                 @endforeach
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <a href="{{ '/perguntas' }}" title="" class="btns">Mostrar Mais</a>
+                </div>
             </div>
         </section>
         <!-- End Perguntas Section -->
