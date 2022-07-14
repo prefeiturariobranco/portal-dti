@@ -10,35 +10,35 @@
 
 
 @section('content')
-    <!-- Carousel Section -->
-    {{--    <section id="hero">--}}
-    {{--        <div class="hero-container" style="cursor: pointer">--}}
-    {{--                <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">--}}
+{{--    <!-- Carousel Section -->--}}
+{{--        <section id="hero">--}}
+{{--            <div class="hero-container" style="cursor: pointer">--}}
+{{--                    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">--}}
 
-    {{--                    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>--}}
-    {{--                    <div class="carousel-inner" role="listbox">--}}
-    {{--                        @foreach($postagem as $key => $slider)--}}
-    {{--                            <div class="carousel-item {{$key == 0 ? 'active' : '' }}">--}}
-    {{--                                <a href="/novidade/{{$slider->id}}">--}}
-    {{--                                    <img src="/storage/banner/{{$slider->imagem}}" width="100%" alt="...">--}}
-    {{--                                </a>--}}
-    {{--                            </div>--}}
-    {{--                        @endforeach--}}
+{{--                        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>--}}
+{{--                        <div class="carousel-inner" role="listbox">--}}
+{{--                            @foreach($postagem as $key => $slider)--}}
+{{--                                <div class="carousel-item {{$key == 0 ? 'active' : '' }}">--}}
+{{--                                    <a href="/novidade/{{$slider->id}}">--}}
+{{--                                        <img src="/storage/banner/{{$slider->imagem}}" width="100%" alt="...">--}}
+{{--                                    </a>--}}
+{{--                                </div>--}}
+{{--                            @endforeach--}}
 
-    {{--                        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">--}}
-    {{--                            <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>--}}
-    {{--                            <span class="sr-only">Previous</span>--}}
-    {{--                        </a>--}}
+{{--                            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">--}}
+{{--                                <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>--}}
+{{--                                <span class="sr-only">Previous</span>--}}
+{{--                            </a>--}}
 
-    {{--                        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">--}}
-    {{--                            <span class="carousel-control-next-icon icofont-thin-double-right"--}}
-    {{--                                  aria-hidden="true"></span>--}}
-    {{--                            <span class="sr-only">Next</span>--}}
-    {{--                        </a>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--        </div>--}}
-    {{--    </section>--}}
+{{--                            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">--}}
+{{--                                <span class="carousel-control-next-icon icofont-thin-double-right"--}}
+{{--                                      aria-hidden="true"></span>--}}
+{{--                                <span class="sr-only">Next</span>--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--            </div>--}}
+{{--        </section>--}}
     <!-- End Carousel Section -->
 
     <main id="main">
@@ -140,7 +140,7 @@
                                     <div class="portfolio-links">
                                         <a href="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}"
                                            data-gall="portfolioGallery"
-                                           class="venobox" title="Web 3">
+                                           class="venobox" title="{{ $aplicativo->titulo }}">
                                             <i class="bx bx-plus"></i></a>
                                         <a href="{{$aplicativo->url}}" title="Mais Detalhes">
                                             <i class="bx bx-link"></i></a>

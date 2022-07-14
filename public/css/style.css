@@ -4374,5 +4374,10 @@ div.fullscreen {
     background-color: #f7f7f7
 }
 
-/* ============================== /ESTILOS DE PERGUNTAS ============================== */
-
+/* ============================== /ESTILOS DE APLICATIVOS ============================== */
+.link-url {
+    color: #356EB1;
+}
+.link-url:hover {
+    color: black!important;
+}
