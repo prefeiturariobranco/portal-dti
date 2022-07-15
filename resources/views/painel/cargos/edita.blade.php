@@ -28,8 +28,8 @@
 
                 <input type="text" name="id" value="{{$cargos->id}}" hidden>
                 <br>
-                <input class="btn btn-outline-primary" type="submit" value="Alterar">
-                <a class="btn btn-outline-danger" href="{{route('lista.cargos')}}">Voltar</a>
+                <input class="btn btn-primary" type="submit" value="Alterar">
+                <a class="btn btn-danger" href="{{route('lista.cargos')}}">Voltar</a>
             </form>
         </div>
     </div>

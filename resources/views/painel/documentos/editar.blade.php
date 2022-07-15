@@ -77,7 +77,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Anexos: </label>
-                            <input type="file" name="arquivo_documento[]" multiple class="custom-file">
+                            <input type="file" name="arquivo_documento[]" multiple class="custom-file" accept="application/pdf">
                         </div>
                     </div>
                     <br>
@@ -98,7 +98,7 @@
                                         </div>
 
                                         <div class="col-lg-4">
-                                            <a href="/files/documentos/{{ $arquivo->caminho }}" title="baixa" class="btn      btn-primary">
+                                            <a href="/files/documentos/{{ $arquivo->caminho }}" title="baixa" class="btn btn-primary">
                                                 <i class="fas fa-download"></i>
                                             </a>
                                             <a href="/painel/documentos/arquivo/remover/{{ $arquivo->id }}/{{ $arquivo->id }}"

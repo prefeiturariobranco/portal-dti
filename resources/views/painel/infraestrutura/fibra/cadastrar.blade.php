@@ -31,7 +31,7 @@
                     <div class="row mt-3">
                         <div class="col-md-4">
                             <label>Ano: </label>
-                            <input type="text" class="form-control" name="ano" value="{{date('Y')}}">
+                            <input type="number" max="{{date('Y')}}" class="form-control" name="ano" value="{{date('Y')}}">
                             <span class="system_error text-danger">{{$errors->first('ano')}}</span>
                         </div>
                     </div>

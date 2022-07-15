@@ -56,7 +56,7 @@
                         <div class="col-md-4">
                             <label>Telefone:</label>
                             <input type="text" name="telefone" class="form-control"
-                                   placeholder="Digite o telefone do contato">
+                                   placeholder="Digite o telefone do contato" onkeydown="return mascaraTelefone(event)">
                             <span class="system_error text-danger">{{$errors->first('telefone')}}</span>
                         </div>
                     </div>
@@ -73,5 +73,5 @@
         </div>
     </div> <!-- end col -->
 </div> <!-- end row -->
-
 @endsection
+

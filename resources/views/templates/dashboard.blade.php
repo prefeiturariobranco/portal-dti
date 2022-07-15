@@ -9,6 +9,7 @@
     <meta content="Painel Administrativo" name="description" />
     <meta content="DTI - Sistemas" name="author" />
     <link rel="stylesheet" href="/css/dashboard.css">
+    <script src="{{asset('js/site/mascaras.js')}}"></script>
     @yield('css')
 </head>
 <body>
