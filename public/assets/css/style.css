@@ -654,6 +654,16 @@ section {
     font-size: 18px;
 }
 
+.title-box {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.title:hover, .title:after{
+    color: #fff3cd !important;
+}
+
 .services .title a {
     color: #425451;
 }
@@ -1658,6 +1668,10 @@ section {
 }
 
 .img-apps:hover {
+    opacity: 0.7;
+}
+
+.img-tuto:hover {
     opacity: 0.7;
 }
 

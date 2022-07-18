@@ -22,12 +22,12 @@
     <link  href="{{ URL::asset('assets/animate.css/animate.min.css') }}" rel="stylesheet">
     <link  href="{{ URL::asset('assets/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link  href="{{ URL::asset('assets/venobox/venobox.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
 
     <!-- Template Main CSS File -->
     <link  href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet">
 
-    <link  href="css/login.css" rel="stylesheet">
-
+    <link  href="{{ asset('assets/css/login.css') }}" rel="stylesheet">
 
     @stack('css')
 </head>

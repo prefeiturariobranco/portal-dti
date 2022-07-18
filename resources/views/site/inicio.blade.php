@@ -58,11 +58,11 @@
                                      style="padding: 10px; cursor: pointer"
                                      @if($icons['dinamico'] == 2) onclick="window.open('{{$icons['link']}}', '_blank')"
                                      @else onclick="window.location.assign('{{$icons['link']}}')" @endif>
-                                    <div class="icon-box">
+                                    <div class="icon-box title">
                                         <div class="icon">
-                                            <img style="width: 40px" src="{{$icons['caminho']}}" title="" alt=""/>
+                                            <img class="img-color" style="width: 40px" src="{{$icons['caminho']}}" title="" alt=""/>
                                         </div>
-                                        <h4 class="title">{{$icons['nome']}}</h4>
+                                        <h4 class="title-box">{{$icons['nome']}}</h4>
                                     </div>
                                 </div>
                             @endforeach
@@ -88,13 +88,16 @@
 
                             @if($contarTutorial <= 3)
                                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
-                                    <div class="card">
+                                    <div class="card img-tuto">
+                                         <a href="{{ asset('images/'.$tutorial->imagem) }}"
+                                         data-gall="portfolioGallery" class="venobox" title="{{ $tutorial->titulo }}">
                                         @isset($tutorial->imagem)
                                             <div class="carousel-item active">
                                                 <img src="{{asset('images/'.$tutorial->imagem)}}" class="d-block w-100"
                                                      alt="...">
                                             </div>
                                         @endisset
+                                         </a>
                                         <div class="card-body">
                                             <a href="/tutorial/{{ $tutorial->id }}">
                                                 <h5 class="card-title">{{ $tutorial->titulo }}</h5>

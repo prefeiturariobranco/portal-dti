@@ -11,7 +11,7 @@
                 <div class="col-lg-10">
                     <div class="card">
 
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <h4 class="card-title">{{ $tutorial->titulo }}</h4>
                             <h6 class="card-subtitle">de {{ $tutorial->auto}} postado
                                 em {{ $tutorial->created_at }}</h6>

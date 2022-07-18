@@ -8,7 +8,7 @@
                 <div class="ex-page-content">
                     <h1 class="text-dark">404!</h1>
                     <h4 class="mb-4">Pagina Não Encontrada</h4>
-                    <p class="mb-5">O endereço informado não encontra-se disponivel no momento.</p>
+                    <p class="mb-5">O endereço informado encontra-se indisponível no momento.</p>
                     <a class="btn btn-primary mb-5 waves-effect waves-light" href="/"><i class="mdi mdi-home"></i> Voltar ao Início</a>
                 </div>
 

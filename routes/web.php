@@ -27,8 +27,11 @@ Route::get('/especificacoes-ti', 'Site\EspecificacaoController@index');
 Route::get('/aplicativos', 'Site\AplicativosController@index')->name('apps');
 Route::get('/aplicativo/{id}', 'Site\AplicativoController@show')->name('site.app');
 
-Route::get('/error/404', 'Utils\ErrorController@error404');
 Route::get('/error/500', 'Utils\ErrorController@error500');
+
+Route::fallback(function () {
+    return view('error.404');
+});
 
 /*
  * ROUTAS QUE PERTENCIAM AO AUTH

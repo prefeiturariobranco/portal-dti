@@ -8,8 +8,9 @@
     <title>@yield('titulo')</title>
     <meta content="Painel Administrativo" name="description" />
     <meta content="DTI - Sistemas" name="author" />
-    <link rel="stylesheet" href="/css/dashboard.css">
-    <script src="{{asset('js/site/mascaras.js')}}"></script>
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
+    <script src="{{ asset('js/site/mascaras.js') }}"></script>
     @yield('css')
 </head>
 <body>
@@ -21,10 +22,10 @@
             <div class="topbar-left">
                 <a href="/painel" class="logo">
                     <span>
-                        <img src="/images/DTI-branca.png" style="width: 8em;">
+                        <img src="{{ asset('images/DTI-branca.png') }}" style="width: 8em;">
                     </span>
                     <i>
-                        <img src="/images/icon-brasao.png" alt="" height="40">
+                        <img src="{{ asset('images/icon-brasao.png') }}" alt="" height="40">
                     </i>
                 </a>
             </div>

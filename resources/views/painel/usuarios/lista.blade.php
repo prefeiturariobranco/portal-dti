@@ -1,14 +1,14 @@
 @extends('templates.dashboard')
 @section('titulo')Intranet :: Usuários @endsection
 
-@push()
+@push('css')
     <style>
         .pagination.page-link {
             border-top-right-radius: .2rem;
             border-bottom-right-radius: .2rem;
         }
     </style>
-@endpush('css')
+@endpush()
 
 
 @section('content')
