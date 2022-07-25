@@ -195,8 +195,12 @@ Route::get('/painel/acontecimentos/deletar/{id}', 'Dashboard\Acontecimentos\Dele
 Route::post('/painel/acontecimentos/salvar', 'Dashboard\Acontecimentos\CadastrarAcontecimentosController@store')->middleware('logado');
 Route::post('/painel/acontecimentos/alterar', 'Dashboard\Acontecimentos\EditarAcontecimentosController@update')->middleware('logado');
 
-# Documentos
+# Documentos Lista
 Route::get('/painel/documentos', 'Dashboard\Documentos\ListarDocumentosController@index')->middleware('logado');
+Route::get('/painel/documentos/abrir/{id}', 'Dashboard\Documentos\ListarDocumentosController@show')->middleware('logado');
+Route::get('/painel/documento/{id}', 'Dashboard\Documentos\ListarDocumentosController@download')->middleware('logado');
+
+#Documentos
 Route::get('/painel/documentos/cadastro', 'Dashboard\Documentos\CadastrarDocumentosController@index')->middleware('logado');
 Route::get('/painel/documentos/editar/{id}', 'Dashboard\Documentos\EditarDocumentosController@show')->middleware('logado');
 Route::get('/painel/documentos/deletar/{id}', 'Dashboard\Documentos\DeletarDocumentosController@destroy')->middleware('logado');

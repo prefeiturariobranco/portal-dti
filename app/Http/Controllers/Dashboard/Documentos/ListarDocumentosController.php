@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Dashboard\Documentos;
 
 use App\Http\Controllers\Controller;
 use App\Model\Documentos;
+use App\Model\Documentos_arquivos;
+use App\Model\Documentos_categorias;
+use App\Model\Usuarios;
+use App\User;
 use Illuminate\Http\Request;
 
 class ListarDocumentosController extends Controller
@@ -50,7 +54,17 @@ class ListarDocumentosController extends Controller
      */
     public function show($id)
     {
-        //
+        $documento = Documentos::findOrFail($id);
+        $user = Usuarios::findOrFail($id);
+        $cat_doc = Documentos_categorias::findOrFail($id);
+        $doc_ar = Documentos_arquivos::findOrFail($id);
+        return view('painel.documentos.show', compact('documento', 'user','cat_doc', 'doc_ar'));
+    }
+
+    public function download($id)
+    {
+        $doc_ar = Documentos_arquivos::findOrFail($id);
+        return view('painel.documentos.download', compact( 'doc_ar'));
     }
 
     /**

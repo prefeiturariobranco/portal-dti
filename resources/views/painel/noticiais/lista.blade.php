@@ -1,14 +1,14 @@
 @extends('templates.dashboard')
 @section('titulo')Notícias @endsection
 
-@section('css')
+@push('css')
 <style>
     .pagination.page-link {
         border-top-right-radius: .2rem;
         border-bottom-right-radius: .2rem;
     }
 </style>
-@endsection
+@endpush
 
 @section('js')
 <script>
@@ -43,7 +43,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="table-sm table-responsive mb-0" data-pattern="priority-columns">
-                                <table id="tech-companies-1" class="table table-striped" style="text-align: center;">
+                                <table id="tech-companies-1" class="table table-striped" style="text-align: left;">
                                     <thead>
                                     <tr>
                                         <th>Nome</th>

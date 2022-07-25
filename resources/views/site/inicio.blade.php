@@ -10,7 +10,7 @@
 
 
 @section('content')
-{{--    <!-- Carousel Section -->--}}
+    <!-- Carousel Section -->
 {{--        <section id="hero">--}}
 {{--            <div class="hero-container" style="cursor: pointer">--}}
 {{--                    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">--}}

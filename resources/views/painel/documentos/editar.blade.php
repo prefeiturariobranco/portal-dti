@@ -77,38 +77,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Anexos: </label>
-                            <input type="file" name="arquivo_documento[]" multiple class="custom-file" accept="application/pdf">
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <br/>
-                            <p>Arquivos Cadastrados:</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            @foreach($documento->documentosArquivos as $arquivo)
-                                @if($arquivo->ocultar == '0')
-                                    <div class="row mt-2">
-
-                                        <div class="col-lg-6">
-                                            <span>{{ $arquivo->caminho }} </span>
-                                        </div>
-
-                                        <div class="col-lg-4">
-                                            <a href="/files/documentos/{{ $arquivo->caminho }}" title="baixa" class="btn btn-primary">
-                                                <i class="fas fa-download"></i>
-                                            </a>
-                                            <a href="/painel/documentos/arquivo/remover/{{ $arquivo->id }}/{{ $arquivo->id }}"
-                                               title="excluir" class="btn btn-danger">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                @endif
-                            @endforeach
+                            <input type="file" name="documentos_id" multiple class="custom-file" accept="application/pdf">
                         </div>
                     </div>
                     <br>
