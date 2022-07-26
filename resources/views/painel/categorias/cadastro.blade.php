@@ -23,6 +23,7 @@
                             <span class="system_error text-danger">{{$errors->first('nome')}}</span>
                         </div>
                     </div>
+
                     <div class="row mt-3">
                         <div class="col-md-4">
                             <input type="submit" class="btn btn-primary" value="Salvar">

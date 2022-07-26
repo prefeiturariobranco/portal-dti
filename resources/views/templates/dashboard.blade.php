@@ -364,6 +364,7 @@
     <script src="/js/dashboard.js"></script>
     <script src="/js/loadingover/loadingoverlay.js"></script>
     <script src="/js/funcoes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
     @yield('js')
 </body>

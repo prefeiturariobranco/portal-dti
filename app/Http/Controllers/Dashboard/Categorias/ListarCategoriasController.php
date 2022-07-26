@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard\Categorias;
 
 use App\Http\Controllers\Controller;
 use App\Model\Icones_categorias;
+use App\Model\Planejamentos_Categorias;
 use Illuminate\Http\Request;
 
 class ListarCategoriasController extends Controller
@@ -15,7 +16,6 @@ class ListarCategoriasController extends Controller
      */
     public function index()
     {
-        //
         return view('painel.categorias.lista', [
             'categorias' => Icones_categorias::where('ocultar', 0)->get(),
         ]);
