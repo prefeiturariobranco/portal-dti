@@ -14,7 +14,7 @@
                         Cadastro de Planejamentos
                     </div>
                     <hr>
-                    <form action="/painel/planejamentos/salvar" method="post">
+                    <form action="/painel/planejamentos/salvar" method="post" id="ajax-crud-datatable">
                         @csrf
                         <div class="row">
                             <div class="col-md-4">
@@ -60,11 +60,34 @@
                                         <option value="{{ $planejamentoCat->id }}">
                                             {{ $planejamentoCat->nome }}
                                         </option>
-                                    @endforeach
                                 </select>
-                                <a href="" class="cat_plan" id="cadastrar_categoria">
-                                    <i class="fas fa-plus"></i>
-                                </a>
+                                <div class="pull-right mb-2">
+                                    <a class="btn-sm btn-success" onClick="add()" href="javascript:void(0)">
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+                                </div>
+
+                                <div class="card-body">
+                                    <form action="">
+                                            <label for="nome" class="col-sm-8 control-label">Nome da categoria:</label>
+                                            <div class="col-sm-12">
+                                                <input type="text" class="form-control" name="nome"
+                                                       maxlength="50" required="">
+                                            </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-4">
+                                                <input type="submit" class="btn btn-primary" value="Salvar Categoria">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    @endforeach
+
+                                </div>
+                                {{--                                <a href="javascript:void(0)" onclick="add()">--}}
+                                {{--                                    <i class="fas fa-plus"></i>--}}
+                                {{--                                </a>--}}
+                                {{--                                    <button type="button" class="btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#postModal">Salvar</button>--}}
+
                                 <span
                                     class="system_error text-danger">{{$errors->first('planejamento_categoria')}}</span>
                             </div>
@@ -87,29 +110,51 @@
 @push('link-js')
     <script src="{{asset('js/jquery-3.6.0.min.js')}}"></script>
     <script>
-        $(document).ready(function(){
-            var i=1;
-
-            $('#add_categoria').click(function(){
-
-                i++;
-                $('#inputs_adicionais').append('<div class="row" id="inputs_cad_venda'+i+'"> <div class="input-field col s8"> <input placeholder="Digite o produto" name="produto_venda" type="text" class="validate"> <label for="produto_venda">Produto</label> </div> <div class="input-field col s2"> <input placeholder="Digite a quantidade" name="quantidade_produto_venda" type="text" class="validate"> <label for="quantidade_produto_venda">Quantidade</label> </div> </div>' );
+        $(document).ready(function () {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
             });
+            $('#ajax-crud-datatable').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ url('/painel/categorias-planejamentos') }}",
+                columns: [
+                    {data: 'id', name: 'id'},
+                    {data: 'nome', name: 'nome'},
+                ],
+                order: [[0, 'desc']]
+            });
+        });
 
-            $('#cadastra_categoria').click(function(){
+        function add() {
+            $('#CategoriaForm').trigger("reset");
+            $('#CategoriaModal').html("Adicionar");
+            $('#categoria_modal').modal('show');
+            $('#id').val('');
+        }
 
-                $.ajax({
-
-                    url:"/painel/categorias-planejamentos/salvar",
-                    method:"POST",
-                    data:$('#categoria').serialize(),
-
-                    success:function(data){
-
-                        alert(data);
-                        $('#categoria')[0].reset();
-                    }
-                });
+        $('#CategoriaForm').submit(function (e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+            $.ajax({
+                type: 'POST',
+                url: "{{ url('/painel/categorias-planejamentos/cadastro')}}",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: (data) => {
+                    $("#categoria_modal").modal('hide');
+                    var oTable = $('#ajax-crud-datatable').dataTable();
+                    oTable.fnDraw(false);
+                    $("#btn-save").html('Submit');
+                    $("#btn-save").attr("disabled", false);
+                },
+                error: function (data) {
+                    console.log(data);
+                }
             });
         });
     </script>

@@ -54,7 +54,7 @@ class CadastrarPlanejamentosController extends Controller
 
 
         Session::flash('erro_msg', $resultado);
-        return Redirect::to('painel/planejamentos');
+        return Redirect::to('painel/planejamentos', compact('categoria'));
     }
 
     public function cat(Request $request)
