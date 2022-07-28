@@ -120,8 +120,7 @@ Route::post('/painel/categorias/salvar', 'Dashboard\Categorias\CadastrarCategori
 Route::post('/painel/categorias/alterar', 'Dashboard\Categorias\EditarCategoriasController@update')->middleware('logado');
 
 #Categorias Planejamentos
-Route::get('/painel/categorias-planejamentos', 'Dashboard\Categorias\ListarCategoriasController@index')->middleware('logado');
-Route::get('/painel/categorias-planejamentos/cadastro', 'Dashboard\Categorias\CadastrarCategoriasController@index')->middleware('logado');
+Route::post('/painel/categorias-planejamentos/salvar', 'Dashboard\Categorias\CategoriasPlanejamentosController@store')->middleware('logado');
 
 #Contatos
 Route::get('/painel/contatos', 'Dashboard\Contatos\ListarContatosController@index')->middleware('logado');

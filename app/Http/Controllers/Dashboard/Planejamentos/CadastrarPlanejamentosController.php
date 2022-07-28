@@ -10,6 +10,7 @@ use App\Model\Usuarios;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CadastrarPlanejamentosController extends Controller
 {
@@ -54,7 +55,7 @@ class CadastrarPlanejamentosController extends Controller
 
 
         Session::flash('erro_msg', $resultado);
-        return Redirect::to('painel/planejamentos', compact('categoria'));
+        return Redirect::to('painel/planejamentos');
     }
 
     public function cat(Request $request)

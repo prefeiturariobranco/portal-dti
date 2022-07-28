@@ -14,7 +14,7 @@
                         Cadastro de Planejamentos
                     </div>
                     <hr>
-                    <form action="/painel/planejamentos/salvar" method="post" id="ajax-crud-datatable">
+                    <form action="/painel/planejamentos/salvar" method="post">
                         @csrf
                         <div class="row">
                             <div class="col-md-4">
@@ -60,28 +60,12 @@
                                         <option value="{{ $planejamentoCat->id }}">
                                             {{ $planejamentoCat->nome }}
                                         </option>
+                                    @endforeach
                                 </select>
                                 <div class="pull-right mb-2">
                                     <a class="btn-sm btn-success" onClick="add()" href="javascript:void(0)">
                                         <i class="fas fa-plus"></i>
                                     </a>
-                                </div>
-
-                                <div class="card-body">
-                                    <form action="">
-                                            <label for="nome" class="col-sm-8 control-label">Nome da categoria:</label>
-                                            <div class="col-sm-12">
-                                                <input type="text" class="form-control" name="nome"
-                                                       maxlength="50" required="">
-                                            </div>
-                                        <div class="row mt-3">
-                                            <div class="col-md-4">
-                                                <input type="submit" class="btn btn-primary" value="Salvar Categoria">
-                                            </div>
-                                        </div>
-                                    </form>
-                                    @endforeach
-
                                 </div>
                                 {{--                                <a href="javascript:void(0)" onclick="add()">--}}
                                 {{--                                    <i class="fas fa-plus"></i>--}}
@@ -100,6 +84,24 @@
                             </div>
                         </div>
                     </form>
+
+                    <div class="card-body">
+                        <form action="/painel/categorias-planejamentos/salvar" method="POST">
+                            @method('POST')
+                            @csrf
+                            <label for="nome" class="col-sm-8 control-label">Nome da categoria:</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" name="nome"
+                                       maxlength="50" required="">
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <input type="submit" class="btn btn-primary" value="Salvar Categoria">
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
 
                 </div>
             </div>
