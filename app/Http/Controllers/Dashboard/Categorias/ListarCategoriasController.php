@@ -16,8 +16,9 @@ class ListarCategoriasController extends Controller
      */
     public function index()
     {
-        return view('painel.categorias.lista', [
+        return view('painel.categorias.icones.lista', [
             'categorias' => Icones_categorias::where('ocultar', 0)->get(),
+            'planejamentos' => Planejamentos_Categorias::where('ocultar', 0)->get()
         ]);
     }
 

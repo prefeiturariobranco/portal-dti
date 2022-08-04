@@ -1,66 +1,59 @@
 @extends('templates.dashboard')
-@section('titulo')Intranet :: Planejamentos @endsection
 
+@section('titulo')
+    Categorias
+@endsection
 @push('css')
-<style>
-    .pagination.page-link {
-        border-top-right-radius: .2rem;
-        border-bottom-right-radius: .2rem;
-    }
-</style>
+    <style>
+        .pagination.page-link {
+            border-top-right-radius: .2rem;
+            border-bottom-right-radius: .2rem;
+        }
+    </style>
+
 @endpush
 
-@section('js')
-    <script>
-        $(document).ready(function() {
-            $('#tech-companies-1').DataTable({
-                language: {
-                    url: '/json/Portuguese-Brasil.json'
-                }
-            });
-        });
-    </script>
-@endsection
 
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Planejamentos</h4>
+                    <h4>Categorias</h4>
                 </div>
                 <div class="card-body">
 
-                    <!-- Menssage -->
+                    <!-- message -->
 
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-success" href="/painel/planejamentos/cadastro">Cadastrar</a>
+                            <a class="btn btn-success" href="/painel/categorias/cadastro">Cadastrar</a>
                         </div>
                     </div>
 
                     <br>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="table-sm table-responsive mb-0" data-pattern="priority-columns">
-                                <table id="tech-companies-1" class="table table-striped" style="text-align: center;">
+                            <div class="table table-responsive mb-0" data-pattern="priority-columns">
+                                <table id="tech-companies-1_wrapper" class="table table-striped"
+                                       style="text-align: left;">
                                     <thead>
                                     <tr>
-                                        <th>Título</th>
+                                        <th>Nome</th>
                                         <th>Opções</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($planejamentos as $planejamento)
+                                    @foreach($categorias as $categoria)
                                         <tr>
-                                            <td class="text-center">{{ $planejamento->titulo }}</td>
+                                            <td class="text-left">{{ $categoria->nome }}</td>
                                             <td>
-                                                <a href="/painel/planejamentos/editar/{{ $planejamento->id }}">
-                                                    <button class="btn-sm btn-primary">
-                                                        <i class="fas fa-sync"></i>
+                                                <a href="/painel/categorias/editar/{{ $categoria->id }}">
+                                                    <button class="btn-sm btn-primary"><i class="fas fa-sync"></i>
                                                     </button>
                                                 </a>
-                                                <a href="/painel/planejamentos/deletar/{{ $planejamento->id }}">
+
+                                                <a href="/painel/categorias/deletar/{{ $categoria->id }}">
                                                     <button class="btn-sm btn-primary">
                                                         <i class="far fa-trash-alt"></i>
                                                     </button>
@@ -81,3 +74,15 @@
         </div> <!-- end col -->
     </div> <!-- end row -->
 @endsection
+@push('js')
+    <script>
+        $(document).ready(function () {
+
+            $('#tech-companies-1').DataTable({
+                language: {
+                    url: '/json/Portuguese-Brasil.json'
+                }
+            });
+        });
+    </script>
+@endpush

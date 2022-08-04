@@ -31,6 +31,9 @@
                     <div class="row mt-3">
                         <div class="col-md-4">
                             <label>Categoria: </label>
+                            <a class="btn-sm btn-success btn-select" type="button" title="Adicionar categoria" href="{{ route('create.invest') }}">
+                                <i class="fas fa-plus"></i>
+                            </a>
                             <select name="categoria" class="custom-select">
                                 @foreach($categorias as $categoria)
                                     <option value="{{ $categoria->id }}">
@@ -51,7 +54,7 @@
                     <div class="row mt-3">
                         <div class="col-md-4">
                             <input type="submit" class="btn btn-primary" value="Salvar">
-                            <a class="btn btn-danger" href="/painel/investimentos">Voltar</a>
+                            <a class="btn btn-danger" href="/painel/investimentos/">Voltar</a>
                         </div>
                     </div>
                 </form>

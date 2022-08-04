@@ -40,7 +40,6 @@ class CadastrarPlanejamentosController extends Controller
             'titulo' => $request->post('titulo'),
             'descricao' => $request->post('descricao'),
             'data_entrega' => $request->post('data_entrega'),
-            'responsavel' => $request->post('responsavel'),
             'criado_por' => Session::get('usuario')->id,
             'planejamentos_categorias_id' => $request->post('planejamento_categoria'),
         ]);
@@ -56,25 +55,5 @@ class CadastrarPlanejamentosController extends Controller
 
         Session::flash('erro_msg', $resultado);
         return Redirect::to('painel/planejamentos');
-    }
-
-    public function cat(Request $request)
-    {
-        if ($request->isMethod('POST')){
-            $categoria = new Planejamentos_Categorias;
-            $categoria->create([
-                'nome' => $request->get('nome'),
-
-            ]);
-
-            if($categoria){
-                return response()->json(['success' => 'success' , 'categoria' =>
-                    Planejamentos_Categorias::where('nome' , $request->get('nome'))->first()]);
-            }
-
-        }
-
-        return response()->json(['response' => 'This is get method']);
-
     }
 }

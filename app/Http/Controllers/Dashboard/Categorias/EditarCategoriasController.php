@@ -20,7 +20,7 @@ class EditarCategoriasController extends Controller
     public function show($id)
     {
         //
-        return view('painel.categorias.editar', [
+        return view('painel.categorias.icones.editar', [
             'categoria' => Icones_categorias::where('id', $id)->first(),
         ]);
     }

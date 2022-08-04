@@ -16,7 +16,8 @@
         "laravel/tinker": "^2.0",
         "spatie/cpu-load-health-check": "^1.0",
         "spatie/laravel-backup": "^8.0",
-        "spatie/laravel-health": "^1.8"
+        "spatie/laravel-health": "^1.8",
+        "yajra/laravel-datatables-oracle": "^10.1"
     },
     "require-dev": {
         "spatie/laravel-ignition": "^1.0",

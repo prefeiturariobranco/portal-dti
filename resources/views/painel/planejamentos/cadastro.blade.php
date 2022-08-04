@@ -55,26 +55,21 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Selecione a categoria:</label>
+                                <a class="btn-sm btn-success btn-select" type="button" title="Adicionar categoria" href="{{ route('create.plan') }}">
+                                    <i class="fas fa-plus"></i>
+                                </a>
                                 <select name="planejamento_categoria" id="planejamento_categoria" class="form-control">
                                     @foreach($planejamentoCats as $planejamentoCat)
+                                        <option>Selecione</option>
                                         <option value="{{ $planejamentoCat->id }}">
                                             {{ $planejamentoCat->nome }}
                                         </option>
                                     @endforeach
                                 </select>
-                                <div class="pull-right mb-2">
-                                    <a class="btn-sm btn-success" onClick="add()" href="javascript:void(0)">
-                                        <i class="fas fa-plus"></i>
-                                    </a>
-                                </div>
-                                {{--                                <a href="javascript:void(0)" onclick="add()">--}}
-                                {{--                                    <i class="fas fa-plus"></i>--}}
-                                {{--                                </a>--}}
-                                {{--                                    <button type="button" class="btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#postModal">Salvar</button>--}}
 
-                                <span
-                                    class="system_error text-danger">{{$errors->first('planejamento_categoria')}}</span>
                             </div>
+                            <span
+                                class="system_error text-danger">{{$errors->first('planejamento_categoria')}}</span>
                         </div>
 
                         <div class="row mt-3">
@@ -84,80 +79,9 @@
                             </div>
                         </div>
                     </form>
-
-                    <div class="card-body">
-                        <form action="/painel/categorias-planejamentos/salvar" method="POST">
-                            @method('POST')
-                            @csrf
-                            <label for="nome" class="col-sm-8 control-label">Nome da categoria:</label>
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control" name="nome"
-                                       maxlength="50" required="">
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-md-4">
-                                    <input type="submit" class="btn btn-primary" value="Salvar Categoria">
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-
                 </div>
             </div>
         </div> <!-- end col -->
     </div> <!-- end row -->
 @endsection
 
-@push('link-js')
-    <script src="{{asset('js/jquery-3.6.0.min.js')}}"></script>
-    <script>
-        $(document).ready(function () {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            $('#ajax-crud-datatable').DataTable({
-                processing: true,
-                serverSide: true,
-                ajax: "{{ url('/painel/categorias-planejamentos') }}",
-                columns: [
-                    {data: 'id', name: 'id'},
-                    {data: 'nome', name: 'nome'},
-                ],
-                order: [[0, 'desc']]
-            });
-        });
-
-        function add() {
-            $('#CategoriaForm').trigger("reset");
-            $('#CategoriaModal').html("Adicionar");
-            $('#categoria_modal').modal('show');
-            $('#id').val('');
-        }
-
-        $('#CategoriaForm').submit(function (e) {
-            e.preventDefault();
-            var formData = new FormData(this);
-            $.ajax({
-                type: 'POST',
-                url: "{{ url('/painel/categorias-planejamentos/cadastro')}}",
-                data: formData,
-                cache: false,
-                contentType: false,
-                processData: false,
-                success: (data) => {
-                    $("#categoria_modal").modal('hide');
-                    var oTable = $('#ajax-crud-datatable').dataTable();
-                    oTable.fnDraw(false);
-                    $("#btn-save").html('Submit');
-                    $("#btn-save").attr("disabled", false);
-                },
-                error: function (data) {
-                    console.log(data);
-                }
-            });
-        });
-    </script>
-@endpush
