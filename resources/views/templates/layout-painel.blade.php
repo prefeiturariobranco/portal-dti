@@ -18,7 +18,6 @@
 <div id="wrapper">
 
     @include('painel-cabecalho.html')
-    @include('painel-cabecalho.html')
 
     <div class="content-page">
         <div class="content">@section('content')@endsection</div>

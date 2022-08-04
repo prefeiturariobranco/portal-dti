@@ -4198,6 +4198,10 @@ textarea.form-control.is-invalid {
   }
 }
 
+.btn-select {
+    margin-left: 0px;
+}
+
 .btn {
   display: inline-block;
   font-weight: 400;

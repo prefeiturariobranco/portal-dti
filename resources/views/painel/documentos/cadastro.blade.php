@@ -16,6 +16,9 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Categoria: </label>
+                            <a class="btn-sm btn-success btn-select" type="button" title="Adicionar categoria" href="{{ route('create.doc') }}">
+                                <i class="fas fa-plus"></i>
+                            </a>
                             <select name="documentos_categorias_id" class="form-control">
                                 @foreach($categorias as $categoria)
                                     <option value="{{ $categoria->id }}">

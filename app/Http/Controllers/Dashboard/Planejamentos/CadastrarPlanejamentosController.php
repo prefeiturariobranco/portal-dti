@@ -10,6 +10,7 @@ use App\Model\Usuarios;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CadastrarPlanejamentosController extends Controller
 {
@@ -20,7 +21,6 @@ class CadastrarPlanejamentosController extends Controller
      */
     public function index()
     {
-        //
         return view('painel.planejamentos.cadastro', [
             'planejamentoCats' => Planejamentos_Categorias::where('ocultar', 0)->get(),
             'usuarios' => Usuarios::all(),
@@ -33,14 +33,13 @@ class CadastrarPlanejamentosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PlanejamentoFormRequest $request)
+    public function store(Request $request)
     {
         //
         $planejamento = Planejamentos::create([
             'titulo' => $request->post('titulo'),
             'descricao' => $request->post('descricao'),
             'data_entrega' => $request->post('data_entrega'),
-            'responsavel' => $request->post('responsavel'),
             'criado_por' => Session::get('usuario')->id,
             'planejamentos_categorias_id' => $request->post('planejamento_categoria'),
         ]);
@@ -53,8 +52,8 @@ class CadastrarPlanejamentosController extends Controller
             $resultado['msg'] = "Falha cadastrar planejamento";
         }
 
+
         Session::flash('erro_msg', $resultado);
         return Redirect::to('painel/planejamentos');
     }
-
 }
