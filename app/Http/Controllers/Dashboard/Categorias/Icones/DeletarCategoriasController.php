@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard\Categorias;
+namespace App\Http\Controllers\Dashboard\Categorias\Icones;
 
 use App\Http\Controllers\Controller;
 use App\Model\Icones_categorias;
@@ -10,12 +10,6 @@ use Illuminate\Support\Facades\Session;
 
 class DeletarCategoriasController extends Controller
 {
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //
@@ -32,6 +26,6 @@ class DeletarCategoriasController extends Controller
         }
 
         Session::flash('erro_msg', $resultado);
-        return Redirect::to('/painel/categorias');
+        return Redirect::to('/painel/categorias-icones');
     }
 }

@@ -1,39 +1,24 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard\Categorias;
+namespace App\Http\Controllers\Dashboard\Categorias\Icones;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Categorias\CategoriasStoreFormRequest;
 use App\Model\Icones_categorias;
 use App\Model\Planejamentos;
-use App\Model\Planejamentos_Categorias;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
 class CadastrarCategoriasController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function create()
     {
-        $plan = Planejamentos::with('planejamentos_categorias_id');
-        return view('painel.categorias.cadastro', compact('plan'));
+        return view('painel.categorias.icones.cadastro');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(CategoriasStoreFormRequest $request)
     {
-        //
-        $plan = Planejamentos::with('planejamentos_categorias_id');
         $iconeCategoria = Icones_categorias::create([
             'nome' => $request->post('nome'),
         ]);
@@ -46,7 +31,6 @@ class CadastrarCategoriasController extends Controller
             $resultado['msg'] = 'Falha cadastrar categoria';
         }
         Session::flash('erro_msg', $resultado);
-        return Redirect::to('/painel/categorias', compact('plan'));
+        return Redirect::to('/painel/categorias-icones');
     }
-
 }

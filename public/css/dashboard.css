@@ -32737,6 +32737,10 @@ dt {
   background-color: #333547;
 }
 
+.submenu-left {
+    margin-left: 30px;
+}
+
 .topbar {
   left: 0;
   position: fixed;

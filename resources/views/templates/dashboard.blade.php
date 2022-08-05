@@ -202,7 +202,7 @@
                                     </span>
                                 </span>
                             </a>
-                            <ul class="submenu">
+                            <ul class="submenu ">
                                 <li>
                                     <a href="/painel/usuarios/listar" class="waves-effect">
                                         <i class="fas fa-users"></i>
@@ -210,10 +210,36 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/painel/categorias">
-                                        <i class="far fa-window-maximize"></i>
-                                        <span>Categorias</span>
+                                    <a href="javascript:void(0);" class="waves-effect">
+                                        <i class="fas fa-cog"></i>
+                                        <span>Categorias
+                                            <span class="float-right menu-arrow">
+                                                <i class="mdi mdi-chevron-right"></i>
+                                            </span>
+                                        </span>
                                     </a>
+                                    <ul class="submenu submenu-left">
+                                        <li>
+                                            <a href="/painel/categorias-icones" class="waves-effect">
+                                                <i class="fas fa-icons">
+                                                </i>Ícones</a>
+                                        </li>
+                                        <li>
+                                            <a href="/painel/categorias-investimentos" class="waves-effect">
+                                                <i class="fas fa-file-invoice-dollar">
+                                                </i>Investimentos</a>
+                                        </li>
+                                        <li>
+                                            <a href="/painel/categorias-planejamentos" class="waves-effect">
+                                                <i class="far fa-calendar-alt">
+                                                </i>Planejamentos</a>
+                                        </li>
+                                        <li>
+                                            <a href="/painel/categorias-documentos" class="waves-effect">
+                                                <i class="fas fa-file-contract">
+                                                </i>Documentos</a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="/painel/icones">
@@ -286,7 +312,7 @@
                                             </span>
                                         </span>
                                     </a>
-                                    <ul class="submenu">
+                                    <ul class="submenu submenu-left">
                                         <li>
                                             <a href="/painel/sistemas/webpublico"><i class="far fa-window-maximize"></i>Webpublico</a>
                                         </li>
@@ -303,7 +329,7 @@
                                             </span>
                                         </span>
                                     </a>
-                                    <ul class="submenu">
+                                    <ul class="submenu submenu-left">
                                         <li>
                                             <a href="/painel/infra/fibra/listar">
                                                 <i class="fas fa-project-diagram"></i>Malha de Fibra

@@ -115,12 +115,12 @@ Route::post('/painel/aplicativos/salvar', 'Dashboard\Aplicativos\CadastrarAplica
 Route::post('/painel/aplicativos/alterar', 'Dashboard\Aplicativos\EditarAplicativosController@update')->middleware('logado')->name('aplicativo.update');
 
 #Categorias Ícones
-Route::get('/painel/categorias', 'Dashboard\Categorias\ListarCategoriasController@index')->middleware('logado');
-Route::get('/painel/categorias/cadastro', 'Dashboard\Categorias\CadastrarCategoriasController@index')->middleware('logado');
-Route::get('/painel/categorias/editar/{id}', 'Dashboard\Categorias\EditarCategoriasController@show')->middleware('logado');
-Route::get('/painel/categorias/deletar/{id}', 'Dashboard\Categorias\DeletarCategoriasController@destroy')->middleware('logado');
-Route::post('/painel/categorias/salvar', 'Dashboard\Categorias\CadastrarCategoriasController@store')->middleware('logado');
-Route::post('/painel/categorias/alterar', 'Dashboard\Categorias\EditarCategoriasController@update')->middleware('logado');
+Route::get('/painel/categorias-icones', 'Dashboard\Categorias\Icones\ListarCategoriasController@index')->middleware('logado');
+Route::get('/painel/categorias-icones/cadastro', 'Dashboard\Categorias\Icones\CadastrarCategoriasController@create')->middleware('logado');
+Route::get('/painel/categorias-icones/editar/{id}', 'Dashboard\Categorias\Icones\EditarCategoriasController@edit')->middleware('logado');
+Route::get('/painel/categorias-icones/deletar/{id}', 'Dashboard\Categorias\Icones\DeletarCategoriasController@destroy')->middleware('logado');
+Route::post('/painel/categorias-icones/salvar', 'Dashboard\Categorias\Icones\CadastrarCategoriasController@store')->middleware('logado');
+Route::post('/painel/categorias-icones/alterar', 'Dashboard\Categorias\Icones\EditarCategoriasController@update')->middleware('logado');
 
 #Categorias Planejamentos
 Route::get('/painel/categorias-planejamentos', 'Dashboard\Categorias\Planejamentos\ListarCategoriasController@index')
@@ -133,9 +133,13 @@ Route::get('/painel/categorias-planejamentos/editar/{id}', 'Dashboard\Categorias
     ->middleware('logado')->name('edit.plan');
 Route::post('/painel/categorias-planejamentos/alterar', 'Dashboard\Categorias\Planejamentos\EditarCategoriasController@update')
     ->middleware('logado')->name('update.plan');
+Route::get('/painel/categorias-planejamentos/deletar/{id}', 'Dashboard\Categorias\Planejamentos\DeletarCategoriasController@destroy')
+    ->middleware('logado')->name('destroy.plan');
 
 
 #Categorias Documentos
+Route::get('/painel/categorias-documentos', 'Dashboard\Categorias\Documentos\ListarCategoriasController@index')
+    ->middleware('logado')->name('index.doc');
 Route::get('/painel/categorias-documentos/cadastro', 'Dashboard\Categorias\Documentos\CadastrarCategoriasController@create')
     ->middleware('logado')->name('create.doc');
 Route::post('/painel/categorias-documentos/salvar', 'Dashboard\Categorias\Documentos\CadastrarCategoriasController@store')
@@ -144,8 +148,13 @@ Route::get('/painel/categorias-documentos/editar/{id}', 'Dashboard\Categorias\Do
     ->middleware('logado')->name('edit.doc');
 Route::post('/painel/categorias-documentos/alterar', 'Dashboard\Categorias\Documentos\EditarCategoriasController@update')
     ->middleware('logado')->name('update.doc');
+Route::get('/painel/categorias-documentos/deletar/{id}', 'Dashboard\Categorias\Documentos\DeletarCategoriasController@destroy')
+    ->middleware('logado');
+
 
 #Categorias Investimentos
+Route::get('/painel/categorias-investimentos', 'Dashboard\Categorias\Investimentos\ListarCategoriasController@index')
+    ->middleware('logado')->name('index.invest');
 Route::get('/painel/categorias-investimentos/cadastro', 'Dashboard\Categorias\Investimentos\CadastrarCategoriasController@create')
     ->middleware('logado')->name('create.invest');
 Route::post('/painel/categorias-investimentos/salvar', 'Dashboard\Categorias\Investimentos\CadastrarCategoriasController@store')
@@ -154,6 +163,8 @@ Route::get('/painel/categorias-investimentos/editar/{id}', 'Dashboard\Categorias
     ->middleware('logado')->name('edit.invest');
 Route::post('/painel/categorias-investimentos/alterar', 'Dashboard\Categorias\Investimentos\EditarCategoriasController@update')
     ->middleware('logado')->name('update.invest');
+Route::get('/painel/categorias-investimentos/deletar/{id}', 'Dashboard\Categorias\Investimentos\DeletarCategoriasController@destroy')
+    ->middleware('logado')->name('destroy.invest');
 
 #Contatos
 Route::get('/painel/contatos', 'Dashboard\Contatos\ListarContatosController@index')->middleware('logado');

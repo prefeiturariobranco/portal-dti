@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Model\Planejamentos_Categorias;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class CadastrarCategoriasController extends Controller
 {
@@ -16,12 +17,19 @@ class CadastrarCategoriasController extends Controller
 
     public function store(Request $request)
     {
-        Planejamentos_Categorias::create([
+        $plan = Planejamentos_Categorias::create([
             'nome' => $request->nome,
         ]);
-        return Redirect::to('painel/planejamentos/cadastro')->with([
-            'success' => true,
-            'msg' => 'Categoria cadastrada com sucesso'
-        ]);
+
+        $resultado['error'] = 1;
+        $resultado['msg'] = 'Categoria cadastrado com o sucesso!';
+
+        if (!$plan) {
+            $resultado['error'] = 2;
+            $resultado['msg'] = 'Erro ao cadastrar categoria';
+        }
+
+        Session::flash('erro_msg', $resultado);
+        return Redirect::to('/painel/categorias-planejamentos');
     }
 }

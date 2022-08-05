@@ -1,7 +1,6 @@
 @extends('templates.dashboard')
 
-
-@section('titulo')Categorias Planejamentos @endsection
+@section('titulo')Categorias Documentos@endsection
 @push('css')
     <style>
         .pagination.page-link {
@@ -26,7 +25,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-success" href="/painel/categorias-planejamentos/cadastro">Cadastrar</a>
+                            <a class="btn btn-success" href="/painel/categorias-documentos/cadastro">Cadastrar</a>
                         </div>
                     </div>
 
@@ -34,8 +33,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="table table-responsive mb-0" data-pattern="priority-columns">
-                                <table id="tech-companies-1_wrapper" class="table table-striped"
-                                       style="text-align: left;">
+                                <table id="tech-companies-1_wrapper" class="table table-striped" style="text-align: left;">
                                     <thead>
                                     <tr>
                                         <th>Nome</th>
@@ -47,12 +45,11 @@
                                         <tr>
                                             <td class="text-left">{{ $categoria->nome }}</td>
                                             <td>
-                                                <a href="/painel/categorias-planejamentos/editar/{{ $categoria->id }}">
-                                                    <button class="btn-sm btn-primary"><i class="fas fa-sync"></i>
-                                                    </button>
+                                                <a href="/painel/categorias-documentos/editar/{{ $categoria->id }}">
+                                                    <button class="btn-sm btn-primary"><i class="fas fa-sync"></i></button>
                                                 </a>
 
-                                                <a href="/painel/categorias-planejamentos/deletar/{{ $categoria->id }}">
+                                                <a href="/painel/categorias-documentos/deletar/{{ $categoria->id }}">
                                                     <button class="btn-sm btn-primary">
                                                         <i class="far fa-trash-alt"></i>
                                                     </button>
@@ -75,7 +72,7 @@
 @endsection
 @push('js')
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
 
             $('#tech-companies-1').DataTable({
                 language: {

@@ -13,12 +13,13 @@
                         Editar Categoria Planejamentos
                     </div>
                     <hr>
-                    <form action="{{ route('update.plan', $plan->id) }}" method="post" enctype="multipart/form-data">
+                    <form action="/painel/categorias-planejamentos/alterar" method="post" enctype="multipart/form-data">
                         @csrf
+                        <input type="hidden" name="planejamento_id" value="{{ $categoria->id }}">
                         <div class="row">
                             <div class="col-md-4">
                                 <label for="nome" class="col-sm-8 control-label">Nome da categoria:</label>
-                                <input type="text" class="form-control" name="nome" value="{{ $plan->nome }}"
+                                <input type="text" class="form-control" name="nome" value="{{ $categoria->nome }}"
                                        maxlength="50" required="">
                             </div>
                         </div>

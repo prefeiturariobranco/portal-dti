@@ -1,7 +1,8 @@
 @extends('templates.dashboard')
 
-
-@section('titulo')Categorias Planejamentos @endsection
+@section('titulo')
+    Categorias Investimentos
+@endsection
 @push('css')
     <style>
         .pagination.page-link {
@@ -26,7 +27,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-success" href="/painel/categorias-planejamentos/cadastro">Cadastrar</a>
+                            <a class="btn btn-success" href="/painel/categorias-investimentos/cadastro">Cadastrar</a>
                         </div>
                     </div>
 
@@ -47,12 +48,12 @@
                                         <tr>
                                             <td class="text-left">{{ $categoria->nome }}</td>
                                             <td>
-                                                <a href="/painel/categorias-planejamentos/editar/{{ $categoria->id }}">
+                                                <a href="/painel/categorias-investimentos/editar/{{ $categoria->id }}">
                                                     <button class="btn-sm btn-primary"><i class="fas fa-sync"></i>
                                                     </button>
                                                 </a>
 
-                                                <a href="/painel/categorias-planejamentos/deletar/{{ $categoria->id }}">
+                                                <a href="/painel/categorias-investimentos/deletar/{{ $categoria->id }}">
                                                     <button class="btn-sm btn-primary">
                                                         <i class="far fa-trash-alt"></i>
                                                     </button>

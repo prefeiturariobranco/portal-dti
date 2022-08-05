@@ -13,7 +13,7 @@
                     Alterar de Categoria
                 </div>
                 <hr>
-                <form action="/painel/categorias/alterar" method="post">
+                <form action="/painel/categorias-icones/alterar" method="post">
                     @csrf
                     <input type="hidden" name="categoria_id" value="{{ $categoria->id }}">
                     <div class="row">
@@ -26,7 +26,7 @@
                     <div class="row mt-3">
                         <div class="col-md-4">
                             <input type="submit" class="btn btn-primary" value="Alterar">
-                            <a class="btn btn-danger" href="/painel/categorias">Voltar</a>
+                            <a class="btn btn-danger" href="/painel/categorias-icones">Voltar</a>
                         </div>
                     </div>
                 </form>

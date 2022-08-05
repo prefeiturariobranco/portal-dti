@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard\Categorias\Investimentos;
 use App\Http\Controllers\Controller;
 use App\Model\Investimentos_categorias;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class CadastrarCategoriasController extends Controller
 {
@@ -15,12 +16,19 @@ class CadastrarCategoriasController extends Controller
 
     public function store(Request $request)
     {
-        Investimentos_categorias::create([
+        $invest = Investimentos_categorias::create([
             'nome' => $request->nome
         ]);
-        return redirect('/painel/investimentos/cadastro')->with([
-            'success' => true,
-            'msg' => 'Categoria cadastrada com sucesso'
-        ]);
+
+        $resultado['error'] = 1;
+        $resultado['msg'] = 'Categoria cadastrada com sucesso';
+
+        if (!$invest) {
+            $resultado['error'] = 2;
+            $resultado['msg'] = 'Erro ao cadastrar categoria';
+        }
+
+            Session::flash('erro_msg', $resultado);
+        return redirect('/painel/categorias-investimentos');
     }
 }
