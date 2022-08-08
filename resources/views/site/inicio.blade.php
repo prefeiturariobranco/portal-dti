@@ -89,11 +89,11 @@
                             @if($contarTutorial <= 3)
                                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
                                     <div class="card img-tuto">
-                                         <a href="{{ asset('images/'.$tutorial->imagem) }}"
+                                         <a href="{{ asset('storage/'.str_replace('public/', '',$tutorial->imagem)) }}"
                                          data-gall="portfolioGallery" class="venobox" title="{{ $tutorial->titulo }}">
                                         @isset($tutorial->imagem)
                                             <div class="carousel-item active">
-                                                <img src="{{asset('images/'.$tutorial->imagem)}}" class="d-block w-100"
+                                                <img src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem))}}" class="d-block w-100"
                                                      alt="...">
                                             </div>
                                         @endisset
