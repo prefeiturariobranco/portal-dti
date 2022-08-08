@@ -28,7 +28,7 @@
                                     <tbody>
                                     @foreach( $secretaria as $secretarias)
                                         <tr>
-                                            <td class="text-left">{{$secretarias->nome}}</td>
+                                            <td class="text-left">{{$secretarias->nome}} - {{$secretarias->sigla }}</td>
                                             <td>
                                                 <a href="/painel/secretarias/editar/{{$secretarias->id}}">
                                                     <button class="btn-sm btn-primary">

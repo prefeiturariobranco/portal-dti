@@ -32,7 +32,7 @@
                         <input class="form-control col-4" name="sigla" type="text" maxlength="255" required>
                         <br>
                         <input class="btn btn-primary" type="submit" value="Cadastrar">
-                        <a class="btn btn-danger" href="">Voltar</a>
+                        <a class="btn btn-danger" href="/painel/secretarias/">Voltar</a>
                     </form>
                 </div>
             </div>

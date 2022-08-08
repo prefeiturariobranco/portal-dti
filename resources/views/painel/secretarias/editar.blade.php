@@ -15,6 +15,7 @@
                     <hr>
                     <form action="/painel/secretarias/alterar" method="POST" enctype="multipart/form-data">
                         @csrf
+                        <input type="hidden" name="secretaria_id" class="form-control" value="{{ $secretaria->id }}">
                         @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>
@@ -24,7 +25,6 @@
                                 </ul>
                             </div>
                         @endif
-
                         <label class="py-4 col-form-label">Digite o nome da secretaria:</label>
                         <input class="form-control col-4" name="nome" type="text" value="{{ $secretaria->nome }}" maxlength="255" required>
 
