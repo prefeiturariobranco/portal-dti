@@ -198,6 +198,13 @@ Route::get('/painel/tilocal/deletar/{id}', 'Dashboard\TiLocal\DeletarTilocalCont
 Route::post('/painel/tilocal/salvar', 'Dashboard\TiLocal\CadastrarTilocalController@store')->middleware('logado');
 Route::post('/painel/tilocal/alterar', 'Dashboard\TiLocal\EditarTilocalController@update')->middleware('logado');
 
+# Secreatarias
+Route::get('/painel/secretarias', 'Dashboard\Secretarias\ListarController@index')->middleware('logado');
+Route::get('/painel/secretarias/cadastro', 'Dashboard\Secretarias\CadastrarController@create')->middleware('logado');
+Route::get('/painel/secretarias/editar/{id}', 'Dashboard\Secretarias\EditarController@edit')->middleware('logado');
+Route::post('/painel/secretarias/salvar', 'Dashboard\Secretarias\CadastrarController@store')->middleware('logado');
+Route::post('/painel/secretarias/alterar', 'Dashboard\Secretarias\EditarController@update')->middleware('logado');
+
 # Noticias
 Route::get('/painel/noticias', 'Dashboard\Noticias\ListarNoticiasController@index')->middleware('logado');
 Route::get('/painel/noticias/cadastro', 'Dashboard\Noticias\CadastrarNoticiasController@index')->middleware('logado');
