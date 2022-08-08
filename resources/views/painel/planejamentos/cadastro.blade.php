@@ -55,12 +55,9 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Selecione a categoria:</label>
-                                <a class="btn-sm btn-success btn-select" type="button" title="Adicionar categoria" href="{{ route('create.plan') }}">
-                                    <i class="fas fa-plus"></i>
-                                </a>
                                 <select name="planejamento_categoria" id="planejamento_categoria" class="form-control">
-                                    @foreach($planejamentoCats as $planejamentoCat)
-                                        <option>Selecione</option>
+                                    <option>Selecione</option>
+                                @foreach($planejamentoCats as $planejamentoCat)
                                         <option value="{{ $planejamentoCat->id }}">
                                             {{ $planejamentoCat->nome }}
                                         </option>

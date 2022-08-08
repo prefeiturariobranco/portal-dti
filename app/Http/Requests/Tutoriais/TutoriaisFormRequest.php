@@ -27,6 +27,7 @@ class TutoriaisFormRequest extends FormRequest
             //
             'titulo' => 'required|max:128',
             'conteudo' => 'required',
+            'imagem' => 'nullable|image|mimes:jpg,jpeg,png'
         ];
     }
 

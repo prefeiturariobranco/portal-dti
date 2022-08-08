@@ -31,10 +31,8 @@
                     <div class="row mt-3">
                         <div class="col-md-4">
                             <label>Categoria: </label>
-                            <a class="btn-sm btn-success btn-select" type="button" title="Adicionar categoria" href="{{ route('create.invest') }}">
-                                <i class="fas fa-plus"></i>
-                            </a>
                             <select name="categoria" class="custom-select">
+                                <option>Selecionar</option>
                                 @foreach($categorias as $categoria)
                                     <option value="{{ $categoria->id }}">
                                         {{ $categoria->nome }}

@@ -35,7 +35,7 @@ class InicioController extends Controller
         return view('site/inicio', [
             'categorias' => $this->retornaCategoriaIcone(),
             'postagem' => Postagens::where('ocultar', 0)->get(),
-            'tutoriais' => Tutoriais::all(),
+            'tutoriais' => Tutoriais::where('ocultar', 0)->limit(3)->get(),
             'perguntas' => Perguntas::where('ocultar', 0)->limit(5)->get(),
             'aplicativos' => Aplicativos::where('ocultar', 0)->limit(3)->get(),
         ]);
