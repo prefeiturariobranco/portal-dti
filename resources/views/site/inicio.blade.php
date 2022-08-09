@@ -14,7 +14,8 @@
         }
 
         .section-center {
-            margin-right: 65px;
+            margin-right: auto;
+            margin-left: auto;
         }
     </style>
 @endpush
@@ -89,10 +90,10 @@
         <!-- Tutoriais Section -->
         <section class="more-services section-bg">
             <div class="container">
-                <div class="section-title section-center">
+                <div class="section-title" style="margin-right: 50px">
                     <a href="{{'/tutoriais'}}"><h2>Tutoriais</h2></a>
                 </div>
-                <div class="row">
+                <div class="row section-center">
                     <?php $contarTutorial = 1; ?>
                     @foreach($tutoriais as $tutorial )
                         @if($tutorial->ocultar == 0)
@@ -123,7 +124,7 @@
                             @endif
                         @endif
                     @endforeach
-                    <div class="container-fluid" style="text-align: center">
+                    <div class="container-fluid" style="text-align: center; margin-right: 50px">
                         <a href="{{'/tutoriais'}}" title="" class="btn">Mostrar Mais</a>
                     </div>
                 </div>
