@@ -211,7 +211,7 @@
                                 </li>
                                 <li>
                                     <a href="javascript:void(0);" class="waves-effect">
-                                        <i class="fas fa-cog"></i>
+                                        <i class="fa fa-list-alt"></i>
                                         <span>Categorias
                                             <span class="float-right menu-arrow">
                                                 <i class="mdi mdi-chevron-right"></i>
@@ -267,6 +267,12 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="/painel/secretarias">
+                                        <i class='fas fa-building'></i>
+                                        <span>Secretarias</span>
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="{{route('lista.cargos')}}">
                                         <i class="fas fa-briefcase"></i>
                                         <span>Cargos</span>
@@ -286,13 +292,13 @@
                                 </li>
                                 <li>
                                     <a href="/painel/tutoriais">
-                                        <i class="far fa-id-card"></i>
+                                        <i class="fas fa-chalkboard-teacher"></i>
                                         <span>Tutoriais</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="/painel/novidades">
-                                        <i class="far fa-id-card"></i>
+                                        <i class="fas fa-newspaper"></i>
                                         <span>Novidades</span>
                                     </a>
                                 </li>

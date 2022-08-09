@@ -21,14 +21,16 @@
                                 <table id="tech-companies-1" class="table table-striped" style="text-align: center;">
                                     <thead>
                                     <tr>
-                                        <th>Nome</th>
+                                        <th class="text-left">Nome</th>
+                                        <th>Sigla</th>
                                         <th>Ações</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach( $secretaria as $secretarias)
                                         <tr>
-                                            <td class="text-left">{{$secretarias->nome}} - {{$secretarias->sigla }}</td>
+                                            <td class="text-left">{{$secretarias->nome}}</td>
+                                            <td>{{$secretarias->sigla }}</td>
                                             <td>
                                                 <a href="/painel/secretarias/editar/{{$secretarias->id}}">
                                                     <button class="btn-sm btn-primary">
