@@ -44,9 +44,8 @@ class EditarNoticiasController extends Controller
         $arquivos = $request->file('banner');
         $arquivo_achou = 0;
         if(!is_null($request->file('pdf'))){
-            $arquivo_pdf = $request->file('pdf');
+            $arquivo_pdf = $request->file('pdf')->store('public/pdf');
 
-            $arquivo_pdf->storePubliclyAs('public/pdf/', $arquivo_pdf->getClientOriginalName());
             $noticiaId->update([
                 'url_documento' => $arquivo_pdf->getClientOriginalName(),
             ]);

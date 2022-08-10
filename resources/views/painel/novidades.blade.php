@@ -25,7 +25,7 @@
 
 
                     </form>
-                    <button class="btn btn-success" style="margin-bottom: 1%;" type="button" data-toggle="modal" data-target="#modalAdd">Adicionar Novidade
+                    <button class="btn btn-success" style="margin-bottom: 1%;" type="button" data-toggle="modal" href="" data-target="#modalAdd">Cadastrar Novidade
                     </button>
 
 
@@ -49,14 +49,7 @@
                                             <button class="btn btn-primary waves-effect waves-light" type="button" data-toggle="modal" data-target="#modalEdit">Editar
                                             </button>
                                             <button class="btn btn-danger waves-effect waves-light" type="button" data-toggle="modal" data-target="#modalDelete">Excluir
-
-        return view('painel.novidades', [
-            'postagens' => Postagens::all(),
-        ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.                </button>
+                                            </button>
                                         </td>
                                     </tr>
                                 @endforeach
