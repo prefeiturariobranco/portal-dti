@@ -296,12 +296,12 @@
                                         <span>Tutoriais</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="/painel/novidades">
-                                        <i class="fas fa-newspaper"></i>
-                                        <span>Novidades</span>
-                                    </a>
-                                </li>
+{{--                                <li>--}}
+{{--                                    <a href="/painel/noticias">--}}
+{{--                                        <i class="fas fa-newspaper"></i>--}}
+{{--                                        <span>Novidades</span>--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
                                 <li>
                                     <a href="/painel/investimentos" class="waves-effect">
                                         <i class="fas fa-file-invoice-dollar"></i>

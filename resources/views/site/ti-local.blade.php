@@ -20,13 +20,15 @@
 
                 <div class="departamento col-md-8">
                     @foreach($secretarias as $secretaria)
+                        @foreach($secretaria->tiLocal as $contato)
+                            @if($contato->ocultar == 0)
                         <p class="nome-departamento">{{$secretaria->nome}}</p>
-                    @foreach($secretaria->tiLocal as $contato)
-                            <div class="contato">
+                        <div class="contato">
                                     <p>{{$contato->nome}}</p>
                                     <p><i class="bx bx-phone"></i> {{$contato->telefone}}</p>
                                     <p><i class="bx bx-envelope"></i> {{$contato->email}}</p>
                                 </div>
+                            @endif
                         @endforeach
                     @endforeach
                 </div>
