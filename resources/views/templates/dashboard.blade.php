@@ -225,6 +225,11 @@
                                                 </i>Ícones</a>
                                         </li>
                                         <li>
+                                            <a href="/painel/categorias-mapas" class="waves-effect">
+                                                <i class="fas fa-map-marked-alt"></i>
+                                                </i>Mapas</a>
+                                        </li>
+                                        <li>
                                             <a href="/painel/categorias-investimentos" class="waves-effect">
                                                 <i class="fas fa-file-invoice-dollar">
                                                 </i>Investimentos</a>
@@ -352,6 +357,12 @@
                                     <a href="/painel/planejamentos" class="waves-effect">
                                         <i class="far fa-calendar-alt"></i>
                                         <span>Planejamento</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('list.maps') }}" class="waves-effect">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        <span>Mapas</span>
                                     </a>
                                 </li>
                                 <li>

@@ -1,7 +1,7 @@
 @extends('templates.dashboard')
 
 @section('titulo')
-    Categorias Investimentos
+    Categorias Mapas
 @endsection
 @push('css')
     <style>
@@ -27,7 +27,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-success" href="/painel/categorias-investimentos/cadastro">Cadastrar</a>
+                            <a class="btn btn-success" href="/painel/categorias-mapas/cadastro">Cadastrar</a>
                         </div>
                     </div>
 
@@ -48,16 +48,10 @@
                                         <tr>
                                             <td class="text-left">{{ $categoria->nome }}</td>
                                             <td>
-                                                <a href="/painel/categorias-investimentos/editar/{{ $categoria->id }}">
+                                                <a href="/painel/categorias-mapas/editar/{{ $categoria->id }}">
                                                     <button class="btn-sm btn-primary"><i class="fas fa-sync"></i>
                                                     </button>
                                                 </a>
-
-{{--                                                <a href="/painel/categorias-investimentos/deletar/{{ $categoria->id }}">--}}
-{{--                                                    <button class="btn-sm btn-primary">--}}
-{{--                                                        <i class="far fa-trash-alt"></i>--}}
-{{--                                                    </button>--}}
-{{--                                                </a>--}}
                                             </td>
                                         </tr>
                                     @endforeach

@@ -35,7 +35,7 @@
                                                         <i class="fas fa-pen-alt"></i>
                                                     </button>
                                                 </a>
-                                                @if (isset($this->formValidation))
+                                                @if (isset($formValidation))
                                                 <a href="{{route('deleta.cargos',$cargo->id)}}">
                                                     <button class="btn-sm btn-primary">
                                                         <i class="far fa-trash-alt"></i>

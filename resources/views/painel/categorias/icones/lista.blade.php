@@ -49,11 +49,11 @@
                                                 <button class="btn-sm btn-primary"><i class="fas fa-sync"></i></button>
                                             </a>
 
-                                            <a href="/painel/categorias-icones/deletar/{{ $categoria->id }}">
-                                                <button class="btn-sm btn-primary">
-                                                    <i class="far fa-trash-alt"></i>
-                                                </button>
-                                            </a>
+{{--                                            <a href="/painel/categorias-icones/deletar/{{ $categoria->id }}">--}}
+{{--                                                <button class="btn-sm btn-primary">--}}
+{{--                                                    <i class="far fa-trash-alt"></i>--}}
+{{--                                                </button>--}}
+{{--                                            </a>--}}
                                         </td>
                                     </tr>
                                 @endforeach
