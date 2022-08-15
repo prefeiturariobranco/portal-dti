@@ -6,6 +6,18 @@
 
 @push('css')
     <link href="public/css/icons.css">
+    <style>
+        .responsive {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .section-center {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
 @endpush
 
 
@@ -78,10 +90,10 @@
         <!-- Tutoriais Section -->
         <section class="more-services section-bg">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" style="margin-right: 50px">
                     <a href="{{'/tutoriais'}}"><h2>Tutoriais</h2></a>
                 </div>
-                <div class="row">
+                <div class="row section-center">
                     <?php $contarTutorial = 1; ?>
                     @foreach($tutoriais as $tutorial )
                         @if($tutorial->ocultar == 0)
@@ -93,7 +105,7 @@
                                          data-gall="portfolioGallery" class="venobox" title="{{ $tutorial->titulo }}">
                                         @isset($tutorial->imagem)
                                             <div class="carousel-item active">
-                                                <img src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem))}}" class="d-block w-100"
+                                                <img src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem))}}" class="d-block responsive"
                                                      alt="...">
                                             </div>
                                         @endisset
@@ -112,7 +124,7 @@
                             @endif
                         @endif
                     @endforeach
-                    <div class="container-fluid" style="text-align: center">
+                    <div class="container-fluid" style="text-align: center; margin-right: 50px">
                         <a href="{{'/tutoriais'}}" title="" class="btn">Mostrar Mais</a>
                     </div>
                 </div>
@@ -132,11 +144,11 @@
 
                     <?php $contarAplicativos = 1; ?>
                     @foreach($aplicativos as $aplicativo)
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="col-lg-4 col-md-6 d-flex portfolio-item filter-web">
                             <div class="portfolio-wrap ml-5 col-8">
                                 @isset($aplicativo->imagem)
                                     <img src="{{asset('storage/'.str_replace('public/', '', $aplicativo->imagem))}}"
-                                         class="img-fluid " alt="" >
+                                         class="d-block responsive" alt="" width="100%">
                                     <div class="portfolio-info">
                                         <h4>{{$aplicativo->titulo}}</h4>
                                     </div>

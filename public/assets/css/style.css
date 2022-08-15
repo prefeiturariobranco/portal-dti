@@ -467,7 +467,7 @@ section {
 }
 
 .section-title {
-    text-align: center;
+    text-align: center !important;
 }
 
 .section-title h2 {

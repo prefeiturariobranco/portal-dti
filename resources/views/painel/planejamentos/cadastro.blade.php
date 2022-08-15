@@ -33,7 +33,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Data de entrega: </label>
-                                <input type="date" class="form-control" name="data_entrega">
+                                <input type="date" class="form-control" name="data_entrega" max="2022-12-31">
                                 <span class="system_error text-danger">{{$errors->first('data_entrega')}}</span>
                             </div>
                         </div>
