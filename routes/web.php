@@ -166,6 +166,18 @@ Route::post('/painel/categorias-investimentos/alterar', 'Dashboard\Categorias\In
 Route::get('/painel/categorias-investimentos/deletar/{id}', 'Dashboard\Categorias\Investimentos\DeletarCategoriasController@destroy')
     ->middleware('logado')->name('destroy.invest');
 
+#Categorias Mapas
+Route::get('/painel/categorias-mapas', 'Dashboard\Categorias\Mapas\ListarCategoriasController@index')
+    ->middleware('logado')->name('index.maps');
+Route::get('/painel/categorias-mapas/cadastro', 'Dashboard\Categorias\Mapas\CadastrarCategoriasController@create')
+    ->middleware('logado')->name('create.maps');
+Route::post('/painel/categorias-mapas/salvar', 'Dashboard\Categorias\Mapas\CadastrarCategoriasController@store')
+    ->middleware('logado')->name('store.maps');
+Route::get('/painel/categorias-mapas/editar/{id}', 'Dashboard\Categorias\Mapas\EditarCategoriasController@edit')
+    ->middleware('logado')->name('edit.maps');
+Route::post('/painel/categorias-mapas/alterar', 'Dashboard\Categorias\Mapas\EditarCategoriasController@update')
+    ->middleware('logado')->name('update.maps');
+
 #Contatos
 Route::get('/painel/contatos', 'Dashboard\Contatos\ListarContatosController@index')->middleware('logado');
 Route::get('/painel/contatos/cadastro', 'Dashboard\Contatos\CadastrarContatosController@index')->middleware('logado');
@@ -275,6 +287,13 @@ Route::get('/painel/cargos/cadastro', 'Dashboard\Cargos\CargoController@cadcreat
 Route::post('/painel/cargos/cadastro/salvar', 'Dashboard\Cargos\CargoController@create')->name('save.cargos')->middleware('logado');
 Route::post('/painel/cargos/cadastro/editar', 'Dashboard\Cargos\CargoController@update')->name('editsave.cargos')->middleware('logado');
 
+# Mapas
+Route::get('painel/mapas/', 'Dashboard\Mapas\ListarController@index')->middleware('logado')->name('list.maps');
+Route::get('painel/mapas/cadastro', 'Dashboard\Mapas\CadastrarController@create')->middleware('logado')->name('maps');
+Route::post('painel/mapas/salvar', 'Dashboard\Mapas\CadastrarController@store')->middleware('logado')->name('cad.maps');
+Route::post('painel/mapas/alterar', 'Dashboard\Mapas\EditarController@update')->middleware('logado')->name('alt.maps');
+Route::get('painel/mapas/editar/{id}', 'Dashboard\Mapas\EditarController@edit')->middleware('logado')->name('editar.maps');
+
 # API
 Route::get('/api/investimentos/{id}', 'Dashboard\Investimentos\ApiInvestimentosController@investimentosRealizados')->middleware('logado');
 Route::get('/api/mapa/geral/{id}', 'Dashboard\Mapas\ApiMapasController@infoMapaGeral')->middleware('logado');
@@ -283,3 +302,6 @@ Route::get('/api/sistemas/chamados/horas', 'Dashboard\Sistemas\ApiSistemasContro
 Route::get('/api/sistemas/chamados/ciclo', 'Dashboard\Sistemas\ApiSistemasController@horasPorCiclo')->middleware('logado');
 Route::get('/api/infra/fibra', 'Dashboard\Infraestrutura\Fibra\ApiController@evolucaoMalhaFibra')->middleware('logado');
 Route::get('/api/infra/conexao/unidades', 'Dashboard\Infraestrutura\Fibra\ApiController@tipoConexaoUnidades')->middleware('logado');
+
+
+

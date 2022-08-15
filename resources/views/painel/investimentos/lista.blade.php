@@ -1,14 +1,14 @@
 @extends('templates.dashboard')
 @section('titulo')Investimentos @endsection
 
-@section('css')
+@push('css')
 <style>
     .pagination.page-link {
         border-top-right-radius: .2rem;
         border-bottom-right-radius: .2rem;
     }
 </style>
-@endsection
+@endpush
 
 @section('js')
 <script>

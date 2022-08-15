@@ -52,11 +52,6 @@
                                                     </button>
                                                 </a>
 
-                                                <a href="/painel/categorias-planejamentos/deletar/{{ $categoria->id }}">
-                                                    <button class="btn-sm btn-primary">
-                                                        <i class="far fa-trash-alt"></i>
-                                                    </button>
-                                                </a>
                                             </td>
                                         </tr>
                                     @endforeach

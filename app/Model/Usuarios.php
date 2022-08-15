@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Audit;
 
 class Usuarios extends Model
 {
