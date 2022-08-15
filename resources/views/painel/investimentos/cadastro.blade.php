@@ -1,6 +1,17 @@
 @extends('templates.dashboard')
 @section('titulo')Investimentos @endsection
-
+@push('js')
+    <script>
+        jQuery(function () {
+            $("#valor").mask({
+                symbol:'R$ ',
+                symbolStay: true,
+                thousands: '.',
+                decimal: ','
+            })
+        })
+    </script>
+@endpush
 @section('content')
 <div class="row">
     <div class="col-12">
@@ -17,7 +28,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Nome: </label>
-                            <input type="text" class="form-control" name="nome">
+                            <input type="text" class="form-control" name="nome" max="10">
                             <span class="system_error text-danger">{{$errors->first('nome')}}</span>
                         </div>
                     </div>
@@ -62,3 +73,9 @@
     </div> <!-- end col -->
 </div> <!-- end row -->
 @endsection
+
+@push('link-js')
+    <script href="{{ asset('js/site/moeda.js') }}">
+@endpush
+
+

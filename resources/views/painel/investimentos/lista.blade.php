@@ -49,8 +49,8 @@
                                 <table id="tech-companies-1" class="table table-striped" style="text-align: center;">
                                     <thead>
                                     <tr>
-                                        <th>Nome</th>
-                                        <th>Valor</th>
+                                        <th class="text-left">Nome</th>
+                                        <th class="text-center">Valor</th>
                                         <th>Opções</th>
                                     </tr>
                                     </thead>
@@ -58,7 +58,7 @@
                                     @foreach($investimentos as $investimento)
                                         <tr>
                                             <td class="text-left">{{ $investimento->nome }}</td>
-                                            <td class="text-left">R$ {{ number_format($investimento->valor, 2) }}</td>
+                                            <td class="text-center">R$ {{ number_format($investimento->valor, 2) }}</td>
                                             <td>
                                                 <a href="/painel/investimentos/editar/{{ $investimento->id }}">
                                                     <button class="btn-sm btn-primary">
