@@ -47,7 +47,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Imagem 1:</label>
-                                <input type="file" name="imagem" class="form-control" placeholder="Digite o título">
+                                <input type="file" name="imagem" class="form-control" accept="image/*">
                                 <span class="system_error text-danger">{{$errors->first('imagem')}}</span>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Imagem 2:</label>
-                                <input type="file" name="imagem1" class="form-control" >
+                                <input type="file" name="imagem1" class="form-control" accept="image/*">
                                 <span class="system_error text-danger">{{$errors->first('imagem1')}}</span>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Imagem 3:</label>
-                                <input type="file" name="imagem2" class="form-control" >
+                                <input type="file" name="imagem2" class="form-control" accept="image/*">
                                 <span class="system_error text-danger">{{$errors->first('imagem2')}}</span>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Imagem 4:</label>
-                                <input type="file" name="imagem3" class="form-control" >
+                                <input type="file" name="imagem3" class="form-control" accept="image/*">
                                 <span class="system_error text-danger">{{$errors->first('imagem3')}}</span>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Imagem 5:</label>
-                                <input type="file" name="imagem4" class="form-control" >
+                                <input type="file" name="imagem4" class="form-control" accept="image/*">
                                 <span class="system_error text-danger">{{$errors->first('imagem4')}}</span>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Imagem 6:</label>
-                                <input type="file" name="imagem5" class="form-control" >
+                                <input type="file" name="imagem5" class="form-control" accept="image/*">
                                 <span class="system_error text-danger">{{$errors->first('imagem5')}}</span>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Video:</label>
-                                <input type="file" name="video" class="form-control" placeholder="Digite o título">
+                                <input type="file" name="video" class="form-control" accept="video/*">
                                 <span class="system_error text-danger">{{$errors->first('video')}}</span>
                             </div>
                         </div>
