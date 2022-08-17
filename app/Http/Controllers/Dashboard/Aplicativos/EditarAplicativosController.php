@@ -16,7 +16,7 @@ class EditarAplicativosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -30,42 +30,46 @@ class EditarAplicativosController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(AplicativosFormRequest $request)
     {
         //
-        $aplicativos = Aplicativos::where('id', $request->aplicativo_id)->first();
+        try {
+            $aplicativos = Aplicativos::where('id', $request->aplicativo_id)->first();
 
-        if (!empty($request->file('imagem'))) {
-            \Storage::delete($aplicativos->imagem);
-            $fileName = $request->imagem->store('public/aplicativos');
-            $aplicativos->imagem = $fileName;
+            if (!empty($request->file('imagem'))) {
+                \Storage::delete($aplicativos->imagem);
+                $fileName = $request->imagem->store('public/aplicativos');
+                $aplicativos->imagem = $fileName;
+            }
+
+            $aplicativos->titulo = $request->post('titulo');
+            $aplicativos->url = $request->post('url');
+
+            $resultado['error'] = 1;
+            $resultado['msg'] = "Aplicativo alterado com sucesso!";
+
+            if (!$aplicativos) {
+                $resultado['error'] = 2;
+                $resultado['msg'] = "Falha alterar aplicativo";
+            }
+            $aplicativos->save();
+
+
+            Session::flash('erro_msg', $resultado);
+            return Redirect::to('painel/aplicativos');
+        } catch (\Exception $exception) {
+            dd($exception);
         }
-
-        $aplicativos->titulo = $request->post('titulo');
-        $aplicativos->url= $request->post('url');
-
-        $resultado['error'] = 1;
-        $resultado['msg'] = "Aplicativo alterado com sucesso!";
-
-        if (!$aplicativos) {
-            $resultado['error'] = 2;
-            $resultado['msg'] = "Falha alterar aplicativo";
-        }
-        $aplicativos->save();
-
-
-        Session::flash('erro_msg', $resultado);
-        return  Redirect::to('painel/aplicativos');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Login;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Usuarios;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
@@ -32,6 +33,7 @@ class CheckLoginController extends Controller
                         'DTI_PORTAL' => $usuario->id,
                         'usuario' => $usuario,
                     ]);
+                    Auth::loginUsingId($usuario->id);
                     return Redirect::to('/painel');
                 }
             }else {

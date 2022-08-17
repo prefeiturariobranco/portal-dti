@@ -303,5 +303,3 @@ Route::get('/api/sistemas/chamados/ciclo', 'Dashboard\Sistemas\ApiSistemasContro
 Route::get('/api/infra/fibra', 'Dashboard\Infraestrutura\Fibra\ApiController@evolucaoMalhaFibra')->middleware('logado');
 Route::get('/api/infra/conexao/unidades', 'Dashboard\Infraestrutura\Fibra\ApiController@tipoConexaoUnidades')->middleware('logado');
 
-
-
