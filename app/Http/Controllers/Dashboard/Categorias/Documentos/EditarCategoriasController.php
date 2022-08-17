@@ -27,7 +27,7 @@ class EditarCategoriasController extends Controller
 
         if (!$doc) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Erro ao alterar categoria';
+            $resultado['msg'] = 'Falha ao alterar categoria';
         }
 
         Session::flash('erro_msg', $resultado);

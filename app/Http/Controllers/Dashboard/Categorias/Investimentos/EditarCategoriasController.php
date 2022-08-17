@@ -22,11 +22,11 @@ class EditarCategoriasController extends Controller
             'nome' => $request->nome
         ]);
         $resultado['error'] = 1;
-        $resultado['msg'] = 'Categoria alterado com sucesso!';
+        $resultado['msg'] = 'Categoria alterada com sucesso!';
 
         if (!$categoria) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Falha alterar categoria';
+            $resultado['msg'] = 'Falha ao alterar categoria';
         }
 
         Session::flash('erro_msg', $resultado);

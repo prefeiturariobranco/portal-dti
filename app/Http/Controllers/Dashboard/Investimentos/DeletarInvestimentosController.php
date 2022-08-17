@@ -29,7 +29,7 @@ class DeletarInvestimentosController extends Controller
 
         if (!$investimento) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha remover investimento";
+            $resultado['msg'] = "Falha ao remover investimento";
         }
 
         Session::flash('erro_msg', $resultado);

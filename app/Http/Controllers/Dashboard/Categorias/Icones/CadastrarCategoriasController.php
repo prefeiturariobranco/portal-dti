@@ -24,11 +24,11 @@ class CadastrarCategoriasController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = 'Categoria cadastrado com sucesso!';
+        $resultado['msg'] = 'Categoria cadastrada com sucesso!';
 
         if (!$iconeCategoria) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Falha cadastrar categoria';
+            $resultado['msg'] = 'Falha ao cadastrar categoria';
         }
         Session::flash('erro_msg', $resultado);
         return Redirect::to('/painel/categorias-icones');

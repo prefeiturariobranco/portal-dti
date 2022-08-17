@@ -22,11 +22,11 @@ class CadastrarCategoriasController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = 'Categoria cadastrado com o sucesso!';
+        $resultado['msg'] = 'Categoria cadastrada com sucesso!';
 
         if (!$plan) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Erro ao cadastrar categoria';
+            $resultado['msg'] = 'Falha ao cadastrar categoria';
         }
 
         Session::flash('erro_msg', $resultado);

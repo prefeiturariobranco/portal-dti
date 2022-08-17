@@ -57,11 +57,11 @@ class CadastrarUsuariosController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = 'Usuário criado com sucesso!';
+        $resultado['msg'] = 'Usuário cadastrado com sucesso!';
 
         if (!$usuario) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Falha ao tentar criar o usuário!';
+            $resultado['msg'] = 'Falha ao cadastrar usuário!';
         }
 
         Session::flash('erro_msg', $resultado);

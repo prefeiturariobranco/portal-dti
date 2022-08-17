@@ -58,7 +58,7 @@ class CadastrarIconesController extends Controller
 
         if (!$icone) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha cadastrar ícone";
+            $resultado['msg'] = "Falha ao cadastrar ícone";
         }
 
         Session::flash('erro_msg', $resultado);

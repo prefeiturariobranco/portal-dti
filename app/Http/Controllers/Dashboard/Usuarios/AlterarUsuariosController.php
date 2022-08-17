@@ -36,11 +36,11 @@ class AlterarUsuariosController extends Controller
         }
 
         $resultado['erro'] = 1;
-        $resultado['msg'] = 'Usuário editado com sucesso!';
+        $resultado['msg'] = 'Usuário alterado com sucesso!';
 
         if (!$usuario) {
             $resultado['erro'] = 2;
-            $resultado['msg'] = 'Falha ao tentar editar o usuário!';
+            $resultado['msg'] = 'Falha ao alterar usuário!';
         }
 
         Session::flash('erro_msg', $resultado);

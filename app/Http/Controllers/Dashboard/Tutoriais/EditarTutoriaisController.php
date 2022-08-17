@@ -85,11 +85,11 @@ class EditarTutoriaisController extends Controller
         }
 
         $resultado['error'] = 1;
-        $resultado['msg'] = "Tutoriais alterado com sucesso!";
+        $resultado['msg'] = "Tutorial alterado com sucesso!";
 
         if (!$tutorial) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha alterar tutoriais";
+            $resultado['msg'] = "Falha ao alterar tutorial";
         }
 
         $tutorial->save();

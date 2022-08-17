@@ -39,11 +39,11 @@ class CadastrarController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = "Registro criado com sucesso!";
+        $resultado['msg'] = "Registro cadastrado com sucesso!";
 
         if(!$infraHistoricoFibra->save()){
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha ao criar registro";
+            $resultado['msg'] = "Falha ao cadastrar registro";
         }
 
         Session::flash('erro_msg', $resultado);

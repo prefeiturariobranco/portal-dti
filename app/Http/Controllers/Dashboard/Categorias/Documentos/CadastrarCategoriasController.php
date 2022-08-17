@@ -25,7 +25,7 @@ class CadastrarCategoriasController extends Controller
 
         if (!$resultado) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Erro ao cadastrar categoria';
+            $resultado['msg'] = 'Falha ao cadastrar categoria';
         }
 
         Session::flash('erro_msg', $resultado);

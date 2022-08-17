@@ -24,7 +24,7 @@ class EditarCategoriasController extends Controller
             ]);
 
             $resultado['error'] = 1;
-            $resultado['msg'] = 'Categoria alterado com sucesso!';
+            $resultado['msg'] = 'Categoria alterada com sucesso!';
 
             if (!$categoria) {
                 $resultado['error'] = 2;

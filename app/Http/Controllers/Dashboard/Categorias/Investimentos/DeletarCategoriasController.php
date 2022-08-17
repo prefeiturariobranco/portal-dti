@@ -16,11 +16,11 @@ class DeletarCategoriasController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = 'Categoria deletada com sucesso!';
+        $resultado['msg'] = 'Categoria removida com sucesso!';
 
         if (!$categoria) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Erro ao deletar categoria';
+            $resultado['msg'] = 'Falha ao remover categoria';
         }
 
         Session::flash('erro_msg', $resultado);

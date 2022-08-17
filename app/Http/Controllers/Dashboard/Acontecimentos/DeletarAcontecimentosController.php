@@ -28,7 +28,7 @@ class DeletarAcontecimentosController extends Controller
 
         if (!$acontecimento) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha remover acontecimento";
+            $resultado['msg'] = "Falha ao remover acontecimento";
         }
 
         Session::flash('erro_msg', $resultado);

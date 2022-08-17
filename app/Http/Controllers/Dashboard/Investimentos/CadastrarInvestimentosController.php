@@ -46,7 +46,7 @@ class CadastrarInvestimentosController extends Controller
 
         if (!$investimento) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha cadastrar investimento";
+            $resultado['msg'] = "Falha ao cadastrar investimento";
         }
         Session::flash('erro_msg', $resultado);
         return Redirect::to('painel/investimentos');

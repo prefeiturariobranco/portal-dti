@@ -44,11 +44,11 @@ class CadastrarContatosController extends Controller
             'telefone' => $request->post('telefone'),
         ]);
         $resultado['error'] = 1;
-        $resultado['msg'] = 'Contatos cadastrada com sucesso!';
+        $resultado['msg'] = 'Contato cadastrado com sucesso!';
 
         if (!$contato) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Falha cadastrar contatos!';
+            $resultado['msg'] = 'Falha ao cadastrar contatos!';
         }
         Session::flash('erro_msg', $resultado);
         return Redirect::to('/painel/contatos');

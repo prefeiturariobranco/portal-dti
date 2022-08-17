@@ -46,7 +46,7 @@ class AlterarController extends Controller
 
         if ($hitoricoFibra != 1) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Falha alterar registro!';
+            $resultado['msg'] = 'Falha ao alterar registro!';
         }
 
         Session::flash('erro_msg', $resultado);

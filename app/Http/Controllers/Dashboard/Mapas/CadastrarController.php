@@ -32,7 +32,7 @@ class CadastrarController extends Controller
 
         if (!$mapa) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Erro ao cadastrar mapa';
+            $resultado['msg'] = 'Falha ao cadastrar mapa';
         }
 
         Session::flash('erro_msg', $resultado);

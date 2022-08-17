@@ -25,10 +25,10 @@ class CadastrarCategoriasController extends Controller
 
         if (!$categoria) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Erro ao cadastrar categoria';
+            $resultado['msg'] = 'Falha ao cadastrar categoria';
         }
 
         Session::flash('erro_msg', $resultado);
-        return redirect()->back();
+        return redirect('painel/categorias-mapas');
     }
 }

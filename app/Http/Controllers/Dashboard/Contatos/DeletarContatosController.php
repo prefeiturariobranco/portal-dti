@@ -24,7 +24,7 @@ class DeletarContatosController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = 'Contato removida com sucesso!';
+        $resultado['msg'] = 'Contato removido com sucesso!';
 
         if (!$contato){
             $resultado['error'] = 2;

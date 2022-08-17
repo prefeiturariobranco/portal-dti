@@ -39,11 +39,11 @@ class CargoController extends Controller
         } else {
             return redirect()->route('cadastro.cargos');
         }
-        $resultado['error'] = 0;
+        $resultado['error'] = 1;
         $resultado['msg'] = 'Cargo cadastrado com sucesso!';
         if (!$cargo) {
-            $resultado['error'] = 1;
-            $resultado['msg'] = 'Falha cadastrar cargo!';
+            $resultado['error'] = 2;
+            $resultado['msg'] = 'Falha ao cadastrar cargo!';
         }
         Session::flash('erro_msg', $resultado);
         return Redirect::to('/painel/cargos');
@@ -90,6 +90,15 @@ class CargoController extends Controller
               Cargos::where('id', $id )->update([
                     'nome' => $nome,
                 ]);
+
+              $resultado['error'] = 1;
+              $resultado['msg'] = "Cargo alterado com sucesso";
+
+              if (!$nome) {
+                  $resultado['error'] = 2;
+                  $resultado['msg'] = "Falha ao alterar cargo";
+              }
+              Session::flash('erro_msg', $resultado);
             } else {
                 return redirect()->route('edita.cargos');
             }

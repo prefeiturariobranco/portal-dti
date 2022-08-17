@@ -47,11 +47,11 @@ class CadastrarTutoriaisController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = "Tutoriais cadastrada com sucesso!";
+        $resultado['msg'] = "Tutorial cadastrado com sucesso!";
 
         if (!$tutoriais) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha cadastrar tutoriais";
+            $resultado['msg'] = "Falha ao cadastrar tutoriais";
         }
 
         if (!empty($request->file('imagem'))) {

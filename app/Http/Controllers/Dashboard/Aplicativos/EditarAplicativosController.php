@@ -54,7 +54,7 @@ class EditarAplicativosController extends Controller
 
             if (!$aplicativos) {
                 $resultado['error'] = 2;
-                $resultado['msg'] = "Falha alterar aplicativo";
+                $resultado['msg'] = "Falha ao alterar aplicativo";
             }
             $aplicativos->save();
 
@@ -62,7 +62,6 @@ class EditarAplicativosController extends Controller
             Session::flash('erro_msg', $resultado);
             return Redirect::to('painel/aplicativos');
         } catch (\Exception $exception) {
-            dd($exception);
         }
     }
 

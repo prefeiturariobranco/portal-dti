@@ -26,7 +26,7 @@ class CadastrarController extends Controller
 
         if (!$secretaria) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Erro ao cadastrar secretaria';
+            $resultado['msg'] = 'Falha ao cadastrar secretaria';
         }
 
         $secretaria->save();

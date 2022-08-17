@@ -43,11 +43,11 @@ class CadastrarPerguntasController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = 'Perguntas cadastrado com sucesso!';
+        $resultado['msg'] = 'Pergunta cadastrada com sucesso!';
 
         if (!$perguntas){
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Falha ao cadastrar perguntas';
+            $resultado['msg'] = 'Falha ao cadastrar pergunta';
         }
 
         Session::flash('erro_msg', $resultado);

@@ -50,7 +50,7 @@ class EditarSubiconesController extends Controller
 
         if (!$subIcoens) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Falha alterar subicone';
+            $resultado['msg'] = 'Falha ao alterar subicone';
         }
 
         Session::flash('erro_msg', $resultado);

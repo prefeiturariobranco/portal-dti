@@ -49,7 +49,7 @@ class CadastrarPlanejamentosController extends Controller
 
         if (!$planejamento) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha cadastrar planejamento";
+            $resultado['msg'] = "Falha ao cadastrar planejamento";
         }
 
 

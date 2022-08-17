@@ -33,13 +33,10 @@ class EditarNoticiasController extends Controller
             'conteudo' => $request->post('conteudo'),
         ]);
 
-        $resultado['error'] = 1;
-        $resultado['msg'] = "Notícia alterada com sucesso!";
-
         $noticiaId = Postagens::where('id', $request->post('noticia_id'))->first();
 
         $resultado['error'] = 1;
-        $resultado['msg'] = "Notícia cadastrada com sucesso!";
+        $resultado['msg'] = "Notícia alterada com sucesso!";
 
         $arquivos = $request->file('banner');
         $arquivo_achou = 0;
@@ -53,7 +50,7 @@ class EditarNoticiasController extends Controller
 
         if (!$noticia) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha cadastrar notícia";
+            $resultado['msg'] = "Falha ao alterar notícia";
         }
         else if (!is_null($arquivos)) {
             $arquivos->storePubliclyAs('public/banner/', $arquivos->getClientOriginalName());

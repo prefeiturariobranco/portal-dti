@@ -46,7 +46,7 @@ class CadastrarSubiconesController extends Controller
 
         if (!$resultado) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Falha cadastrar subicone';
+            $resultado['msg'] = 'Falha ao cadastrar subicone';
         }
 
         Session::flash('erro_msg', $resultado);

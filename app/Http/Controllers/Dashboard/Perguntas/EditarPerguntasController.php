@@ -40,7 +40,7 @@ class EditarPerguntasController extends Controller
             'conteudo'=> $request->post('conteudo'),
         ]);
         $reposta['error'] = 1;
-        $reposta['msg'] = 'Pergunta alterado com sucesso!';
+        $reposta['msg'] = 'Pergunta alterada com sucesso!';
         if (!$reposta) {
             $reposta['error'] = 2;
             $reposta['msg'] = 'Falha ao alterar pergunta';

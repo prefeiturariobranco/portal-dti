@@ -28,7 +28,7 @@ class DeletarPlanejamentosController extends Controller
 
         if (!$planejamneto) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha remover planejamento";
+            $resultado['msg'] = "Falha ao remover planejamento";
         }
 
         Session::flash('erro_msg', $resultado);

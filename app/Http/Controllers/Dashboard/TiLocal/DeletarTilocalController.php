@@ -24,11 +24,11 @@ class DeletarTilocalController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = "TI local desativado com sucesso!";
+        $resultado['msg'] = "TI local removido com sucesso!";
 
         if (!$tiLocal) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha ao desativar ti local";
+            $resultado['msg'] = "Falha ao remover ti local";
         }
 
         Session::flash('erro_msg', $resultado);

@@ -23,6 +23,8 @@ class DeletarDocumentosController extends Controller
         $documento = Documentos::where('id', $id)->update([
             'ocultar' => 1
         ]);
+        $resultado['error'] = 1;
+        $resultado['msg'] = "Documento removido com sucesso!";
 
         if (!$documento) {
             $resultado['error'] = 2;

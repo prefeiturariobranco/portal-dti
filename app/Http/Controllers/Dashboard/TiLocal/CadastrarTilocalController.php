@@ -46,7 +46,7 @@ class CadastrarTilocalController extends Controller
 
         if (!$tiLocal) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Falha cadastrar TI local';
+            $resultado['msg'] = 'Falha ao cadastrar TI local';
         }
 
         Session::flash('erro_msg', $resultado);
