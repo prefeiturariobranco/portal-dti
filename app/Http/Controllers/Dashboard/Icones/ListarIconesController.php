@@ -15,10 +15,8 @@ class ListarIconesController extends Controller
      */
     public function index()
     {
-        //
-        return view('painel.icones.lista', [
-            'icones' => Icones::where('ocultar', 0)->get(),
-        ]);
+        $icones = Icones::where('ocultar', 0)->get();
+        return view('painel.icones.lista', compact('icones'));
     }
 
     /**
