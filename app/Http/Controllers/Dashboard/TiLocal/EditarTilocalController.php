@@ -51,7 +51,7 @@ class EditarTilocalController extends Controller
 
         if (!$tiLocal) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha alterar tilocal";
+            $resultado['msg'] = "Falha ao alterar tilocal";
         }
 
         Session::flash('erro_msg', $resultado);

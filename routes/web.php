@@ -24,9 +24,14 @@ Route::get('/novidade/{id}', 'Site\NovidadeController@show');
 Route::get('/tutoriais', 'Site\TutoriaisController@tutoriais');
 Route::get('/tutorial/{id}', 'Site\TutorialController@show');
 Route::get('/especificacoes-ti', 'Site\EspecificacaoController@index');
+Route::get('/aplicativos', 'Site\AplicativosController@index')->name('apps');
+Route::get('/aplicativo/{id}', 'Site\AplicativoController@show')->name('site.app');
 
-Route::get('/error/404', 'Utils\ErrorController@error404');
 Route::get('/error/500', 'Utils\ErrorController@error500');
+
+Route::fallback(function () {
+    return view('error.404');
+});
 
 /*
  * ROUTAS QUE PERTENCIAM AO AUTH
@@ -107,15 +112,71 @@ Route::get('/painel/aplicativos/cadastro', 'Dashboard\Aplicativos\CadastrarAplic
 Route::get('/painel/aplicativos/editar/{id}', 'Dashboard\Aplicativos\EditarAplicativosController@show')->middleware('logado');
 Route::get('/painel/aplicativos/deletar/{id}', 'Dashboard\Aplicativos\DeletarAplicativosController@destroy')->middleware('logado');
 Route::post('/painel/aplicativos/salvar', 'Dashboard\Aplicativos\CadastrarAplicativosController@store')->middleware('logado');
-Route::post('/painel/aplicativos/alterar', 'Dashboard\Aplicativos\EditarAplicativosController@update')->middleware('logado');
+Route::post('/painel/aplicativos/alterar', 'Dashboard\Aplicativos\EditarAplicativosController@update')->middleware('logado')->name('aplicativo.update');
 
-#Categorias
-Route::get('/painel/categorias', 'Dashboard\Categorias\ListarCategoriasController@index')->middleware('logado');
-Route::get('/painel/categorias/cadastro', 'Dashboard\Categorias\CadastrarCategoriasController@index')->middleware('logado');
-Route::get('/painel/categorias/editar/{id}', 'Dashboard\Categorias\EditarCategoriasController@show')->middleware('logado');
-Route::get('/painel/categorias/deletar/{id}', 'Dashboard\Categorias\DeletarCategoriasController@destroy')->middleware('logado');
-Route::post('/painel/categorias/salvar', 'Dashboard\Categorias\CadastrarCategoriasController@store')->middleware('logado');
-Route::post('/painel/categorias/alterar', 'Dashboard\Categorias\EditarCategoriasController@update')->middleware('logado');
+#Categorias Ícones
+Route::get('/painel/categorias-icones', 'Dashboard\Categorias\Icones\ListarCategoriasController@index')->middleware('logado');
+Route::get('/painel/categorias-icones/cadastro', 'Dashboard\Categorias\Icones\CadastrarCategoriasController@create')->middleware('logado');
+Route::get('/painel/categorias-icones/editar/{id}', 'Dashboard\Categorias\Icones\EditarCategoriasController@edit')->middleware('logado');
+Route::get('/painel/categorias-icones/deletar/{id}', 'Dashboard\Categorias\Icones\DeletarCategoriasController@destroy')->middleware('logado');
+Route::post('/painel/categorias-icones/salvar', 'Dashboard\Categorias\Icones\CadastrarCategoriasController@store')->middleware('logado');
+Route::post('/painel/categorias-icones/alterar', 'Dashboard\Categorias\Icones\EditarCategoriasController@update')->middleware('logado');
+
+#Categorias Planejamentos
+Route::get('/painel/categorias-planejamentos', 'Dashboard\Categorias\Planejamentos\ListarCategoriasController@index')
+    ->middleware('logado')->name('index.plan');
+Route::get('/painel/categorias-planejamentos/cadastro', 'Dashboard\Categorias\Planejamentos\CadastrarCategoriasController@create')
+    ->middleware('logado')->name('create.plan');
+Route::post('/painel/categorias-planejamentos/salvar', 'Dashboard\Categorias\Planejamentos\CadastrarCategoriasController@store')
+    ->middleware('logado')->name('store.plan');
+Route::get('/painel/categorias-planejamentos/editar/{id}', 'Dashboard\Categorias\Planejamentos\EditarCategoriasController@edit')
+    ->middleware('logado')->name('edit.plan');
+Route::post('/painel/categorias-planejamentos/alterar', 'Dashboard\Categorias\Planejamentos\EditarCategoriasController@update')
+    ->middleware('logado')->name('update.plan');
+Route::get('/painel/categorias-planejamentos/deletar/{id}', 'Dashboard\Categorias\Planejamentos\DeletarCategoriasController@destroy')
+    ->middleware('logado')->name('destroy.plan');
+
+
+#Categorias Documentos
+Route::get('/painel/categorias-documentos', 'Dashboard\Categorias\Documentos\ListarCategoriasController@index')
+    ->middleware('logado')->name('index.doc');
+Route::get('/painel/categorias-documentos/cadastro', 'Dashboard\Categorias\Documentos\CadastrarCategoriasController@create')
+    ->middleware('logado')->name('create.doc');
+Route::post('/painel/categorias-documentos/salvar', 'Dashboard\Categorias\Documentos\CadastrarCategoriasController@store')
+    ->middleware('logado')->name('store.doc');
+Route::get('/painel/categorias-documentos/editar/{id}', 'Dashboard\Categorias\Documentos\EditarCategoriasController@edit')
+    ->middleware('logado')->name('edit.doc');
+Route::post('/painel/categorias-documentos/alterar', 'Dashboard\Categorias\Documentos\EditarCategoriasController@update')
+    ->middleware('logado')->name('update.doc');
+Route::get('/painel/categorias-documentos/deletar/{id}', 'Dashboard\Categorias\Documentos\DeletarCategoriasController@destroy')
+    ->middleware('logado');
+
+
+#Categorias Investimentos
+Route::get('/painel/categorias-investimentos', 'Dashboard\Categorias\Investimentos\ListarCategoriasController@index')
+    ->middleware('logado')->name('index.invest');
+Route::get('/painel/categorias-investimentos/cadastro', 'Dashboard\Categorias\Investimentos\CadastrarCategoriasController@create')
+    ->middleware('logado')->name('create.invest');
+Route::post('/painel/categorias-investimentos/salvar', 'Dashboard\Categorias\Investimentos\CadastrarCategoriasController@store')
+    ->middleware('logado')->name('store.invest');
+Route::get('/painel/categorias-investimentos/editar/{id}', 'Dashboard\Categorias\Investimentos\EditarCategoriasController@edit')
+    ->middleware('logado')->name('edit.invest');
+Route::post('/painel/categorias-investimentos/alterar', 'Dashboard\Categorias\Investimentos\EditarCategoriasController@update')
+    ->middleware('logado')->name('update.invest');
+Route::get('/painel/categorias-investimentos/deletar/{id}', 'Dashboard\Categorias\Investimentos\DeletarCategoriasController@destroy')
+    ->middleware('logado')->name('destroy.invest');
+
+#Categorias Mapas
+Route::get('/painel/categorias-mapas', 'Dashboard\Categorias\Mapas\ListarCategoriasController@index')
+    ->middleware('logado')->name('index.maps');
+Route::get('/painel/categorias-mapas/cadastro', 'Dashboard\Categorias\Mapas\CadastrarCategoriasController@create')
+    ->middleware('logado')->name('create.maps');
+Route::post('/painel/categorias-mapas/salvar', 'Dashboard\Categorias\Mapas\CadastrarCategoriasController@store')
+    ->middleware('logado')->name('store.maps');
+Route::get('/painel/categorias-mapas/editar/{id}', 'Dashboard\Categorias\Mapas\EditarCategoriasController@edit')
+    ->middleware('logado')->name('edit.maps');
+Route::post('/painel/categorias-mapas/alterar', 'Dashboard\Categorias\Mapas\EditarCategoriasController@update')
+    ->middleware('logado')->name('update.maps');
 
 #Contatos
 Route::get('/painel/contatos', 'Dashboard\Contatos\ListarContatosController@index')->middleware('logado');
@@ -148,6 +209,13 @@ Route::get('/painel/tilocal/editar/{id}', 'Dashboard\TiLocal\EditarTilocalContro
 Route::get('/painel/tilocal/deletar/{id}', 'Dashboard\TiLocal\DeletarTilocalController@destroy')->middleware('logado');
 Route::post('/painel/tilocal/salvar', 'Dashboard\TiLocal\CadastrarTilocalController@store')->middleware('logado');
 Route::post('/painel/tilocal/alterar', 'Dashboard\TiLocal\EditarTilocalController@update')->middleware('logado');
+
+# Secreatarias
+Route::get('/painel/secretarias', 'Dashboard\Secretarias\ListarController@index')->middleware('logado');
+Route::get('/painel/secretarias/cadastro', 'Dashboard\Secretarias\CadastrarController@create')->middleware('logado');
+Route::get('/painel/secretarias/editar/{id}', 'Dashboard\Secretarias\EditarController@edit')->middleware('logado');
+Route::post('/painel/secretarias/salvar', 'Dashboard\Secretarias\CadastrarController@store')->middleware('logado');
+Route::post('/painel/secretarias/alterar', 'Dashboard\Secretarias\EditarController@update')->middleware('logado');
 
 # Noticias
 Route::get('/painel/noticias', 'Dashboard\Noticias\ListarNoticiasController@index')->middleware('logado');
@@ -190,8 +258,12 @@ Route::get('/painel/acontecimentos/deletar/{id}', 'Dashboard\Acontecimentos\Dele
 Route::post('/painel/acontecimentos/salvar', 'Dashboard\Acontecimentos\CadastrarAcontecimentosController@store')->middleware('logado');
 Route::post('/painel/acontecimentos/alterar', 'Dashboard\Acontecimentos\EditarAcontecimentosController@update')->middleware('logado');
 
-# Documentos
+# Documentos Lista
 Route::get('/painel/documentos', 'Dashboard\Documentos\ListarDocumentosController@index')->middleware('logado');
+Route::get('/painel/documentos/abrir/{id}', 'Dashboard\Documentos\ListarDocumentosController@show')->middleware('logado');
+Route::get('/painel/documento/{id}', 'Dashboard\Documentos\ListarDocumentosController@download')->middleware('logado');
+
+#Documentos
 Route::get('/painel/documentos/cadastro', 'Dashboard\Documentos\CadastrarDocumentosController@index')->middleware('logado');
 Route::get('/painel/documentos/editar/{id}', 'Dashboard\Documentos\EditarDocumentosController@show')->middleware('logado');
 Route::get('/painel/documentos/deletar/{id}', 'Dashboard\Documentos\DeletarDocumentosController@destroy')->middleware('logado');
@@ -207,6 +279,21 @@ Route::post('/painel/sistemas/webpublico/salvar', 'Dashboard\Sistemas\Webpublico
 Route::get('/img/perfil/{name}', 'Utils\ImageController@getProfileImage')->middleware('logado');
 Route::get('/banner/{name}', 'Utils\ImageController@getBannerImage')->middleware('logado');
 
+#Cargos
+Route::get('/painel/cargos', 'Dashboard\Cargos\CargoController@index')->name('lista.cargos')->middleware('logado');
+Route::get('/painel/cargos/deletar/{id}','Dashboard\Cargos\CargoController@delete')->name('deleta.cargos')->middleware('logado');
+Route::get('/painel/cargos/editar/{id}','Dashboard\Cargos\CargoController@edit')->name('edita.cargos')->middleware('logado');
+Route::get('/painel/cargos/cadastro', 'Dashboard\Cargos\CargoController@cadcreate')->name('cadastro.cargos')->middleware('logado');
+Route::post('/painel/cargos/cadastro/salvar', 'Dashboard\Cargos\CargoController@create')->name('save.cargos')->middleware('logado');
+Route::post('/painel/cargos/cadastro/editar', 'Dashboard\Cargos\CargoController@update')->name('editsave.cargos')->middleware('logado');
+
+# Mapas
+Route::get('painel/mapas/', 'Dashboard\Mapas\ListarController@index')->middleware('logado')->name('list.maps');
+Route::get('painel/mapas/cadastro', 'Dashboard\Mapas\CadastrarController@create')->middleware('logado')->name('maps');
+Route::post('painel/mapas/salvar', 'Dashboard\Mapas\CadastrarController@store')->middleware('logado')->name('cad.maps');
+Route::post('painel/mapas/alterar', 'Dashboard\Mapas\EditarController@update')->middleware('logado')->name('alt.maps');
+Route::get('painel/mapas/editar/{id}', 'Dashboard\Mapas\EditarController@edit')->middleware('logado')->name('editar.maps');
+
 # API
 Route::get('/api/investimentos/{id}', 'Dashboard\Investimentos\ApiInvestimentosController@investimentosRealizados')->middleware('logado');
 Route::get('/api/mapa/geral/{id}', 'Dashboard\Mapas\ApiMapasController@infoMapaGeral')->middleware('logado');
@@ -216,6 +303,3 @@ Route::get('/api/sistemas/chamados/ciclo', 'Dashboard\Sistemas\ApiSistemasContro
 Route::get('/api/infra/fibra', 'Dashboard\Infraestrutura\Fibra\ApiController@evolucaoMalhaFibra')->middleware('logado');
 Route::get('/api/infra/conexao/unidades', 'Dashboard\Infraestrutura\Fibra\ApiController@tipoConexaoUnidades')->middleware('logado');
 
-Route::get('/teste/php', function (){
-   phpinfo();
-});

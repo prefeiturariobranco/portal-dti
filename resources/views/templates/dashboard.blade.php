@@ -8,7 +8,9 @@
     <title>@yield('titulo')</title>
     <meta content="Painel Administrativo" name="description" />
     <meta content="DTI - Sistemas" name="author" />
-    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
+    <script src="{{ asset('js/site/mascaras.js') }}"></script>
     @yield('css')
 </head>
 <body>
@@ -20,10 +22,10 @@
             <div class="topbar-left">
                 <a href="/painel" class="logo">
                     <span>
-                        <img src="/images/logo-portal-branca.png" style="width: 8em;">
+                        <img src="{{ asset('images/DTI-branca.png') }}" style="width: 8em;">
                     </span>
                     <i>
-                        <img src="/images/logo-sm.png" alt="" height="22">
+                        <img src="{{ asset('images/icon-brasao.png') }}" alt="" height="40">
                     </i>
                 </a>
             </div>
@@ -47,61 +49,61 @@
                         </a>
                     </li>
 
-                    <!-- notification -->
-                    <li class="dropdown notification-list">
-                        <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#"
-                           role="button" aria-haspopup="false" aria-expanded="false">
-                            <i class="mdi mdi-bell-outline noti-icon"></i>
-                            <span class="badge badge-pill badge-danger noti-icon-badge">3</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
-                            <!-- item-->
-                            <h6 class="dropdown-item-text">
-                                Notifications (258)
-                            </h6>
-                            <div class="slimscroll notification-item-list">
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item active">
-                                    <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
-                                    <p class="notify-details">Your order is placed<span class="text-muted">Dummy text of the printing and typesetting industry.</span>
-                                    </p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-warning"><i class="mdi mdi-message-text-outline"></i></div>
-                                    <p class="notify-details">New Message received<span class="text-muted">You have 87 unread messages</span>
-                                    </p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-info"><i class="mdi mdi-glass-cocktail"></i></div>
-                                    <p class="notify-details">Your item is shipped<span class="text-muted">It is a long established fact that a reader will</span>
-                                    </p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-primary"><i class="mdi mdi-cart-outline"></i></div>
-                                    <p class="notify-details">Your order is placed<span class="text-muted">Dummy text of the printing and typesetting industry.</span>
-                                    </p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-danger"><i class="mdi mdi-message-text-outline"></i></div>
-                                    <p class="notify-details">New Message received<span class="text-muted">You have 87 unread messages</span>
-                                    </p>
-                                </a>
-                            </div>
-                            <!-- All-->
-                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
-                                View all <i class="fi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </li>
+{{--                    <!-- notification -->--}}
+{{--                    <li class="dropdown notification-list">--}}
+{{--                        <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#"--}}
+{{--                           role="button" aria-haspopup="false" aria-expanded="false">--}}
+{{--                            <i class="mdi mdi-bell-outline noti-icon"></i>--}}
+{{--                            <span class="badge badge-pill badge-danger noti-icon-badge">3</span>--}}
+{{--                        </a>--}}
+{{--                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">--}}
+{{--                            <!-- item-->--}}
+{{--                            <h6 class="dropdown-item-text">--}}
+{{--                                Notifications (258)--}}
+{{--                            </h6>--}}
+{{--                            <div class="slimscroll notification-item-list">--}}
+{{--                                <!-- item-->--}}
+{{--                                <a href="javascript:void(0);" class="dropdown-item notify-item active">--}}
+{{--                                    <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>--}}
+{{--                                    <p class="notify-details">Your order is placed<span class="text-muted">Dummy text of the printing and typesetting industry.</span>--}}
+{{--                                    </p>--}}
+{{--                                </a>--}}
+{{--                                <!-- item-->--}}
+{{--                                <a href="javascript:void(0);" class="dropdown-item notify-item">--}}
+{{--                                    <div class="notify-icon bg-warning"><i class="mdi mdi-message-text-outline"></i></div>--}}
+{{--                                    <p class="notify-details">New Message received<span class="text-muted">You have 87 unread messages</span>--}}
+{{--                                    </p>--}}
+{{--                                </a>--}}
+{{--                                <!-- item-->--}}
+{{--                                <a href="javascript:void(0);" class="dropdown-item notify-item">--}}
+{{--                                    <div class="notify-icon bg-info"><i class="mdi mdi-glass-cocktail"></i></div>--}}
+{{--                                    <p class="notify-details">Your item is shipped<span class="text-muted">It is a long established fact that a reader will</span>--}}
+{{--                                    </p>--}}
+{{--                                </a>--}}
+{{--                                <!-- item-->--}}
+{{--                                <a href="javascript:void(0);" class="dropdown-item notify-item">--}}
+{{--                                    <div class="notify-icon bg-primary"><i class="mdi mdi-cart-outline"></i></div>--}}
+{{--                                    <p class="notify-details">Your order is placed<span class="text-muted">Dummy text of the printing and typesetting industry.</span>--}}
+{{--                                    </p>--}}
+{{--                                </a>--}}
+{{--                                <!-- item-->--}}
+{{--                                <a href="javascript:void(0);" class="dropdown-item notify-item">--}}
+{{--                                    <div class="notify-icon bg-danger"><i class="mdi mdi-message-text-outline"></i></div>--}}
+{{--                                    <pfa-user class="notify-details">New Message received<span class="text-muted">You have 87 unread messages</span>--}}
+{{--                                    </p>--}}
+{{--                                </a>--}}
+{{--                            </div>--}}
+{{--                            <!-- All-->--}}
+{{--                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary">--}}
+{{--                                View all <i class="fi-arrow-right"></i>--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+{{--                    </li>--}}
 
                     <li class="dropdown notification-list">
                         <div class="dropdown notification-list nav-pro-img">
                             <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="/storage/usuarios/{{\Illuminate\Support\Facades\Session::get('usuario')->imagem}}" alt="Minha Conta" class="rounded-circle" />
+                                <i class="mdi mdi-account-circle mdi-24px"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown">
                                 <!-- item-->
@@ -164,7 +166,7 @@
                         <li>
                             <a href="/painel/noticias">
                                 <i class="far fa-id-card"></i>
-                                <span>Noticias</span>
+                                <span>Notícias</span>
                             </a>
                         </li>
 
@@ -200,7 +202,7 @@
                                     </span>
                                 </span>
                             </a>
-                            <ul class="submenu">
+                            <ul class="submenu ">
                                 <li>
                                     <a href="/painel/usuarios/listar" class="waves-effect">
                                         <i class="fas fa-users"></i>
@@ -208,10 +210,41 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/painel/categorias">
-                                        <i class="far fa-window-maximize"></i>
-                                        <span>Categorias</span>
+                                    <a href="javascript:void(0);" class="waves-effect">
+                                        <i class="fa fa-list-alt"></i>
+                                        <span>Categorias
+                                            <span class="float-right menu-arrow">
+                                                <i class="mdi mdi-chevron-right"></i>
+                                            </span>
+                                        </span>
                                     </a>
+                                    <ul class="submenu submenu-left">
+                                        <li>
+                                            <a href="/painel/categorias-icones" class="waves-effect">
+                                                <i class="fas fa-icons">
+                                                </i>Ícones</a>
+                                        </li>
+                                        <li>
+                                            <a href="/painel/categorias-mapas" class="waves-effect">
+                                                <i class="fas fa-map-marked-alt"></i>
+                                                </i>Mapas</a>
+                                        </li>
+                                        <li>
+                                            <a href="/painel/categorias-investimentos" class="waves-effect">
+                                                <i class="fas fa-file-invoice-dollar">
+                                                </i>Investimentos</a>
+                                        </li>
+                                        <li>
+                                            <a href="/painel/categorias-planejamentos" class="waves-effect">
+                                                <i class="far fa-calendar-alt">
+                                                </i>Planejamentos</a>
+                                        </li>
+                                        <li>
+                                            <a href="/painel/categorias-documentos" class="waves-effect">
+                                                <i class="fas fa-file-contract">
+                                                </i>Documentos</a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="/painel/icones">
@@ -239,6 +272,19 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="/painel/secretarias">
+                                        <i class='fas fa-building'></i>
+                                        <span>Secretarias</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{route('lista.cargos')}}">
+                                        <i class="fas fa-briefcase"></i>
+                                        <span>Cargos</span>
+                                    </a>
+                                </li>
+
+                                <li>
                                     <a href="/painel/perguntas"><i class="far fa-question-circle"></i>
                                         <span>Perguntas</span>
                                     </a>
@@ -251,16 +297,16 @@
                                 </li>
                                 <li>
                                     <a href="/painel/tutoriais">
-                                        <i class="far fa-id-card"></i>
+                                        <i class="fas fa-chalkboard-teacher"></i>
                                         <span>Tutoriais</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="/painel/novidades">
-                                        <i class="far fa-id-card"></i>
-                                        <span>Novidades</span>
-                                    </a>
-                                </li>
+{{--                                <li>--}}
+{{--                                    <a href="/painel/noticias">--}}
+{{--                                        <i class="fas fa-newspaper"></i>--}}
+{{--                                        <span>Novidades</span>--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
                                 <li>
                                     <a href="/painel/investimentos" class="waves-effect">
                                         <i class="fas fa-file-invoice-dollar"></i>
@@ -277,7 +323,7 @@
                                             </span>
                                         </span>
                                     </a>
-                                    <ul class="submenu">
+                                    <ul class="submenu submenu-left">
                                         <li>
                                             <a href="/painel/sistemas/webpublico"><i class="far fa-window-maximize"></i>Webpublico</a>
                                         </li>
@@ -294,7 +340,7 @@
                                             </span>
                                         </span>
                                     </a>
-                                    <ul class="submenu">
+                                    <ul class="submenu submenu-left">
                                         <li>
                                             <a href="/painel/infra/fibra/listar">
                                                 <i class="fas fa-project-diagram"></i>Malha de Fibra
@@ -311,6 +357,12 @@
                                     <a href="/painel/planejamentos" class="waves-effect">
                                         <i class="far fa-calendar-alt"></i>
                                         <span>Planejamento</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('list.maps') }}" class="waves-effect">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        <span>Mapas</span>
                                     </a>
                                 </li>
                                 <li>
@@ -356,6 +408,7 @@
     <script src="/js/dashboard.js"></script>
     <script src="/js/loadingover/loadingoverlay.js"></script>
     <script src="/js/funcoes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
     @yield('js')
 </body>

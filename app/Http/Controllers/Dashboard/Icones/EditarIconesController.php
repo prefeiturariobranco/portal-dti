@@ -59,7 +59,7 @@ class EditarIconesController extends Controller
 
         if ($icone != 1) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Falha alterar ícone';
+            $resultado['msg'] = 'Falha ao alterar ícone';
         }
 
         Session::flash('erro_msg', $resultado);

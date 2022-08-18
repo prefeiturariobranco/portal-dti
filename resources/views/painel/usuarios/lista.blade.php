@@ -1,31 +1,33 @@
 @extends('templates.dashboard')
-@section('titulo')Intranet :: Novidades @endsection
+@section('titulo')Intranet :: Usuários @endsection
 
-@section('js')
-<script>
-    $(document).ready(function() {
+@push('css')
+    <style>
+        .pagination.page-link {
+            border-top-right-radius: .2rem;
+            border-bottom-right-radius: .2rem;
+        }
+    </style>
+@endpush()
 
-        $('#tech-companies-1').DataTable({
-            language: {
-                url: '/json/Portuguese-Brasil.json'
-            }
-        });
-    });
-</script>
-@endsection
 
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <a class="card-body">
+                <div class="card-header">
+                    <h4>Usuários</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="btn btn-success" href="/painel/usuarios/cadastrar">Cadastrar Usuário</a>
+                        </div>
+                    </div>
+                    <br>
 
-                    <form class="form-inline">
-
-                    </form>
-                        <a href="/painel/usuarios/cadastrar"><button class="btn btn-success" type="button" data-toggle="modal" data-target="#modalAdd">Cadastrar Usuário
-                    </button></a>
-
+                    <div class="row">
+                        <div class="col-md-12">
                     <div class="table-rep-plugin mt-3">
                         <div class="table-responsive mb-0" data-pattern="priority-columns">
                             <table id="tech-companies-1" class="table table-striped">
@@ -51,18 +53,19 @@
                                     @endif
                                     <td class="text-center">
 
-                                        <a href="/painel/usuarios/{{ $usuario->id }}">
+                                        <a href="/painel/usuarios/{{ $usuario->id }}" title="Editar">
                                             <button class="btn-sm btn-primary">
                                                 <i class="fas fa-shield-alt"></i>
                                             </button>
                                         </a>
 
-                                        <a href="/painel/usuarios/{{ $usuario->id }}/permissoes">
-                                            <button class="btn-sm btn-primary">
-                                                <i class="fas fa-user-edit"></i>
-                                            </button>
-                                        </a>
-                                        <a href="/painel/usuarios/remover/{{ $usuario->id }}">
+{{--                                        <a href="/painel/usuarios/{{ $usuario->id }}/permissoes">--}}
+{{--                                            <button class="btn-sm btn-primary">--}}
+{{--                                                <i class="fas fa-user-edit"></i>--}}
+{{--                                            </button>--}}
+{{--                                        </a>--}}
+
+                                        <a href="/painel/usuarios/remover/{{ $usuario->id }}" title="Excluir">
                                             <button class="btn-sm btn-danger">
                                                 <i class="fas fa-user-times"></i>
                                             </button>
@@ -95,13 +98,26 @@
                     <form method="post" action="/painel/categorias/deletar">
                         <i class="fa fa-exclamation-triangle"></i>
                         <p>Você tem certeza que deseja excluir esse registro?</p>
-                </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary waves-effect waves-light">Excluir</button>
                     <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Fechar</button>
+                </div>
                     </form>
+                </div>
                 </div>
             </div>
         </div>
     </div>
 @endsection
+@push('js')
+    <script>
+        $(document).ready(function() {
+
+            $('#tech-companies-1').DataTable({
+                language: {
+                    url: '/json/Portuguese-Brasil.json'
+                }
+            });
+        });
+    </script>
+@endpush

@@ -21,7 +21,7 @@
                     <div class="row mt-3">
                         <div class="col-md-4">
                             <label>Email: </label>
-                            <input type="email" class="form-control" name="email" value="{{old('email')}}">
+                            <input type="email" class="form-control" name="email" value="{{old('email')}}" placeholder="nome@examplo.com.br">
                             <span class="system_error text-danger">{{$errors->first('email')}}</span>
                         </div>
                     </div>

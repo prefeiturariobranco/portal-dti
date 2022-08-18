@@ -4198,6 +4198,10 @@ textarea.form-control.is-invalid {
   }
 }
 
+.btn-select {
+    margin-left: 0px;
+}
+
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -32558,10 +32562,10 @@ dt {
 ===================*/
 /*!
  * Waves v0.7.6
- * http://fian.my.id/Waves 
- * 
- * Copyright 2014-2018 Alfiana E. Sibuea and other contributors 
- * Released under the MIT license 
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014-2018 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
  * https://github.com/fians/Waves/blob/master/LICENSE */
 .waves-effect {
   position: relative;
@@ -32731,6 +32735,10 @@ dt {
 .submenu li.active>a {
   color: #b4c9de;
   background-color: #333547;
+}
+
+.submenu-left {
+    margin-left: 30px;
 }
 
 .topbar {
@@ -34973,6 +34981,9 @@ th {
 .table td,
 .table th {
   vertical-align: middle;
+}
+.table-center {
+    text-align: center !important;
 }
 
 .table-vertical td {

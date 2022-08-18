@@ -24,7 +24,7 @@ class DeletarAplicativosController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = "Aplicativo removida com sucesso!";
+        $resultado['msg'] = "Aplicativo removido com sucesso!";
 
         if (!$aplicativos) {
             $resultado['error'] = 2;

@@ -1,5 +1,5 @@
 @extends('templates.dashboard')
-@section('titulo')Ti Local @endsection
+@section('titulo')TI Local @endsection
 
 @section('content')
     <div class="row">
@@ -9,7 +9,7 @@
                 <div class="card-body">
 
                     <div class="card-title">
-                        Alterar de TiLocal
+                        Alterar de Ti Local
                     </div>
                     <hr>
                     <form action="/painel/tilocal/alterar" method="post">
@@ -36,7 +36,8 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Telefone:</label>
-                                <input type="text" name="telefone" class="form-control" value="{{ $tiLocal->telefone }}" placeholder="Digite o telefone">
+                                <input type="text" name="telefone" class="form-control" value="{{ $tiLocal->telefone }}"
+                                       placeholder="Digite o telefone" onkeydown="return mascaraTelefone(event)">
                                 <span class="system_error text-danger">{{$errors->first('telefone')}}</span>
                             </div>
                         </div>

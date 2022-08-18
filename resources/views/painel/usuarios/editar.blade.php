@@ -11,6 +11,7 @@
                     <hr>
                     <form action="/painel/usuarios/alterar/{{$usuario->id}}" method="post">
                         @csrf
+                        <input type="hidden" name="usuario_id" value="{{ $usuario->id }}">
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Nome: </label>

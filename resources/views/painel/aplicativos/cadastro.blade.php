@@ -33,7 +33,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Imagem:</label>
-                                <input type="file" name="imagem" class="form-control" >
+                                <input type="file" name="imagem" class="form-control" accept="image/*">
                                 <span class="system_error text-danger">{{$errors->first('imagem')}}</span>
                             </div>
                         </div>

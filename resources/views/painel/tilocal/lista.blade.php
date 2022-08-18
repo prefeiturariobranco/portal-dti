@@ -1,5 +1,5 @@
 @extends('templates.dashboard')
-@section('titulo')Ti Local @endsection
+@section('titulo')TI Local @endsection
 
 @section('css')
     <style>
@@ -27,7 +27,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>TiLocal</h4>
+                    <h4>Ti Local</h4>
                 </div>
                 <div class="card-body">
 
@@ -46,7 +46,7 @@
                                 <table id="tech-companies-1" class="table table-striped" style="text-align: center;">
                                     <thead>
                                     <tr>
-                                        <th>Nome</th>
+                                        <th class="text-left">Nome</th>
                                         <th>Opções</th>
                                     </tr>
                                     </thead>

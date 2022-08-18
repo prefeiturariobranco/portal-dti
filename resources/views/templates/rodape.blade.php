@@ -7,24 +7,24 @@
                 <div class="col-lg-4 col-md-4 footer-info">
                     <h3>Portal DTI</h3>
                     <p>
-                        R. Goldwasser Santos - Bosque <br>
-                        Rio Branco - AC, 69908-400<br><br>
-                        <strong>Telefone:</strong><br>
+                        R. Alvorada, 411, Térreo - B. Bosque <br>
+                        Rio Branco - AC, 69900-631<br><br>
+                        <strong>Telefone:</strong> (68) 3222-7310<br>
                         <strong>Email:</strong> dti@riobranco.ac.gov.br<br>
                     </p>
                     <div class="social-links mt-3">
-                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                        <a href="https://twitter.com/prefriobranco" class="twitter"><i class="bx bxl-twitter"></i></a>
+                        <a href="https://web.facebook.com/PrefRioBranco?_rdc=1&_rdr" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="https://www.instagram.com/prefriobranco/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="https://www.youtube.com/user/PrefRioBranco" class="google-plus"><i class="bx bxl-youtube"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-4 footer-links">
-                    <h4>Links Uteis</h4>
+                    <h4>Links Úteis</h4>
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/'}}">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="http://webpublico.riobranco.ac.gov.br/faces/login.xhtml">Webpublico</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="http://webpublico.riobranco.ac.gov.br/faces/login.xhtml">Webpúblico</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/submenu/10'}}">Sistemas</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/submenu/8'}}">Software Livre</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="https://webmail.riobranco.ac.gov.br">E-mail Institucional</a></li>
@@ -48,7 +48,7 @@
 
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong><span>DTI</span></strong>. All Rights Reserved
+            &copy; Copyright 2021 <strong><span>Diretoria de Tecnologia da Informação</span></strong>. All Rights Reserved
         </div>
     </div>
 </footer><!-- End Footer -->

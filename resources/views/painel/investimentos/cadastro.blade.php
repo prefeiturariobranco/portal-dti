@@ -1,6 +1,17 @@
 @extends('templates.dashboard')
 @section('titulo')Investimentos @endsection
-
+@push('js')
+    <script>
+        jQuery(function () {
+            $("#valor").mask({
+                symbol:'R$ ',
+                symbolStay: true,
+                thousands: '.',
+                decimal: ','
+            })
+        })
+    </script>
+@endpush
 @section('content')
 <div class="row">
     <div class="col-12">
@@ -17,7 +28,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Nome: </label>
-                            <input type="text" class="form-control" name="nome">
+                            <input type="text" class="form-control" name="nome" max="10">
                             <span class="system_error text-danger">{{$errors->first('nome')}}</span>
                         </div>
                     </div>
@@ -32,6 +43,7 @@
                         <div class="col-md-4">
                             <label>Categoria: </label>
                             <select name="categoria" class="custom-select">
+                                <option>Selecionar</option>
                                 @foreach($categorias as $categoria)
                                     <option value="{{ $categoria->id }}">
                                         {{ $categoria->nome }}
@@ -51,7 +63,7 @@
                     <div class="row mt-3">
                         <div class="col-md-4">
                             <input type="submit" class="btn btn-primary" value="Salvar">
-                            <a class="btn btn-danger" href="/painel/investimentos">Voltar</a>
+                            <a class="btn btn-danger" href="/painel/investimentos/">Voltar</a>
                         </div>
                     </div>
                 </form>
@@ -61,3 +73,9 @@
     </div> <!-- end col -->
 </div> <!-- end row -->
 @endsection
+
+@push('link-js')
+    <script href="{{ asset('js/site/moeda.js') }}">
+@endpush
+
+

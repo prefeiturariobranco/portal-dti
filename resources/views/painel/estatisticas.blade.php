@@ -20,8 +20,8 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h4 class="mt-0 header-title">Estatisticas <i class="fa fa-align-center" aria-hidden="true"></i></h4>
-                    <p class="text-muted m-b-30">Tabela de gerenciamento de Estatisticas</p>
+                    <h4 class="mt-0 header-title">Estatísticas <i class="fa fa-align-center" aria-hidden="true"></i></h4>
+                    <p class="text-muted m-b-30">Tabela de gerenciamento de Estatísticas</p>
                     <form class="form-inline">
 
 
@@ -74,18 +74,18 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title mt-0" id="myModalLabel">Adicionar Estatisticas</h5>
+                    <h5 class="modal-title mt-0" id="myModalLabel">Adicionar Estatísticas</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">
 
                     <form method="post" action="/painel/estatisticas-gerais/cadastrar">
                         <div class="form-group">
-                            <label>Nome da Estatistica:</label>
+                            <label>Nome da Estatística:</label>
                             <input type="text" name="nome" class="form-control" placeholder="Digite o nome da estatistica">
                         </div>
                         <div class="form-group">
-                            <label>Valor da Estatistica:</label>
+                            <label>Valor da Estatística:</label>
                             <input type="text" name="valor" class="form-control" placeholder="Digite o valor da estatistica">
                         </div>
                         <button type="submit" class="btn btn-success waves-effect waves-light">Salvar</button>
@@ -104,13 +104,13 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title mt-0" id="myModalLabel">Editar Estatistica</h5>
+                    <h5 class="modal-title mt-0" id="myModalLabel">Editar Estatística</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">
                     <form method="post" action="/painel/estatisticas-gerais/editar">
                         <div class="form-group">
-                            <label>Nome da Estatistica:</label>
+                            <label>Nome da Estatística:</label>
                             <input type="text" name="nome" class="form-control" placeholder="Digite o nome da estatistica">
                         </div>
                         <div class="form-group">
@@ -134,7 +134,7 @@
             <div class="modal-content">
                 <div class="modal-header">
 
-                    <h5 class="modal-title mt-0" id="myModalLabel">Excluir Estatistica</h5>
+                    <h5 class="modal-title mt-0" id="myModalLabel">Excluir Estatística</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">

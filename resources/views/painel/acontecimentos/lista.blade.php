@@ -1,6 +1,6 @@
 @extends('templates.dashboard')
 
-@section('titulo')Intranet :: Acontecimentos @endsection
+@section('titulo')Acontecimentos @endsection
 
 @section('css')
 

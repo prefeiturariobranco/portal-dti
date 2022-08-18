@@ -50,14 +50,14 @@
                     <div class="row mt-3">
                         <label style="margin-left: 20px">Banner: </label>
                         <div class="col-md-4">
-                           <input type="file" name="banner" class="">
+                           <input type="file" name="banner" class="" accept="image/*">
                         </div>
                     </div>
 
                     <div class="row mt-3">
                         <label style="margin-left: 20px">PDF: </label>
                         <div class="col-md-4">
-                            <input type="file" name="pdf" class="">
+                            <input type="file" name="pdf" class="" accept="application/pdf">
                         </div>
                     </div>
                     <div class="row mt-3">

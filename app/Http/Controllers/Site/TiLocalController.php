@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Model\Ti_Local;
 use Illuminate\Http\Request;
 use App\Model\Icones_categorias;
 use App\Model\Icones;
@@ -26,6 +27,7 @@ class TiLocalController extends Controller
                 'status' => 1
             ])->get(),
             'secretarias' => Secretarias::all(),
+            'ti_local' => Ti_Local::all(),
             'titulo' => ''
         ]);
     }

@@ -49,15 +49,41 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="row">
                         <div class="col-md-4">
                             <label>Ano Referencia: </label>
-                            <input type="number" class="form-control" name="ano" value="{{old('ano')}}">
-                            <span class="system_error text-danger">{{$errors->first('ano')}}</span>
+                    <select name="ano" class="form-control">
+                        <option>
+                            <?php
+                            $ano_atual = date("Y");
+                            for($i = 2000; $i <= $ano_atual; $i++) {
+                                echo "<option value=\"$i\">$i</option>\n";
+                            }
+                            ?>
+                        </option>
+                    </select>
                         </div>
                     </div>
+
+
+{{--                    <div class="row">--}}
+{{--                        <div class="col-md-4">--}}
+{{--                            <label>Ano Referencia: </label>--}}
+{{--                            <input type="number" class="form-control" name="ano" value="2022" max="2099">--}}
+{{--                            <span class="system_error text-danger">{{$errors->first('ano')}}</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+
+                    <script>
+                        $(function() {
+                            $( "#datepicker" ).datepicker({dateFormat: 'yy'});
+                        });
+                    </script>
+                    <style>
+                        .ui-datepicker-calendar {
+                            display: none;
+                        }
+                    </style>
                     <div class="row mt-3">
                         <div class="col-md-4">
                             <input type="submit" class="btn btn-primary" value="Salvar">

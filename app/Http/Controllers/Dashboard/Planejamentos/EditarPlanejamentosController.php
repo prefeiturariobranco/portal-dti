@@ -62,7 +62,7 @@ class EditarPlanejamentosController extends Controller
 
         if (!$resultado) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha alterar planejamento";
+            $resultado['msg'] = "Falha ao alterar planejamento";
         }
 
         Session::flash('erro_msg', $resultado);

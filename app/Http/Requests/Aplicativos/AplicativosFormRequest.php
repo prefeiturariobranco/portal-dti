@@ -24,9 +24,9 @@ class AplicativosFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'titulo' => 'required|max:128',
-            'url' => 'required',
-            'imagem' => 'required'
+            'titulo' => 'nullable',
+            'url' => 'nullable',
+            'imagem' => 'nullable|image'
         ];
     }
 

@@ -1,16 +1,18 @@
 @extends('templates/layout-principal')
 @push('css')
-    <link href="assets/css/contatos.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/contatos.css') }}" rel="stylesheet">
 @endpush
 
 @section('js')@endsection
+@section('title') Portal DTI @endsection
+
 @section('content')
     <div class="main">
         <section class="container contatos">
             <div class="row justify-content-center">
                 <div class="sidenav col-md-3">
                     <nav class="nav flex-column">
-                        <a class="nav-link active" href="#">Contatos</a>
+                        <a class="nav-link active" href="{{'/contatos'}}">Contatos</a>
                         <a class="nav-link" href="{{'/ti-local'}}">TI Local</a>
                     </nav>
                 </div>
@@ -35,6 +37,4 @@
             </div>
         </section>
     </div>
-
-
 @endsection

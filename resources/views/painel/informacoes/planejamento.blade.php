@@ -37,10 +37,10 @@
                             @foreach($planejamentos as $planejamento)
                                 <tr>
                                     <td>{{ $planejamento->descricao }}</td>
-                                    <td class="text-center d-none d-sm-block">{{ date_format($planejamento->data_entrega, 'd/m/Y') }}</td>
+                                    <td class="text-center d-none d-sm-block" >{{ $planejamento->data_entrega }}</td>
                                     <td class="text-center">
                                         <span>{{ $planejamento->responsavel }}</span>
-                                        <small class="text-primary d-block d-sm-none">{{date_format($planejamento->data_entrega, 'd/m/Y') }}</small>
+                                        <small class="text-primary d-block d-sm-none">{{ $planejamento->data_entrega }}</small>
                                     </td>
                                 </tr>
                             @endforeach

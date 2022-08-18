@@ -25,11 +25,11 @@ class DeletarTutoriaisController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = "Tutoriais removida com sucesso!";
+        $resultado['msg'] = "Tutorial removido com sucesso!";
 
         if (!$tutorial) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha ao remover tutoriais";
+            $resultado['msg'] = "Falha ao remover tutorial";
         }
 
         Session::flash('ero_msg', $tutorial);

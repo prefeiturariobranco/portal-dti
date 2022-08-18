@@ -50,11 +50,11 @@ class ConfigController extends Controller
             'criado_por' => Session::get('DTI_PORTAL'),
         ]);
         $resultado['error'] = 1;
-        $resultado['msg'] = 'Dados inseridos com sucesso!';
+        $resultado['msg'] = 'Dado cadastrado com sucesso!';
 
         if (!$infraConfig->save()) {
             $resultado['error'] = 2;
-            $resultado['msg'] = 'Falha ao salvar cofiguração!';
+            $resultado['msg'] = 'Falha ao cadastrar cofiguração!';
         }
 
         Session::flash('erro_msg', $resultado);

@@ -51,7 +51,7 @@ class CadastrarNoticiasController extends Controller
 
         if (!$noticia) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha cadastrar notícia";
+            $resultado['msg'] = "Falha ao cadastrar notícia";
         } else if ($arquivos->storePubliclyAs('public/banner/', $arquivos->getClientOriginalName())){
             $noticia->imagem = $arquivos->getClientOriginalName();
 

@@ -25,7 +25,7 @@
 
 
                     </form>
-                    <button class="btn btn-success" style="margin-bottom: 1%;" type="button" data-toggle="modal" data-target="#modalAdd">Adicionar Novidade
+                    <button class="btn btn-success" style="margin-bottom: 1%;" type="button" data-toggle="modal" href="" data-target="#modalAdd">Cadastrar Novidade
                     </button>
 
 

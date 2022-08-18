@@ -46,9 +46,12 @@ class CadastrarDocumentosController extends Controller
             'criado_por' => Session::get('usuario')->id,
         ]);
 
+        $resultado['error'] = 1;
+        $resultado['msg'] = "Documento cadastrado com sucesso!";
+
         if (!$documento) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha cadastrar documento";
+            $resultado['msg'] = "Falha ao cadastrar documento";
 
             Session::flash('erro_msg', $resultado);
             return Redirect::to('painel/documentos');

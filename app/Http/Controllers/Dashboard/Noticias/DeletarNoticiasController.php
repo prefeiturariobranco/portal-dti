@@ -24,11 +24,11 @@ class DeletarNoticiasController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = "Notícias removida com sucesso!";
+        $resultado['msg'] = "Notícia removida com sucesso!";
 
         if (!$noticia) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha ao remover notícias";
+            $resultado['msg'] = "Falha ao remover notícia";
         }
 
         Session::flash('erro_msg', $resultado);

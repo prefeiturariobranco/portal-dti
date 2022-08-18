@@ -17,7 +17,7 @@ class ApiController extends Controller
     public function tipoConexaoUnidades(){
         $config = Infra_config::all()->last();
         $resultado[] = ['label'=> "Conexão por Fibra", 'value' => $config->num_conexao_fibra, 'cor'=> "red"];
-        $resultado[] = ['label'=> "Conexão por Radio", 'value' => $config->num_conexao_radio, 'cor' => "blue"];
+        $resultado[] = ['label'=> "Conexão por Rádio", 'value' => $config->num_conexao_radio, 'cor' => "blue"];
 
         echo json_encode($resultado);
     }

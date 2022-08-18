@@ -2,6 +2,9 @@
 @section('js')
     <script src="/js/site/perguntas.js"></script>
 @endsection
+
+@section('title') Portal DTI @endsection
+
 @section('content')
     <section id="services" class="services section-bg">
         <div class="container">

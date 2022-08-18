@@ -53,7 +53,7 @@ class CadastrarAcontecimentosController extends Controller
 
         if (!$acontecimento) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha cadastrar acontecimento";
+            $resultado['msg'] = "Falha ao cadastrar linha do tempo";
         }
 
         Session::flash('erro_msg', $resultado);

@@ -4,9 +4,11 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use OwenIt\Auditing\Contracts\Auditable;
 
-class Icones extends Model
+class Icones extends Model implements Auditable
 {
+    use \OwenIt\Auditing\Auditable;
     //
     protected $fillable = [
         'id',

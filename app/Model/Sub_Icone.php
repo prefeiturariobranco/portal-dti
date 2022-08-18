@@ -4,9 +4,11 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use OwenIt\Auditing\Contracts\Auditable;
 
-class Sub_Icone extends Model
+class Sub_Icone extends Model implements Auditable
 {
+    use \OwenIt\Auditing\Auditable;
     //
     protected $table = 'sub_icones';
     protected $fillable = ['id', 'nome', 'caminho', 'link', 'ocultar', 'icones_id'];

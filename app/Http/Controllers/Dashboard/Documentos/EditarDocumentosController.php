@@ -9,6 +9,7 @@ use App\Model\Documentos;
 use App\Model\Documentos_arquivos;
 use App\Model\Documentos_categorias;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
@@ -18,7 +19,7 @@ class EditarDocumentosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -33,13 +34,12 @@ class EditarDocumentosController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(DocumentosFormRequest $request)
     {
-        //
         $documento = Documentos::where('id', $request->post('documento_id'))->update([
             'titulo' => $request->post('titulo'),
             'descricao' => $request->post('descricao'),
@@ -51,7 +51,7 @@ class EditarDocumentosController extends Controller
 
         $arquivos = $request->file('arquivo_documento');
 
-        if ($arquivos != null){
+        if ($arquivos != null) {
             foreach ($arquivos as $arquivo) {
                 if (!$arquivo->storePubliclyAs('public/documentos/', $arquivo->getClientOriginalName())) {
                     $resultado['error'] = 2;
@@ -61,7 +61,7 @@ class EditarDocumentosController extends Controller
                     return Redirect::to('painel/documentos');
                 }
 
-                $categoria = Documentos_arquivos::create([
+                $doc = Documentos_arquivos::create([
                     'caminho' => 'documentos/' . $arquivo->getClientOriginalName(),
                     'documentos_id' => $request->post('documento_id'),
                 ]);
@@ -70,6 +70,6 @@ class EditarDocumentosController extends Controller
         $resultado['error'] = 1;
         $resultado['msg'] = "Documento editado com sucesso!";
 
-        return Redirect::to('/painel/documentos/editar/'.$request->post('documento_id'));
+        return Redirect::to('/painel/documentos/editar/' . $request->post('documento_id'));
     }
 }

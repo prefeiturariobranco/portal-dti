@@ -1,8 +1,12 @@
 @extends('templates/layout-principal')
 @push('css')
-    <link href="assets/css/contatos.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/contatos.css') }}" rel="stylesheet">
 @endpush
 @section('js')@endsection
+@section('title')
+    Portal DTI
+@endsection
+
 @section('content')
     <div class="main">
         <section class="container contatos">
@@ -16,13 +20,15 @@
 
                 <div class="departamento col-md-8">
                     @foreach($secretarias as $secretaria)
-                        <p class="nome-departamento">{{$secretaria->nome}}</p>
                         @foreach($secretaria->tiLocal as $contato)
-                            <div class="contato">
-                                <p>{{$contato->nome}}</p>
-                                <p><i class="bx bx-phone"></i> {{$contato->telefone}}</p>
-                                <p><i class="bx bx-envelope"></i> {{$contato->email}}</p>
-                            </div>
+                            @if($contato->ocultar == 0)
+                        <p class="nome-departamento">{{$secretaria->nome}}</p>
+                        <div class="contato">
+                                    <p>{{$contato->nome}}</p>
+                                    <p><i class="bx bx-phone"></i> {{$contato->telefone}}</p>
+                                    <p><i class="bx bx-envelope"></i> {{$contato->email}}</p>
+                                </div>
+                            @endif
                         @endforeach
                     @endforeach
                 </div>

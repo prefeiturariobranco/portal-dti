@@ -5,6 +5,7 @@
 @endsection
 
 @section('js')@endsection
+@section('title') Portal DTI @endsection
 
 @section('content')
 
@@ -12,12 +13,12 @@
         <div class="container">
             <div class="row">
             @foreach($subIcones as $subIcone)
-                    <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0" style="padding: 10px;">
-                        <div class="icon-box" onclick=location.href="{{$subIcone['link']}}" style="cursor: pointer">
+                    <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0" style="padding: 10px;" onclick="window.open('{{$subIcone['link']}}', '_blank')">
+                        <div class="icon-box" style="cursor: pointer">
                             <div class="icon">
                                 <img style="width: 40px" src="{{$subIcone['caminho']}}" title="" alt=""/>
                             </div>
-                            <h4 class="title"><a href="{{$subIcone['link']}}">{{$subIcone['nome']}}</a></h4></div>
+                            <h4 class="title"><a href="{{$subIcone['link']}}">{{$subIcone['nome']}} </a></h4></div>
                     </div>
             @endforeach
             </div>

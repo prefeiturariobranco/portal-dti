@@ -1,11 +1,12 @@
 @extends('templates/layout-principal')
 @section('css')@endsection
 @section('js')@endsection
+@section('title') Portal DTI @endsection
 @section('content')
 
 <section id="services" class="services section-bg">
     <div class="container">
-        <h2 class="section-title">Especificações Tecnicas</h2>
+        <h2 class="section-title">Especificações Técnicas</h2>
 
         <table class="table" >
             <thead>
@@ -24,7 +25,7 @@
                     <td class="text-center">
                         <a href="{{$especificao->arquivo}}">
                             <button class="btn">
-                                Download
+                                Abrir
                             </button>
                         </a>
                     </td>

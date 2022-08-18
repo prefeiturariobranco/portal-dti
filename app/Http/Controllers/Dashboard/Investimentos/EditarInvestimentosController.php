@@ -41,12 +41,12 @@ class EditarInvestimentosController extends Controller
             'cor' => $request->post('cor'),
         ]);
 
-        $resultado['error'] = 0;
-        $resultado['msg'] = "Investimento cadastrado com sucesso!";
+        $resultado['error'] = 1;
+        $resultado['msg'] = "Investimento alterado com sucesso!";
 
         if (!$investimentos) {
-            $resultado['error'] = 1;
-            $resultado['msg'] = "Falha cadastrar investimento";
+            $resultado['error'] = 2;
+            $resultado['msg'] = "Falha ao alterar investimento";
         }
 
         Session::flash('erro_msg', $resultado);

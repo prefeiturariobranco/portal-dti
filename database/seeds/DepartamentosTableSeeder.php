@@ -27,3 +27,4 @@ class DepartamentosTableSeeder extends Seeder
         ]);
     }
 }
+

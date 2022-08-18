@@ -17,6 +17,7 @@
                         <div class="col-md-4">
                             <label>Categoria: </label>
                             <select name="documentos_categorias_id" class="form-control">
+                                <option>Selecionar categoria</option>
                                 @foreach($categorias as $categoria)
                                     <option value="{{ $categoria->id }}">
                                         {{ $categoria->nome }}
@@ -70,7 +71,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Anexos: </label>
-                            <input type="file" name="arquivo_documento[]" multiple class="form-control">
+                            <input type="file" name="arquivo_documento[]" multiple class="form-control" accept="application/pdf">
                             <span class="system_error text-danger">{{$errors->first('arquivo_documento')}}</span>
                         </div>
                     </div>

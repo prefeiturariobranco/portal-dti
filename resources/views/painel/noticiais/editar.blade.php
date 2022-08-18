@@ -53,7 +53,7 @@
                         <div class="row mt-3">
                             <label style="margin-left: 20px">Banner: </label>
                             <div class="col-md-4">
-                                <input type="file" name="banner" class="">
+                                <input type="file" name="banner" class="" accept="image/*">
                             </div>
                         </div>
                         @if(!is_null($noticia->url_documento))
@@ -66,7 +66,7 @@
                             <div class="row mt-3">
                                 <label style="margin-left: 20px">PDF: </label>
                                 <div class="col-md-4">
-                                    <input type="file" name="pdf" class="">
+                                    <input type="file" name="pdf" class="form-control" accept="application/pdf">
                                 </div>
                             </div>
                         @endif

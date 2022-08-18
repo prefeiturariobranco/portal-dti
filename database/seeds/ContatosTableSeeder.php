@@ -14,8 +14,15 @@ class ContatosTableSeeder extends Seeder
     {
         //
         Contatos::create([
+            'departamento_id' => 1,
+            'cargos_id'  => 1,
+            'nome'  => 'Mark',
+            'telefone'  => '3211 - 2212',
+            'email' => 'mak.moreira@riobranco.ac.gov.br',
+        ]);
+        Contatos::create([
             'departamento_id' => 2,
-            'cargos_id'  => 2,
+            'cargos_id'  => 1,
             'nome'  => 'Luiz Aguirre',
             'telefone'  => '3211 - 2212',
             'email' => 'luiz.aguirre@riobranco.ac.gov.br',
@@ -27,13 +34,7 @@ class ContatosTableSeeder extends Seeder
             'telefone'  => '3211 - 2200',
             'email' => 'genesio.mendonca@riobranco.ac.gov.br',
         ]);
-        Contatos::create([
-            'departamento_id' => 3,
-            'cargos_id'  => 5,
-            'nome'  => 'Rafaella Magalhães',
-            'telefone'  => '3211 - 3976',
-            'email' => 'rafaella.santos@riobranco.ac.gov.br',
-        ]);
+
         Contatos::create([
             'departamento_id' => 2,
             'cargos_id'  => 4,
@@ -50,7 +51,7 @@ class ContatosTableSeeder extends Seeder
         ]);
         Contatos::create([
             'departamento_id' => 2,
-            'cargos_id'  => 12,
+            'cargos_id'  => 2,
             'nome'  => 'Mônica Meireles',
             'telefone'  => '3211 - 2212',
             'email' => 'monica.meireles@riobranco.ac.gov.br',
@@ -98,13 +99,6 @@ class ContatosTableSeeder extends Seeder
             'telefone'  => '3211 - 3976',
             'email' => 'uiara.nascimento@riobranco.ac.gov.br',
         ]);
-        Contatos::create([
-            'departamento_id' => 3,
-            'cargos_id'  => 10,
-            'nome'  => 'Thiago Franco',
-            'telefone'  => '3211 - 3974',
-            'email' => 'thiago.franco@riobranco.ac.gov.br',
 
-        ]);
     }
 }
