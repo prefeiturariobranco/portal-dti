@@ -15,14 +15,19 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <a class="card-body">
+                <div class="card-header">
+                    <h4>Usuários</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="btn btn-success" href="/painel/usuarios/cadastrar">Cadastrar Usuário</a>
+                        </div>
+                    </div>
+                    <br>
 
-                    <form class="form-inline">
-
-                    </form>
-                        <a href="/painel/usuarios/cadastrar"><button class="btn btn-success" type="button" data-toggle="modal" data-target="#modalAdd">Cadastrar Usuário
-                    </button></a>
-
+                    <div class="row">
+                        <div class="col-md-12">
                     <div class="table-rep-plugin mt-3">
                         <div class="table-responsive mb-0" data-pattern="priority-columns">
                             <table id="tech-companies-1" class="table table-striped">
@@ -92,17 +97,18 @@
                     <form method="post" action="/painel/categorias/deletar">
                         <i class="fa fa-exclamation-triangle"></i>
                         <p>Você tem certeza que deseja excluir esse registro?</p>
-                </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary waves-effect waves-light">Excluir</button>
                     <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Fechar</button>
+                </div>
                     </form>
+                </div>
                 </div>
             </div>
         </div>
     </div>
 @endsection
-@section('js')
+@push('js')
     <script>
         $(document).ready(function() {
 
@@ -113,4 +119,4 @@
             });
         });
     </script>
-@endsection
+@endpush
