@@ -25,7 +25,7 @@
 
                         <div class="wrap-input100 validate-input m-b-10" data-validate="Password is required">
                             <input class="input100" type="password" name="senha" placeholder="Senha" required>
-                            <span class="focus-input100"></span>
+                                <span class="focus-input100"></span>
                             <span class="symbol-input100">
 							    <i class="fa fa-lock"></i>
 						    </span>
