@@ -53,18 +53,19 @@
                                     @endif
                                     <td class="text-center">
 
-                                        <a href="/painel/usuarios/{{ $usuario->id }}">
+                                        <a href="/painel/usuarios/{{ $usuario->id }}" title="Editar">
                                             <button class="btn-sm btn-primary">
                                                 <i class="fas fa-shield-alt"></i>
                                             </button>
                                         </a>
 
-                                        <a href="/painel/usuarios/{{ $usuario->id }}/permissoes">
-                                            <button class="btn-sm btn-primary">
-                                                <i class="fas fa-user-edit"></i>
-                                            </button>
-                                        </a>
-                                        <a href="/painel/usuarios/remover/{{ $usuario->id }}">
+{{--                                        <a href="/painel/usuarios/{{ $usuario->id }}/permissoes">--}}
+{{--                                            <button class="btn-sm btn-primary">--}}
+{{--                                                <i class="fas fa-user-edit"></i>--}}
+{{--                                            </button>--}}
+{{--                                        </a>--}}
+
+                                        <a href="/painel/usuarios/remover/{{ $usuario->id }}" title="Excluir">
                                             <button class="btn-sm btn-danger">
                                                 <i class="fas fa-user-times"></i>
                                             </button>
