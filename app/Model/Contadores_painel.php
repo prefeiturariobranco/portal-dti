@@ -2,12 +2,20 @@
 
 namespace App\Model;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
-class contadores_painel extends Model
+class Contadores_painel extends Model
 {
-    //
-    protected $table = 'contadores_painel';
-    protected $fillable = ['id', 'usuarios_id', 'ip', 'data_criacao'];
+    use HasFactory;
 
+    protected $fillable = ['id', 'usuarios_id', 'ip', 'data_criacao'];
+    protected $table = 'contadores_painel';
+
+    public function users()
+    {
+        return $this->hasOne(Usuarios::class, 'usuarios_id', 'id');
+    }
 }

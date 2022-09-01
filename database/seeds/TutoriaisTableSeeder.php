@@ -11,6 +11,18 @@ class TutoriaisTableSeeder extends Seeder
      */
     public function run()
     {
-
+        Tutoriais::create([
+            'titulo' => 'RBponto',
+            'conteudo' => 'Primeiro acesso',
+            'ocultar' => '0',
+            'imagem' => '',
+            'imagem1' => '',
+            'imagem2' => '',
+            'imagem3' => '',
+            'imagem4' => '',
+            'imagem5' => '',
+            'video' => '',
+            'criado_por' => 1
+        ]);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Login;
 
 use App\Http\Controllers\Controller;
+use App\Model\Contadores_painel;
 use Illuminate\Http\Request;
 use App\Model\Usuarios;
 use Illuminate\Support\Facades\Auth;
@@ -34,6 +35,11 @@ class CheckLoginController extends Controller
                         'usuario' => $usuario,
                     ]);
                     Auth::loginUsingId($usuario->id);
+                    Contadores_painel::create([
+                        'usuarios_id' => Session::get('usuario')->id,
+                        'ip' => $_SERVER['REMOTE_ADDR'],
+                        'data_criacao' => date('Y-m-d H:i:s'),
+                    ]);
                     return Redirect::to('/painel');
                 }
             }else {

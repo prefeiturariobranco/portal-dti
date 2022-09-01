@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Model\contadores_painel;
+use App\Model\Contadores_painel;
 use App\Model\Contadores_site;
 use App\Model\Documentos;
 use App\Model\Equipe_config;
@@ -50,7 +50,7 @@ class DashboardController extends Controller
 
        return view('painel/index', [
            'contadorSite' => Contadores_site::all()->count(),
-//           'contadorPainel' => Contadores_painel::all()->count(),
+           'contadorPainel' => Contadores_painel::all()->count(),
            'estatisticasWebPublico' => Sistemas_Webpublico::all()->last(),
            'infraConfig' => Infra_config::all()->last(),
            'investTotalPMAT' => $investTotalPMAT,

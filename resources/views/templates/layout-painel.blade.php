@@ -20,7 +20,8 @@
     @include('painel-cabecalho.html')
 
     <div class="content-page">
-        <div class="content">@section('content')@endsection</div>
+        <div class="content"
+        >@section('content')@endsection</div>
         @include('painel-rodape.html')
 
     </div>

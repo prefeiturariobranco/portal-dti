@@ -23,7 +23,7 @@ class AlterarUsuariosController extends Controller
     {
         //
         $usuario = Usuarios::where('id',  $request->post('usuario_id'))->update([
-            'nome' => $request->post('nome'),
+                'nome' => $request->post('nome'),
             'email' => $request->post('email'),
             'senha' => Hash::make($request->post('senha')),
             'departamentos_id' => $request->post('departamento_id'),
