@@ -40,6 +40,17 @@
                                 <input type="texte" name="descricao" class="form-control" value="{{ $mapa->descricao }}">
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Categoria: {{ $mapa->mapas_categorias_id }} </label>
+                                <select name="mapas_categorias_id" class="form-control" autocomplete="on">
+                                    @foreach($categorias as $categoria)
+                                            <option value="{{ $categoria->id }}" selected>{{ $categoria->nome }}</option>
+                                    @endforeach
+                                </select>
+                                <span class="system_error text-danger"></span>
+                            </div>
+                        </div>
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <input type="submit" class="btn btn-primary" value="Salvar">

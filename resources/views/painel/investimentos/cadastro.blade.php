@@ -42,7 +42,7 @@
                     <div class="row mt-3">
                         <div class="col-md-4">
                             <label>Categoria: </label>
-                            <select name="categoria" class="custom-select">
+                            <select name="categoria" class="custom-select" autocomplete="on">
                                 <option>Selecionar</option>
                                 @foreach($categorias as $categoria)
                                     <option value="{{ $categoria->id }}">

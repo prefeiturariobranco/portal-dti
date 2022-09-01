@@ -40,7 +40,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Selecione o responsável:</label>
-                                <select name="nome_responsavel" class="form-control">
+                                <select name="nome_responsavel" class="form-control" autocomplete="on">
                                     @foreach($usuarios as $usuario)
                                         @if ($usuario->status == 0)
                                             <option value="{{ $usuario->id }}">
@@ -55,7 +55,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Selecione a categoria:</label>
-                                <select name="planejamento_categoria" id="planejamento_categoria" class="form-control">
+                                <select name="planejamento_categoria" id="planejamento_categoria" class="form-control" autocomplete="on">
                                     <option>Selecione</option>
                                 @foreach($planejamentoCats as $planejamentoCat)
                                         <option value="{{ $planejamentoCat->id }}">

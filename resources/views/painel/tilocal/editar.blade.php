@@ -18,7 +18,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Secretaria:</label>
-                                <select name="secretaria_id" class="form-control">
+                                <select name="secretaria_id" class="form-control" autocomplete="on">
                                     @foreach($secretarias as $secretaria)
                                         <option value="{{ $secretaria->id }}">{{ $secretaria->nome }}</option>
                                     @endforeach

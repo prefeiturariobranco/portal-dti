@@ -31,7 +31,16 @@
                     <div class="row mt-3">
                         <div class="col-md-4">
                             <label>Ano: </label>
-                            <input type="number" max="{{date('Y')}}" class="form-control" name="ano" value="{{date('Y')}}">
+                            <select name="ano" class="form-control" autocomplete="on">
+                            <option>
+                                <?php
+                                $ano_atual = date("Y");
+                                for($i = 2000; $i <= $ano_atual; $i++) {
+                                    echo "<option value=\"$i\">$i</option>\n";
+                                }
+                                ?>
+                            </option>
+                            </select>
                             <span class="system_error text-danger">{{$errors->first('ano')}}</span>
                         </div>
                     </div>

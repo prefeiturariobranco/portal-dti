@@ -43,7 +43,7 @@
                             <div class="col-md-4">
                                 <label>Selecionar categoria:</label>
 
-                                <select name="mapas_categorias_id" class="form-control">
+                                <select name="mapas_categorias_id" class="form-control" autocomplete="on">
                                     <option>Selecione</option>
                                     @foreach($categorias as $categoria)
                                         <option value="{{ $categoria->id }}">
