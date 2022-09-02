@@ -238,7 +238,7 @@
             <div class="card">
                 <div class="card-body">
                     <div>
-                        <h3 class="mt-0  mb-4">Webpúblico</h3>
+                        <h3 class="mt-0  mb-4">Webpublico</h3>
                     </div>
                     <div class="wid-peity mb-1">
                         <div class="row">
