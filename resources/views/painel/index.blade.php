@@ -1,7 +1,9 @@
 @extends('templates/dashboard')
-@section('titulo')Intranet :: DTI @endsection
+@section('titulo')
+    Intranet :: DTI
+@endsection
 
-@section('css')
+@push('css')
     <style>
         .chart-card-inv {
 
@@ -9,14 +11,11 @@
             min-height: 50rem;
         }
     </style>
-@endsection
+@endpush
 
 @section('content')
     <!--INCLUDE MESSAGES.BLADE-->
-
     <!-- end row -->
-
-
     <br>
     <div class="row">
         <div class="col-xl-3 col-md-6">
@@ -27,7 +26,8 @@
                             <i class="fas fa-globe-americas fa-3x"></i>
                         </div>
                         <h5 class="font-16 text-uppercase mt-0">Acessos Intranet</h5>
-                        <h4 class="font-500">{{ $contadorPainel }} <i class="mdi mdi-arrow-up text-success ml-2"></i></h4>
+                        <h4 class="font-500">{{ $contadorPainel }} <i class="mdi mdi-arrow-up text-success ml-2"></i>
+                        </h4>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,8 @@
                             <i class="fas fa-users fa-3x"></i>
                         </div>
                         <h5 class="font-16 text-uppercase mt-0">Usuários Portal DTI</h5>
-                        <h4 class="font-500">{{ $contadorUsuarios }} <i class="mdi mdi-arrow-up text-success ml-2"></i></h4>
+                        <h4 class="font-500">{{ $contadorUsuarios }} <i class="mdi mdi-arrow-up text-success ml-2"></i>
+                        </h4>
                     </div>
                 </div>
             </div>
@@ -69,7 +70,8 @@
                             <i class="fas fa-sort-amount-up-alt fa-3x"></i>
                         </div>
                         <h5 class="font-16 text-uppercase mt-0">Acessos {{date('d/m/Y')}}</h5>
-{{--                        <h4 class="font-500">{{ $contadorAcessosDia }} <i class="mdi mdi-arrow-up text-success ml-2"></i></h4>--}}
+                        <h4 class="font-500">{{ $contadorAcessosDia }} <i
+                                class="mdi mdi-arrow-up text-success ml-2"></i></h4>
                     </div>
                 </div>
             </div>
@@ -97,16 +99,16 @@
                             <div class="col-xs-12 col-lg-3 text-center">
                                 <div>
                                     <strong>Investimento Anual RP</strong>
-                                    <h5 class="mb-6 text-success">R$ {{number_format($investRP, 2)}}</h5>
+                                    <h5 class="mb-6 text-success">R$ {{number_format($investRP, 2, ",", ".")}}</h5>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-lg-3 text-center">
                                 <strong>Investimento Anual PMAT</strong>
-                                <h5 class="mb-4 text-success">R$ {{number_format($investTotalPMAT, 2)}}</h5>
+                                <h5 class="mb-4 text-success">R$ {{number_format($investTotalPMAT, 2, ",", ".")}}</h5>
                             </div>
                             <div class="col-xs-12 col-lg-3 text-center">
                                 <strong>Investimento Anual Total</strong>
-                                <h5 class="mb-6 text-success">R$ {{number_format($investTotalAnual, 2)}}</h5>
+                                <h5 class="mb-6 text-success">R$ {{number_format($investTotalAnual, 2, ",", ".")}}</h5>
                             </div>
 
                         </div>
@@ -128,19 +130,24 @@
 
                     <div class="cleafix">
                         <p class="float-left"><i class="mdi mdi-calendar mr-1 text-primary"></i>Investimento Mensal</p>
-                        <h5 id="investimentos-sistemas-total" class="font-18 text-right"></h5>
-                    </div>
-
-                    <div id="investimentos-sistemas" class="ct-chart wid">
-                        <div class="chartist-tooltip" style="top: 72px; left: 220px;">
-                            <span class="chartist-tooltip-value">54</span>
-                        </div>
+                        <h5 class="font-18 text-right">R$ {{number_format($investSistema[0]->valor, 2, ",", ".")}}</h5>
                     </div>
 
                     <div class="mt-4">
                         <table class="table mb-0">
+                            <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th class="text-right">Valor</th>
+                            </tr>
+                            </thead>
                             <tbody id="investimentos-sistemas-table">
-
+                            @foreach($investSistema as $investimentos)
+                                <tr>
+                                    <td>{{ $investimentos->nome }}</td>
+                                    <td class="text-right">R$ {{number_format($investimentos->valor, 2, ",", ".")}}</td>
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -156,18 +163,25 @@
 
                     <div class="cleafix">
                         <p class="float-left"><i class="mdi mdi-calendar mr-1 text-primary"></i>Total</p>
-                        <h5 id="investimentos-infra-total" class="font-18 text-right"></h5>
-                    </div>
-
-                    <div id="investimentos-infra" class="ct-chart wid">
-                        <div class="chartist-tooltip" style="top: 72px; left: 220px;">
-                            <span class="chartist-tooltip-value">54</span>
-                        </div>
+                        <h5 class="font-18 text-right">R$ {{number_format($investInfra[0]->valor, 2, ",", ".")}}</h5>
                     </div>
 
                     <div class="mt-4">
                         <table id="investimentos-infra-table" class="table mb-0">
-
+                            <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th class="text-right">Valor</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($investInfra as $investimentos)
+                                <tr>
+                                    <td>{{$investimentos->nome}}</td>
+                                    <td class="text-right">R$ {{number_format($investimentos->valor, 2, ",", ".")}}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -177,28 +191,41 @@
         <div class="col-xl-4">
             <div class="card">
                 <div class="card-body chart-card-inv">
-                    <h4 class="mt-0 header-title mb-4">Investimentos - PMAT</h4>
 
+                    <h4 class="mt-0 header-title mb-4">Investimentos - PMAT</h4>
                     <div class="cleafix">
                         <p class="float-left"><i class="mdi mdi-calendar mr-1 text-primary"></i>Total</p>
-                        <h5 id="investimentos-pmat-total" class="font-18 text-right"></h5>
+                        <h5 class="font-18 text-right">R$ {{ number_format($investMensalPMAT, 2, ",", ".")}}</h5>
                     </div>
 
-                    <div id="investimentos-pmat" class="ct-chart wid">
-                        <div class="chartist-tooltip" style="top: 72px; left: 220px;">
-                            <span class="chartist-tooltip-value">54</span>
-                        </div>
-                    </div>
 
-                    <div class="mt-4">
+                    {{--                    <div id="investimentos-pmat" class="ct-chart wid">--}}
+                    {{--                        <div class="chartist-tooltip" style="top: 72px; left: 220px;">--}}
+                    {{--                            <span class="chartist-tooltip-value">54</span>--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
+
+                    <div class="col-xl">
                         <table id="investimentos-pmat-table" class="table mb-0">
-
+                            <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th class="text-right">Valor</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($investPMAT as $investimentos)
+                                <tr>
+                                    <td>{{$investimentos->nome}}</td>
+                                    <td class="text-right">R$ {{number_format($investimentos->valor, 2, ",", ".")}}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-
 
 
     </div>
@@ -463,15 +490,10 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
         </div>
     </div>
-
-
 
     <div class="row">
         <div class="col-xl-12">
@@ -507,51 +529,18 @@
                             </table>
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
         </div>
     </div>
-
-
-
-
-
-    </div>
-    </div>
-    </div>
-    </div>
-
-
-
-
-
-
-    </div>
-
-
-
-    <!-- end card -->
-    </div>
-
-
-
-
-
-    </div>
-
 @endsection
 
 @section('js')
-    <script src="/js/painel/categoria.js"></script>
+    <script src="{{ asset('js/painel/categoria.js') }}"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
-
-
     <script>
         function writeRows(data, tableName, prefix) {
 
@@ -658,14 +647,14 @@
                 url: '/api/investimentos/1',
                 responseType: 'json'
             })
-                .then(function(response) {
+                .then(function (response) {
 
-                    var labels = response.data.map(function(e) {
+                    var labels = response.data.map(function (e) {
 
                         return e.nome;
                     });
 
-                    var data = response.data.map(function(e) {
+                    var data = response.data.map(function (e) {
 
                         return {
                             'name': e.nome,
@@ -679,7 +668,7 @@
                     makeChart(data, labels, "Investimentos Sistemas", "investimentos-sistemas", "Valor");
                     writeRows(data, "investimentos-sistemas", 1);
 
-                }).catch(function(error) {
+                }).catch(function (error) {
                 console.log(error);
             });
         }
@@ -691,14 +680,14 @@
                 url: '/api/investimentos/3',
                 responseType: 'json'
             })
-                .then(function(response) {
+                .then(function (response) {
 
-                    var labels = response.data.map(function(e) {
+                    var labels = response.data.map(function (e) {
 
                         return e.nome;
                     });
 
-                    var data = response.data.map(function(e) {
+                    var data = response.data.map(function (e) {
 
                         return {
                             'name': e.nome,
@@ -712,7 +701,7 @@
                     makeChart(data, labels, "Investimentos PMAT ", "investimentos-pmat", "Valor");
                     writeRows(data, "investimentos-pmat", 1);
 
-                }).catch(function(error) {
+                }).catch(function (error) {
                 console.log(error);
             });
         }
@@ -734,14 +723,14 @@
                 url: '/api/sistemas/chamados/qtd',
                 responseType: 'json'
             })
-                .then(function(response) {
+                .then(function (response) {
 
-                    var labels = response.data.map(function(e) {
+                    var labels = response.data.map(function (e) {
 
                         return e.label;
                     });
 
-                    var data = response.data.map(function(e) {
+                    var data = response.data.map(function (e) {
 
                         return {
                             'name': e.label,
@@ -755,7 +744,7 @@
                     makeChart(data, labels, "Sistemas - Chamados", "sistemas-chamados", "Chamados");
                     writeRows(data, "sistemas-chamados", 0);
 
-                }).catch(function(error) {
+                }).catch(function (error) {
                 console.log(error);
             });
         }
@@ -768,14 +757,14 @@
                 url: '/api/sistemas/chamados/horas',
                 responseType: 'json'
             })
-                .then(function(response) {
+                .then(function (response) {
 
-                    var labels = response.data.map(function(e) {
+                    var labels = response.data.map(function (e) {
 
                         return e.label;
                     });
 
-                    var data = response.data.map(function(e) {
+                    var data = response.data.map(function (e) {
 
                         return {
                             'name': e.label,
@@ -789,7 +778,7 @@
                     makeChart(data, labels, "Sistemas - Horas", "sistemas-horas", "Chamados");
                     writeRows(data, "sistemas-horas", 0);
 
-                }).catch(function(error) {
+                }).catch(function (error) {
                 console.log(error);
             });
         }
@@ -801,14 +790,14 @@
                 url: '/api/sistemas/chamados/ciclo',
                 responseType: 'json'
             })
-                .then(function(response) {
+                .then(function (response) {
 
-                    var labels = response.data.map(function(e) {
+                    var labels = response.data.map(function (e) {
 
                         return e.label;
                     });
 
-                    var data = response.data.map(function(e) {
+                    var data = response.data.map(function (e) {
 
                         return {
                             'name': e.label,
@@ -822,7 +811,7 @@
                     makeChart(data, labels, "Sistemas - Ciclo " + dateCiclo(), "sistemas-ciclo", "Chamados");
                     writeRows(data, "sistemas-ciclo", 0);
 
-                }).catch(function(error) {
+                }).catch(function (error) {
                 console.log(error);
             });
         }
@@ -834,9 +823,7 @@
                 title: {
                     text: 'Evolução Malha de Fibra'
                 },
-                tooltip: {
-
-                },
+                tooltip: {},
                 legend: false,
                 xAxis: {
                     data: labels
@@ -859,15 +846,15 @@
                 url: '/api/infra/fibra',
                 responseType: 'json'
             })
-                .then(function(response) {
+                .then(function (response) {
 
-                    var labels = response.data.map(function(e) {
+                    var labels = response.data.map(function (e) {
 
                         return e.ano;
                     });
 
 
-                    var data = response.data.map(function(e) {
+                    var data = response.data.map(function (e) {
 
                         return {
                             'name': e.titulo,
@@ -881,7 +868,7 @@
                     makeChartFibra(labels, data);
 
 
-                }).catch(function(error) {
+                }).catch(function (error) {
                 console.log(error);
             });
         }
@@ -893,14 +880,14 @@
                 url: '/api/investimentos/5',
                 responseType: 'json'
             })
-                .then(function(response) {
+                .then(function (response) {
 
-                    var labels = response.data.map(function(e) {
+                    var labels = response.data.map(function (e) {
 
                         return e.nome;
                     });
 
-                    var data = response.data.map(function(e) {
+                    var data = response.data.map(function (e) {
 
                         return {
                             'name': e.nome,
@@ -914,7 +901,7 @@
                     makeChart(data, labels, "Investimentos Infraestrutura", "investimentos-infra", "Valor");
                     writeRows(data, "investimentos-infra", 1);
 
-                }).catch(function(error) {
+                }).catch(function (error) {
                 console.log(error);
             });
         }
@@ -943,14 +930,14 @@
                 url: '/api/infra/conexao/unidades',
                 responseType: 'json'
             })
-                .then(function(response) {
+                .then(function (response) {
 
-                    var labels = response.data.map(function(e) {
+                    var labels = response.data.map(function (e) {
 
                         return e.label;
                     });
 
-                    var data = response.data.map(function(e) {
+                    var data = response.data.map(function (e) {
 
                         return {
                             'name': e.label,
@@ -966,12 +953,10 @@
                     makeChart(data, labels, "Conexão Unidades", "infra-conexoes", "Valor");
                     writeRows(data, "infra-conexoes", 0);
 
-                }).catch(function(error) {
+                }).catch(function (error) {
                 console.log(error);
             });
         }
-
-
 
         getEvolucaoFibra();
         getInvestimentosSistemas();
