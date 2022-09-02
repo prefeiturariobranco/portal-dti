@@ -52,7 +52,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Ano Referencia: </label>
-                    <select name="ano" class="form-control">
+                    <select name="ano" class="form-control" autocomplete="on">
                         <option>
                             <?php
                             $ano_atual = date("Y");

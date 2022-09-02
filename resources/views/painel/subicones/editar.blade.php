@@ -18,7 +18,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Selecione o ícone:</label>
-                                <select name="icones_id" class="form-control">
+                                <select name="icones_id" class="form-control" autocomplete="on">
                                     @foreach($icones as $icone)
                                         <option value="{{ $icone->id }}">
                                             {{ $icone->nome }}

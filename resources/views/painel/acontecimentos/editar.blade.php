@@ -55,7 +55,17 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Ano Referencia: </label>
-                            <input type="number" class="form-control" name="ano" value="{{ $acontecimento->ano }}">
+                            <select name="ano" class="form-control" autocomplete="on">
+                                <option>{{ $acontecimento->ano }}</option>
+                                <option>
+                                    <?php
+                                    $ano_atual = date("Y");
+                                    for($i = 2000; $i <= $ano_atual; $i++) {
+                                        echo "<option value=\"$i\">$i</option>\n";
+                                    }
+                                    ?>
+                                </option>
+                            </select>
                             <span class="system_error text-danger">{{$errors->first('ano')}}</span>
                         </div>
                     </div>

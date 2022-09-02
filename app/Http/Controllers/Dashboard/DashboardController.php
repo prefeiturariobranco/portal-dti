@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Model\contadores_painel;
+use App\Model\Contadores_painel;
 use App\Model\Contadores_site;
 use App\Model\Documentos;
 use App\Model\Equipe_config;
@@ -41,19 +41,34 @@ class DashboardController extends Controller
         $investRP = ($investInfra[0]->valor * 12) + ($investSistema[0]->valor * 12);
         $investTotalAnual = $investTotalPMAT + $investRP;
 
+        $investPMAT = $investPMAT[0]->valor / 12;
+
         $usuario = Usuarios::where('id', 1);
         $configEquipe = Equipe_config::all()->last();
 
         $contadorTotalEquipe = $configEquipe->num_comissionados + $configEquipe->num_terceirizados + $configEquipe->num_estagiarios + $configEquipe->num_efetivos;
         $contadorUsuarios = $usuario->count();
-//        $contadorAcessoDoDia = Contadores_painel::where('data_criacao', date('Y-m-d'))->count();
+        $contadorAcessoDoDia = Contadores_painel::where('data_criacao', date('Y-m-d'))->count();
 
        return view('painel/index', [
            'contadorSite' => Contadores_site::all()->count(),
-//           'contadorPainel' => Contadores_painel::all()->count(),
+           'contadorPainel' => Contadores_painel::all()->count(),
            'estatisticasWebPublico' => Sistemas_Webpublico::all()->last(),
            'infraConfig' => Infra_config::all()->last(),
+           'investSistema' => Investimentos::where([
+               ['ocultar', 0],
+               ['investimentos_categorias_id', 1]
+           ])->get()->take(8),
+           'investInfra' => Investimentos::where([
+               ['ocultar', 0],
+               ['investimentos_categorias_id', 5]
+           ])->get()->take(8),
+           'investPMAT' => Investimentos::where([
+               ['ocultar', 0],
+               ['investimentos_categorias_id', 3]
+           ])->get()->take(8),
            'investTotalPMAT' => $investTotalPMAT,
+           'investMensalPMAT' => $investPMAT,
            'investRP' => $investRP,
            'investTotalAnual' => $investTotalAnual,
            'usuarios' => Usuarios::where('ocultar', 0)->get(),
@@ -61,7 +76,7 @@ class DashboardController extends Controller
            'contadorContratos' => $contadorContratos,
            'configEquipe' => $configEquipe,
            'contadorTotalEquipe' => $contadorTotalEquipe,
-//           'contadorAcessosDia' => $contadorAcessoDoDia
+           'contadorAcessosDia' => $contadorAcessoDoDia
        ]);
 
     }

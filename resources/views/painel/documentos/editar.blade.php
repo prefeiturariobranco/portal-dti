@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Categoria: {{ $documento->documentos_categorias_id }} </label>
-                            <select name="documentos_categorias_id" class="form-control">
+                            <select name="documentos_categorias_id" class="form-control" autocomplete="on">
                                 @foreach($categorias as $categoria)
                                     @if($documento->documentos_categorias_id == $categoria->id)
                                         <option value="{{ $categoria->id }}" selected>{{ $categoria->nome }}</option>

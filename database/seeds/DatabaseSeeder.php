@@ -37,5 +37,6 @@ class DatabaseSeeder extends Seeder
         $this->call(MapasTableSeeder::class);
         $this->call(WebPublicoChamadosTableSeeder::class);
         $this->call(InfraEspecificacoesTableSeeder::class);
+        $this->call(AplicativosTableSeeder::class);
     }
 }

@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('titulo')Malha de Fibra @endsection
+@section('titulo')
+    Malha de Fibra
+@endsection
 
 @section('content')
     <div class="row">
@@ -25,14 +27,25 @@
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <label>Quantidade(KM): </label>
-                                <input type="text" class="form-control" name="quilometragem" value="{{ $registro->quilometragem }}">
+                                <input type="text" class="form-control" name="quilometragem"
+                                       value="{{ $registro->quilometragem }}">
                                 <span class="system_error text-danger">{{$errors->first('quilometragem')}}</span>
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <label>Ano: </label>
-                                <input type="text" class="form-control" name="ano" value="{{ $registro->ano }}">
+                                <select name="ano" class="form-control" autocomplete="on">
+                                    <option>{{ $registro->ano }}</option>
+                                    <option>
+                                        <?php
+                                        $ano_atual = date("Y");
+                                        for ($i = 2000; $i <= $ano_atual; $i++) {
+                                            echo "<option value=\"$i\">$i</option>\n";
+                                        }
+                                        ?>
+                                    </option>
+                                </select>
                                 <span class="system_error text-danger">{{$errors->first('ano')}}</span>
                             </div>
                         </div>

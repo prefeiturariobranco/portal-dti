@@ -58,7 +58,7 @@
                                     @foreach($investimentos as $investimento)
                                         <tr>
                                             <td class="text-left">{{ $investimento->nome }}</td>
-                                            <td class="text-center">R$ {{ number_format($investimento->valor, 2) }}</td>
+                                            <td class="text-center">R$ {{ number_format($investimento->valor, 2, ",", ".") }}</td>
                                             <td>
                                                 <a href="/painel/investimentos/editar/{{ $investimento->id }}">
                                                     <button class="btn-sm btn-primary">

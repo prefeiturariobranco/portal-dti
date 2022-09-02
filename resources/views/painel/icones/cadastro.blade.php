@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Selecione a categoria:</label>
-                            <select name="icones_categorias_id" id="categoria" class="form-control">
+                            <select name="icones_categorias_id" id="categoria" class="form-control" autocomplete="on">
                                 <option selected>Selecione uma categoria</option>
                                 @foreach($categorias as $categoria)
                                     <option value="{{ $categoria->id }}">

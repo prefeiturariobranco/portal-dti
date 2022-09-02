@@ -70,6 +70,12 @@ class EditarDocumentosController extends Controller
         $resultado['error'] = 1;
         $resultado['msg'] = "Documento editado com sucesso!";
 
+        if (!$documento) {
+            $resultado['error'] = 2;
+            $resultado['msg'] = "Falha ao alterar documento";
+        }
+
+        Session::flash('error_msg', $resultado);
         return Redirect::to('/painel/documentos/editar/' . $request->post('documento_id'));
     }
 }

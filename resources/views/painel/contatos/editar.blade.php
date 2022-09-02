@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Departamento:</label>
-                            <select name="departamento_id" id="departamento" class="form-control">
+                            <select name="departamento_id" id="departamento" class="form-control" autocomplete="on">
                                 @foreach($departamentos as $departamento)
                                     @if($contato->departamento_id===$departamento->id)
                                         <option selected value="{{ $departamento->id }}">{{ $departamento->nome }}</option>
