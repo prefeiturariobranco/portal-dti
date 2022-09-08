@@ -31,19 +31,19 @@ class DocumentosFormRequest extends FormRequest
             'valor' => 'required',
             'data_inicio' => 'required|date',
             'data_fim' => 'required|date',
-            'arquivo_documento' => 'required',
+            'arquivo_documento' => 'nullable',
         ];
     }
 
     public function messages()
     {
         return [
-            'documentos_categorias_id.required' => 'o campo é de preenchimento obrigatório.',
+            'documentos_categeorias_id.required' => 'o campo é de preenchimento obrigatório.',
             'titulo.required' => 'o campo é de preenchimento obrigatório.',
             'descricao.required' => 'o campo é de preenchimento obrigatório.',
             'valor.required' => 'o campo é de preenchimento obrigatório.',
             'data_inicio.required' => 'o campo é de preenchimento obrigatório.',
-            'data_fim.required' => 'o campo é de preenchimento obrigatório.',
+            'data_fim.required' => 'o campo é de prenchimento obrigatório.',
             'arquivo_documento.required' => 'o campo é de preenchimento obrigatório.',
             'documentos_categorias_id.numeric' => 'O campo só aceita informações númericas.',
             'data_inicio.date' => 'O campo precisa se no formato de uma data.',

@@ -51,7 +51,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Valor: </label>
-                            <input type="text" class="form-control" name="valor" value="{{ number_format($documento->valor, 2) }}"
+                            <input type="text" class="form-control" name="valor" value="{{ $documento->valor }}"
                                    placeholder="Digite o valor">
                             <span class="system_error text-danger">{{$errors->first('valor')}}</span>
                         </div>
@@ -77,7 +77,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Anexos: </label>
-                            <input type="file" name="documentos_id" multiple class="custom-file" accept="application/pdf">
+                            <input type="file" name="arquivo_documento[]" multiple class="custom-file" accept="application/pdf">
                         </div>
                     </div>
                     <br>
