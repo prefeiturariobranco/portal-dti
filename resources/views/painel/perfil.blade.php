@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('titutlo')Intranet :: DTI@endsection
+@section('titutlo')
+    Intranet :: DTI
+@endsection
 
 @section('js')@endsection
 @section('css')@endsection
@@ -53,7 +55,8 @@
                             <div class="col-xs-12 col-lg-4">
                                 <div>
                                     <strong>Local de Trabalho: </strong>
-                                    <h5 class="mb-4 text-success">{{$usuario->departamentos->nome}} - {{$usuario->departamentos->secretarias->sigla}}</h5>
+                                    <h5 class="mb-4 text-success">{{$usuario->departamentos->nome}}
+                                        - {{$usuario->departamentos->secretarias->sigla}}</h5>
                                 </div>
                             </div>
                         </div>

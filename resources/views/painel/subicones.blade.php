@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('title')Intranet :: Sub-ícones@endsection
+@section('title')
+    Intranet :: Sub-ícones
+@endsection
 @section('js')@endsection
 @section('css')@endsection
 
@@ -12,7 +14,9 @@
                     <h4 class="mt-0 header-title">Sub-ícones <i class="fa fa-align-center" aria-hidden="true"></i></h4>
                     <p class="text-muted m-b-30">Tabela de gerenciamento de Sub-ícones</p>
 
-                    <button class="btn btn-success" style="margin-bottom:  1%;" type="button" data-toggle="modal" data-target="#modalAdd">Adicionar Sub-Ícone</button>
+                    <button class="btn btn-success" style="margin-bottom:  1%;" type="button" data-toggle="modal"
+                            data-target="#modalAdd">Adicionar Sub-Ícone
+                    </button>
 
                     <div class="alert alert-success messagemSucesso d-none" role="alert"></div>
 
@@ -79,7 +83,8 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-success waves-effect waves-light">Salvar</button>
-                            <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Fechar
+                            </button>
                     </form>
                 </div>
             </div>
@@ -88,7 +93,8 @@
 
 
     <!-- MODAL EDIT -->
-    <div id="modalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="modalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -114,7 +120,8 @@
     </div>
 
     <!-- MODAL DELETE -->
-    <div id="modalDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="modalDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">

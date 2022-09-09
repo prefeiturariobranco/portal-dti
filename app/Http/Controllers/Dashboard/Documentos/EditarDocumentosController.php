@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class EditarDocumentosController extends Controller
 {
@@ -41,19 +42,31 @@ class EditarDocumentosController extends Controller
     public function update(DocumentosFormRequest $request)
     {
         $documento = Documentos::where('id', $request->post('documento_id'))->update([
+            'documentos_categorias_id' => $request->post('documentos_categorias_id'),
             'titulo' => $request->post('titulo'),
             'descricao' => $request->post('descricao'),
             'valor' => $request->post('valor'),
             'data_inicio' => $request->post('data_inicio'),
             'data_fim' => $request->post('data_fim'),
-            'documentos_categorias_id' => $request->post('documentos_categorias_id'),
         ]);
+
+        $resultado['error'] = 1;
+        $resultado['msg'] = "Documento editado com sucesso!";
+
+        if (!$documento) {
+            $resultado['error'] = 2;
+            $resultado['msg'] = "Falha ao alterar documento";
+        }
+
+        Session::flash('erro_msg', $resultado);
+        return Redirect::to('painel/documentos');
 
         $arquivos = $request->file('arquivo_documento');
 
         if ($arquivos != null) {
             foreach ($arquivos as $arquivo) {
-                if (!$arquivo->storePubliclyAs('public/documentos/', $arquivo->getClientOriginalName())) {
+                if (!$arquivo->storePubliclyAs('public/documentos/',
+                    $arquivo->getClientOriginalName())) {
                     $resultado['error'] = 2;
                     $resultado['msg'] = "Falha ao enviar arquivo do documento";
 
@@ -67,15 +80,5 @@ class EditarDocumentosController extends Controller
                 ]);
             }
         }
-        $resultado['error'] = 1;
-        $resultado['msg'] = "Documento editado com sucesso!";
-
-        if (!$documento) {
-            $resultado['error'] = 2;
-            $resultado['msg'] = "Falha ao alterar documento";
-        }
-
-        Session::flash('error_msg', $resultado);
-        return Redirect::to('/painel/documentos/editar/' . $request->post('documento_id'));
     }
 }

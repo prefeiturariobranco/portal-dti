@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('titulo')Notícias @endsection
+@section('titulo')
+    Notícias
+@endsection
 
 @section('js')
     <script src="/js/noticias.js"></script>
@@ -30,7 +32,8 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Título:</label>
-                                <input type="text" name="titulo" class="form-control" value="{{ $tutorial->titulo }}" placeholder="Digite o título">
+                                <input type="text" name="titulo" class="form-control" value="{{ $tutorial->titulo }}"
+                                       placeholder="Digite o título">
                                 <span class="system_error text-danger">{{$errors->first('titulo')}}</span>
                             </div>
                         </div>
@@ -38,7 +41,8 @@
                             <div class="col-md-12">
                                 <strong>Conteúdo: </strong>
                                 <div>
-                                    <textarea id="noticias-conteudo" name="conteudo" class="form-control" rows="5">{{ $tutorial->conteudo }}</textarea>
+                                    <textarea id="noticias-conteudo" name="conteudo" class="form-control"
+                                              rows="5">{{ $tutorial->conteudo }}</textarea>
                                     <span class="system_error text-danger">{{$errors->first('conteudo')}}</span>
                                 </div>
                             </div>

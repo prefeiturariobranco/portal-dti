@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('title')Intranet :: Ti Local@endsection
+@section('title')
+    Intranet :: Ti Local
+@endsection
 @section('js')
     <script>
         $(document).ready(function () {
@@ -43,7 +45,7 @@
                                 <tbody>
                                 @foreach($tiLocais as $tiLocal)
                                     <tr>
-                                    <!--                                <td>{{ $tiLocal->id}}</td>-->
+                                        <!--                                <td>{{ $tiLocal->id}}</td>-->
                                         <td style="text-transform: uppercase; ">{{$tiLocal->nome}}</td>
                                         <td>
                                             </button>
@@ -116,7 +118,8 @@
 
 
     <!-- MODAL EDIT -->
-    <div id="modalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="modalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -161,7 +164,8 @@
     </div>
 
     <!-- MODAL DELETE -->
-    <div id="modalDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="modalDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">

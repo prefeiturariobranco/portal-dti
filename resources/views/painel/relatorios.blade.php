@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('titulo')Intranet :: Ti Local@endsection
+@section('titulo')
+    Intranet :: Ti Local
+@endsection
 @section('js')@endsection
 
 @section('content')

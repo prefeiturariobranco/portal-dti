@@ -23,34 +23,34 @@
 
 @section('content')
     <!-- Carousel Section -->
-{{--        <section id="hero">--}}
-{{--            <div class="hero-container" style="cursor: pointer">--}}
-{{--                    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">--}}
+    {{--        <section id="hero">--}}
+    {{--            <div class="hero-container" style="cursor: pointer">--}}
+    {{--                    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">--}}
 
-{{--                        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>--}}
-{{--                        <div class="carousel-inner" role="listbox">--}}
-{{--                            @foreach($postagem as $key => $slider)--}}
-{{--                                <div class="carousel-item {{$key == 0 ? 'active' : '' }}">--}}
-{{--                                    <a href="/novidade/{{$slider->id}}">--}}
-{{--                                        <img src="/storage/banner/{{$slider->imagem}}" width="100%" alt="...">--}}
-{{--                                    </a>--}}
-{{--                                </div>--}}
-{{--                            @endforeach--}}
+    {{--                        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>--}}
+    {{--                        <div class="carousel-inner" role="listbox">--}}
+    {{--                            @foreach($postagem as $key => $slider)--}}
+    {{--                                <div class="carousel-item {{$key == 0 ? 'active' : '' }}">--}}
+    {{--                                    <a href="/novidade/{{$slider->id}}">--}}
+    {{--                                        <img src="/storage/banner/{{$slider->imagem}}" width="100%" alt="...">--}}
+    {{--                                    </a>--}}
+    {{--                                </div>--}}
+    {{--                            @endforeach--}}
 
-{{--                            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">--}}
-{{--                                <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>--}}
-{{--                                <span class="sr-only">Previous</span>--}}
-{{--                            </a>--}}
+    {{--                            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">--}}
+    {{--                                <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>--}}
+    {{--                                <span class="sr-only">Previous</span>--}}
+    {{--                            </a>--}}
 
-{{--                            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">--}}
-{{--                                <span class="carousel-control-next-icon icofont-thin-double-right"--}}
-{{--                                      aria-hidden="true"></span>--}}
-{{--                                <span class="sr-only">Next</span>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--            </div>--}}
-{{--        </section>--}}
+    {{--                            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">--}}
+    {{--                                <span class="carousel-control-next-icon icofont-thin-double-right"--}}
+    {{--                                      aria-hidden="true"></span>--}}
+    {{--                                <span class="sr-only">Next</span>--}}
+    {{--                            </a>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--            </div>--}}
+    {{--        </section>--}}
     <!-- End Carousel Section -->
 
     <main id="main">
@@ -72,7 +72,8 @@
                                      @else onclick="window.location.assign('{{$icons['link']}}')" @endif>
                                     <div class="icon-box title">
                                         <div class="icon">
-                                            <img class="img-color" style="width: 40px" src="{{$icons['caminho']}}" title="" alt=""/>
+                                            <img class="img-color" style="width: 40px" src="{{$icons['caminho']}}"
+                                                 title="" alt=""/>
                                         </div>
                                         <h4 class="title-box">{{$icons['nome']}}</h4>
                                     </div>
@@ -80,7 +81,7 @@
                             @endforeach
                         </div>
                     @endif
-                    <?php $contarCategoria++; ?>
+                        <?php $contarCategoria++; ?>
                 @endforeach
 
             </div>
@@ -101,15 +102,17 @@
                             @if($contarTutorial <= 3)
                                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
                                     <div class="card img-tuto">
-                                         <a href="{{ asset('storage/'.str_replace('public/', '',$tutorial->imagem)) }}"
-                                         data-gall="portfolioGallery" class="venobox" title="{{ $tutorial->titulo }}">
-                                        @isset($tutorial->imagem)
-                                            <div class="carousel-item active">
-                                                <img src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem))}}" class="d-block responsive"
-                                                     alt="...">
-                                            </div>
-                                        @endisset
-                                         </a>
+                                        <a href="{{ asset('storage/'.str_replace('public/', '',$tutorial->imagem)) }}"
+                                           data-gall="portfolioGallery" class="venobox" title="{{ $tutorial->titulo }}">
+                                            @isset($tutorial->imagem)
+                                                <div class="carousel-item active">
+                                                    <img
+                                                        src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem))}}"
+                                                        class="d-block responsive"
+                                                        alt="...">
+                                                </div>
+                                            @endisset
+                                        </a>
                                         <div class="card-body">
                                             <a href="/tutorial/{{ $tutorial->id }}">
                                                 <h5 class="card-title">{{ $tutorial->titulo }}</h5>
@@ -120,7 +123,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <?php $contarTutorial++; ?>
+                                    <?php $contarTutorial++; ?>
                             @endif
                         @endif
                     @endforeach

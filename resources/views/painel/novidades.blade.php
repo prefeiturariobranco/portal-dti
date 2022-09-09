@@ -1,9 +1,11 @@
 @extends('templates/dashboard')
-@section('titulo')Intranet :: Novidades@endsection
+@section('titulo')
+    Intranet :: Novidades
+@endsection
 
 @section('js')
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#tech-companies-1').DataTable({
                 language: {
                     url: '/json/Portuguese-Brasil.json'
@@ -25,7 +27,8 @@
 
 
                     </form>
-                    <button class="btn btn-success" style="margin-bottom: 1%;" type="button" data-toggle="modal" href="" data-target="#modalAdd">Cadastrar Novidade
+                    <button class="btn btn-success" style="margin-bottom: 1%;" type="button" data-toggle="modal" href=""
+                            data-target="#modalAdd">Cadastrar Novidade
                     </button>
 
 
@@ -46,9 +49,11 @@
                                         <td style="text-transform: uppercase; ">{{ $postagem->titulo }}</td>
                                         <td>
                                             </button>
-                                            <button class="btn btn-primary waves-effect waves-light" type="button" data-toggle="modal" data-target="#modalEdit">Editar
+                                            <button class="btn btn-primary waves-effect waves-light" type="button"
+                                                    data-toggle="modal" data-target="#modalEdit">Editar
                                             </button>
-                                            <button class="btn btn-danger waves-effect waves-light" type="button" data-toggle="modal" data-target="#modalDelete">Excluir
+                                            <button class="btn btn-danger waves-effect waves-light" type="button"
+                                                    data-toggle="modal" data-target="#modalDelete">Excluir
                                             </button>
                                         </td>
                                     </tr>

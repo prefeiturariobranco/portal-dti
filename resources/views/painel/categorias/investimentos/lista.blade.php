@@ -13,7 +13,6 @@
 
 @endpush
 
-
 @section('content')
     <div class="row">
         <div class="col-12">
@@ -53,11 +52,11 @@
                                                     </button>
                                                 </a>
 
-{{--                                                <a href="/painel/categorias-investimentos/deletar/{{ $categoria->id }}">--}}
-{{--                                                    <button class="btn-sm btn-primary">--}}
-{{--                                                        <i class="far fa-trash-alt"></i>--}}
-{{--                                                    </button>--}}
-{{--                                                </a>--}}
+                                                {{--                                                <a href="/painel/categorias-investimentos/deletar/{{ $categoria->id }}">--}}
+                                                {{--                                                    <button class="btn-sm btn-primary">--}}
+                                                {{--                                                        <i class="far fa-trash-alt"></i>--}}
+                                                {{--                                                    </button>--}}
+                                                {{--                                                </a>--}}
                                             </td>
                                         </tr>
                                     @endforeach

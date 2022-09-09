@@ -1,6 +1,8 @@
 @extends('templates.dashboard')
 
-@section('titulo')Categorias Documentos@endsection
+@section('titulo')
+    Categorias Documentos
+@endsection
 @push('css')
     <style>
         .pagination.page-link {
@@ -33,7 +35,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="table table-responsive mb-0" data-pattern="priority-columns">
-                                <table id="tech-companies-1_wrapper" class="table table-striped" style="text-align: left;">
+                                <table id="tech-companies-1_wrapper" class="table table-striped"
+                                       style="text-align: left;">
                                     <thead>
                                     <tr>
                                         <th>Nome</th>
@@ -46,7 +49,8 @@
                                             <td class="text-left">{{ $categoria->nome }}</td>
                                             <td>
                                                 <a href="/painel/categorias-documentos/editar/{{ $categoria->id }}">
-                                                    <button class="btn-sm btn-primary"><i class="fas fa-sync"></i></button>
+                                                    <button class="btn-sm btn-primary"><i class="fas fa-sync"></i>
+                                                    </button>
                                                 </a>
                                             </td>
                                         </tr>
@@ -66,7 +70,7 @@
 @endsection
 @push('js')
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             $('#tech-companies-1').DataTable({
                 language: {

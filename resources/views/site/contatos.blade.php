@@ -4,7 +4,9 @@
 @endpush
 
 @section('js')@endsection
-@section('title') Portal DTI @endsection
+@section('title')
+    Portal DTI
+@endsection
 
 @section('content')
     <div class="main">

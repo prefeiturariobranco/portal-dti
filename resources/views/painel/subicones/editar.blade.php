@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('titulo') Subicones @endsection
+@section('titulo')
+    Subicones
+@endsection
 
 @section('content')
     <div class="row">
@@ -7,7 +9,6 @@
             <div class="card">
 
                 <div class="card-body">
-
                     <div class="card-title">
                         Alterar de Subicones
                     </div>
@@ -31,28 +32,32 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Nome do Sub-ícone:</label>
-                                <input type="text" name="nome" class="form-control" value="{{ $subIcone->nome }}" placeholder="Digite o nome">
+                                <input type="text" name="nome" class="form-control" value="{{ $subIcone->nome }}"
+                                       placeholder="Digite o nome">
                                 <span class="system_error text-danger">{{$errors->first('nome')}}</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Caminho do Sub-ícone:</label>
-                                <input type="text" name="caminho" class="form-control" value="{{ $subIcone->caminho }}" placeholder="Digite o caminho">
+                                <input type="text" name="caminho" class="form-control" value="{{ $subIcone->caminho }}"
+                                       placeholder="Digite o caminho">
                                 <span class="system_error text-danger">{{$errors->first('caminho')}}</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Link do Sub-ícone:</label>
-                                <input type="text" name="link" class="form-control" value="{{ $subIcone->link }}" placeholder="Digite o link">
+                                <input type="text" name="link" class="form-control" value="{{ $subIcone->link }}"
+                                       placeholder="Digite o link">
                                 <span class="system_error text-danger">{{$errors->first('link')}}</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Ocultar:</label>
-                                <input type="number" name="ocultar" class="form-control" value="{{ $subIcone->ocultar }}" min="0" max="1">
+                                <input type="number" name="ocultar" class="form-control"
+                                       value="{{ $subIcone->ocultar }}" min="0" max="1">
 
                             </div>
                         </div>

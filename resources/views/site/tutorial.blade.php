@@ -2,7 +2,9 @@
 
 @section('css')@endsection
 @section('js')@endsection
-@section('title') Portal DTI @endsection
+@section('title')
+    Portal DTI
+@endsection
 
 @section('content')
     <section id="services" class="services section-bg">
@@ -24,38 +26,50 @@
                                 <div class="carousel-inner">
                                     @isset($tutorial->imagem)
                                         <div class="carousel-item active">
-                                            <img src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem))}}" class="d-block w-100"
-                                                 alt="...">
+                                            <img
+                                                src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem))}}"
+                                                class="d-block w-100"
+                                                alt="...">
                                         </div>
                                     @endisset
                                     @isset($tutorial->imagem1)
                                         <div class="carousel-item">
-                                            <img src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem1))}}" class="d-block w-100"
-                                                 alt="...">
+                                            <img
+                                                src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem1))}}"
+                                                class="d-block w-100"
+                                                alt="...">
                                         </div>
                                     @endisset
                                     @isset($tutorial->imagem2)
                                         <div class="carousel-item">
-                                            <img src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem2))}}" class="d-block w-100"
-                                                 alt="...">
+                                            <img
+                                                src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem2))}}"
+                                                class="d-block w-100"
+                                                alt="...">
                                         </div>
                                     @endisset
                                     @isset($tutorial->imagem3)
                                         <div class="carousel-item">
-                                            <img src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem3))}}" class="d-block w-100"
-                                                 alt="...">
+                                            <img
+                                                src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem3))}}"
+                                                class="d-block w-100"
+                                                alt="...">
                                         </div>
                                     @endisset
                                     @isset($tutorial->imagem4)
                                         <div class="carousel-item">
-                                            <img src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem4))}}" class="d-block w-100"
-                                                 alt="...">
+                                            <img
+                                                src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem4))}}"
+                                                class="d-block w-100"
+                                                alt="...">
                                         </div>
                                     @endisset
                                     @isset($tutorial->imagem5)
                                         <div class="carousel-item">
-                                            <img src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem5))}}" class="d-block w-100"
-                                                 alt="...">
+                                            <img
+                                                src="{{asset('storage/'.str_replace('public/', '', $tutorial->imagem5))}}"
+                                                class="d-block w-100"
+                                                alt="...">
                                         </div>
                                     @endisset
                                 </div>
@@ -74,7 +88,8 @@
                             @if($tutorial->video!=NULL)
                                 <div>
                                     <video width="100%" controls style="margin-top: 50px">
-                                        <source src="{{asset('storage/'.str_replace('public', '', $tutorial->video))}}" type="video/mp4"/>
+                                        <source src="{{asset('storage/'.str_replace('public', '', $tutorial->video))}}"
+                                                type="video/mp4"/>
                                 </div>
                             @endif
 

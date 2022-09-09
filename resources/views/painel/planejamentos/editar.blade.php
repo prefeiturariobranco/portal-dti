@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('titulo')Planejamentos @endsection
+@section('titulo')
+    Planejamentos
+@endsection
 
 @section('content')
     <div class="row">
@@ -18,19 +20,22 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Título: </label>
-                                <input type="text" class="form-control" name="titulo" value="{{ $planejamento->titulo }}">
+                                <input type="text" class="form-control" name="titulo"
+                                       value="{{ $planejamento->titulo }}">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Descrição: </label>
-                                <input type="text" class="form-control" name="descricao" value="{{ $planejamento->descricao }}">
+                                <input type="text" class="form-control" name="descricao"
+                                       value="{{ $planejamento->descricao }}">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Data de entrega: </label>
-                                <input type="date" class="form-control" name="data_entrega" value="{{ $planejamento->data_entrega }}">
+                                <input type="date" class="form-control" name="data_entrega"
+                                       value="{{ $planejamento->data_entrega }}">
                             </div>
                         </div>
                         <div class="row">

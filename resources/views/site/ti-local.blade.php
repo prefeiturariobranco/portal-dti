@@ -22,8 +22,8 @@
                     @foreach($secretarias as $secretaria)
                         @foreach($secretaria->tiLocal as $contato)
                             @if($contato->ocultar == 0)
-                        <p class="nome-departamento">{{$secretaria->nome}}</p>
-                        <div class="contato">
+                                <p class="nome-departamento">{{$secretaria->nome}}</p>
+                                <div class="contato">
                                     <p>{{$contato->nome}}</p>
                                     <p><i class="bx bx-phone"></i> {{$contato->telefone}}</p>
                                     <p><i class="bx bx-envelope"></i> {{$contato->email}}</p>

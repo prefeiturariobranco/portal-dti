@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('titulo')Intranet :: Contatos @endsection
+@section('titulo')
+    Intranet :: Contatos
+@endsection
 
 @section('js')
     <script>
@@ -122,7 +124,8 @@
 
 
     <!-- MODAL EDIT -->
-    <div id="modalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="modalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -162,7 +165,8 @@
 
                         <div class="form-group">
                             <label>Email:</label>
-                            <input type="text" name="email" class="form-control" placeholder="Digite o email do contato">
+                            <input type="text" name="email" class="form-control"
+                                   placeholder="Digite o email do contato">
                         </div>
 
                 </div>
@@ -176,7 +180,8 @@
     </div>
 
     <!-- MODAL DELETE -->
-    <div id="modalDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="modalDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">

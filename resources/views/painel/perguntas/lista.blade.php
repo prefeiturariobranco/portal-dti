@@ -1,9 +1,11 @@
 @extends('templates.dashboard')
-@section('titulo')Perguntas @endsection
+@section('titulo')
+    Perguntas
+@endsection
 
 @section('js')
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#tech-companies-1').DataTable({
                 language: {
                     url: '/json/Portuguese-Brasil.json'
@@ -23,7 +25,6 @@
                 <div class="card-body">
 
                     <!-- Message -->
-
 
 
                     <div class="row">

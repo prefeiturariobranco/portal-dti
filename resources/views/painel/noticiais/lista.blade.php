@@ -1,25 +1,27 @@
 @extends('templates.dashboard')
-@section('titulo')Notícias @endsection
+@section('titulo')
+    Notícias
+@endsection
 
 @push('css')
-<style>
-    .pagination.page-link {
-        border-top-right-radius: .2rem;
-        border-bottom-right-radius: .2rem;
-    }
-</style>
+    <style>
+        .pagination.page-link {
+            border-top-right-radius: .2rem;
+            border-bottom-right-radius: .2rem;
+        }
+    </style>
 @endpush
 
 @section('js')
-<script>
-    $(document).ready(function() {
-        $('#tech-companies-1').DataTable({
-            language: {
-                url: '/json/Portuguese-Brasil.json'
-            }
+    <script>
+        $(document).ready(function () {
+            $('#tech-companies-1').DataTable({
+                language: {
+                    url: '/json/Portuguese-Brasil.json'
+                }
+            });
         });
-    });
-</script>
+    </script>
 @endsection
 
 @section('content')

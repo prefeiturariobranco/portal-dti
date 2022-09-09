@@ -1,10 +1,12 @@
 @extends('templates.dashboard')
 
-@section('titulo')Aplicativos @endsection
+@section('titulo')
+    Aplicativos
+@endsection
 
 @section('js')
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#tech-companies-1').DataTable({
                 language: {
                     url: '/json/Portuguese-Brasil.json'
