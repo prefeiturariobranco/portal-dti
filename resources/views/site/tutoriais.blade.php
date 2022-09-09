@@ -1,7 +1,9 @@
 @extends('templates/layout-principal')
 
 @section('css')@endsection
-@section('title') Portal DTI @endsection
+@section('title')
+    Portal DTI
+@endsection
 
 @section('content')
 
@@ -30,6 +32,6 @@
         </div>
     </section>
 
-</div>
+    </div>
 
 @endsection

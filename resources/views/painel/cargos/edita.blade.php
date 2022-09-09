@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('titulo')Cargos @endsection
+@section('titulo')
+    Cargos
+@endsection
 @section('content')
     {{--    @dd($cargos->id)--}}
     <div class="py-4"></div>

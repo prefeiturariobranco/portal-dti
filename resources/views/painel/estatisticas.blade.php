@@ -1,9 +1,11 @@
 @extends('templates/dashboard.layout.php')
-@section('titulo')Intranet :: Estatisticas Gerais @endsection
+@section('titulo')
+    Intranet :: Estatisticas Gerais
+@endsection
 
 @section('js')
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#tech-companies-1').DataTable({
                 language: {
                     url: '/json/Portuguese-Brasil.json'
@@ -20,13 +22,15 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h4 class="mt-0 header-title">Estatísticas <i class="fa fa-align-center" aria-hidden="true"></i></h4>
+                    <h4 class="mt-0 header-title">Estatísticas <i class="fa fa-align-center" aria-hidden="true"></i>
+                    </h4>
                     <p class="text-muted m-b-30">Tabela de gerenciamento de Estatísticas</p>
                     <form class="form-inline">
 
 
                     </form>
-                    <button class="btn btn-success" style="margin-bottom: 1%;" type="button" data-toggle="modal" data-target="#modalAdd">Adicionar Estatistica
+                    <button class="btn btn-success" style="margin-bottom: 1%;" type="button" data-toggle="modal"
+                            data-target="#modalAdd">Adicionar Estatistica
                     </button>
 
 
@@ -44,14 +48,16 @@
                                 <tbody>
                                 {% for estatistica in estatisticas %}
                                 <tr>
-                                <!--                                <td>{{ categoria.id }}</td>-->
+                                    <!--                                <td>{{ categoria.id }}</td>-->
                                     <td style="text-transform: uppercase; ">{{ estatistica.nome }}</td>
                                     <td style="text-transform: uppercase; ">{{ estatistica.valor }}</td>
                                     <td>
                                         </button>
-                                        <button class="btn btn-primary waves-effect waves-light" type="button" data-toggle="modal" data-target="#modalEdit">Editar
+                                        <button class="btn btn-primary waves-effect waves-light" type="button"
+                                                data-toggle="modal" data-target="#modalEdit">Editar
                                         </button>
-                                        <button class="btn btn-danger waves-effect waves-light" type="button" data-toggle="modal" data-target="#modalDelete">Excluir
+                                        <button class="btn btn-danger waves-effect waves-light" type="button"
+                                                data-toggle="modal" data-target="#modalDelete">Excluir
                                         </button>
                                     </td>
                                 </tr>
@@ -82,14 +88,17 @@
                     <form method="post" action="/painel/estatisticas-gerais/cadastrar">
                         <div class="form-group">
                             <label>Nome da Estatística:</label>
-                            <input type="text" name="nome" class="form-control" placeholder="Digite o nome da estatistica">
+                            <input type="text" name="nome" class="form-control"
+                                   placeholder="Digite o nome da estatistica">
                         </div>
                         <div class="form-group">
                             <label>Valor da Estatística:</label>
-                            <input type="text" name="valor" class="form-control" placeholder="Digite o valor da estatistica">
+                            <input type="text" name="valor" class="form-control"
+                                   placeholder="Digite o valor da estatistica">
                         </div>
                         <button type="submit" class="btn btn-success waves-effect waves-light">Salvar</button>
-                        <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Fechar
+                        </button>
                     </form>
                 </div>
                 <!--<div class="modal-footer">
@@ -100,7 +109,8 @@
 
 
     <!-- MODAL EDIT -->
-    <div id="modalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="modalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -111,14 +121,18 @@
                     <form method="post" action="/painel/estatisticas-gerais/editar">
                         <div class="form-group">
                             <label>Nome da Estatística:</label>
-                            <input type="text" name="nome" class="form-control" placeholder="Digite o nome da estatistica">
+                            <input type="text" name="nome" class="form-control"
+                                   placeholder="Digite o nome da estatistica">
                         </div>
                         <div class="form-group">
                             <label>Valor da Estatistica:</label>
-                            <input type="text" name="valor" class="form-control" placeholder="Digite o valor da estatistica">
+                            <input type="text" name="valor" class="form-control"
+                                   placeholder="Digite o valor da estatistica">
                         </div>
-                        <button type="submit" class="btn btn-primary waves-effect waves-light">Salvar Alterações</button>
-                        <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Fechar</button>
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">Salvar Alterações
+                        </button>
+                        <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Fechar
+                        </button>
                     </form>
                 </div>
                 <!--<div class="modal-footer">
@@ -129,7 +143,8 @@
     </div>
 
     <!-- MODAL DELETE -->
-    <div id="modalDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="modalDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">

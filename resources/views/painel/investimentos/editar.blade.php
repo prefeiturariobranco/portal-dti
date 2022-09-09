@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('titulo')Investimentos @endsection
+@section('titulo')
+    Investimentos
+@endsection
 
 @section('content')
     <div class="row">
@@ -7,9 +9,6 @@
             <div class="card">
 
                 <div class="card-body">
-
-
-
                     <div class="card-title">
                         Alterar de Investimento
                     </div>
@@ -27,7 +26,8 @@
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <label>Valor: </label>
-                                <input type="text" class="form-control valor" name="valor" value="{{ $investimento->valor }}">
+                                <input type="text" class="form-control valor" name="valor"
+                                       value="{{ $investimento->valor }}">
                                 <span class="system_error text-danger">{{$errors->first('valor')}}</span>
                             </div>
                         </div>

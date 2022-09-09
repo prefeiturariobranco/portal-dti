@@ -1,16 +1,18 @@
 @extends('templates.dashboard')
-@section('titulo')Notícias @endsection
+@section('titulo')
+    Notícias
+@endsection
 
 @section('js')
-<script src="/js/noticias.js"></script>
+    <script src="/js/noticias.js"></script>
 
-<script>
-    tinymce.init({
-        selector: '#noticias-conteudo',
-        menubar: false,
-        statusbar: false
-    });
-</script>
+    <script>
+        tinymce.init({
+            selector: '#noticias-conteudo',
+            menubar: false,
+            statusbar: false
+        });
+    </script>
 @endsection
 
 @section('content')
@@ -30,7 +32,8 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Título:</label>
-                                <input type="text" name="titulo" class="form-control" value="{{ $noticia->titulo }}" placeholder="Digite o título">
+                                <input type="text" name="titulo" class="form-control" value="{{ $noticia->titulo }}"
+                                       placeholder="Digite o título">
                                 <span class="system_error text-danger">{{$errors->first('titulo')}}</span>
                             </div>
                         </div>
@@ -38,7 +41,8 @@
                             <div class="col-md-12">
                                 <strong>Conteúdo: </strong>
                                 <div>
-                                    <textarea id="noticias-conteudo" name="conteudo" class="form-control" rows="20">{{ $noticia->conteudo }}</textarea>
+                                    <textarea id="noticias-conteudo" name="conteudo" class="form-control"
+                                              rows="20">{{ $noticia->conteudo }}</textarea>
                                     <span class="system_error text-danger">{{$errors->first('conteudo')}}</span>
                                 </div>
                             </div>
@@ -59,7 +63,8 @@
                         @if(!is_null($noticia->url_documento))
                             <div class="row mt-3">
                                 <div class="col-md-5">
-                                    <a href="/storage/pdf/{{$noticia->url_documento}}" style="margin-left: 10px; color: blue" target="_blank">Arquivo</a>
+                                    <a href="/storage/pdf/{{$noticia->url_documento}}"
+                                       style="margin-left: 10px; color: blue" target="_blank">Arquivo</a>
                                 </div>
                             </div>
 

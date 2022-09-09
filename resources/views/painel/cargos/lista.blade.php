@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('titulo')Cargos @endsection
+@section('titulo')
+    Cargos
+@endsection
 @section('content')
     <div class="row">
         <div class="col-12">
@@ -36,11 +38,11 @@
                                                     </button>
                                                 </a>
                                                 @if (isset($formValidation))
-                                                <a href="{{route('deleta.cargos',$cargo->id)}}">
-                                                    <button class="btn-sm btn-primary">
-                                                        <i class="far fa-trash-alt"></i>
-                                                    </button>
-                                                </a>
+                                                    <a href="{{route('deleta.cargos',$cargo->id)}}">
+                                                        <button class="btn-sm btn-primary">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </button>
+                                                    </a>
                                                 @endif
                                             </td>
                                         </tr>

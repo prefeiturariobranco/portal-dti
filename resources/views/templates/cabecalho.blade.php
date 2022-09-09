@@ -2,7 +2,7 @@
     <div class="container d-flex">
 
         <div class="mr-auto">
-            <a href={{'/'}}><img src="{{ URL::asset('assets/img/Logo-DTI.png') }}"width="280" alt="" class="img-fluid"></a>
+            <a href={{'/'}}><img src="{{ URL::asset('assets/img/Logo-DTI.png') }}" width="280" alt="" class="img-fluid"></a>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">

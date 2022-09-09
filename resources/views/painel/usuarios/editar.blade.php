@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('titulo')Editar Usuário @endsection
+@section('titulo')
+    Editar Usuário
+@endsection
 @section('content')
     <div class="row">
         <div class="col-12">

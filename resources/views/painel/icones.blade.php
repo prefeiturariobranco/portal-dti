@@ -1,5 +1,7 @@
 @extends('templates/dashboard.layout.php')
-@section('titulo')Intranet :: Icones @endsection
+@section('titulo')
+    Intranet :: Icones
+@endsection
 
 @section('js')
     <script src="/js/painel/icones.js"></script>;
@@ -15,12 +17,14 @@
                     <h4 class="mt-0 header-title">Ícones <i class="fa fa-align-center" aria-hidden="true"></i></h4>
                     <p class="text-muted m-b-30">Tabela de gerenciamento de icones</p>
 
-                    <button class="btn btn-success" style="margin-bottom: 1%;" type="button" data-toggle="modal" data-target="#modalAdd">Adicionar Ícone
+                    <button class="btn btn-success" style="margin-bottom: 1%;" type="button" data-toggle="modal"
+                            data-target="#modalAdd">Adicionar Ícone
                     </button>
 
                     <div class="alert alert-success messagemSucesso d-none" role="alert"></div>
 
-                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                    <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                           style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                         <thead>
                         <tr>
                             <th class="text-center">Id</th>
@@ -67,7 +71,8 @@
 
                         <div class="form-group">
                             <label>Caminho do ícone:<span class="text-danger">*</span></label>
-                            <input type="text" name="caminho" id="caminho" class="form-control" placeholder="Digite o caminho">
+                            <input type="text" name="caminho" id="caminho" class="form-control"
+                                   placeholder="Digite o caminho">
                         </div>
 
                         <div class="form-group">
@@ -77,7 +82,8 @@
 
                         <div class="form-group">
                             <label>Subtítulo:</label>
-                            <input type="text" name="subtitulo" id="subtitulo" class="form-control" placeholder="Informe o Subtítulo">
+                            <input type="text" name="subtitulo" id="subtitulo" class="form-control"
+                                   placeholder="Informe o Subtítulo">
                         </div>
 
                         <div class="form-group">
@@ -104,7 +110,8 @@
 
 
     <!-- MODAL EDIT -->
-    <div id="modalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="modalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -127,12 +134,13 @@
 
                     <div class="form-group">
                         <label>Nome do ícone:<span class="text-danger">*</span></label>
-                        <input type="text" name="nome" class="form-control"  id ="icone_edit" placeholder="Digite o nome">
+                        <input type="text" name="nome" class="form-control" id="icone_edit" placeholder="Digite o nome">
                     </div>
 
                     <div class="form-group">
                         <label>Caminho do ícone:<span class="text-danger">*</span></label>
-                        <input type="text" name="caminho" class="form-control" id="caminho_edit" placeholder="Digite o caminho">
+                        <input type="text" name="caminho" class="form-control" id="caminho_edit"
+                               placeholder="Digite o caminho">
                     </div>
 
                     <div class="form-group">
@@ -142,7 +150,8 @@
 
                     <div class="form-group">
                         <label>Subtítulo:</label>
-                        <input type="text" name="subtitulo" class="form-control" id="subtitulo_edit" placeholder="Informe o Subtítulo">
+                        <input type="text" name="subtitulo" class="form-control" id="subtitulo_edit"
+                               placeholder="Informe o Subtítulo">
                     </div>
 
                     <div class="form-group divDinamico">
@@ -170,7 +179,8 @@
 
 
     <!-- MODAL DELETE -->
-    <div id="modalDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="modalDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">

@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('titulo') Portal DTI - Permissões @endsection
+@section('titulo')
+    Portal DTI - Permissões
+@endsection
 @section('content')
     <div class="row">
         <div class="col-12">
@@ -27,7 +29,8 @@
                                         <tr class="col-md-12">
                                             <td class="text-left col-md-8">{{ $permissao->nome }}</td>
                                             <td class="text-right col-md-4">
-                                                <select class="custom-select col-md-12" name="permissoes[{{$permissao->id}}]">
+                                                <select class="custom-select col-md-12"
+                                                        name="permissoes[{{$permissao->id}}]">
                                                     <option value="0">Sem Permissão</option>
                                                     <option value="1">Nível 1</option>
                                                     <option value="2">Nível 2</option>

@@ -1,8 +1,6 @@
 @extends('templates.dashboard')
-@section('titulo') Planejamento DTI @endsection
-
-@section('css')
-
+@section('titulo')
+    Planejamento DTI
 @endsection
 
 @section('content')
@@ -28,7 +26,8 @@
                             <thead>
                             <tr class="bg-primary">
                                 <th class="text-justify font-weight-bold text-light" width="50%">Meta</th>
-                                <th class="text-center font-weight-bold text-light d-none d-sm-block">Data de Entrega</th>
+                                <th class="text-center font-weight-bold text-light d-none d-sm-block">Data de Entrega
+                                </th>
                                 <th class="text-center font-weight-bold text-light">Responsavel</th>
                             </tr>
                             </thead>
@@ -37,10 +36,11 @@
                             @foreach($planejamentos as $planejamento)
                                 <tr>
                                     <td>{{ $planejamento->descricao }}</td>
-                                    <td class="text-center d-none d-sm-block" >{{ $planejamento->data_entrega }}</td>
+                                    <td class="text-center d-none d-sm-block">{{ $planejamento->data_entrega }}</td>
                                     <td class="text-center">
                                         <span>{{ $planejamento->responsavel }}</span>
-                                        <small class="text-primary d-block d-sm-none">{{ $planejamento->data_entrega }}</small>
+                                        <small
+                                            class="text-primary d-block d-sm-none">{{ $planejamento->data_entrega }}</small>
                                     </td>
                                 </tr>
                             @endforeach

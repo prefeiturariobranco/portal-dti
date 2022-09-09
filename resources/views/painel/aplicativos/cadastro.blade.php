@@ -1,6 +1,8 @@
 @extends('templates.dashboard')
 
-@section('titulo')Aplicativos @endsection
+@section('titulo')
+    Aplicativos
+@endsection
 
 @section('content')
     <div class="row">
@@ -25,7 +27,8 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Caminho do Aplicativo:</label>
-                                <input type="text" name="url" id="caminho" class="form-control" placeholder="Digite o caminho">
+                                <input type="text" name="url" id="caminho" class="form-control"
+                                       placeholder="Digite o caminho">
                                 <span class="system_error text-danger">{{$errors->first('url')}}</span>
                             </div>
                         </div>

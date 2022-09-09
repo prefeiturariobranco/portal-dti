@@ -1,5 +1,7 @@
 @extends('templates.dashboard')
-@section('titulo')Secretarias @endsection
+@section('titulo')
+    Secretarias
+@endsection
 @section('content')
     <div class="row">
         <div class="col-12">

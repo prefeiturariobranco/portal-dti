@@ -25,7 +25,8 @@
                         <div class="row">
                             <div class="col-md-4" id="longtitudeArea">
                                 <label>Longitude:</label>
-                                <input type="text" name="lng" id="longitude" class="form-control" value="{{ $mapa->lng }}">
+                                <input type="text" name="lng" id="longitude" class="form-control"
+                                       value="{{ $mapa->lng }}">
                             </div>
                         </div>
                         <div class="row">
@@ -37,7 +38,8 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Descrição:</label>
-                                <input type="texte" name="descricao" class="form-control" value="{{ $mapa->descricao }}">
+                                <input type="texte" name="descricao" class="form-control"
+                                       value="{{ $mapa->descricao }}">
                             </div>
                         </div>
                         <div class="row">
@@ -45,7 +47,7 @@
                                 <label>Categoria: {{ $mapa->mapas_categorias_id }} </label>
                                 <select name="mapas_categorias_id" class="form-control" autocomplete="on">
                                     @foreach($categorias as $categoria)
-                                            <option value="{{ $categoria->id }}" selected>{{ $categoria->nome }}</option>
+                                        <option value="{{ $categoria->id }}" selected>{{ $categoria->nome }}</option>
                                     @endforeach
                                 </select>
                                 <span class="system_error text-danger"></span>

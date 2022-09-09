@@ -18,6 +18,8 @@ class ListarInvestimentosController extends Controller
         //
         return view('painel.investimentos.lista', [
             'investimentos' => Investimentos::where('ocultar', 0)->get(),
+            'categoria' => Investimentos_categorias::where('ocultar', 0)->get(),
+
         ]);
     }
 

@@ -1,18 +1,20 @@
 @extends('templates.dashboard')
-@section('titulo')Intranet :: Planejamentos @endsection
+@section('titulo')
+    Intranet :: Planejamentos
+@endsection
 
 @push('css')
-<style>
-    .pagination.page-link {
-        border-top-right-radius: .2rem;
-        border-bottom-right-radius: .2rem;
-    }
-</style>
+    <style>
+        .pagination.page-link {
+            border-top-right-radius: .2rem;
+            border-bottom-right-radius: .2rem;
+        }
+    </style>
 @endpush
 
 @section('js')
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#tech-companies-1').DataTable({
                 language: {
                     url: '/json/Portuguese-Brasil.json'

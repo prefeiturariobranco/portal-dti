@@ -1,7 +1,8 @@
 @extends('templates.dashboard')
 
-
-@section('titulo')Categorias Planejamentos @endsection
+@section('titulo')
+    Categorias Planejamentos
+@endsection
 @push('css')
     <style>
         .pagination.page-link {
@@ -11,7 +12,6 @@
     </style>
 
 @endpush
-
 
 @section('content')
     <div class="row">
