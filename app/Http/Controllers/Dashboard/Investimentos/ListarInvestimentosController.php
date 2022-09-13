@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard\Investimentos;
 
 use App\Http\Controllers\Controller;
 use App\Model\Investimentos;
+use App\Model\Investimentos_categorias;
 use Illuminate\Http\Request;
 
 class ListarInvestimentosController extends Controller
@@ -15,7 +16,6 @@ class ListarInvestimentosController extends Controller
      */
     public function index()
     {
-        //
         return view('painel.investimentos.lista', [
             'investimentos' => Investimentos::where('ocultar', 0)->get(),
             'categoria' => Investimentos_categorias::where('ocultar', 0)->get(),

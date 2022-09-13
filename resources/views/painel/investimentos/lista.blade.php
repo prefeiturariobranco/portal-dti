@@ -3,7 +3,8 @@
     Investimentos
 @endsection
 
-@push('css')
+@push('link-css')
+    <link rel="stylesheet" href="{{ asset('DataTables/datatables.min.css') }}">
     <style>
         .pagination.page-link {
             border-top-right-radius: .2rem;
@@ -12,14 +13,12 @@
     </style>
 @endpush
 
-@push('js')
+@push('link-js')
+    <script src="{{asset('DataTables/jQuery-3.6.0/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{asset('DataTables/datatables.min.js')}}"></script>
     <script>
         $(document).ready(function () {
-            $('#tech-companies-1').DataTable({
-                language: {
-                    url: '/json/Portuguese-Brasil.json'
-                }
-            });
+            $('#tech-companies-1').DataTable();
         });
     </script>
 @endpush
@@ -47,8 +46,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="table table-responsive-lg mb-0" data-pattern="priority-columns">
-                                    <table id="tech-companies-1" class="table table-bordered data-table"
-                                           style="text-align: center;">
+                                    <table id="tech-companies-1" class="table table-striped">
                                         <thead>
                                         <tr>
                                             <th class="text-left">Nome</th>

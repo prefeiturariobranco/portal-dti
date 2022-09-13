@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
     <script src="{{ asset('js/site/mascaras.js') }}"></script>
     @yield('css')
+    @stack('link-css')
 </head>
 <body>
 <!-- Begin page -->
@@ -408,11 +409,12 @@
     </div>
 </div>
 
-<script src="/js/dashboard.js"></script>
-<script src="/js/loadingover/loadingoverlay.js"></script>
-<script src="/js/funcoes.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="{{ asset('js/dashboard.js') }}"></script>
+<script src="{{ asset('js/loadingover/loadingoverlay.js') }}"></script>
+<script src="{{ asset('/js/funcoes.js') }}"></script>
+<script src="{{asset('DataTables/jQuery-3.6.0/jquery-3.6.0.min.js')}}"></script>
 
 @yield('js')
+@stack('link-js')
 </body>
 </html>
