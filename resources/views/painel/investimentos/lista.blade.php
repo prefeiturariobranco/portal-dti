@@ -5,12 +5,6 @@
 
 @push('link-css')
     <link rel="stylesheet" href="{{ asset('DataTables/datatables.min.css') }}">
-    <style>
-        .pagination.page-link {
-            border-top-right-radius: .2rem;
-            border-bottom-right-radius: .2rem;
-        }
-    </style>
 @endpush
 
 @push('link-js')
@@ -40,8 +34,6 @@
 
                     <br>
                     <!-- menssage -->
-                    @foreach($categoria as $categorias)
-                        <h6>{{ $categorias->nome }}</h6>
                         <br>
                         <div class="row">
                             <div class="col-md-12">
@@ -81,7 +73,6 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
                 </div>
             </div>
         </div> <!-- end col -->
