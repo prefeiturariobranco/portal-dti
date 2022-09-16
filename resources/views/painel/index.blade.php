@@ -10,6 +10,23 @@
             /* border: 1px solid black; */
             min-height: 50rem;
         }
+        div.scrollmenu {
+            background-color: #333;
+            overflow: auto;
+            white-space: nowrap;
+        }
+
+        div.scrollmenu a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+        div.scrollmenu a:hover {
+            background-color: #777;
+        }
     </style>
 @endpush
 
@@ -113,11 +130,8 @@
 
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
         </div>
     </div>
 
@@ -125,7 +139,7 @@
     <div class="row">
         <div class="col-xl-4">
             <div class="card">
-                <div class="card-body chart-card-inv">
+                <div class="card-invest slimscroll-menu chart-card-inv">
                     <h4 class="mt-0 header-title mb-4">Investimentos - Sistemas</h4>
 
                     <div class="cleafix">
@@ -158,7 +172,7 @@
 
         <div class="col-xl-4">
             <div class="card">
-                <div class="card-body chart-card-inv">
+                <div class="card-invest slimscroll-menu chart-card-inv">
                     <h4 class="mt-0 header-title mb-4">Investimentos - Infraestrutura</h4>
 
                     <div class="cleafix">
@@ -190,7 +204,7 @@
 
         <div class="col-xl-4">
             <div class="card">
-                <div class="card-body chart-card-inv">
+                <div class="card-invest slimscroll-menu chart-card-inv">
 
                     <h4 class="mt-0 header-title mb-4">Investimentos - PMAT</h4>
                     <div class="cleafix">
@@ -957,7 +971,6 @@
                 console.log(error);
             });
         }
-
         getEvolucaoFibra();
         getInvestimentosSistemas();
         getInvestimentosPMAT();
