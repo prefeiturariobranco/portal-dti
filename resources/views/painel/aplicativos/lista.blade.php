@@ -4,17 +4,19 @@
     Aplicativos
 @endsection
 
-@section('js')
+@push('link-css')
+    <link rel="stylesheet" href="{{ asset('DataTables/datatables.min.css') }}">
+@endpush
+
+@push('link-js')
+    <script src="{{asset('DataTables/jQuery-3.6.0/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{asset('DataTables/datatables.min.js')}}"></script>
     <script>
         $(document).ready(function () {
-            $('#tech-companies-1').DataTable({
-                language: {
-                    url: '/json/Portuguese-Brasil.json'
-                }
-            });
+            $('#tech-companies-1').DataTable();
         });
     </script>
-@endsection
+@endpush
 
 @section('content')
     <div class="row">
@@ -40,7 +42,7 @@
                                 <table id="tech-companies-1" class="table table-striped" style="text-align: center;">
                                     <thead>
                                     <tr>
-                                        <th>Nome</th>
+                                        <th class="text-left">Nome</th>
                                         <th>Opções</th>
                                     </tr>
                                     </thead>

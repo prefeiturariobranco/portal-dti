@@ -3,16 +3,19 @@
 @section('titulo')
     Categorias Documentos
 @endsection
-@push('css')
-    <style>
-        .pagination.page-link {
-            border-top-right-radius: .2rem;
-            border-bottom-right-radius: .2rem;
-        }
-    </style>
-
+@push('link-css')
+    <link rel="stylesheet" href="{{ asset('DataTables/datatables.min.css') }}">
 @endpush
 
+@push('link-js')
+    <script src="{{asset('DataTables/jQuery-3.6.0/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{asset('DataTables/datatables.min.js')}}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tech-companies-1').DataTable();
+        });
+    </script>
+@endpush
 
 @section('content')
     <div class="row">
@@ -35,7 +38,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="table table-responsive mb-0" data-pattern="priority-columns">
-                                <table id="tech-companies-1_wrapper" class="table table-striped"
+                                <table id="tech-companies-1" class="table table-striped"
                                        style="text-align: left;">
                                     <thead>
                                     <tr>
