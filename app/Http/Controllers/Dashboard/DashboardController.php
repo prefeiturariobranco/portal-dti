@@ -78,7 +78,6 @@ class DashboardController extends Controller
            'contadorTotalEquipe' => $contadorTotalEquipe,
            'contadorAcessosDia' => $contadorAcessoDoDia
        ]);
-
     }
 
     /**

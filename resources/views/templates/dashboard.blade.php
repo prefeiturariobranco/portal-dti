@@ -141,7 +141,6 @@
             <div id="sidebar-menu">
                 <!-- Left Menu Start -->
                 <ul class="metismenu" id="side-menu">
-                    <li class="menu-title">Menu</li>
                     <li>
                         <a href="/painel" class="waves-effect">
                             <i class="fas fa-home"></i>
