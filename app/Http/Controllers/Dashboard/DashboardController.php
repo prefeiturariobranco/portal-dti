@@ -58,15 +58,15 @@ class DashboardController extends Controller
            'investSistema' => Investimentos::where([
                ['ocultar', 0],
                ['investimentos_categorias_id', 1]
-           ])->get()->take(8),
+           ])->get(),
            'investInfra' => Investimentos::where([
                ['ocultar', 0],
                ['investimentos_categorias_id', 5]
-           ])->get()->take(8),
+           ])->get(),
            'investPMAT' => Investimentos::where([
                ['ocultar', 0],
                ['investimentos_categorias_id', 3]
-           ])->get()->take(8),
+           ])->get(),
            'investTotalPMAT' => $investTotalPMAT,
            'investMensalPMAT' => $investPMAT,
            'investRP' => $investRP,

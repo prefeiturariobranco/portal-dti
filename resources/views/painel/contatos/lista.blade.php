@@ -31,6 +31,11 @@
                     <div class="row">
                         <div class="col-md-12">
                             <a class="btn btn-success" href="/painel/contatos/cadastro">Cadastrar</a>
+{{--                            @if(request()->has($contatos->ocultar = 0))--}}
+{{--                                <a class='btn btn-danger' href="/painel/contatos/inativos">Inativos</a>--}}
+{{--                            @else--}}
+{{--                                <a class="btn btn-info" href="/painel/contatos">Ativos</a>--}}
+{{--                            @endif--}}
                         </div>
                     </div>
 

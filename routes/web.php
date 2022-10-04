@@ -183,6 +183,7 @@ Route::get('/painel/contatos', 'Dashboard\Contatos\ListarContatosController@inde
 Route::get('/painel/contatos/cadastro', 'Dashboard\Contatos\CadastrarContatosController@index')->middleware('logado');
 Route::get('/painel/contatos/editar/{id}', 'Dashboard\Contatos\EditarContatosController@show')->middleware('logado');
 Route::get('/painel/contatos/deletar/{id}', 'Dashboard\Contatos\DeletarContatosController@destroy')->middleware('logado');
+Route::get('/painel/contatos/inativos', 'Dashboard\Contatos\DeletarContatosController@index')->middleware('logado');
 Route::post('/painel/contatos/salvar', 'Dashboard\Contatos\CadastrarContatosController@store')->middleware('logado');
 Route::post('/painel/contatos/alterar', 'Dashboard\Contatos\EditarContatosController@update')->middleware('logado');
 
