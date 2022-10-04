@@ -33605,6 +33605,11 @@ button:focus {
   border-color: #2a3142;
 }
 
+.btn-right{
+    margin-right: 50px !important;
+    margin-top: 10px !important;
+}
+
 /* ======
 07. Cards
    ====== */

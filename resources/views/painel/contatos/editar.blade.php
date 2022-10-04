@@ -42,7 +42,6 @@
                                         @if($contato->cargos_id===$cargo->id)
                                             <option selected value="{{ $cargo->id }}">{{ $cargo->nome }}</option>
                                         @else
-                                            <option value="{{ $cargo->id }}">{{ $cargo->nome }}</option>
                                         @endif
                                     @endforeach
                                 </select>
@@ -76,12 +75,14 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Ocultar:</label>
-                                <input type="number" name="ocultar" class="form-control" value="{{ $contato->ocultar }}"
-                                       min="0" max="1">
-
+                                <label>Status:</label>
+                                <select name="ocultar" class="form-control">
+                                        <option value="0">Ativar</option>
+                                        <option value="1">Inativar</option>
+                                </select>
                             </div>
                         </div>
+                        <span class="system_error text-danger">{{$errors->first('cargo_id')}}</span>
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <input type="submit" class="btn btn-primary" value="Alterar">
@@ -89,8 +90,6 @@
                             </div>
                         </div>
                     </form>
-
-
                 </div>
             </div>
         </div> <!-- end col -->
