@@ -41,8 +41,8 @@
                                 <table id="tech-companies-1" class="table table-striped" style="text-align: center;">
                                     <thead>
                                     <tr>
-                                        <th class="text-left">Nome</th>
-                                        <th>Opções</th>
+                                        <th>Nome</th>
+                                        <th class="text-center">Opções</th>
                                     </tr>
                                     </thead>
                                     <tbody>

@@ -28,7 +28,7 @@ class ContatosController extends Controller
             'titulo' => '',
             'departamentos' => Departamentos::all(),
             'secretarias' => Secretarias::all(),
-            'contatos' => Contatos::all(),
+            'contatos' => Contatos::orderBy('cargos_id', 'asc')->get(),
         ]);
 
 

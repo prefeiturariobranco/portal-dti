@@ -28,8 +28,12 @@
                                     <div class="contato">
                                         <p class="nome-contato">{{$contato->nome}}</p>
                                         <p class="cargo">{{$contato->cargos->nome}}</p>
+                                        @if(!is_null($contato->telefone))
                                         <p><i class="bx bx-phone"></i> {{$contato->telefone}}</p>
+                                        @endif
+                                        @if(!is_null($contato->email))
                                         <p><i class="bx bx-envelope"></i> {{$contato->email}}</p>
+                                        @endif
                                     </div>
                                 @endif
                             @endif

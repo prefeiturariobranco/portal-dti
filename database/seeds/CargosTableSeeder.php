@@ -13,46 +13,68 @@ class CargosTableSeeder extends Seeder
     {
         //
         Cargos::create([
-            'nome' => 'Diretor(a) Geral'
+            'id' => 1,
+            'nome' => 'Diretor(a) de Tecnologia da Informação'
         ]);
         Cargos::create([
-            'nome' => 'Chefe do Departamento de Infraestrutura'
+            'id' => 2,
+            'nome' => 'Assessoria Técnica'
         ]);
         Cargos::create([
-            'nome' => 'Chefe do Departamento de Sistemas'
+            'id' => 3,
+            'nome' => 'Gerente do Departamento de Infraestrutura'
         ]);
         Cargos::create([
-            'nome' => 'Coordenador(a) de Segurança da Informação'
+            'id' => 4,
+            'nome' => 'Gerente do Departamento de Sistemas'
         ]);
         Cargos::create([
-            'nome' => 'Suporte ao Módulo de Compras, Licitações, Contratos e Materiais'
+            'id' => 5,
+            'nome' => 'Assessoria Técnica e Suporte ao Módulo de Patrimônio, Frota, Obras e Portais'
         ]);
         Cargos::create([
-            'nome' => 'Suporte ao Módulo Orçamentário, Financeiro e Contábil'
+            'id' => 6,
+            'nome' => 'Product Owner e Suporte do RBDOC'
         ]);
         Cargos::create([
-            'nome' => 'Suporte ao Módulo Tributário'
+            'id' => 7,
+            'nome' => 'Desenvolvedor Sênior'
         ]);
         Cargos::create([
-            'nome' => 'Suporte ao Módulo Rbtrans'
+            'id' => 8,
+            'nome' => 'Desenvolvedor Pleno'
         ]);
         Cargos::create([
-            'nome' => 'Suporte ao Módulo de Protocolo, Obras, Frotas, e Patrimônio'
+            'id' => 9,
+            'nome' => 'Desenvolvedor Junior'
         ]);
         Cargos::create([
-            'nome' => 'Suporte ao Módulo de Recursos Humanos'
+            'id' => 10,
+            'nome' => 'Assessoria de Segurança da Informação'
         ]);
         Cargos::create([
-            'nome' => 'Suporte aos Portais e Submódulos'
+            'id' => 11,
+            'nome' => 'Suporte de Infraestrutura'
         ]);
         Cargos::create([
+            'id' => 12,
+            'nome' => 'Suporte Técnico Prefeitura'
+        ]);
+        Cargos::create([
+            'id' => 13,
             'nome' => 'Suporte Técnico'
         ]);
         Cargos::create([
-            'nome' => 'Coordenador(a) do Departamento de Redes Corporativas'
+            'id' => 14,
+            'nome' => 'Suporte ao Módulo de Compras, Licitações, Contratos, Materiais e Protocolos'
         ]);
         Cargos::create([
-            'nome' => 'Monitoramento do Núcleo de Operação e Controle'
+            'id' => 15,
+            'nome' => 'Suporte ao Módulo Tributário e RBTrans'
+        ]);
+        Cargos::create([
+            'id' => 16,
+            'nome' => 'Suporte ao Módulo Orçamentário, Financeiro e Contábil'
         ]);
     }
 }
