@@ -47,7 +47,7 @@
                                     <thead>
                                     <tr>
                                         <th>Nome</th>
-                                        <th>Opções</th>
+                                        <th class="text-center">Opções</th>
                                     </tr>
                                     </thead>
                                     <tbody>

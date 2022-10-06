@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Model\Perguntas;
+
 class PerguntasTableSeeder extends Seeder
 {
     /**
@@ -20,7 +21,7 @@ class PerguntasTableSeeder extends Seeder
         ]);
         Perguntas::create([
             'titulo' => 'Como faço para informar um problema ou sugestão de melhoria em algum dos sistemas da Prefeitura?',
-            'conteudo' => 'Se o problema for referente ao sistema Webpúblico, é só abrir um chamado no Sistema de Unificado de Atendimento (SUA) na página principal do Portal DTI. Para ter acesso, basta entrar com o mesmo usuário e senha que você utiliza para acessar a internet. Caso seja relacionado ao E-Saj, Gmus ou SITgeo, o problema terá que ser relatado ao gestor do sistema nas secretarias responsáveis (PGM, SEMSA e SEINFRA). Após o registro, um técnico da DTI entrará em contato.',
+            'conteudo' => 'Se o problema for referente ao sistema Webpublico, é só abrir um chamado no Sistema de Unificado de Atendimento (SUA) na página principal do Portal DTI. Para ter acesso, basta entrar com o mesmo usuário e senha que você utiliza para acessar a internet. Caso seja relacionado ao E-Saj, Gmus ou SITgeo, o problema terá que ser relatado ao gestor do sistema nas secretarias responsáveis (PGM, SEMSA e SEINFRA). Após o registro, um técnico da DTI entrará em contato.',
             'ocultar' => 0,
             'criado_por' => 1,
         ]);
@@ -43,8 +44,8 @@ class PerguntasTableSeeder extends Seeder
             'criado_por' => 1,
         ]);
         Perguntas::create([
-            'titulo' => 'Onde consigo o contato do técnico responsável pelo suporte do sistema Webpúblico?',
-            'conteudo' => 'Cada módulo do sistema Webpúblico conta com um técnico diferente, para ter acesso ao telefone de contato, basta clicar aqui.',
+            'titulo' => 'Onde consigo o contato do técnico responsável pelo suporte do sistema Webpublico?',
+            'conteudo' => 'Cada módulo do sistema Webpublico conta com um técnico diferente, para ter acesso ao telefone de contato, basta ir em contatos.',
             'ocultar' => 0,
             'criado_por' => 1,
         ]);

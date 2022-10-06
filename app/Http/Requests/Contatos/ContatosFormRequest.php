@@ -28,7 +28,7 @@ class ContatosFormRequest extends FormRequest
             'departamento_id' => 'required|numeric',
             'cargo_id' => 'required|numeric',
             'nome' => 'required|max:100',
-            'telefone' => 'required|max:100',
+            'telefone' => 'nullable|unique:contatos',
             'email' => 'required|max:100|email',
         ];
     }
@@ -42,9 +42,9 @@ class ContatosFormRequest extends FormRequest
             'cargo_id.numeric' => 'O campo cargo só aceita valores númericos.',
             'nome.required' => 'O campo nome é de preenchimento obrigatório.',
             'nome.max' => 'O campo nome só pode ter no máximo 100 caracteres.',
-            'telefone.required' => 'O campo telefone é de preenchimento obrigatório.',
-            'telefone.max' => 'O campo telefone só aceitar no máximo 100 caracteres.',
+            'telefone.max' => 'O campo telefone só aceitar no máximo 50 caracteres.',
             'telefone.regex' => 'O campo telefone precisa seguir o padrão (DDD) XXXX-XXXX',
+            'telefone.unique' => 'Número de telefone já existe',
             'email.required' =>  'O campo email é de preenchimento obrigatório',
             'email.max' => 'O campo email só pode ter no máximo 100 caracteres.',
             'email.email' => 'O email precisa ser valido.',

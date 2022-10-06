@@ -33,7 +33,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="table-sm table-responsive mb-0" data-pattern="priority-columns">
-                                <table id="tech-companies-1" class="table table-striped" style="text-align: center;">
+                                <table id="tech-companies-1" class="table table-striped">
                                     <thead>
                                     <tr>
                                         <th>Nome</th>
