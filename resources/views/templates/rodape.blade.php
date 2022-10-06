@@ -28,7 +28,7 @@
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/'}}">Home</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a
-                                href="http://webpublico.riobranco.ac.gov.br/faces/login.xhtml">Webpúblico</a></li>
+                                href="http://webpublico.riobranco.ac.gov.br/faces/login.xhtml">Webpublico</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/submenu/10'}}">Sistemas</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/submenu/8'}}">Software Livre</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="https://webmail.riobranco.ac.gov.br">E-mail

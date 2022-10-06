@@ -27,7 +27,7 @@ class IconesTableSeeder extends Seeder
             'nome' => 'Formulário de E-mail',
             'subtitulo' => '',
             'caminho' => '/images/icones/icon-solicitacao-acesso.png',
-            'link' => 'https://docs.google.com/forms/d/17PzbYgi01nE4OUUJU6QIvDwTE9kQ7-ow8cicNpkfd6E/viewform',
+            'link' => 'https://formail.riobranco.ac.gov.br/',
             'ocultar' => 0,
             'icones_categorias_id' => 4
         ]);
@@ -106,7 +106,7 @@ class IconesTableSeeder extends Seeder
         ]);
         Icones::create([
             'dinamico' => 2,
-            'nome' => 'Webpúblico',
+            'nome' => 'Webpublico',
             'subtitulo' => '',
             'caminho' => '/images/icones/icon-webpublico.png',
             'link' => 'http://webpublico.riobranco.ac.gov.br',
