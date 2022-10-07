@@ -28,7 +28,6 @@
                                         @else
                                             <option value="{{ $departamento->id }}">{{ $departamento->nome }}</option>
                                         @endif
-
                                     @endforeach
                                 </select>
                                 <span class="system_error text-danger">{{$errors->first('departamento_id')}}</span>
@@ -42,6 +41,7 @@
                                         @if($contato->cargos_id===$cargo->id)
                                             <option selected value="{{ $cargo->id }}">{{ $cargo->nome }}</option>
                                         @else
+                                            <option value="{{ $cargo->id }}">{{ $cargo->nome }}</option>
                                         @endif
                                     @endforeach
                                 </select>

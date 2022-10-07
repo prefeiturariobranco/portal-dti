@@ -135,7 +135,7 @@ class ContatosTableSeeder extends Seeder
         ]);
         Contatos::create([
             'departamento_id' => 4,
-            'cargos_id'  => 13,
+            'cargos_id'  => 17,
             'nome'  => 'Cynthia Yasmin',
             'telefone'  => null,
             'email' => 'cynthia.soares@riobranco.ac.gov.br',
