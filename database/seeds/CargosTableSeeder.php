@@ -76,5 +76,9 @@ class CargosTableSeeder extends Seeder
             'id' => 16,
             'nome' => 'Suporte ao Módulo Orçamentário, Financeiro e Contábil'
         ]);
+        Cargos::create([
+            'id' => 17,
+            'nome' => 'Suporte RBdoc e RBponto'
+        ]);
     }
 }
