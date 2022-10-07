@@ -38,18 +38,18 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="table-sm table-responsive mb-0" data-pattern="priority-columns">
-                                <table id="tech-companies-1" class="table table-striped" style="text-align: center;">
+                                <table id="tech-companies-1" class="table table-striped">
                                     <thead>
                                     <tr>
                                         <th>Nome</th>
-                                        <th>Opções</th>
+                                        <th class="text-center">Opções</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($tutoriais as $tutorial)
                                         <tr>
                                             <td class="text-left">{{ $tutorial->titulo }}</td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a href="/painel/tutoriais/editar/{{ $tutorial->id }}">
                                                     <button class="btn-sm btn-primary">
                                                         <i class="fas fa-sync"></i>

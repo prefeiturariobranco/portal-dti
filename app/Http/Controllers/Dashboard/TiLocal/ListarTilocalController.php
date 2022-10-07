@@ -17,7 +17,7 @@ class ListarTilocalController extends Controller
     {
         //
         return view('painel.tilocal.lista', [
-            'tiLocais' => Ti_Local::all(),
+            'tiLocais' => Ti_Local::where('ocultar', 0)->get(),
         ]);
     }
 

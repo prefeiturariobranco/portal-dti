@@ -39,18 +39,18 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="table-sm table-responsive mb-0" data-pattern="priority-columns">
-                                <table id="tech-companies-1" class="table table-striped" style="text-align: center;">
+                                <table id="tech-companies-1" class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th class="text-left">Nome</th>
-                                        <th>Opções</th>
+                                        <th>Nome</th>
+                                        <th class="text-center">Opções</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($aplicativos as $aplicativo)
                                         <tr>
                                             <td class="text-left">{{ $aplicativo->titulo }}</td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a href="/painel/aplicativos/editar/{{ $aplicativo->id }}">
                                                     <button class="btn-sm btn-primary">
                                                         <i class="fas fa-sync"></i>

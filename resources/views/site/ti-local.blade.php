@@ -25,8 +25,12 @@
                                 <p class="nome-departamento">{{$secretaria->nome}}</p>
                                 <div class="contato">
                                     <p>{{$contato->nome}}</p>
+                                    @if(!is_null($contato->telefone))
                                     <p><i class="bx bx-phone"></i> {{$contato->telefone}}</p>
+                                    @endif
+                                    @if(!is_null($contato->email))
                                     <p><i class="bx bx-envelope"></i> {{$contato->email}}</p>
+                                    @endif
                                 </div>
                             @endif
                         @endforeach

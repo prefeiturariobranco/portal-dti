@@ -17,9 +17,10 @@ class Logado
      */
     public function handle($request, Closure $next)
     {
-        if (!Session::get('usuario')) {
+        if (auth()->check()) {
+            return $next($request);
+        }else {
             return Redirect::to('error/500');
         }
-        return $next($request);
     }
 }

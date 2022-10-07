@@ -36,7 +36,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="table-sm table-responsive mb-0" data-pattern="priority-columns">
-                                <table id="tech-companies-1" class="table table-striped" style="text-align: center;">
+                                <table id="tech-companies-1" class="table table-striped">
                                     <thead>
                                     <tr>
                                         <th>Tamanho</th>
@@ -47,8 +47,8 @@
                                     <tbody>
                                     @foreach($registros as $registro)
                                         <tr>
-                                            <td class="text-center">{{ $registro->quilometragem }} KM</td>
-                                            <td class="text-center">{{ $registro->ano }}</td>
+                                            <td class="text-left">{{ $registro->quilometragem }} KM</td>
+                                            <td>{{ $registro->ano }}</td>
                                             <td>
                                                 <a href="/painel/infra/fibra/alterar/{{ $registro->id }}">
                                                     <button class="btn-sm btn-primary">

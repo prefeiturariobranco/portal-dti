@@ -18,7 +18,7 @@ class CreateContatosTable extends Migration
             $table->unsignedBigInteger('departamento_id');
             $table->unsignedBigInteger('cargos_id');
             $table->string('nome', 255);
-            $table->string('telefone', 255);
+            $table->string('telefone', 255)->nullable();
             $table->string('email', 255)->nullable();
             $table->tinyInteger('ocultar')->default(0);
             $table->foreign('departamento_id')->references('id')->on('departamentos');

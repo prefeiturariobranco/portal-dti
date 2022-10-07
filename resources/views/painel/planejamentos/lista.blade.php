@@ -42,13 +42,13 @@
                                     <thead>
                                     <tr>
                                         <th>Título</th>
-                                        <th>Opções</th>
+                                        <th class="text-center">Opções</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($planejamentos as $planejamento)
                                         <tr>
-                                            <td class="text-center">{{ $planejamento->titulo }}</td>
+                                            <td class="text-left">{{ $planejamento->titulo }}</td>
                                             <td>
                                                 <a href="/painel/planejamentos/editar/{{ $planejamento->id }}">
                                                     <button class="btn-sm btn-primary">

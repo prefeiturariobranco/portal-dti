@@ -25,6 +25,10 @@ class DepartamentosTableSeeder extends Seeder
             'nome' => 'Sistemas',
             'secretarias_id' => 14
         ]);
+        Departamentos::create([
+            'nome' => 'Suportes',
+            'secretarias_id' => 14
+        ]);
     }
 }
 
