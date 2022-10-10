@@ -28,7 +28,7 @@ class ContatosFormRequest extends FormRequest
             'departamento_id' => 'required|numeric',
             'cargo_id' => 'required|numeric',
             'nome' => 'required|max:100',
-            'telefone' => 'nullable|unique:contatos',
+            'telefone' => 'nullable|max:50',
             'email' => 'required|max:100|email',
         ];
     }
