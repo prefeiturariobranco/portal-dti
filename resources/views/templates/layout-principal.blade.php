@@ -38,7 +38,6 @@
 <div class="wrap">
     <div class="main">
         @include('templates/cabecalho')
-
         @yield('content')
     </div>
 </div>

@@ -41,8 +41,6 @@
                         </div>
                     </form>
                 </li> -->
-
-
                 <!-- full screen -->
                 <li class="dropdown notification-list d-none d-md-block">
                     <a class="nav-link waves-effect" href="#" id="btn-fullscreen">
@@ -172,8 +170,6 @@
                     {{--                                <span>Notícias</span>--}}
                     {{--                            </a>--}}
                     {{--                        </li>--}}
-
-
                     <li>
                         <a href="/painel/informacoes/planejamento" class="waves-effect">
                             <i class="far fa-calendar-alt"></i>
@@ -194,7 +190,6 @@
                             <span>Mapas</span>
                         </a>
                     </li>
-
 
                     <li>
                         <a href="javascript:void(0);" class="waves-effect">

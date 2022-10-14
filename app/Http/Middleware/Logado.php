@@ -4,7 +4,6 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Session;
 
 class Logado
 {
@@ -17,6 +16,9 @@ class Logado
      */
     public function handle($request, Closure $next)
     {
+        if (!isset($_SESSION['sessao'])){
+            $_SESSION['session'] = time();
+        }
         if (auth()->check()) {
             return $next($request);
         }else {

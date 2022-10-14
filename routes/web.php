@@ -59,7 +59,7 @@ Route::get('/painel/perfil', 'Dashboard\PerfilController@index')->middleware('lo
 #Senha
 Route::get('/painel/senha', 'Dashboard\SenhaController@index')->middleware('logado');
 #ALTERAR SENHA
-Route::post('/painel/senha/alterar', 'Dashboard\AlterarSenhaController@alterarSenha')->middleware('logado');
+Route::post('/painel/senha/alterar', 'Dashboard\AlterarSenhaController@update')->middleware('logado');
 #Relatorios
 Route::get('/painel/relatorios', 'Dashboard\RelatoriosController@index')->middleware('logado');
 #MAPAS
@@ -271,6 +271,13 @@ Route::get('/painel/documentos/deletar/{id}', 'Dashboard\Documentos\DeletarDocum
 Route::post('/painel/documentos/salvar', 'Dashboard\Documentos\CadastrarDocumentosController@store')->middleware('logado');
 Route::post('/painel/documentos/alterar', 'Dashboard\Documentos\EditarDocumentosController@update')->middleware('logado');
 Route::get('/painel/documentos/arquivo/remover/{documentoid}/{arquivoid}', 'Dashboard\Documentos\RemoverArquivosController@destroy')->middleware('logado');
+
+#Arquivos
+Route::get('/painel/arquivos/cadastro', 'Dashboard\Anexos\CadastrarAnexosController@create')->middleware('logado');
+Route::get('/painel/arquivos/editar/{id}', 'Dashboard\Anexos\EditarAnexosController@edict')->middleware('logado');
+Route::get('/painel/arquivos/deletar/{id}', 'Dashboard\Anexos\DeletarAnexosController@destroy')->middleware('logado');
+Route::post('/painel/arquivos/salvar', 'Dashboard\Anexos\CadastrarAnexosController@store')->middleware('logado')->name('arq.store');
+Route::post('/painel/arquivos/alterar', 'Dashboard\Anexos\EditarAnexosController@update')->middleware('logado');
 
 # Sistemas
 Route::get('/painel/sistemas/webpublico', 'Dashboard\Sistemas\WebpublicoController@index')->middleware('logado');

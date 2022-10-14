@@ -12,9 +12,7 @@
     </style>
 </head>
 <title> Arquivo </title>
-<body>
-
-<embed src="{{ asset('storage/'.$doc_ar->caminho) }}" type="application/pdf">
-
+<body style="margin: 0">
+<embed src="{{asset('storage/documentos/'.$doc_ar->id)}}" type="application/pdf" width="100%" height="100%" style="margin: 0">
 </body>
 </html>

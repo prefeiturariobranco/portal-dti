@@ -24,7 +24,7 @@
                                     <th>Data de Fim</th>
                                     <th>Criado por</th>
                                     <th>Categoria</th>
-                                    <th>Arquivo Cadastrado</th>
+                                    <th>Arquivos</th>
                                 </tr>
 
                                 @if($documento->ocultar == '0')
@@ -35,13 +35,13 @@
                                         <td> {{ $documento->data_fim }}</td>
                                         <td> {{ $user->nome }}</td>
                                         <td> {{ $cat_doc->nome }}</td>
-                                        <td>
-                                            <a href="/painel/documento/{{ $doc_ar->id }}">
+                                        <td><a href="/painel/documento/{{ $doc_ar->id }}">
                                                 <button class="btn-sm btn-primary">
-                                                    <i class="fas fa-download"></i>
+                                                    <i class="fas fa-external-link-alt"></i>
                                                 </button>
                                             </a>
                                         </td>
+                                    </tr>
                                 @endif
                                 </thead>
                             </table>
