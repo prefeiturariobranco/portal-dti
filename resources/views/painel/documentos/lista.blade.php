@@ -30,7 +30,8 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-success" href="/painel/documentos/cadastro">Cadastrar</a>
+                            <a class="btn btn-success" href="/painel/documentos/cadastro">Documentos</a>
+                            <a class="btn btn-success" href="/painel/arquivos/cadastro">Arquivos</a>
                         </div>
                     </div>
 

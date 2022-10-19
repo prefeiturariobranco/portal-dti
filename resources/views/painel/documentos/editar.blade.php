@@ -75,14 +75,6 @@
                             </div>
                         </div>
                         <br>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <label>Anexos: </label>
-                                <input type="file" name="arquivo_documento[]" multiple class="custom-file"
-                                       accept="application/pdf">
-                            </div>
-                        </div>
-                        <br>
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <input type="submit" class="btn btn-primary" value="Alterar">

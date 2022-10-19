@@ -91,15 +91,3 @@
         </div> <!-- end col -->
     </div> <!-- end row -->
 @endsection
-
-@push('js')
-    <script>
-        function mybtn(el) {
-            let display = document.getElementById(el).style.display;
-            if(display === "none")
-                document.getElementById(el).style.display = 'block';
-            else
-                document.getElementById(el).style.display = 'none';
-        }
-    </script>
-@endpush

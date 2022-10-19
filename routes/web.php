@@ -274,7 +274,7 @@ Route::get('/painel/documentos/arquivo/remover/{documentoid}/{arquivoid}', 'Dash
 
 #Arquivos
 Route::get('/painel/arquivos/cadastro', 'Dashboard\Anexos\CadastrarAnexosController@create')->middleware('logado');
-Route::get('/painel/arquivos/editar/{id}', 'Dashboard\Anexos\EditarAnexosController@edict')->middleware('logado');
+Route::get('/painel/arquivos/editar/{id}', 'Dashboard\Anexos\EditarAnexosController@edit')->middleware('logado');
 Route::get('/painel/arquivos/deletar/{id}', 'Dashboard\Anexos\DeletarAnexosController@destroy')->middleware('logado');
 Route::post('/painel/arquivos/salvar', 'Dashboard\Anexos\CadastrarAnexosController@store')->middleware('logado')->name('arq.store');
 Route::post('/painel/arquivos/alterar', 'Dashboard\Anexos\EditarAnexosController@update')->middleware('logado');

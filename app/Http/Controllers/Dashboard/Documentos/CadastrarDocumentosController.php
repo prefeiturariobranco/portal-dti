@@ -69,7 +69,7 @@ class CadastrarDocumentosController extends Controller
             }
 
             $categoria = Documentos_arquivos::create([
-                'caminho' => 'documentos/' . $arquivo->getClientOriginalName(),
+                'caminho' => '/documentos/' . $arquivo->getClientOriginalName(),
                 'documentos_id' => $documento->id,
             ]);
         }
