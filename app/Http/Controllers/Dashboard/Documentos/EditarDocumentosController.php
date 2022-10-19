@@ -25,7 +25,6 @@ class EditarDocumentosController extends Controller
      */
     public function show($id)
     {
-        //
         return view('painel.documentos.editar', [
             'documento' => Documentos::where('id', $id)->first(),
             'categorias' => Documentos_categorias::where('ocultar', 0)->get(),
@@ -51,23 +50,15 @@ class EditarDocumentosController extends Controller
             'criado_por' => Session::get('usuario')->id,
         ]);
 
-        $arquivos = $request->file('arquivo_documento');
-
-        foreach ($arquivos as $arquivo) {
-            if (!$arquivo->storePubliclyAs('public/documentos/', $arquivo->getClientOriginalName())) {
-                $resultado['error'] = 2;
-                $resultado['msg'] = "Falha ao alterar arquivo do documento";
-            }
-            $doc = Documentos_arquivos::where('id', $request->post('documento_id'))->update([
-                'caminho' => 'documentos/' . $arquivo->getClientOriginalName(),
-                'documentos_id' => $request->post('documento_id'),
-            ]);
-
             $resultado['error'] = 1;
             $resultado['msg'] = "Documento editado com sucesso!";
+
+            if (!$documento) {
+                $resultado['error'] = 2;
+                $resultado['msg'] = "Falha ao editar documento";
+            }
 
             Session::flash('erro_msg', $resultado);
             return Redirect::to('painel/documentos');
         }
-    }
 }
