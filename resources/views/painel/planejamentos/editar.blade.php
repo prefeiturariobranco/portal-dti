@@ -7,9 +7,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-
                 <div class="card-body">
-
                     <div class="card-title">
                         Alterar de Planejamento
                     </div>
@@ -68,10 +66,7 @@
                                 <a class="btn btn-danger" href="/painel/planejamentos">Voltar</a>
                             </div>
                         </div>
-
                     </form>
-
-
                 </div>
             </div>
         </div> <!-- end col -->

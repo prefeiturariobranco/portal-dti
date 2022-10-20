@@ -7,9 +7,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-
                 <div class="card-body">
-
                     <div class="card-title">
                         Cadastrar Malha de Fibra
                     </div>
@@ -18,7 +16,7 @@
                         @csrf
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Titulo: </label>
+                                <label>Título: </label>
                                 <input type="text" class="form-control" name="titulo">
                                 <span class="system_error text-danger">{{$errors->first('titulo')}}</span>
                             </div>
@@ -60,8 +58,6 @@
                             </div>
                         </div>
                     </form>
-
-
                 </div>
             </div>
         </div> <!-- end col -->

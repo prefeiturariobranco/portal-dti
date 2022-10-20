@@ -3770,7 +3770,7 @@ select.form-control[size] {
 }
 
 textarea.form-control {
-  height: auto
+  height: auto;
 }
 
 .form-group {

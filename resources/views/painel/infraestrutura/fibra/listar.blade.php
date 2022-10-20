@@ -31,7 +31,6 @@
                             <a class="btn btn-success" href="/painel/infra/fibra/cadastrar">Cadastrar</a>
                         </div>
                     </div>
-
                     <br>
                     <div class="row">
                         <div class="col-md-12">
@@ -39,6 +38,7 @@
                                 <table id="tech-companies-1" class="table table-striped">
                                     <thead>
                                     <tr>
+                                        <th>Título</th>
                                         <th>Tamanho</th>
                                         <th>Ano</th>
                                         <th>Opções</th>
@@ -47,6 +47,7 @@
                                     <tbody>
                                     @foreach($registros as $registro)
                                         <tr>
+                                            <td class="text-left">{{ $registro->titulo }}</td>
                                             <td class="text-left">{{ $registro->quilometragem }} KM</td>
                                             <td>{{ $registro->ano }}</td>
                                             <td>

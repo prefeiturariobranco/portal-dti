@@ -4,9 +4,7 @@
     Historia DTI
 @endsection
 
-
 @section('js')
-
     <script src="/js/noticias.js"></script>
 
     <script>
@@ -15,10 +13,11 @@
             menubar: false,
             statusbar: false
         });
+        $(function () {
+            $("#datepicker").datepicker({dateFormat: 'yy'});
+        });
     </script>
-
 @endsection
-
 
 @section('content')
     <div class="row">
@@ -38,12 +37,10 @@
                                 <label>Título: </label>
                                 <input type="text" class="form-control" name="titulo" value="{{old('titulo')}}">
                                 <span class="system_error text-danger">{{$errors->first('titulo')}}</span>
-
                             </div>
                         </div>
-
                         <div class="row mt-3">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <strong>Descrição: </strong>
                                 <div>
                                     <textarea id="descricao" name="descricao" class="form-control" rows="20"
@@ -67,26 +64,6 @@
                                 </select>
                             </div>
                         </div>
-
-
-                        {{--                    <div class="row">--}}
-                        {{--                        <div class="col-md-4">--}}
-                        {{--                            <label>Ano Referencia: </label>--}}
-                        {{--                            <input type="number" class="form-control" name="ano" value="2022" max="2099">--}}
-                        {{--                            <span class="system_error text-danger">{{$errors->first('ano')}}</span>--}}
-                        {{--                        </div>--}}
-                        {{--                    </div>--}}
-
-                        <script>
-                            $(function () {
-                                $("#datepicker").datepicker({dateFormat: 'yy'});
-                            });
-                        </script>
-                        <style>
-                            .ui-datepicker-calendar {
-                                display: none;
-                            }
-                        </style>
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <input type="submit" class="btn btn-primary" value="Salvar">
@@ -94,10 +71,8 @@
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div> <!-- end col -->
     </div> <!-- end row -->
-
 @endsection
