@@ -55,10 +55,11 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Ocultar:</label>
-                                <input type="number" name="ocultar" class="form-control"
-                                       value="{{ $subIcone->ocultar }}" min="0" max="1">
-
+                                <label>Status:</label>
+                                <select name="ocultar" class="form-control">
+                                    <option value="0">Ativar</option>
+                                    <option value="1">Inativar</option>
+                                </select>
                             </div>
                         </div>
                         <div class="row mt-3">

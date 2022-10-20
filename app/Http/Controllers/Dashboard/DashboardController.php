@@ -43,7 +43,7 @@ class DashboardController extends Controller
 
         $investPMAT = $investPMAT[0]->valor / 12;
 
-        $usuario = Usuarios::where('id', 1);
+        $usuario = Usuarios::where('ocultar', 0);
         $configEquipe = Equipe_config::all()->last();
 
         $contadorTotalEquipe = $configEquipe->num_comissionados + $configEquipe->num_terceirizados + $configEquipe->num_estagiarios + $configEquipe->num_efetivos;

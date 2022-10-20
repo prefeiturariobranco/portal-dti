@@ -62,7 +62,15 @@
                                 <span class="system_error text-danger">{{$errors->first('senha')}}</span>
                             </div>
                         </div>
-
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Status:</label>
+                                <select name="ocultar" class="form-control">
+                                    <option value="0">Ativar</option>
+                                    <option value="1">Inativar</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <input type="submit" class="btn btn-primary" value="Salvar">

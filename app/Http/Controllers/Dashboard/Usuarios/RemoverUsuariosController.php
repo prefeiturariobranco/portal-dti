@@ -21,17 +21,15 @@ class RemoverUsuariosController extends Controller
     {
         //
         $usuario = Usuarios::where('id', $id)->update([
-            'data_exoneracao' => date('Y-m-d'),
-            'status' => 2,
             'ocultar' => 1,
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = "Usuário removido com sucesso!";
+        $resultado['msg'] = "Usuário inativado com sucesso!";
 
         if (!$usuario) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha ao remover o usuario";
+            $resultado['msg'] = "Falha ao inativar o usuario";
         }
 
         Session::flash('erro_msg', $resultado);
