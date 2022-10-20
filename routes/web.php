@@ -17,7 +17,7 @@ Route::get('/', 'Site\InicioController@index');
 Route::get('/perguntas', 'Site\PerguntasController@perguntas');
 Route::get('/submenu/{id}', 'Site\SubmenuController@submenu');
 Route::get('/ti-local', 'Site\TiLocalController@index');
-Route::get('/login', 'Login\LoginController@index');
+Route::get('/login', 'Login\LoginController@index')->name('login');
 Route::get('/contatos', 'Site\ContatosController@index');
 Route::get('/novidades', 'Site\NovidadesController@novidades');
 Route::get('/novidade/{id}', 'Site\NovidadeController@show');
