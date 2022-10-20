@@ -44,7 +44,7 @@
 
 
                         <div class="row mt-3">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <strong>Descrição: </strong>
                                 <div>
                                     <textarea id="descricao" name="descricao" class="form-control"

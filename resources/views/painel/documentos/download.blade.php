@@ -13,8 +13,6 @@
 </head>
 <title> Arquivo </title>
 <body>
-
-<embed src="{{ asset('storage/'.$doc_ar->caminho) }}" type="application/pdf">
-
+<embed src="{{asset('storage/').str_replace("public", "", $doc_ar->caminho)}}" type="application/pdf">
 </body>
 </html>

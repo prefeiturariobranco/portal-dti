@@ -32,7 +32,7 @@
                         <input class="form-control col-4" name="sigla" type="text" value="{{ $secretaria->sigla }}"
                                maxlength="255" required>
                         <br>
-                        <input class="btn btn-primary" type="submit" value="Cadastrar">
+                        <input class="btn btn-primary" type="submit" value="Alterar">
                         <a class="btn btn-danger" href="">Voltar</a>
                     </form>
                 </div>

@@ -25,7 +25,6 @@ class EditarDocumentosController extends Controller
      */
     public function show($id)
     {
-        //
         return view('painel.documentos.editar', [
             'documento' => Documentos::where('id', $id)->first(),
             'categorias' => Documentos_categorias::where('ocultar', 0)->get(),
@@ -48,37 +47,18 @@ class EditarDocumentosController extends Controller
             'valor' => $request->post('valor'),
             'data_inicio' => $request->post('data_inicio'),
             'data_fim' => $request->post('data_fim'),
+            'criado_por' => Session::get('usuario')->id,
         ]);
 
-        $resultado['error'] = 1;
-        $resultado['msg'] = "Documento editado com sucesso!";
+            $resultado['error'] = 1;
+            $resultado['msg'] = "Documento editado com sucesso!";
 
-        if (!$documento) {
-            $resultado['error'] = 2;
-            $resultado['msg'] = "Falha ao alterar documento";
-        }
-
-        Session::flash('erro_msg', $resultado);
-        return Redirect::to('painel/documentos');
-
-        $arquivos = $request->file('arquivo_documento');
-
-        if ($arquivos != null) {
-            foreach ($arquivos as $arquivo) {
-                if (!$arquivo->storePubliclyAs('public/documentos/',
-                    $arquivo->getClientOriginalName())) {
-                    $resultado['error'] = 2;
-                    $resultado['msg'] = "Falha ao enviar arquivo do documento";
-
-                    Session::flash('erro_msg', $resultado);
-                    return Redirect::to('painel/documentos');
-                }
-
-                $doc = Documentos_arquivos::create([
-                    'caminho' => 'documentos/' . $arquivo->getClientOriginalName(),
-                    'documentos_id' => $request->post('documento_id'),
-                ]);
+            if (!$documento) {
+                $resultado['error'] = 2;
+                $resultado['msg'] = "Falha ao editar documento";
             }
+
+            Session::flash('erro_msg', $resultado);
+            return Redirect::to('painel/documentos');
         }
-    }
 }

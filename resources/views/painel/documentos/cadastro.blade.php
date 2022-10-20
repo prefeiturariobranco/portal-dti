@@ -86,10 +86,8 @@
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div> <!-- end col -->
     </div> <!-- end row -->
-
 @endsection

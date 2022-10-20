@@ -7,9 +7,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-
                 <div class="card-body">
-
                     <div class="card-title">
                         Alterar de Malha de Fibra {{ $registro->ano }}
                     </div>
@@ -19,7 +17,7 @@
                         <input type="hidden" name="registro_id" value="{{ $registro->id }}">
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Titulo: </label>
+                                <label>Título: </label>
                                 <input type="text" class="form-control" name="titulo" value="{{ $registro->titulo }}">
                                 <span class="system_error text-danger">{{$errors->first('titulo')}}</span>
                             </div>
@@ -63,8 +61,6 @@
                             </div>
                         </div>
                     </form>
-
-
                 </div>
             </div>
         </div> <!-- end col -->

@@ -70,9 +70,31 @@ class AlterarSenhaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        try {
+            if (!empty(Session::get('DTI_PORTAL')) ) {
+                $usuario = Usuarios::where('id', Session::get('DTI_PORTAL'))->first();
+                $senhaAntiga = $usuario->senha;
+                if (Hash::check($request->post('antiga'), $senhaAntiga) && $request->post('nova') == $request->post('confirma')) {
+                    $usuario->update([
+                        'senha' => Hash::make($request->post('nova')),
+                    ]);
+                    $usuario->save();
+                }
+                $resultado['error'] = 1;
+                $resultado['msg'] = "Senha alterada com sucesso";
+
+                if (!$usuario){
+                    $resultado['error'] = 2;
+                    $resultado['msg'] = "Erro ao alterar senha";
+                }
+                Session::flash('erro_msg', $resultado);
+                return redirect('/painel');
+            }
+        }catch (\Exception $exception) {
+          return $exception->getMessage();
+        }
     }
 
     /**
@@ -84,24 +106,5 @@ class AlterarSenhaController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function alterarSenha(Request $request){
-        if (!empty(Session::get('DTI_PORTAL')) ) {
-            $usuario = Usuarios::where('id', Session::get('DTI_PORTAL'))->first();
-            $senhaAntiga = $usuario->senha;
-            if (Hash::check( $request->post('antiga'),  $senhaAntiga) && $request->post('nova') == $request->post('confirma')) {
-                $usuario->update([
-                    'senha' => Hash::make($request->post('nova')),
-                ]);
-                $usuario->save();
-            }
-            else {
-                echo 'erro';
-            }
-        }
-        else {
-            echo 'erro';
-        }
     }
 }

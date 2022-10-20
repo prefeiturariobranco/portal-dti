@@ -42,6 +42,7 @@
                                 <table id="tech-companies-1" class="table table-striped">
                                     <thead>
                                     <tr>
+                                        <th>Título</th>
                                         <th>Ano</th>
                                         <th class="text-center">Opções</th>
                                     </tr>
@@ -49,6 +50,7 @@
                                     <tbody>
                                     @foreach($acontecimentos as $acontecimento)
                                         <tr>
+                                            <td>{{ $acontecimento->titulo }}</td>
                                             <td>{{ $acontecimento->ano }}</td>
                                             <td class="text-center">
                                                 <a href="/painel/acontecimentos/editar/{{ $acontecimento->id }}">

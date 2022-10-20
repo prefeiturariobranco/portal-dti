@@ -1,6 +1,6 @@
 @extends('templates.dashboard')
 @section('titulo')
-    Malha de Fibra
+    Documentos
 @endsection
 
 @push('link-css')
@@ -22,41 +22,45 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Malha de Fibra</h4>
+                    <h4>Anexos</h4>
                 </div>
                 <div class="card-body">
-                    <!--MENSAGEM -->
+
+                    <!-- menssage -->
+
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-success" href="/painel/infra/fibra/cadastrar">Cadastrar</a>
+                            <a class="btn btn-success" href="/painel/documentos/cadastro">Cadastrar</a>
                         </div>
                     </div>
+
                     <br>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="table-sm table-responsive mb-0" data-pattern="priority-columns">
-                                <table id="tech-companies-1" class="table table-striped">
+                                <table id="tech-companies-1" class="table table-striped" style="text-align: left;">
                                     <thead>
                                     <tr>
-                                        <th>Título</th>
-                                        <th>Tamanho</th>
-                                        <th>Ano</th>
-                                        <th>Opções</th>
+                                        <th>Nome</th>
+                                        <th class="text-center">Opções</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($registros as $registro)
+                                    @foreach($documentos as $documento)
                                         <tr>
-                                            <td class="text-left">{{ $registro->titulo }}</td>
-                                            <td class="text-left">{{ $registro->quilometragem }} KM</td>
-                                            <td>{{ $registro->ano }}</td>
-                                            <td>
-                                                <a href="/painel/infra/fibra/alterar/{{ $registro->id }}">
+                                            <td class="text-left">{{ $documento->titulo }}</td>
+                                            <td style="text-align: center">
+                                                <a href="/painel/documentos/abrir/{{ $documento->id }}">
+                                                    <button class="btn-sm btn-primary">
+                                                        <i class="fas fa-external-link-alt"></i>
+                                                    </button>
+                                                </a>
+                                                <a href="/painel/documentos/editar/{{ $documento->id }}">
                                                     <button class="btn-sm btn-primary">
                                                         <i class="fas fa-sync"></i>
                                                     </button>
                                                 </a>
-                                                <a href="/painel/infra/fibra/remover/{{ $registro->id }}">
+                                                <a href="/painel/documentos/deletar/{{ $documento->id }}">
                                                     <button class="btn-sm btn-primary">
                                                         <i class="far fa-trash-alt"></i>
                                                     </button>
@@ -66,12 +70,9 @@
                                     @endforeach
                                     </tbody>
                                 </table>
-
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </div> <!-- end col -->

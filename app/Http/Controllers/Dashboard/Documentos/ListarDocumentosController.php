@@ -54,11 +54,15 @@ class ListarDocumentosController extends Controller
      */
     public function show($id)
     {
-        $documento = Documentos::findOrFail($id);
-        $user = Usuarios::findOrFail($id);
-        $cat_doc = Documentos_categorias::findOrFail($id);
-        $doc_ar = Documentos_arquivos::findOrFail($id);
-        return view('painel.documentos.show', compact('documento', 'user','cat_doc', 'doc_ar'));
+        try {
+            $documento = Documentos::findOrFail($id);
+            $user = Usuarios::where('id', $id)->first();
+            $cat_doc = Documentos_categorias::where('id', $id)->first();
+            $doc_ar = Documentos_arquivos::where('ocultar', 0)->where('documentos_id', $id)->get();
+            return view('painel.documentos.show', compact('documento', 'user', 'cat_doc', 'doc_ar'));
+        }catch (\Exception $exception){
+            dd($exception->getMessage());
+        }
     }
 
     public function download($id)

@@ -2,14 +2,11 @@
 @section('titulo')
     Documentos
 @endsection
-
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="card">
-
                 <div class="card-body">
-
                     <div class="card-title">
                         Alterar de Documentos
                     </div>
@@ -78,14 +75,6 @@
                             </div>
                         </div>
                         <br>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <label>Anexos: </label>
-                                <input type="file" name="arquivo_documento[]" multiple class="custom-file"
-                                       accept="application/pdf">
-                            </div>
-                        </div>
-                        <br>
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <input type="submit" class="btn btn-primary" value="Alterar">
@@ -93,10 +82,8 @@
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div> <!-- end col -->
     </div> <!-- end row -->
-
 @endsection

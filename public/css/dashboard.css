@@ -3770,7 +3770,7 @@ select.form-control[size] {
 }
 
 textarea.form-control {
-  height: auto
+  height: auto;
 }
 
 .form-group {
@@ -33478,6 +33478,7 @@ button:focus {
 .btn-danger {
   background-color: #ec4561;
   border: 1px solid #ec4561;
+    color: white !important;
 }
 
 .btn-danger:active,
@@ -34974,9 +34975,6 @@ pre[class*="language-"] {
 /* ==============
   Tables
 ===================*/
-th {
-  font-weight: 500;
-}
 
 /*.table>tbody>tr>td,*/
 /*.table>tfoot>tr>td,*/

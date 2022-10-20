@@ -7,9 +7,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-
                 <div class="card-body">
-
                     <div class="card-title">
                         Cadastro de Planejamentos
                     </div>
@@ -64,12 +62,9 @@
                                         </option>
                                     @endforeach
                                 </select>
-
                             </div>
-                            <span
-                                class="system_error text-danger">{{$errors->first('planejamento_categoria')}}</span>
+                            <span class="system_error text-danger">{{$errors->first('planejamento_categoria')}}</span>
                         </div>
-
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <input type="submit" class="btn btn-primary" value="Salvar">
