@@ -50,34 +50,23 @@
                                             <tr class="">
                                                 <td class="">{{ $usuario->nome }}</td>
                                                 <td class="text-center">{{ $usuario->login }}</td>
-                                                @if ($usuario->status == 0)
+                                                @if ($usuario->ocultar == 0)
                                                     <td class="text-center text-success">Ativo</td>
-                                                @elseif($usuario->status == 2 )
+                                                @elseif($usuario->ocultar == 1 )
                                                     <td class="text-center text-warning">Bloqueado</td>
-                                                @else
-                                                    <td class="text-center text-danger">Excluido</td>
                                                 @endif
                                                 <td class="text-center">
-
                                                     <a href="/painel/usuarios/{{ $usuario->id }}" title="Editar">
                                                         <button class="btn-sm btn-primary">
                                                             <i class="fas fa-shield-alt"></i>
                                                         </button>
                                                     </a>
-
-                                                    {{--                                        <a href="/painel/usuarios/{{ $usuario->id }}/permissoes">--}}
-                                                    {{--                                            <button class="btn-sm btn-primary">--}}
-                                                    {{--                                                <i class="fas fa-user-edit"></i>--}}
-                                                    {{--                                            </button>--}}
-                                                    {{--                                        </a>--}}
-
                                                     <a href="/painel/usuarios/remover/{{ $usuario->id }}"
                                                        title="Excluir">
                                                         <button class="btn-sm btn-danger">
                                                             <i class="fas fa-user-times"></i>
                                                         </button>
                                                     </a>
-
                                                 </td>
                                             </tr>
                                         @endforeach

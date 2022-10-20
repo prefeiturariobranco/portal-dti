@@ -29,6 +29,7 @@ class AlterarUsuariosController extends Controller
             'departamentos_id' => $request->post('departamento_id'),
             'cargos_id' => $request->post('cargo_id'),
             'login' => $request->post('login'),
+            'ocultar' => $request->post('ocultar')
         ]);
 
         $resultado['error'] = 1;
