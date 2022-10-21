@@ -22,99 +22,115 @@ class SubIconesTableSeeder extends Seeder
         ]);
         Sub_Icone::create([
             'nome' => 'Alerta Rio',
-            'caminho' => '/images/icones/icon-portal-transporte.png',
+            'caminho' => '/images/icones/icon-alertario.png',
             'link' => 'https://play.google.com/store/apps/details?id=riobranco.ac.gov.br.nivel_rio',
             'ocultar' => 0,
             'icones_id' => 13,
         ]);
         Sub_Icone::create([
             'nome' => 'Zona Azul Rio Branco',
-            'caminho' => '/images/icones/icon-portal-transporte.png',
+            'caminho' => '/images/icones/icon-zonaazul.png',
             'link' => 'https://play.google.com/store/apps/details?id=br.com.mobilicidade.android.riobranco.gui',
             'ocultar' => 0,
             'icones_id' => 13,
         ]);
         Sub_Icone::create([
-            'nome' => 'Consignação',
-            'caminho' => '/images/icones/icon-consignacao.png',
-            'link' => 'http://econsig.riobranco.ac.gov.br/',
+            'nome' => 'SITGeo',
+            'caminho' => '/images/icones/icon-sistemas.png',
+            'link' => 'http://sit.riobranco.ac.gov.br/',
             'ocultar' => 0,
             'icones_id' => 10,
         ]);
         Sub_Icone::create([
-            'nome' => 'Saúde Mental',
-            'caminho' => '/images/icones/icon-saude-mental.png',
-            'link' => 'http://intranet.riobranco.ac.gov.br/sistemas/Higeia/autentica.php',
+            'nome' => 'G-MUS',
+            'caminho' => '/images/icones/gmus-removebg.png',
+            'link' => 'https://gmus.riobranco.ac.gov.br/home',
             'ocultar' => 0,
             'icones_id' => 10,
         ]);
         Sub_Icone::create([
-            'nome' => 'Cadastro Funebres',
-            'caminho' => '/images/icones/icon-cadastro-funebres.png',
-            'link' => 'http://intranet.riobranco.ac.gov.br/sistemas/Thanatos/autentica.php',
-            'ocultar' => 0,
-            'icones_id' => 10,
-        ]);
-        Sub_Icone::create([
-            'nome' => 'Tanen',
-            'caminho' => '/images/icones/icon-tanen.png',
-            'link' => 'http://intranet.riobranco.ac.gov.br/sistemas/tanen/autentica.php',
-            'ocultar' => 0,
-            'icones_id' => 10,
-        ]);
-        Sub_Icone::create([
-            'id' => 9,
-            'nome' => 'Ácone',
-            'caminho' => '/images/icones/icon-acona.png',
-            'link' => 'http://acre.acone.com.br/',
-            'ocultar' => 0,
-            'icones_id' => 10,
-        ]);
-        Sub_Icone::create([
-            'nome' => 'Minerva',
+            'nome' => 'Diário Oficial',
             'caminho' => '/images/icones/icon-minerva.png',
-            'link' => 'http://intranet.riobranco.ac.gov.br/sistemas/minerva/autentica.php',
+            'link' => 'http://diario.ac.gov.br/',
             'ocultar' => 0,
             'icones_id' => 10,
         ]);
         Sub_Icone::create([
-            'nome' => 'Libre Office',
-            'caminho' => '/images/icones/icon-portal-transporte.png',
-            'link' => 'https://pt-br.libreoffice.org/baixe-ja/libreoffice-novo/',
+            'nome' => 'WebDesk',
+            'caminho' => '/images/icones/icon-sistemas.png',
+            'link' => 'https://chamados.webpublico.com.br/#/login',
+            'ocultar' => 0,
+            'icones_id' => 10,
+        ]);
+        Sub_Icone::create([
+            'nome' => 'RB Simplificado',
+            'caminho' => '/images/icones/icon-sistemas.png',
+            'link' => 'https://rbsimplificado.riobranco.ac.gov.br/',
+            'ocultar' => 0,
+            'icones_id' => 10,
+        ]);
+        Sub_Icone::create([
+            'nome' => 'Portal RBDoc',
+            'caminho' => '/images/icones/icon-minerva.png',
+            'link' => 'https://portalrbdoc.riobranco.ac.gov.br/',
             'ocultar' => 0,
             'icones_id' => 8,
         ]);
         Sub_Icone::create([
-            'nome' => 'GIMP',
-            'caminho' => '/images/icones/icon-portal-transporte.png',
-            'link' => 'https://www.gimp.org/downloads/',
+            'nome' => 'Portal da Transparência',
+            'caminho' => '/images/icones/icon-portal-transparencia.png',
+            'link' => 'http://transparencia.riobranco.ac.gov.br/',
             'ocultar' => 0,
             'icones_id' => 8,
         ]);
         Sub_Icone::create([
-            'nome' => 'Umbrello',
+            'nome' => 'Portal do Transporte',
             'caminho' => '/images/icones/icon-portal-transporte.png',
-            'link' => 'https://umbrello.kde.org/',
+            'link' => 'http://transportes.riobranco.ac.gov.br/',
             'ocultar' => 0,
             'icones_id' => 8,
         ]);
         Sub_Icone::create([
-            'nome' => 'Thunderbird',
-            'caminho' => '/images/icones/icon-portal-transporte.png',
-            'link' => 'https://www.thunderbird.net/pt-BR/',
+            'nome' => 'Portal do Turismo',
+            'caminho' => '/images/icones/portais-removebg.png',
+            'link' => 'http://turismo.riobranco.ac.gov.br/',
             'ocultar' => 0,
             'icones_id' => 8,
         ]);
         Sub_Icone::create([
-            'nome' => 'WinRAR',
-            'caminho' => '/images/icones/icon-portal-transporte.png',
-            'link' => 'https://www.win-rar.com/start.html?&L=9',
+            'nome' => 'Portal da Cultura',
+            'caminho' => '/images/icones/portais-removebg.png',
+            'link' => 'https://fgb.riobranco.ac.gov.br/',
             'ocultar' => 0,
             'icones_id' => 8,
         ]);
 
         Sub_Icone::create([
-            'nome' => 'Formulário Webpúblico - Geral dpt Sistemas',
+            'nome' => 'Portal do Cidadão',
+            'caminho' => '/images/icones/icon-portal-cidadao.png',
+            'link' => 'http://portalcidadao.riobranco.ac.gov.br/todos-servicos/',
+            'ocultar' => 0,
+            'icones_id' => 8,
+        ]);
+
+        Sub_Icone::create([
+            'nome' => 'Portal do SAERB',
+            'caminho' => '/images/icones/portais-removebg.png',
+            'link' => 'https://saerb.jtech.com.br/',
+            'ocultar' => 0,
+            'icones_id' => 8,
+        ]);
+
+        Sub_Icone::create([
+            'nome' => 'Portal da Escola',
+            'caminho' => '/images/icones/escola-removebg.png',
+            'link' => 'http://portaldaescola.riobranco.ac.gov.br/',
+            'ocultar' => 0,
+            'icones_id' => 8,
+        ]);
+
+        Sub_Icone::create([
+            'nome' => 'RBWeb - Geral Sistemas',
             'caminho' => '/images/icones/icon-solicitacao-acesso.png',
             'link' => 'http://sua.riobranco.ac.gov.br/plugins/formcreator/front/formdisplay.php?id=20',
             'ocultar' => 0,
