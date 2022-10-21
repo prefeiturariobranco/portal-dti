@@ -28,7 +28,7 @@
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/'}}">Home</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a
-                                href="http://webpublico.riobranco.ac.gov.br/faces/login.xhtml">Webpublico</a></li>
+                                href="http://webpublico.riobranco.ac.gov.br/faces/login.xhtml">RBWeb</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/submenu/10'}}">Sistemas</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/submenu/8'}}">Software Livre</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="https://webmail.riobranco.ac.gov.br">E-mail
@@ -42,8 +42,7 @@
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/login'}}">Intranet</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/perguntas'}}">Perguntas Frequentes</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/tutoriais'}}">Tutoriais</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="http://ponto.riobranco.ac.gov.br/">Ponto
-                                Eletrônico</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="http://ponto.riobranco.ac.gov.br/">RBPonto</a></li>
                     </ul>
                 </div>
 
