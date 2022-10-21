@@ -1,8 +1,9 @@
 <section id="header">
     <div class="container d-flex">
 
-        <div class="mr-auto">
-            <a href={{'/'}}><img src="{{ URL::asset('assets/img/Logo-DTI.png') }}" width="280" alt="" class="img-fluid"></a>
+        <div class="mr-auto" style="margin-top: -10px">
+            <a href={{'/'}}><img src="{{ URL::asset('assets/img/DTI-preta.png') }}" width="150" alt="" class="img-fluid"></a>
+            <a href={{url('http://riobranco.ac.gov.br/')}}><img src="{{ URL::asset('assets/img/Logo.png') }}" width="160" alt="" class="img-fluid"></a>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">

@@ -26,7 +26,7 @@ class IconesTableSeeder extends Seeder
             'dinamico' => 2,
             'nome' => 'Formulário de E-mail',
             'subtitulo' => '',
-            'caminho' => '/images/icones/icon-solicitacao-acesso.png',
+            'caminho' => '/images/icones/icon-email.png',
             'link' => 'https://formail.riobranco.ac.gov.br/',
             'ocultar' => 0,
             'icones_categorias_id' => 4
@@ -79,9 +79,9 @@ class IconesTableSeeder extends Seeder
         Icones::create([
             'id' => 8,
             'dinamico' => 1,
-            'nome' => 'Software Livre',
+            'nome' => 'Portais',
             'subtitulo' => '',
-            'caminho' => '/images/icones/icon-softwarelivres.png',
+            'caminho' => '/images/icones/portais-removebg.png',
             'link' => '/submenu/8',
             'ocultar' => 0,
             'icones_categorias_id' => 4,
@@ -106,7 +106,7 @@ class IconesTableSeeder extends Seeder
         ]);
         Icones::create([
             'dinamico' => 2,
-            'nome' => 'Webpublico',
+            'nome' => 'RBWeb',
             'subtitulo' => '',
             'caminho' => '/images/icones/icon-webpublico.png',
             'link' => 'http://webpublico.riobranco.ac.gov.br',
@@ -154,7 +154,7 @@ class IconesTableSeeder extends Seeder
             'nome' => 'E-Mail Funcional',
             'subtitulo' => '',
             'caminho' => '/images/icones/icon-email.png',
-            'link' => 'https://webmail.riobranco.ac.gov.br',
+            'link' => '/images/icones/icon-email.png',
             'ocultar' => 0,
             'icones_categorias_id' => null,
         ]);
