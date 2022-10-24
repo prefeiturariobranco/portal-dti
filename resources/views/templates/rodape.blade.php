@@ -9,7 +9,7 @@
                     <p>
                         R. Alvorada, 411, Térreo - B. Bosque <br>
                         Rio Branco - AC, 69900-631<br><br>
-                        <strong>Telefone:</strong> (68) 3222-7310<br>
+                        <strong>Telefone:</strong> (68) 3211-4135<br>
                         <strong>Email:</strong> dti@riobranco.ac.gov.br<br>
                     </p>
                     <div class="social-links mt-3">
