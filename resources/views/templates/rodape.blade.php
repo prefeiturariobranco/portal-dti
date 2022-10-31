@@ -53,7 +53,7 @@
 
     <div class="container">
         <div class="copyright">
-            &copy; Copyright 2021 <strong><span>Diretoria de Tecnologia da Informação</span></strong>. All Rights
+            &copy; Copyright {{date('Y')}} <strong><span>Diretoria de Tecnologia da Informação</span></strong>. All Rights
             Reserved
         </div>
     </div>
