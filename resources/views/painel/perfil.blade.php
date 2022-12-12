@@ -1,6 +1,6 @@
 @extends('templates.dashboard')
 @section('titutlo')
-    Intranet :: DTI
+    Intranet
 @endsection
 
 @section('js')@endsection

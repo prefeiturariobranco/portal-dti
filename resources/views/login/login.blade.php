@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
 @endpush
 @section('title')
-    Portal DTI
+    Portal de Tecnologia
 @endsection
 @section('js')@endsection
 @section('content')

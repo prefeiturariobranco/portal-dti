@@ -33,10 +33,17 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Caminho do ícone:</label>
-                                <input type="text" name="caminho" id="caminho" class="form-control"
-                                       placeholder="Digite o caminho">
-                                <span class="system_error text-danger">{{$errors->first('caminho')}}</span>
+                                <select name="caminho" class="form-control">
+                                    @foreach($icone as $icones)
+                                        <option value="{{$icones->caminho}}">{{$icones->caminho}}</option>
+                                    @endforeach
+                                </select>
                             </div>
+{{--                            <div class="col-1 pl-0" style="padding-top: 2.3rem">--}}
+{{--                                <button class="plus" onclick="">--}}
+{{--                                <i class="fas fa-plus"></i>--}}
+{{--                                </button>--}}
+{{--                            </div>--}}
                         </div>
                         <div class="row">
                             <div class="col-md-4">
@@ -86,3 +93,15 @@
     </div> <!-- end row -->
 
 @endsection
+@push('js')
+    <script>
+        function form() {
+            var x = document.getElementById('div');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+    </script>
+@endpush

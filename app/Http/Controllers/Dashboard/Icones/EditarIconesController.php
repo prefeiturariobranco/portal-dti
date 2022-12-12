@@ -24,6 +24,7 @@ class EditarIconesController extends Controller
         return view('painel.icones.editar', [
             'icone' => Icones::where('id', $id)->first(),
             'categorias' => Icones_categorias::where('status', 1)->get(),
+            'imagens' => Icones::all()
         ]);
     }
 

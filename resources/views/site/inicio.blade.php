@@ -1,7 +1,7 @@
 @extends('templates/layout-principal')
 
 @section('title')
-    Portal DTI
+    Portal de Tecnologia
 @endsection
 
 @push('css')
