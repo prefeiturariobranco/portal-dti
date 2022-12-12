@@ -1,6 +1,6 @@
 @extends('templates/dashboard')
 @section('titulo')
-    Intranet :: DTI
+    Intranet
 @endsection
 
 @push('css')

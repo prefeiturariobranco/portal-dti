@@ -30,7 +30,7 @@
                         <li><i class="bx bx-chevron-right"></i> <a
                                 href="http://webpublico.riobranco.ac.gov.br/faces/login.xhtml">RBWeb</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{'/submenu/10'}}">Sistemas</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{'/submenu/8'}}">Software Livre</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{'/submenu/8'}}">Portais</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="https://webmail.riobranco.ac.gov.br">E-mail
                                 Institucional</a></li>
                     </ul>

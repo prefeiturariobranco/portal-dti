@@ -9989,6 +9989,12 @@ button.bg-dark:hover {
   height: 100vh !important
 }
 
+.plus {
+    border: none;
+    background: none;
+    color: #5b626b;
+}
+
 .m-0 {
   margin: 0 !important
 }
@@ -37840,3 +37846,4 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end, body.swal2-no-backdrop .sw
 .ace-thumbnails > li .tools.tools-top > a {
     display: inline-block
 }
+

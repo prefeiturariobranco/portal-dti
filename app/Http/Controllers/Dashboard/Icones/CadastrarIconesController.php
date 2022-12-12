@@ -22,6 +22,7 @@ class CadastrarIconesController extends Controller
         //
         return view('painel.icones.cadastro', [
             'categorias' => Icones_categorias::where('status', 1)->get(),
+            'icone' => Icones::all()
         ]);
     }
 

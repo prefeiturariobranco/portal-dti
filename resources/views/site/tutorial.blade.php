@@ -3,7 +3,7 @@
 @section('css')@endsection
 @section('js')@endsection
 @section('title')
-    Portal DTI
+    Portal de Tecnologia
 @endsection
 
 @section('content')
