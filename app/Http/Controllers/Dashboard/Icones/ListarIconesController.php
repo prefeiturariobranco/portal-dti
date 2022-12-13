@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard\Icones;
 
 use App\Http\Controllers\Controller;
 use App\Model\Icones;
+use App\Model\Images;
 use Illuminate\Http\Request;
 
 class ListarIconesController extends Controller

@@ -245,6 +245,12 @@
                                 </ul>
                             </li>
                             <li>
+                                <a href="/painel/imagens/icones" class="waves-effect">
+                                    <i class="fas fa-image">
+                                    </i>Imagens de Sub e Ícones
+                                </a>
+                            </li>
+                            <li>
                                 <a href="/painel/icones">
                                     <i class="fas fa-icons">
                                     </i>

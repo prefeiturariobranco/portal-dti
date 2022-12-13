@@ -33,10 +33,10 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Caminho do ícone:</label>
+                                <label>Ícone:</label>
                                 <select class="form-control" name="caminho">
                                     @foreach($imagens as $icones)
-                                        <option>{{$icones->caminho}}</option>
+                                        <option value="{{$icones->caminho}}">{{$icones->nome}}</option>
                                     @endforeach
                                 </select>
                                 <span class="system_error text-danger">{{$errors->first('caminho')}}</span>

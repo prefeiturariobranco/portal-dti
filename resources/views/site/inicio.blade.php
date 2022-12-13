@@ -72,7 +72,7 @@
                                      @else onclick="window.location.assign('{{$icons['link']}}')" @endif>
                                     <div class="icon-box title">
                                         <div class="icon">
-                                            <img class="img-color" style="width: 40px" src="{{$icons['caminho']}}"
+                                            <img class="img-color" style="width: 40px" src="{{asset('storage/'.str_replace('public/', '', $icons['caminho']))}}"
                                                  title="" alt=""/>
                                         </div>
                                         <h4 class="title-box">{{$icons['nome']}}</h4>

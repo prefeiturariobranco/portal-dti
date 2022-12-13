@@ -32,10 +32,10 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Caminho do ícone:</label>
+                                <label>Ícone:</label>
                                 <select name="caminho" class="form-control">
                                     @foreach($icone as $icones)
-                                        <option value="{{$icones->caminho}}">{{$icones->caminho}}</option>
+                                        <option value="{{$icones->caminho}}">{{$icones->nome}}</option>
                                     @endforeach
                                 </select>
                             </div>
