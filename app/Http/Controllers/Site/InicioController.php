@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Site;
 use App\Model\Aplicativos;
 use App\Http\Controllers\Controller;
 use App\Model\Icones;
+use App\Model\Images;
 use App\Model\Perguntas;
 use App\Model\Postagens;
 use App\Model\Tutoriais;
@@ -38,6 +39,7 @@ class InicioController extends Controller
             'tutoriais' => Tutoriais::where('ocultar', 0)->limit(3)->get(),
             'perguntas' => Perguntas::where('ocultar', 0)->limit(5)->get(),
             'aplicativos' => Aplicativos::where('ocultar', 0)->limit(3)->get(),
+            'icones' => Images::all()
         ]);
 
     }

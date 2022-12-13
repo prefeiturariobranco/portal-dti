@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Icones\IconesStoreFormRequest;
 use App\Model\Icones;
 use App\Model\Icones_categorias;
+use App\Model\Images;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
@@ -22,6 +23,7 @@ class CadastrarIconesController extends Controller
         //
         return view('painel.icones.cadastro', [
             'categorias' => Icones_categorias::where('status', 1)->get(),
+            'icone' => Images::all()
         ]);
     }
 

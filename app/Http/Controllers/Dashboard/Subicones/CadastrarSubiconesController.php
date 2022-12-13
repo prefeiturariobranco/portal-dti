@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard\Subicones;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SubIcones\SubIconesStoreFormRequest;
 use App\Model\Icones;
+use App\Model\Images;
 use App\Model\Sub_Icone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -22,6 +23,7 @@ class CadastrarSubiconesController extends Controller
         //
         return view('painel.subicones.cadastro', [
             'icones' => Icones::all(),
+            'imagem' => Images::all()
         ]);
     }
 

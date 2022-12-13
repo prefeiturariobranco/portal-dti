@@ -33,9 +33,12 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Caminho do ícone:</label>
-                                <input type="text" name="caminho" id="caminho" class="form-control"
-                                       value="{{ $icone->caminho }}" placeholder="Digite o caminho">
+                                <label>Ícone:</label>
+                                <select class="form-control" name="caminho">
+                                    @foreach($imagens as $icones)
+                                        <option value="{{$icones->caminho}}">{{$icones->nome}}</option>
+                                    @endforeach
+                                </select>
                                 <span class="system_error text-danger">{{$errors->first('caminho')}}</span>
                             </div>
                         </div>

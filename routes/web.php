@@ -95,13 +95,21 @@ Route::post('/painel/infra/config/salvar', 'Dashboard\Infraestrutura\ConfigContr
 Route::post('/painel/infra/fibra/salvar', 'Dashboard\Infraestrutura\Fibra\CadastrarController@store')->middleware('logado');
 Route::post('/painel/infra/fibra/editar', 'Dashboard\Infraestrutura\Fibra\AlterarController@update')->middleware('logado');
 
-#Icones
+#Ícones
 Route::get('/painel/icones', 'Dashboard\Icones\ListarIconesController@index')->middleware('logado');
 Route::get('/painel/icones/cadastro', 'Dashboard\Icones\CadastrarIconesController@index')->middleware('logado');
 Route::get('/painel/icones/editar/{id}', 'Dashboard\Icones\EditarIconesController@show')->middleware('logado');
 Route::get('/painel/icones/deletar/{id}', 'Dashboard\Icones\DeletarIconesController@remover')->middleware('logado');
 Route::post('/painel/icones/salvar', 'Dashboard\Icones\CadastrarIconesController@store')->middleware('logado');
 Route::post('/painel/icones/alterar', 'Dashboard\Icones\EditarIconesController@update')->middleware('logado');
+
+#Imagens de Ícones
+Route::get('/painel/imagens/icones', 'Dashboard\Icones\ImageController@index')->middleware('logado');
+Route::get('/painel/imagens/icones/cadastro', 'Dashboard\Icones\ImageController@create')->middleware('logado');
+Route::get('/painel/imagens/icones/editar/{id}', 'Dashboard\Icones\ImageController@edit')->middleware('logado');
+Route::get('/painel/imagens/icones/deletar/{id}', 'Dashboard\Icones\ImageController@destroy')->middleware('logado');
+Route::post('/painel/imagens/icones/salvar', 'Dashboard\Icones\ImageController@store')->middleware('logado');
+Route::post('/painel/imagens/icones/alterar', 'Dashboard\Icones\ImageController@update')->middleware('logado');
 
 #Novidade
 Route::get('/painel/novidades', 'Dashboard\NovidadesController@index')->middleware('logado');

@@ -1,6 +1,6 @@
 @extends('templates.dashboard')
 @section('titulo')
-    Ícones
+    Imagens de Ícones
 @endsection
 
 @push('link-css')
@@ -12,9 +12,6 @@
     <script src="{{asset('DataTables/datatables.min.js')}}"></script>
     <script>
         $(document).ready(function () {
-            $('#tech-companies-1').DataTable();
-        });
-        $(document).ready(function () {
             $('#tech-companies-2').DataTable();
         });
     </script>
@@ -25,39 +22,35 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header pt-0">
-                    <h4>Ícones</h4>
+                    <h4>Imagens de Ícones</h4>
                 </div>
                 <div class="card-body">
-                    <!-- INCLUDE MENSAGE -->
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-success" href="/painel/icones/cadastro">Cadastrar</a>
+                            <a class="btn btn-success" href="/painel/imagens/icones/cadastro">Cadastrar</a>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="table-sm table-responsive mb-0" data-pattern="priority-columns">
-                                <table id="tech-companies-1" class="table table-striped">
+                                <table id="tech-companies-2" class="table table-striped">
                                     <thead>
                                     <tr>
                                         <th>Nome</th>
+                                        <th>Caminho</th>
                                         <th>Opções</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($icones as $icone)
+                                    @foreach($imagens as $imagem)
                                         <tr>
-                                            <td class="text-left">{{ $icone->nome }}</td>
+                                            <td class="text-left">{{ $imagem->nome }}</td>
+                                            <td class="text-left">{{ $imagem->caminho }}</td>
                                             <td>
-                                                <a href="/painel/icones/editar/{{ $icone->id }}">
+                                                <a href="/painel/imagens/icones/editar/{{ $imagem->id }}">
                                                     <button class="btn-sm btn-primary">
                                                         <i class="fas fa-sync"></i>
-                                                    </button>
-                                                </a>
-                                                <a href="/painel/icones/deletar/{{ $icone->id }}">
-                                                    <button class="btn-sm btn-primary">
-                                                        <i class="far fa-trash-alt"></i>
                                                     </button>
                                                 </a>
                                             </td>
@@ -70,7 +63,7 @@
                     </div>
                 </div>
             </div>
-        </div> <!-- end col -->
-    </div> <!-- end row -->
+        </div>
+    </div>
 @endsection
 

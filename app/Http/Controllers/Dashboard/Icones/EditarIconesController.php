@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Icones\IconesEditFormRequest;
 use App\Model\Icones;
 use App\Model\Icones_categorias;
+use App\Model\Images;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
@@ -24,6 +25,7 @@ class EditarIconesController extends Controller
         return view('painel.icones.editar', [
             'icone' => Icones::where('id', $id)->first(),
             'categorias' => Icones_categorias::where('status', 1)->get(),
+            'imagens' => Images::all()
         ]);
     }
 

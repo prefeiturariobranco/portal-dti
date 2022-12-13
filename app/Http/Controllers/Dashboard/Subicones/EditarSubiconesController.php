@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard\Subicones;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SubIcones\SubIconesEditFormRequest;
 use App\Model\Icones;
+use App\Model\Images;
 use App\Model\Sub_Icone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -25,6 +26,7 @@ class EditarSubiconesController extends Controller
         return view('painel.subicones.editar', [
            'subIcone' => Sub_Icone::where('id', $id)->first(),
            'icones' => Icones::all(),
+            'imagens' => Images::all()
         ]);
     }
     /**
