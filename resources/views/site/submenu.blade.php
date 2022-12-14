@@ -19,7 +19,9 @@
                          onclick="window.open('{{$subIcone['link']}}', '_blank')">
                         <div class="icon-box" style="cursor: pointer">
                             <div class="icon">
-                                <img style="width: 40px" src="{{asset('storage/'.str_replace('public/', '', $subIcone['caminho']))}}" title="" alt=""/>
+                                <img style="width: 40px"
+                                     src="{{asset('storage/'.str_replace('public/', '', $subIcone['caminho']))}}"
+                                     title="" alt=""/>
                             </div>
                             <h4 class="title"><a href="{{$subIcone['link']}}">{{$subIcone['nome']}} </a></h4></div>
                     </div>

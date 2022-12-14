@@ -21,7 +21,7 @@
                                 <label>Selecione a categoria:</label>
                                 <select name="icones_categorias_id" id="categoria" class="form-control"
                                         autocomplete="on">
-                                    <option selected>Selecione uma categoria</option>
+                                    <option value="{{ $icone->icones_categorias_id }}" selected>{{ $icone->iconesCategoria->nome }}</option>
                                     @foreach($categorias as $categoria)
                                         <option value="{{ $categoria->id }}">
                                             {{ $categoria->nome }}
@@ -35,7 +35,8 @@
                             <div class="col-md-4">
                                 <label>Ícone:</label>
                                 <select class="form-control" name="caminho">
-                                    @foreach($imagens as $icones)
+                                    <option value="{{ $icone->caminho }}" selected>{{ $icone->nome }}</option>
+                                @foreach($imagens as $icones)
                                         <option value="{{$icones->caminho}}">{{$icones->nome}}</option>
                                     @endforeach
                                 </select>

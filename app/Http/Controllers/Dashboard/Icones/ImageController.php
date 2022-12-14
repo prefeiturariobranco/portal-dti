@@ -42,7 +42,7 @@ class ImageController extends Controller
             $resultado['msg'] = 'Falha ao cadastrar imagem';
         }
         Session::flash('erro_msg', $resultado);
-        return Redirect::to('/painel/icones');
+        return Redirect::to('/painel/imagens/icones');
     }
 
     public function edit($id)
@@ -74,6 +74,6 @@ class ImageController extends Controller
         $imagem->save();
 
         Session::flash('erro_msg', $resultado);
-        return Redirect::to('/painel/icones');
+        return Redirect::to('/painel/imagens/icones');
     }
 }
