@@ -32,7 +32,7 @@
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <input type="submit" class="btn btn-primary" value="Salvar">
-                                <a href="/painel/icones" class="btn btn-danger">Voltar</a>
+                                <a href="/painel/imagens/icones" class="btn btn-danger">Voltar</a>
                             </div>
                         </div>
                     </form>
