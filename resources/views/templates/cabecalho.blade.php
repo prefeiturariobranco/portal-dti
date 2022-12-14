@@ -2,7 +2,7 @@
     <div class="container d-flex">
 
         <div class="mr-auto" style="margin-top: -10px">
-            <a href={{'/'}}><img src="{{ URL::asset('images/logos/logo-2.png') }}" width="150" alt="" class="img-fluid"></a>
+            <a href={{'/'}}><img src="{{ URL::asset('images/logos/logo-2.png') }}" width="150" alt="" class="img-fluid">|</a>
             <a href={{url('http://riobranco.ac.gov.br/')}}><img src="{{ URL::asset('assets/img/Logo.png') }}" width="160" alt="" class="img-fluid"></a>
         </div>
 

@@ -33,7 +33,7 @@
                         <div class="row mt-3">
                             <div class="col-md-4">
                                 <input type="submit" class="btn btn-primary" value="Alterar">
-                                <a class="btn btn-danger" href="/painel/icones">Voltar</a>
+                                <a class="btn btn-danger" href="/painel/imagens/icones">Voltar</a>
                             </div>
                         </div>
                     </form>
