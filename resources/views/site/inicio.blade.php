@@ -1,9 +1,5 @@
 @extends('templates/layout-principal')
 
-@section('title')
-    Portal de Tecnologia
-@endsection
-
 @push('css')
     <link href="public/css/icons.css">
     <style>
@@ -127,7 +123,7 @@
                             @endif
                         @endif
                     @endforeach
-                    <div class="container-fluid" style="text-align: center; margin-right: 50px">
+                    <div class="container-fluid" style="text-align: center">
                         <a href="{{'/tutoriais'}}" title="" class="btn">Mostrar Mais</a>
                     </div>
                 </div>

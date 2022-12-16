@@ -5,10 +5,6 @@
 @endpush
 
 @section('js')@endsection
-@section('title')
-    Portal de Tecnologia
-@endsection
-
 @section('content')
 
     <section id="services" class="services section-bg">

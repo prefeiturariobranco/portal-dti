@@ -2,7 +2,7 @@
 @section('css')@endsection
 @section('js')@endsection
 @section('title')
-    Portal de Tecnologia
+    Portal da Tecnologia
 @endsection
 @section('content')
 

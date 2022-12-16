@@ -3,10 +3,6 @@
     <script src="/js/site/perguntas.js"></script>
 @endsection
 
-@section('title')
-    Portal de Tecnologia
-@endsection
-
 @section('content')
     <section id="services" class="services section-bg">
         <div class="container">

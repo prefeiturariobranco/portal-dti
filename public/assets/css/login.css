@@ -80,8 +80,12 @@ input {
 .dti-container-login {
     width: 100%;
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
+}
 
+.img-tec {
+    width: 20rem;
+    margin-top: 1rem;
 }
 
 .wrap-input100 {
