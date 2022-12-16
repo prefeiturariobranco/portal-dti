@@ -2,16 +2,14 @@
 @push('css')
     <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
 @endpush
-@section('title')
-    Portal de Tecnologia
-@endsection
 @section('js')@endsection
 @section('content')
     <div class="caixa-textura" style="margin-top: 50px; margin-bottom: 50px;">
-        <div class="dti-container-login">
+        <div class="dti-container-login justify-content-center">
+            <img src="{{ asset('images/logos/logo-3.png')  }}" class="img-tec mr-3">
             <div class="row" style="align-items: center;">
                 <div class="col-md-6 dti-separador">
-                    <p style="line-height: 100%; margin-left: 0px">BEM-VINDO A <br> NOSSA INTRANET!</p>
+                    <p style="line-height: 100%; margin-left: 0px">PORTAL DA <br> TECNOLOGIA</p>
                     <cite>Essa área é exclusiva para os <br> setores e departamento de Tecnologia.</cite>
                 </div>
                 <div class="col-md-6 dti-login">

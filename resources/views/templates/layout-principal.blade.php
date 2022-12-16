@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>@yield('title')</title>
+    <title>Portal da Tecnologia</title>
     <!-- Favicons -->
     <link rel="icon" href="{{ URL::asset('favicon.ico') }}" type="image/x-icon"/>
 

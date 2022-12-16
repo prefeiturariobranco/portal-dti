@@ -3,9 +3,6 @@
     <link href="{{ asset('assets/css/contatos.css') }}" rel="stylesheet">
 @endpush
 @section('js')@endsection
-@section('title')
-    Portal de Tecnologia
-@endsection
 
 @section('content')
     <div class="main">

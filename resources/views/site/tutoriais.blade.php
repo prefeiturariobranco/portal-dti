@@ -1,9 +1,6 @@
 @extends('templates/layout-principal')
 
 @section('css')@endsection
-@section('title')
-    Portal de Tecnologia
-@endsection
 
 @section('content')
 

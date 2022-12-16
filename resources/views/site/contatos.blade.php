@@ -4,9 +4,6 @@
 @endpush
 
 @section('js')@endsection
-@section('title')
-    Portal de Tecnologia
-@endsection
 
 @section('content')
     <div class="main">
