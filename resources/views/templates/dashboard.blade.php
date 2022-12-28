@@ -23,7 +23,7 @@
         <div class="topbar-left">
             <a href="/painel" class="logo">
                     <span>
-                        <img src="{{ asset('images/DTI-branca.png') }}" style="width: 8em;">
+                        <img src="{{ asset('images/logos/logo3.png') }}" style="width: 8em;">
                     </span>
                 <i>
                     <img src="{{ asset('images/icon-brasao.png') }}" alt="" height="40">
