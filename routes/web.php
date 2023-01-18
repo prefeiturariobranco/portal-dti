@@ -316,7 +316,15 @@ Route::get('painel/sistemas/cadastro', 'Dashboard\Sistemas\CadastrarSistemasCont
 Route::post('painel/sistemas/salvar', 'Dashboard\Sistemas\CadastrarSistemasController@store')->middleware('logado');
 Route::get('painel/sistemas/editar/{id}', 'Dashboard\Sistemas\EditarSistemasController@edit')->middleware('logado');
 Route::post('painel/sistemas/alterar', 'Dashboard\Sistemas\EditarSistemasController@update')->middleware('logado');
-Route::post('painel/sistemas/deletar', 'Dashboard\Sistemas\EditarSistemasController@destroy')->middleware('logado');
+Route::post('painel/sistemas/deletar/{id}', 'Dashboard\Sistemas\EditarSistemasController@destroy')->middleware('logado');
+
+#Unidades
+Route::get('painel/unidades', 'Dashboard\Unidades\ListarUnidadesController@index')->middleware('logado');
+Route::get('painel/unidades/cadastro', 'Dashboard\Unidades\CadastrarUnidadesController@create')->middleware('logado');
+Route::post('painel/unidades/salvar', 'Dashboard\Unidades\CadastrarUnidadesController@store')->middleware('logado');
+Route::get('painel/unidades/editar/{id}', 'Dashboard\Unidades\EditarUnidadesController@edit')->middleware('logado');
+Route::post('painel/unidades/alterar', 'Dashboard\Unidades\EditarUnidadesController@update')->middleware('logado');
+Route::post('painel/unidades/deletar/{id}', 'Dashboard\Unidades\EditarUnidadesController@destroy')->middleware('logado');
 
 # API
 Route::get('/api/investimentos/{id}', 'Dashboard\Investimentos\ApiInvestimentosController@investimentosRealizados')->middleware('logado');
