@@ -329,7 +329,7 @@
                                 </a>
                                 <ul class="submenu submenu-left">
                                     <li>
-                                        <a href="/painel/sistemas/webpublico"><i class="far fa-window-maximize"></i>Webpublico</a>
+                                        <a href="/painel/sistemas/webpublico"><i class="far fa-window-maximize"></i>RBWeb</a>
                                     </li>
                                 </ul>
                             </li>
