@@ -326,6 +326,14 @@ Route::get('painel/unidades/editar/{id}', 'Dashboard\Unidades\EditarUnidadesCont
 Route::post('painel/unidades/alterar', 'Dashboard\Unidades\EditarUnidadesController@update')->middleware('logado');
 Route::post('painel/unidades/deletar/{id}', 'Dashboard\Unidades\EditarUnidadesController@destroy')->middleware('logado');
 
+#Reunião
+Route::get('painel/reuniao', 'Dashboard\Reuniao\ListarReuniaoController@index')->middleware('logado');
+Route::get('painel/reuniao/cadastro', 'Dashboard\Reuniao\CadastrarReuniaoController@create')->middleware('logado');
+Route::post('painel/reuniao/salvar', 'Dashboard\Reuniao\CadastrarReuniaoController@store')->middleware('logado');
+Route::get('painel/reuniao/editar/{id}', 'Dashboard\Reuniao\EditarReuniaoController@edit')->middleware('logado');
+Route::post('painel/reuniao/alterar', 'Dashboard\Reuniao\EditarReuniaoController@update')->middleware('logado');
+Route::post('painel/reuniao/deletar/{id}', 'Dashboard\Reuniao\EditarReuniaoController@destroy')->middleware('logado');
+
 # API
 Route::get('/api/investimentos/{id}', 'Dashboard\Investimentos\ApiInvestimentosController@investimentosRealizados')->middleware('logado');
 Route::get('/api/mapa/geral/{id}', 'Dashboard\Mapas\ApiMapasController@infoMapaGeral')->middleware('logado');
