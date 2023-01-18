@@ -13,7 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-
+        Schema::create('sistemas', function (Blueprint $table) {
+            $table->id();
+            $table->string('nome_sistema');
+            $table->tinyInteger('ocultar')->default(0);
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,9 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::create('sistema', function (Blueprint $table) {
-            $table->id();
-            $table->string('nome_sistema');
-        });
+        Schema::dropIfExists('sistemas');
     }
 };

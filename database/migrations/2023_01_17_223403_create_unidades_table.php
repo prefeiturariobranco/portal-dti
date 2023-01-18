@@ -13,16 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('reuniao', function (Blueprint $table) {
+        Schema::create('unidades', function (Blueprint $table) {
             $table->id();
-            $table->string('participantes');
-            $table->string('solicitacao');
-            $table->string('providencias')->nullable();
+            $table->string('nome_unidade');
+            $table->tinyInteger('ocultar')->default(0);
             $table->timestamps();
-
-            $table->foreign('sistema_id')->references('id')->on('sistema');
-            $table->foreign('usuarios_id')->references('id')->on('usuarios');
-            $table->foreign('unidades_id')->references('id')->on('unidades');
         });
     }
 
@@ -33,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('unidades');
     }
 };
