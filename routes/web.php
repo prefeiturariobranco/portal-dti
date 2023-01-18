@@ -310,6 +310,14 @@ Route::post('painel/mapas/salvar', 'Dashboard\Mapas\CadastrarController@store')-
 Route::post('painel/mapas/alterar', 'Dashboard\Mapas\EditarController@update')->middleware('logado')->name('alt.maps');
 Route::get('painel/mapas/editar/{id}', 'Dashboard\Mapas\EditarController@edit')->middleware('logado')->name('editar.maps');
 
+#Sistemas
+Route::get('painel/sistemas', 'Dashboard\Sistemas\ListarSistemasController@index')->middleware('logado');
+Route::get('painel/sistemas/cadastro', 'Dashboard\Sistemas\CadastrarSistemasController@create')->middleware('logado');
+Route::post('painel/sistemas/salvar', 'Dashboard\Sistemas\CadastrarSistemasController@store')->middleware('logado');
+Route::get('painel/sistemas/editar/{id}', 'Dashboard\Sistemas\EditarSistemasController@edit')->middleware('logado');
+Route::post('painel/sistemas/alterar', 'Dashboard\Sistemas\EditarSistemasController@update')->middleware('logado');
+Route::post('painel/sistemas/deletar', 'Dashboard\Sistemas\EditarSistemasController@destroy')->middleware('logado');
+
 # API
 Route::get('/api/investimentos/{id}', 'Dashboard\Investimentos\ApiInvestimentosController@investimentosRealizados')->middleware('logado');
 Route::get('/api/mapa/geral/{id}', 'Dashboard\Mapas\ApiMapasController@infoMapaGeral')->middleware('logado');
