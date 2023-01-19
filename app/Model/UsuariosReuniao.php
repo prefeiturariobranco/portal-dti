@@ -9,6 +9,7 @@ class UsuariosReuniao extends Model implements Auditable
 {
     use \OwenIt\Auditing\Auditable;
 
+    protected $table = 'usuarios_reuniao';
     protected $fillable = [
         'reuniao_id',
         'usuario_id',

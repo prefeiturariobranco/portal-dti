@@ -8,7 +8,7 @@ use OwenIt\Auditing\Contracts\Auditable;
 class Sistemas extends Model implements Auditable
 {
     use \OwenIt\Auditing\Auditable;
-    protected $table = 'sistema';
+    protected $table = 'sistemas';
     protected $fillable = [
         'nome_sistema',
         'ocultar'
