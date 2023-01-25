@@ -16,7 +16,6 @@ class ReuniaoTableSeeder extends Seeder
     public function run()
     {
         Reuniao::create([
-            'participantes' => 'João',
             'solicitacao' => '',
             'providencias' => '',
             'sistema_id' => 1,

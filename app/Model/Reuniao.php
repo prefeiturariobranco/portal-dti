@@ -26,4 +26,8 @@ class Reuniao extends Model implements Auditable
     {
         return $this->belongsTo(Unidades::class, 'unidade_id', 'id');
     }
+
+    public function participantes(){
+        return $this->hasMany(Participante::class, 'reuniao_id', 'id');
+    }
 }
