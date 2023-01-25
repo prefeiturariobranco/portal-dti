@@ -22,6 +22,6 @@ class UsuariosReuniao extends Model implements Auditable
 
     public function usuario()
     {
-        return $this->belongsTo(Usuarios::class, 'reuniao_id', 'id');
+        return $this->belongsTo(Usuarios::class, 'usuario_id', 'id');
     }
 }
