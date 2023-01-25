@@ -334,6 +334,9 @@ Route::get('painel/reuniao/editar/{id}', 'Dashboard\Reuniao\EditarReuniaoControl
 Route::post('painel/reuniao/alterar', 'Dashboard\Reuniao\EditarReuniaoController@update')->middleware('logado');
 Route::post('painel/reuniao/deletar/{id}', 'Dashboard\Reuniao\EditarReuniaoController@destroy')->middleware('logado');
 
+#PDF
+Route::get('painel/reuniao/{id}', 'Dashboard\Reuniao\PDFController@pdf')->middleware('logado');
+
 # API
 Route::get('/api/investimentos/{id}', 'Dashboard\Investimentos\ApiInvestimentosController@investimentosRealizados')->middleware('logado');
 Route::get('/api/mapa/geral/{id}', 'Dashboard\Mapas\ApiMapasController@infoMapaGeral')->middleware('logado');
