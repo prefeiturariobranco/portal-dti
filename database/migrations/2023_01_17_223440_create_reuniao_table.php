@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('reuniao', function (Blueprint $table) {
             $table->id();
             $table->string('participantes');
-            $table->string('solicitacao');
-            $table->string('providencias');
+            $table->text('solicitacao');
+            $table->text('providencias');
             $table->unsignedBigInteger('sistema_id');
             $table->unsignedBigInteger('unidade_id');
             $table->timestamps();

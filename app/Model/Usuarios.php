@@ -29,9 +29,4 @@ class Usuarios extends Authenticatable
     {
         return $this->belongsTo(Cargos::class, 'cargos_id', 'id');
     }
-
-    public function reuniao()
-    {
-        return $this->hasMany(Usuarios::class, 'usuario_id', 'id');
-    }
 }

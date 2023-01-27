@@ -17,11 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('nome_participante');
             $table->unsignedBigInteger('tipo_participante_id');
-            $table->unsignedBigInteger('reuniao_id');
             $table->timestamps();
 
             $table->foreign('tipo_participante_id')->references('id')->on('tipo_participantes');
-            $table->foreign('reuniao_id')->references('id')->on('reuniao');
         });
     }
 

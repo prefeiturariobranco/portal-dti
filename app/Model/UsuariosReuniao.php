@@ -12,7 +12,7 @@ class UsuariosReuniao extends Model implements Auditable
     protected $table = 'usuarios_reuniao';
     protected $fillable = [
         'reuniao_id',
-        'usuario_id',
+        'participante_id',
     ];
 
     public function reuniao()
@@ -20,8 +20,8 @@ class UsuariosReuniao extends Model implements Auditable
         return $this->belongsTo(Reuniao::class, 'reuniao_id', 'id');
     }
 
-    public function usuario()
+    public function participante()
     {
-        return $this->belongsTo(Usuarios::class, 'usuario_id', 'id');
+        return $this->belongsTo(Participante::class, 'participante_id', 'id');
     }
 }

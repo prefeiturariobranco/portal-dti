@@ -1,7 +1,9 @@
 <?php
 
+use Database\Seeders\ParticipantesTableSeeder;
 use Database\Seeders\ReuniaoTableSeeder;
 use Database\Seeders\SistemasTableSeeder;
+use Database\Seeders\TipoParticipantesTableSeeder;
 use Database\Seeders\UnidadesTableSeeder;
 use Database\Seeders\UsuariosReuniaoTableSeeder;
 use Illuminate\Database\Seeder;
@@ -45,6 +47,8 @@ class DatabaseSeeder extends Seeder
         $this->call(UnidadesTableSeeder::class);
         $this->call(SistemasTableSeeder::class);
         $this->call(ReuniaoTableSeeder::class);
+        $this->call(TipoParticipantesTableSeeder::class);
+        $this->call(ParticipantesTableSeeder::class);
         $this->call(UsuariosReuniaoTableSeeder::class);
     }
 }

@@ -13,8 +13,9 @@ class PDFController extends Controller
     public function pdf($id)
     {
         $reuniao = Reuniao::findOrFail($id);
-        $participantes = Participante::where('reuniao_id', $id)->get();
+//        $participantes = Participante::where('tipo_participante_id', $id)->get();
         $usuarios = UsuariosReuniao::where('reuniao_id', $id)->get();
+//        dd($usuarios);
         $pdf = PDF::setOptions(['isHtml5ParserEnabled' => true, 'enable_remote' => true,
             'ssl' => [
                 "verify_peer"=>false,
@@ -23,7 +24,7 @@ class PDFController extends Controller
             'chroot' => public_path()
         ])
             ->setPaper('a4')
-            ->loadView('painel.pdf',  compact('reuniao', 'usuarios', 'participantes'));
+            ->loadView('painel.pdf',  compact('reuniao', 'usuarios'));
         return $pdf->stream();
     }
 }

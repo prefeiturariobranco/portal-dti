@@ -17,12 +17,12 @@ class UsuariosReuniaoTableSeeder extends Seeder
     {
         UsuariosReuniao::create([
             'reuniao_id' => 1,
-            'usuario_id' => 1,
+            'participante_id' => 1,
         ]);
 
         UsuariosReuniao::create([
             'reuniao_id' => 1,
-            'usuario_id' => 2,
+            'participante_id' => 2,
         ]);
     }
 }
