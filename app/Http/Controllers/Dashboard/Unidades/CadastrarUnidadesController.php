@@ -11,7 +11,8 @@ class CadastrarUnidadesController extends Controller
 {
     public function create()
     {
-        return view('');
+        $Unidades  = Unidades::all();
+        return view('painel.unidades.cadastro',compact('Unidades'));
     }
 
     public function store(Request $request)

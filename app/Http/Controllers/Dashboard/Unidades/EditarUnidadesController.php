@@ -11,7 +11,7 @@ class EditarUnidadesController extends Controller
 {
     public function edit($id)
     {
-        return view('', [
+        return view('painel.unidades.editar', [
             'unidade' => Unidades::where('id', $id)->first()
         ]);
     }
