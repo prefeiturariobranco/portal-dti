@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Dashboard\Reuniao;
 
 use App\Http\Controllers\Controller;
 use App\Model\Reuniao;
+use App\Model\Unidades;
+use App\Model\Usuarios;
 use App\Model\UsuariosReuniao;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -12,7 +14,9 @@ class CadastrarReuniaoController extends Controller
 {
     public function create()
     {
-        return view('');
+        $usuarios  = Usuarios::all();
+        $unidades = Unidades::all();
+        return view('painel.Reuniao.cadastro',compact('unidades','usuarios'));
     }
 
     public function store(Request $request)
