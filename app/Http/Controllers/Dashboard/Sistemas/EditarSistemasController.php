@@ -59,7 +59,8 @@ class EditarSistemasController extends Controller
      */
     public function edit($id)
     {
-        return view('', [
+
+        return view('painel.sistemas.editar', [
             'sistema' => Sistemas::where('id', $id)->first()
         ]);
     }
@@ -71,7 +72,7 @@ class EditarSistemasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $sistema = Sistemas::where('id', $request->post('sistema_id'))->update([
             'nome_sistema' => $request->post('nome_sistema')
@@ -86,7 +87,7 @@ class EditarSistemasController extends Controller
         }
 
         Session::flash('erro_msg', $resultado);
-        return redirect('');
+        return redirect('painel/sistemas');
     }
 
     /**
@@ -110,6 +111,6 @@ class EditarSistemasController extends Controller
         }
 
         Session::flash('erro_msg', $resultado);
-        return redirect('');
+        return redirect('/painel/sistemas');
     }
 }

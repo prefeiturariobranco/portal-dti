@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard\Sistemas;
 
 use App\Http\Controllers\Controller;
 use App\Model\Sistemas;
+use App\Model\Unidades;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -26,15 +27,10 @@ class CadastrarSistemasController extends Controller
      */
     public function create()
     {
-        return view('');
+        $Sistemas = Sistemas::all();
+        return view('painel.sistemas.cadastro',compact('Sistemas'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $sistemas = Sistemas::create([
@@ -51,7 +47,7 @@ class CadastrarSistemasController extends Controller
         }
 
         Session::flash('erro_msg', $resultado);
-        return redirect('');
+        return redirect('painel/sistemas');
     }
 
     /**
