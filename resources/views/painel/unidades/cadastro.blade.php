@@ -28,7 +28,7 @@
                         <input class="form-control col-4" name="nome_unidade" type="text" required>
                         <br>
                         <input class="btn btn-primary" type="submit" value="Salvar">
-                        <a class="btn btn-danger" href="/painel/secretarias/">Voltar</a>
+                        <a class="btn btn-danger" href="/painel/unidades">Voltar</a>
                     </form>
                 </div>
             </div>

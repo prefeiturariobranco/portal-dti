@@ -9,27 +9,30 @@
 
                 <div class="card-body">
                     <div class="card-title">
-                        Cadastrar Unidade
+                        Alterar Unidade
                     </div>
                     <hr>
-                    <form action="/painel/unidades/salvar" method="POST" enctype="multipart/form-data">
+                    <form action="/painel/unidades/alterar" method="post">
                         @csrf
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-
+                        <input type="hidden" name="unidade_id" value="{{$unidade->id}}">
                         <label class="py-4 col-form-label">Unidades:</label>
-                        <input class="form-control col-4" name="nome" type="text" maxlength="255" required>
-
+                        <input type="text" name="nome_unidade" class="form-control" value="{{ $unidade -> nome_unidade }}">
+                        <span class="system_error text-danger">{{$errors->first('nome_unidade')}}</span>
                         <br>
-                        <input class="btn btn-primary" type="submit" value="Salvar">
-                        <a class="btn btn-danger" href="/painel/unidades/">Voltar</a>
+                        <div class="row">
+                            <div class="col-4">
+                                <label>Status:</label>
+                                <select name="ocultar" class="form-control">
+                                    <option value="0">Ativar</option>
+                                    <option value="1">Inativar</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <input class="btn btn-primary" type="submit" value="Alterar">
+                            <a class="btn btn-danger" href="/painel/unidades">Voltar</a>
+                        </div>
                     </form>
                 </div>
             </div>

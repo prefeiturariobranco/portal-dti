@@ -39,7 +39,7 @@
                                     <thead>
                                     <tr>
                                         <th>Data</th>
-                                        <th>Nome da unidade</th>
+{{--                                        <th>Nome da unidade</th>--}}
                                         <th>Ações</th>
                                     </tr>
                                     </thead>
@@ -47,12 +47,18 @@
                                         @foreach( $Unidades as $Unidade)
                                             <tr>
                                                 <td class="text-left">{{$Unidade->nome_unidade}}</td>
+{{--                                                <td class="text-left">{{$Unidade->}}--}}
                                                 <td>
                                                     <a href="/painel/unidades/editar/{{$Unidade->id}}">
                                                         <button class="btn-sm btn-primary">
                                                             <i class="fas fa-pen-alt"></i>
                                                         </button>
                                                     </a>
+{{--                                                    <a href="/painel/unidades/deletar/{{$Unidade->id}}">--}}
+{{--                                                        <button class="btn-sm btn-primary">--}}
+{{--                                                            <i class="far fa-trash-alt"></i>--}}
+{{--                                                        </button>--}}
+{{--                                                    </a>--}}
                                                 </td>
                                             </tr>
                                         @endforeach

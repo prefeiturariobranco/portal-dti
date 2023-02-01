@@ -31,7 +31,7 @@ class EditarUnidadesController extends Controller
         }
 
         Session::flash('erro_msg', $resultado);
-        return redirect('');
+        return redirect('/painel/unidades');
     }
 
     public function destroy($id)
@@ -49,6 +49,6 @@ class EditarUnidadesController extends Controller
         }
 
         Session::flash('erro_msg', $resultado);
-        return redirect('');
+        return redirect('/painel/unidades');
     }
 }

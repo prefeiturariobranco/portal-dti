@@ -31,6 +31,6 @@ class CadastrarUnidadesController extends Controller
         }
 
         Session::flash('erro_msg', $resultado);
-        return redirect('');
+        return redirect('painel/unidades');
     }
 }
