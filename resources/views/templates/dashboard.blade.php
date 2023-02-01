@@ -192,6 +192,13 @@
                     </li>
 
                     <li>
+                        <a href="/painel/reuniao" class="waves-effect">
+                            <i class="fas fa-hands-helping"></i>
+                            <span>Reuniões</span>
+                        </a>
+                    </li>
+
+                    <li>
                         <a href="javascript:void(0);" class="waves-effect">
                             <i class="fas fa-cog"></i>
                             <span>Configurações
@@ -375,12 +382,20 @@
                                     <span>Aplicativos</span>
                                 </a>
                             </li>
-
+                            <li>
+                                <a href="/painel/sistemas/" class="waves-effect">
+                                    <i class="fas fa-keyboard"></i>
+                                    <span>Sistemas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/painel/unidades/" class="waves-effect">
+                                    <i class="fas fa-square"></i>
+                                    <span>Unidades</span>
+                                </a>
+                            </li>
 
                             </li>
-                            <!-- Fim infra -->
-
-
                         </ul>
                     </li>
 
