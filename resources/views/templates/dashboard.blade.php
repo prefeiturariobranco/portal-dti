@@ -394,6 +394,12 @@
                                     <span>Unidades</span>
                                 </a>
                             </li>
+                            <li>
+                                <a href="/painel/participante" class="waves-effect">
+                                    <i class="fas fa-users"></i>
+                                    <span>Participantes</span>
+                                </a>
+                            </li>
 
                             </li>
                         </ul>
