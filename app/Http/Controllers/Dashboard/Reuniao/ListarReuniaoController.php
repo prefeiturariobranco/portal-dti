@@ -13,6 +13,6 @@ class ListarReuniaoController extends Controller
     public function index()
     {
         $reunioes = Reuniao::all();
-        return view('painel.Reuniao.lista',compact('reunioes'));
+        return view('painel.reuniao.lista',compact('reunioes'));
     }
 }

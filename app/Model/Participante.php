@@ -17,9 +17,7 @@ class Participante extends Model
     public function tipo(){
         return $this->belongsTo(Tipo_participante::class, 'tipo_participante_id', 'id');
     }
-
-    public function reuniao()
-    {
-        return $this->hasMany(Participante::class, 'participante_id', 'id');
+    public function usuarios(){
+        return $this->hasMany(UsuariosReuniao::class, 'participante_id', 'id');
     }
 }

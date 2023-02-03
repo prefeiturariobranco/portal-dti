@@ -329,10 +329,16 @@ Route::post('painel/unidades/deletar/{id}', 'Dashboard\Unidades\EditarUnidadesCo
 #Reunião
 Route::get('painel/reuniao', 'Dashboard\Reuniao\ListarReuniaoController@index')->middleware('logado');
 Route::get('painel/reuniao/cadastro', 'Dashboard\Reuniao\CadastrarReuniaoController@create')->middleware('logado');
-Route::post('painel/reuniao/salvar', 'Dashboard\Reuniao\CadastrarReuniaoController@store')->middleware('logado');
 Route::get('painel/reuniao/editar/{id}', 'Dashboard\Reuniao\EditarReuniaoController@edit')->middleware('logado');
+Route::post('painel/reuniao/salvar', 'Dashboard\Reuniao\CadastrarReuniaoController@store')->middleware('logado');
 Route::post('painel/reuniao/alterar', 'Dashboard\Reuniao\EditarReuniaoController@update')->middleware('logado');
-Route::post('painel/reuniao/deletar/{id}', 'Dashboard\Reuniao\EditarReuniaoController@destroy')->middleware('logado');
+
+#Participantes Reunião
+Route::get('painel/participantes/reuniao/{id}', 'Dashboard\Reuniao\ParticipanteController@participantes')->middleware('logado');
+Route::get('painel/adicionar/participante', 'Dashboard\Reuniao\ParticipanteController@adicionar')->middleware('logado');
+Route::get('painel/participantes/reuniao/deletar/{id}', 'Dashboard\Reuniao\ParticipanteController@destroy')->middleware('logado');
+Route::get('painel/participante/{id}', 'Dashboard\Reuniao\ParticipanteController@create')->middleware('logado');
+Route::post('painel/participante/salvar/{id}', 'Dashboard\Reuniao\ParticipanteController@store')->middleware('logado');
 
 #PDF
 Route::get('painel/reuniao/{id}', 'Dashboard\Reuniao\PDFController@pdf')->middleware('logado');
