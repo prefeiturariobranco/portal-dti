@@ -13,9 +13,7 @@ class PDFController extends Controller
     public function pdf($id)
     {
         $reuniao = Reuniao::findOrFail($id);
-//        $participantes = Participante::where('tipo_participante_id', $id)->get();
         $usuarios = UsuariosReuniao::where('reuniao_id', $id)->get();
-//        dd($usuarios);
         $pdf = PDF::setOptions(['isHtml5ParserEnabled' => true, 'enable_remote' => true,
             'ssl' => [
                 "verify_peer"=>false,

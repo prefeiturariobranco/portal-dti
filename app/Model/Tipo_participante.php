@@ -12,9 +12,4 @@ class Tipo_participante extends Model
     protected $fillable = [
         'tipo_participante'
     ];
-
-    public function participante()
-    {
-        return $this->belongsTo(Participante::class, 'tipo_particpante_id', 'id');
-    }
 }
