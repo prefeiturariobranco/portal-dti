@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Dashboard\Participantes;
 
 use App\Http\Controllers\Controller;
 use App\Model\Participante;
-use App\Model\Reuniao;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -12,8 +11,7 @@ class CadastrarParticipantesController extends Controller
 {
     public function create()
     {
-        $Participantes  = Participante::all();
-        return view('painel.participantes.lista', compact('Participantes'));
+        return view('painel.participantes.cadastro');
     }
 
     public function store(Request $request)

@@ -17,7 +17,7 @@
                         <input class="form-control col-4" name="nome_participante" type="text" maxlength="255" required>
                         <br>
                         <input class="btn btn-primary" type="submit" value="Salvar">
-                        <a class="btn btn-danger" href="painel/participante">Voltar</a>
+                        <a class="btn btn-danger" href="/painel/participante">Voltar</a>
                     </form>
                 </div>
             </div>
