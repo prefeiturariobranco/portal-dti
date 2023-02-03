@@ -11,8 +11,7 @@ class CadastrarParticipantesController extends Controller
 {
     public function create()
     {
-        $Participantes  = Participante::all();
-        return view('painel.participantes.lista', compact('Participantes'));
+        return view('painel.participantes.cadastro');
     }
 
     public function store(Request $request)

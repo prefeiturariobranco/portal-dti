@@ -27,7 +27,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-success" href="/painel/participante/cadastro">Cadastrar</a>
+                            <a class="btn btn-success" href="/painel/participantes/cadastro">Cadastrar</a>
                         </div>
                     </div>
                     <br>
