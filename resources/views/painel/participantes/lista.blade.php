@@ -38,7 +38,6 @@
                                     <thead>
                                     <tr>
                                         <th>Nome</th>
-                                        <th>Sigla</th>
                                         <th>Ações</th>
                                     </tr>
                                     </thead>

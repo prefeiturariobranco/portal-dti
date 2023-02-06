@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Dashboard\Participantes;
 
 use App\Http\Controllers\Controller;
 use App\Model\Participante;
-use App\Model\Reuniao;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -24,11 +23,11 @@ class CadastrarParticipantesController extends Controller
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = "Unidade cadastrada com sucesso!";
+        $resultado['msg'] = "Participante cadastrado com sucesso!";
 
         if (!$participantes) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha ao cadastrar unidade";
+            $resultado['msg'] = "Falha ao cadastrar participante";
         }
 
         Session::flash('erro_msg', $resultado);
