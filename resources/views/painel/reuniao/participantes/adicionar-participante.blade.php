@@ -11,8 +11,10 @@
                         Adicionar Participante
                     </div>
                     <hr>
-                    <form action="/painel/participante/salvar/{{$reuniao->id}}" method="post" enctype="multipart/form-data">
+                    <form action="/painel/participante/salvar/{{$reuniao->id}}" method="post"
+                          enctype="multipart/form-data">
                         @csrf
+                        <input type="hidden" name="reuniao_id" value="{{$reuniao->id}}">
                         <div class="row">
                             <div class="col-md-4">
                                 <label class="py-4 col-form-label">Participante:</label>

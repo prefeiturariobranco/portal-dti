@@ -19,8 +19,8 @@ class AdicionarParticipanteFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'reuniao_id' => 'unique:usuarios_reuniao,NULL,id,participante_id',
-            'participante_id' => 'unique:usuarios_reuniao,participante_id,NULL,id,reuniao_id',
+            'reuniao_id' => 'unique:usuarios_reuniao,reuniao_id,'.null.',id,participante_id,'.$this->request->get('participante_id'),
+            'participante_id' => 'unique:usuarios_reuniao,participante_id,'.null.',id,reuniao_id,'.$this->request->get('reuniao'),
         ];
     }
 

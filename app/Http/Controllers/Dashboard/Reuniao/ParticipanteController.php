@@ -51,7 +51,7 @@ class ParticipanteController extends Controller
     public function store(AdicionarParticipanteFormRequest $request, $id)
     {
         $reuniao = Reuniao::findOrFail($id);
-        $participante = DB::table('usuarios_reuniao')->insert([
+        $participante = UsuariosReuniao::create([
             'reuniao_id' => $reuniao->id,
             'participante_id' => $request->post('participante_id'),
         ]);
