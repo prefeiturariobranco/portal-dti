@@ -1,35 +1,25 @@
 @extends('templates.dashboard')
 @section('titulo')
-    Participante
+    Participantes
 @endsection
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="card">
-
                 <div class="card-body">
                     <div class="card-title">
-                        Editar Participante
+                        Editar cadastro de participante
                     </div>
                     <hr>
-                    <form action="/painel/participante/alterar" method="POST" enctype="multipart/form-data">
+                    <form action="/painel/participante/alterar" method="post">
                         @csrf
-                        <input type="hidden" name="participante_id" class="form-control" value="{{ $Participantes->id }}">
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                        <label class="py-4 col-form-label">Digite o nome do participante:</label>
-                        <input class="form-control col-4" name="nome_participante" type="text" value="{{ $Participantes->nome_participante }}"
-                               maxlength="255" required>
+                        <input type="hidden" name="participante_id" value="{{$participante->id}}">
+                        <label class="py-4 col-form-label">Nome do sistema:</label>
+                        <input type="text" name="nome_participante" class="form-control" value="{{ $participante -> nome_participante}}">
+                        <span class="system_error text-danger">{{$errors->first('nome_participante')}}</span>
                         <br>
-                        <input class="btn btn-primary" type="submit" value="Alterar">
-                        <a class="btn btn-danger" href="painel/participante">Voltar</a>
+                            <input class="btn btn-primary" type="submit" value="Alterar">
+                            <a class="btn btn-danger" href="/painel/participante">Voltar</a>
                     </form>
                 </div>
             </div>

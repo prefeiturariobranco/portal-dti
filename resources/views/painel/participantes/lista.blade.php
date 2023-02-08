@@ -40,7 +40,7 @@
                                         <th>Nome</th>
                                         <th>Ações</th>
                                     </tr>
-                                    </thead>
+                                     </thead>
                                     <tbody>
                                     @foreach( $Participantes as $participante)
                                         <tr>
