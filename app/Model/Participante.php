@@ -11,7 +11,7 @@ class Participante extends Model
 
     protected $fillable = [
         'nome_participante',
-        'tipo_participante_id',
+        'tipo_participante_id'
     ];
 
     public function tipo(){

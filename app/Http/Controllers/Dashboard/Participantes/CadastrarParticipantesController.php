@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard\Participantes;
 
 use App\Http\Controllers\Controller;
 use App\Model\Participante;
+use App\Model\Tipo_participante;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -11,25 +12,28 @@ class CadastrarParticipantesController extends Controller
 {
     public function create()
     {
-        return view('painel.participantes.cadastro');
+        $tipo_participantes = Tipo_participante::all();
+        return view('painel.participantes.cadastro', compact('tipo_participantes'));
     }
 
     public function store(Request $request)
     {
-        $participantes = Participante::create([
+        $Participante = Participante::create([
             'nome_participante' => $request->post('nome_participante'),
-            'ocultar' => 0
+            'tipo_participante_id'=> 1
         ]);
 
         $resultado['error'] = 1;
-        $resultado['msg'] = "Unidade cadastrada com sucesso!";
+        $resultado['msg'] = 'Participante cadastrada com sucesso!';
 
-        if (!$participantes) {
+        if (!$Participante) {
             $resultado['error'] = 2;
-            $resultado['msg'] = "Falha ao cadastrar unidade";
+            $resultado['msg'] = 'Falha ao cadastrar participante';
         }
 
+        $Participante->save();
+
         Session::flash('erro_msg', $resultado);
-        return redirect('painel.participantes');
+        return redirect('/painel/participante');
     }
 }

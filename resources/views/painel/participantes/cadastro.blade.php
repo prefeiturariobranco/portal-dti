@@ -8,13 +8,31 @@
             <div class="card">
                 <div class="card-body">
                     <div class="card-title">
-                        Cadastrar Participantes
+                        Cadastrar Participante
                     </div>
                     <hr>
-                    <form action="painel/participante/salvar" method="POST" enctype="multipart/form-data">
+                    <form action="/painel/participantes/salvar" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <label class="py-4 col-form-label">Digite o nome do participante:</label>
-                        <input class="form-control col-4" name="nome_participante" type="text" maxlength="255" required>
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
+                        <label class="py-4 col-form-label">Nome do Participante:</label>
+                        <input class="form-control col-4" name="nome_participante" type="text" required>
+
+                        <label class="py-4 col-form-label">Tipo de participante:</label>
+
+                        <select name="tipo_participante_option" class="form-control col-4">
+                            @foreach($tipo_participantes as $tipo_participante)
+                                <option value="{{$tipo_participante->tipo_participante}}">{{$tipo_participante->tipo_participante}}</option>
+                            @endforeach
+                        </select>
                         <br>
                         <input class="btn btn-primary" type="submit" value="Salvar">
                         <a class="btn btn-danger" href="/painel/participante">Voltar</a>
