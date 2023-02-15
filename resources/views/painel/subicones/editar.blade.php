@@ -20,12 +20,9 @@
                             <div class="col-md-4">
                                 <label>Selecione o ícone:</label>
                                 <select name="icones_id" class="form-control" autocomplete="on">
-                                    <option value="{{ $subIcone->icones_id }}"
-                                            selected>{{ $subIcone->icones_id }}</option>
+                                    <option value="{{ $subIcone->icones_id }}" selected>Selecionar categoria</option>
                                     @foreach($icones as $icone)
-                                        <option value="{{ $icone->id }}">
-                                            {{ $icone->nome }}
-                                        </option>
+                                        <option value="{{ $icone->id }}">{{ $icone->nome }}</option>
                                     @endforeach
                                 </select>
                                 <span class="system_error text-danger">{{$errors->first('icones_id')}}</span>
@@ -43,7 +40,7 @@
                             <div class="col-md-4">
                                 <label>Imagem:</label>
                                 <select class="form-control" name="caminho">
-                                    <option value="{{ $subIcone->caminho }}" selected>{{ $subIcone->nome }}</option>
+                                    <option value="{{$icone->caminho}}" selected>Selecionar imagem</option>
                                     @foreach($imagens as $icones)
                                         <option value="{{$icones->caminho}}">{{$icones->nome}}</option>
                                     @endforeach
