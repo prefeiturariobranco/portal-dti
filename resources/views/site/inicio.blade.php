@@ -184,8 +184,6 @@
                     <a href="{{'/perguntas'}}"><h2>PERGUNTAS FREQUENTES</h2></a>
                 </div>
                 <?php $contarPerguntas = 1; ?>
-
-                <?php $contarPerguntas = 1; ?>
                 @foreach($perguntas as $pergunta)
                     <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
                         <li class="row">

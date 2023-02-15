@@ -193,6 +193,43 @@
 
                     <li>
                         <a href="javascript:void(0);" class="waves-effect">
+                            <i class="fas fa-hands-helping"></i>
+                            <span>Reuniões  <span class="float-right menu-arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                            </span>
+                        </a>
+
+                        <ul class="submenu submenu-left">
+                            <li>
+                                <a href="/painel/reuniao/" class="waves-effect">
+                                    <i class="fas fa-hands-helping"></i>
+                                    <span>Reuniões</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/painel/sistemas/" class="waves-effect">
+                                    <i class="fas fa-keyboard"></i>
+                                    <span>Sistemas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/painel/unidades/" class="waves-effect">
+                                    <i class="fas fa-square"></i>
+                                    <span>Unidades</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/painel/participante" class="waves-effect">
+                                    <i class="fas fa-users"></i>
+                                    <span>Participantes</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect">
                             <i class="fas fa-cog"></i>
                             <span>Configurações
                                     <span class="float-right menu-arrow">
@@ -329,7 +366,7 @@
                                 </a>
                                 <ul class="submenu submenu-left">
                                     <li>
-                                        <a href="/painel/sistemas/webpublico"><i class="far fa-window-maximize"></i>Webpublico</a>
+                                        <a href="/painel/sistemas/webpublico"><i class="far fa-window-maximize"></i>RBWeb</a>
                                     </li>
                                 </ul>
                             </li>
@@ -376,11 +413,7 @@
                                 </a>
                             </li>
 
-
                             </li>
-                            <!-- Fim infra -->
-
-
                         </ul>
                     </li>
 

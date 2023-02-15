@@ -310,6 +310,49 @@ Route::post('painel/mapas/salvar', 'Dashboard\Mapas\CadastrarController@store')-
 Route::post('painel/mapas/alterar', 'Dashboard\Mapas\EditarController@update')->middleware('logado')->name('alt.maps');
 Route::get('painel/mapas/editar/{id}', 'Dashboard\Mapas\EditarController@edit')->middleware('logado')->name('editar.maps');
 
+#Sistemas
+Route::get('painel/sistemas', 'Dashboard\Sistemas\ListarSistemasController@index')->middleware('logado');
+Route::get('painel/sistemas/cadastro', 'Dashboard\Sistemas\CadastrarSistemasController@create')->middleware('logado');
+Route::post('painel/sistemas/salvar', 'Dashboard\Sistemas\CadastrarSistemasController@store')->middleware('logado');
+Route::get('painel/sistemas/editar/{id}', 'Dashboard\Sistemas\EditarSistemasController@edit')->middleware('logado');
+Route::post('painel/sistemas/alterar', 'Dashboard\Sistemas\EditarSistemasController@update')->middleware('logado');
+Route::post('painel/sistemas/deletar/{id}', 'Dashboard\Sistemas\EditarSistemasController@destroy')->middleware('logado');
+
+#Unidades
+Route::get('painel/unidades', 'Dashboard\Unidades\ListarUnidadesController@index')->middleware('logado');
+Route::get('painel/unidades/cadastro', 'Dashboard\Unidades\CadastrarUnidadesController@create')->middleware('logado');
+Route::post('painel/unidades/salvar', 'Dashboard\Unidades\CadastrarUnidadesController@store')->middleware('logado');
+Route::get('painel/unidades/editar/{id}', 'Dashboard\Unidades\EditarUnidadesController@edit')->middleware('logado');
+Route::post('painel/unidades/alterar', 'Dashboard\Unidades\EditarUnidadesController@update')->middleware('logado');
+Route::post('painel/unidades/deletar/{id}', 'Dashboard\Unidades\EditarUnidadesController@destroy')->middleware('logado');
+
+#Reunião
+Route::get('painel/reuniao', 'Dashboard\Reuniao\ListarReuniaoController@index')->middleware('logado');
+Route::get('painel/reuniao/cadastro', 'Dashboard\Reuniao\CadastrarReuniaoController@create')->middleware('logado');
+Route::get('painel/reuniao/editar/{id}', 'Dashboard\Reuniao\EditarReuniaoController@edit')->middleware('logado');
+Route::post('painel/reuniao/salvar', 'Dashboard\Reuniao\CadastrarReuniaoController@store')->middleware('logado');
+Route::post('painel/reuniao/alterar', 'Dashboard\Reuniao\EditarReuniaoController@update')->middleware('logado');
+
+#Participantes Reunião
+Route::get('painel/participantes/reuniao/{id}', 'Dashboard\Reuniao\ParticipanteController@participantes')->middleware('logado');
+Route::get('painel/adicionar/participante', 'Dashboard\Reuniao\ParticipanteController@adicionar')->middleware('logado');
+Route::get('painel/participantes/reuniao/deletar/{id}', 'Dashboard\Reuniao\ParticipanteController@destroy')->middleware('logado');
+Route::get('painel/participante/{id}', 'Dashboard\Reuniao\ParticipanteController@create')->middleware('logado');
+Route::post('painel/participante/salvar/{id}', 'Dashboard\Reuniao\ParticipanteController@store')->middleware('logado');
+
+Route::get('painel/participantes/cadastro', 'Dashboard\Reuniao\ListarReuniaoController@index')->middleware('logado');
+
+#participantes
+Route::get('painel/participante', 'Dashboard\Participantes\ListarParticipantesController@index')->middleware('logado');
+Route::get('painel/participantes/cadastro', 'Dashboard\Participantes\CadastrarParticipantesController@create')->middleware('logado');
+Route::post('painel/participantes/salvar', 'Dashboard\Participantes\CadastrarParticipantesController@store')->middleware('logado');
+Route::get('painel/participante/editar/{id}', 'Dashboard\Participantes\EditarParticipantesController@edit')->middleware('logado');
+Route::post('painel/participante/alterar', 'Dashboard\Participantes\EditarParticipantesController@update')->middleware('logado');
+Route::post('painel/Participante/deletar/{id}', 'Dashboard\Participantes\EditarParticipantesController@destroy')->middleware('logado');
+
+#PDF
+Route::get('painel/reuniao/{id}', 'Dashboard\Reuniao\PDFController@pdf')->middleware('logado');
+
 # API
 Route::get('/api/investimentos/{id}', 'Dashboard\Investimentos\ApiInvestimentosController@investimentosRealizados')->middleware('logado');
 Route::get('/api/mapa/geral/{id}', 'Dashboard\Mapas\ApiMapasController@infoMapaGeral')->middleware('logado');

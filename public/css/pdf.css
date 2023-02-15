@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 2px;
+    margin-left: 10px;
+}
+
+.columns {
+    float: left;
+    width: 100%;
+    padding: 8px;
+    margin-top: -10px;
+}
+
+.column-ass {
+    height: 150px;
+    width: 50%;
+    float: left;
+    margin-left: 15px;
+}
+
+.font {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+

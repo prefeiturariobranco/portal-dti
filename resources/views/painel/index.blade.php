@@ -57,7 +57,7 @@
                         <div class="float-left mr-4">
                             <i class="fas fa-mouse-pointer fa-3x"></i>
                         </div>
-                        <h5 class="font-16 text-uppercase mt-0">Acessos Portal DTI</h5>
+                        <h5 class="font-16 text-uppercase mt-0">Acessos Portal</h5>
                         <h4 class="font-500">{{ $contadorSite }} <i class="mdi mdi-arrow-up text-success ml-2"></i></h4>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                         <div class="float-left mr-4">
                             <i class="fas fa-users fa-3x"></i>
                         </div>
-                        <h5 class="font-16 text-uppercase mt-0">Usuários Portal DTI</h5>
+                        <h5 class="font-16 text-uppercase mt-0">Usuários DTI</h5>
                         <h4 class="font-500">{{ $contadorUsuarios }} <i class="mdi mdi-arrow-up text-success ml-2"></i>
                         </h4>
                     </div>
@@ -252,7 +252,7 @@
             <div class="card">
                 <div class="card-body">
                     <div>
-                        <h3 class="mt-0  mb-4">Webpublico</h3>
+                        <h3 class="mt-0  mb-4">RBWeb</h3>
                     </div>
                     <div class="wid-peity mb-1">
                         <div class="row">

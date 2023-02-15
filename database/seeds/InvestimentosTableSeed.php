@@ -103,7 +103,7 @@ class InvestimentosTableSeed extends Seeder
         ]);
 
         Investimentos::create([
-            'nome' => 'Web Público',
+            'nome' => 'RBWeb',
             'valor' => 213869.00,
             'investimentos_categorias_id' => 1,
             'criado_por' => 1,

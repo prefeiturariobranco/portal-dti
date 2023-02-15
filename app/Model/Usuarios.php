@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use OwenIt\Auditing\Audit;
 
-class Usuarios extends Authenticatable
+class   Usuarios extends Authenticatable
 {
     //
     protected $table = "usuarios";
