@@ -20,7 +20,6 @@ class CadastrarParticipantesController extends Controller
     {
 //        dd($request->all());
 
-        $tipo_participante_id = Tipo_participante::all();
         $Participante = Participante::create([
             'nome_participante' => $request->post('nome_participante'),
             'tipo_participante_id'=> $request->tipo_participante_option

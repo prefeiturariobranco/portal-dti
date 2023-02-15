@@ -27,7 +27,7 @@
                         <input class="form-control col-4" name="nome_participante" type="text" required>
 
                         <label class="py-4 col-form-label">Tipo de participante:</label>
-                        <select name=" " class="form-control col-4">=
+                        <select name="tipo_participante_option" class="form-control col-4">=
                             @foreach($tipo_participantes as $tipo_participante)
                                 <option value="{{$tipo_participante->id}}">{{$tipo_participante->tipo_participante}}</option>
                             @endforeach

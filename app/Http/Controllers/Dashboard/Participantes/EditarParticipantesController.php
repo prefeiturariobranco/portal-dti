@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard\Participantes;
 
 use App\Http\Controllers\Controller;
 use App\Model\Participante;
+use App\Model\Tipo_participante;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -59,10 +60,10 @@ class EditarParticipantesController extends Controller
      */
     public function edit($id)
     {
-
+        $tipo_participantes = Tipo_participante::all();
         return view('painel.participantes.editar', [
             'participante' => Participante::where('id', $id)->first()
-        ]);
+        ], compact('tipo_participantes'));
     }
 
     /**
@@ -74,8 +75,10 @@ class EditarParticipantesController extends Controller
      */
     public function update(Request $request)
     {
+        $tipo_participante_id = Tipo_participante::all();
         $participante = Participante::where('id', $request->post('participante_id'))->update([
-            'nome_participante' => $request->post('nome_participante')
+            'nome_participante' => $request->post('nome_participante'),
+            'tipo_participante_id' => $request->tipo_participante_option
         ]);
 
         $resultado['error'] = 1;
