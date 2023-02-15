@@ -64,6 +64,11 @@
                                                         <i class="fas fa-user"></i>
                                                     </button>
                                                 </a>
+                                                <a href="/painel/reuniao/{{$reuniao->id}}">
+                                                    <button class="btn-sm btn-primary" title="Visualizar relatório">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                </a>
                                             </td>
                                         </tr>
                                     @endforeach
