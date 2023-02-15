@@ -25,7 +25,7 @@ class IconesEditFormRequest extends FormRequest
     {
         return [
             //
-            'icones_categorias_id' => 'required|numeric',
+//            'icones_categorias_id' => 'required|numeric',
             'caminho' => 'required|max:100',
             'link' => 'required|max:1024',
             'nome' => 'required|max:100',
