@@ -192,10 +192,40 @@
                     </li>
 
                     <li>
-                        <a href="/painel/reuniao" class="waves-effect">
+                        <a href="javascript:void(0);" class="waves-effect">
                             <i class="fas fa-hands-helping"></i>
-                            <span>Reuniões</span>
+                            <span>Reuniões  <span class="float-right menu-arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                            </span>
                         </a>
+
+                        <ul class="submenu submenu-left">
+                            <li>
+                                <a href="/painel/reuniao/" class="waves-effect">
+                                    <i class="fas fa-hands-helping"></i>
+                                    <span>Reuniões</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/painel/sistemas/" class="waves-effect">
+                                    <i class="fas fa-keyboard"></i>
+                                    <span>Sistemas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/painel/unidades/" class="waves-effect">
+                                    <i class="fas fa-square"></i>
+                                    <span>Unidades</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/painel/participante" class="waves-effect">
+                                    <i class="fas fa-users"></i>
+                                    <span>Participantes</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
 
                     <li>
@@ -380,24 +410,6 @@
                                 <a href="/painel/aplicativos" class="waves-effect">
                                     <i class="fas fa-archive"></i>
                                     <span>Aplicativos</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/painel/sistemas/" class="waves-effect">
-                                    <i class="fas fa-keyboard"></i>
-                                    <span>Sistemas</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/painel/unidades/" class="waves-effect">
-                                    <i class="fas fa-square"></i>
-                                    <span>Unidades</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/painel/participante" class="waves-effect">
-                                    <i class="fas fa-users"></i>
-                                    <span>Participantes</span>
                                 </a>
                             </li>
 
