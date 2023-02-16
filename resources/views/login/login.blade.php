@@ -9,7 +9,7 @@
             <img src="{{ asset('images/logos/logo2.png')  }}" class="img-tec mr-3" style="width: 20rem; margin-top: 1rem">
             <div class="row" style="align-items: center;">
                 <div class="col-md-6 dti-separador">
-                    <p style="line-height: 100%; margin-left: 0px">PORTAL DA <br> TECNOLOGIA</p>
+                    <p style="line-height: 100%; margin-left: 0px">PORTAL DE <br> TECNOLOGIA</p>
                     <cite>Essa área é exclusiva para os <br> setores e departamento de Tecnologia.</cite>
                 </div>
                 <div class="col-md-6 dti-login">
