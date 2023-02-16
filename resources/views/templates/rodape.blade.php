@@ -5,7 +5,7 @@
             <div class="row">
 
                 <div class="col-lg-4 col-md-4 footer-info">
-                    <h3>Portal DTI</h3>
+                    <h3>Portal de Tecnologia</h3>
                     <p>
                         R. Goldwasser Santos, 31, Térreo - Bosque <br>
                         Rio Branco - AC, 69900-631<br><br>

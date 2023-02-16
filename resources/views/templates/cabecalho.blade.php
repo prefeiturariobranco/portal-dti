@@ -1,7 +1,7 @@
 <section id="header">
     <div class="container d-flex">
 
-        <div class="mr-auto" style="margin-top: -10px">
+        <div class="mr-auto" style="margin-top: -36px">
             <a href={{'/'}}><img src="{{ URL::asset('images/logos/logo1.png') }}" width="150" alt="" class="img-fluid"></a>
             <a href={{url('http://riobranco.ac.gov.br/')}}><img src="{{ URL::asset('assets/img/Logo.png') }}" width="160" alt="" class="img-fluid" style="margin-left: 1rem"></a>
         </div>
