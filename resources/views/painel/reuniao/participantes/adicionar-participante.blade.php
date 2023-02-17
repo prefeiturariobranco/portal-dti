@@ -26,7 +26,9 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <span class="system_error text-danger">{{$errors->first('participante_id')}}</span>
+                                @error('reuniao_id')
+                                <span class="system_error text-danger">{{$message}}</span>
+                                @enderror
                             </div>
                         </div>
                         <br>

@@ -16,6 +16,7 @@ class AdicionarParticipanteFormRequest extends FormRequest
      *
      * @return array
      */
+
     public function rules()
     {
         return [
@@ -24,11 +25,11 @@ class AdicionarParticipanteFormRequest extends FormRequest
         ];
     }
 
-//    public function messages()
-//    {
-//        return [
-//            'participante_id.unique' => 'Participante já adicionado a reunião.',
-//            'reuniao_id.unique' => 'Participante já adicionado a reunião.',
-//        ];
-//    }
+    public function messages()
+    {
+        return [
+            'reuniao_id.unique' => 'Participante já adicionado a reunião.',
+            'participante_id.unique' => 'Participante já adicionado a reunião.',
+        ];
+    }
 }
