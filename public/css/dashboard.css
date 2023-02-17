@@ -2022,6 +2022,11 @@ mark {
   height: auto
 }
 
+.img-dashboard {
+    width: 8em;
+    margin-right: 3rem
+}
+
 .img-thumbnail {
   padding: .25rem;
   background-color: #fff;
@@ -32772,7 +32777,7 @@ dt {
   z-index: 1;
 }
 
-.topbar .topbar-left .logo {
+.topbar .topbar-left .logo .img-dashboard {
   line-height: 70px;
 }
 
@@ -36244,7 +36249,7 @@ Invoice
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) !important;
   }
 
-  .topbar-left {
+  .topbar-left .img-dashboard {
     display: none;
   }
 }
