@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard\Unidades;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Unidade\UnidadeFormRequest;
 use App\Model\Unidades;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -16,7 +17,7 @@ class EditarUnidadesController extends Controller
         ]);
     }
 
-    public function update(Request $request)
+    public function update(UnidadeFormRequest $request)
     {
         $unidade = Unidades::where('id', $request->post('unidade_id'))->update([
             'nome_unidade' => $request->post('nome_unidade')

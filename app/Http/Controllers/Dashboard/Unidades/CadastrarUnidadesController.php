@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard\Unidades;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Unidade\UnidadeFormRequest;
 use App\Model\Unidades;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -15,7 +16,7 @@ class CadastrarUnidadesController extends Controller
         return view('painel.unidades.cadastro',compact('Unidades'));
     }
 
-    public function store(Request $request)
+    public function store(UnidadeFormRequest $request)
     {
         $unidades = Unidades::create([
             'nome_unidade' => $request->post('nome_unidade'),
