@@ -24,14 +24,14 @@ class UnidadeFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome_unidade' => 'unique:unidades,nome_unidade,' . $this->request->get('id'),
+            'nome_unidade' => 'required|unique:unidades,nome_unidade,'.$this->request->get('id'),
         ];
     }
 
     public function messages()
     {
         return [
-//        'nome_unidade.required' => 'O campo nome da unidade é obrigatório.',
+            'nome_unidade.required' => 'O campo nome da unidade é obrigatório.',
             'nome_unidade.unique' => 'Unidade já cadastrada.',
         ];
     }
