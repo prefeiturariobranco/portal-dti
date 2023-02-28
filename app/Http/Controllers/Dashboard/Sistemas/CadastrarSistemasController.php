@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard\Sistemas;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Sistema\SistemaFormRequest;
 use App\Model\Sistemas;
 use App\Model\Unidades;
 use Illuminate\Http\Request;
@@ -31,7 +32,7 @@ class CadastrarSistemasController extends Controller
         return view('painel.sistemas.cadastro',compact('Sistemas'));
     }
 
-    public function store(Request $request)
+    public function store(SistemaFormRequest $request)
     {
         $sistemas = Sistemas::create([
             'nome_sistema' => $request->post('nome_sistema'),
