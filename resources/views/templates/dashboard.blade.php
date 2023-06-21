@@ -23,7 +23,7 @@
         <div class="topbar-left">
             <a href="/painel" class="logo">
                 <span>
-                        <img src="{{ asset('images/logos/logo3.png') }}"  class="img-dashboard">
+                        <img src="{{ asset('images/logos/logo3.png') }}" class="img-dashboard">
                 </span>
                 <i>
                     <img src="{{ asset('images/icon-brasao.png') }}" alt="" height="40">
@@ -412,10 +412,16 @@
                                     <span>Aplicativos</span>
                                 </a>
                             </li>
-
+                            <li>
+                                <a href="/painel/sistemasip" class="waves-effect">
+                                    <i class="fas fa-archive"></i>
+                                    <span>Sistemas Ip</span>
+                                </a>
                             </li>
                         </ul>
                     </li>
+                </ul>
+                </li>
 
                 </ul>
 

@@ -362,3 +362,10 @@ Route::get('/api/sistemas/chamados/ciclo', 'Dashboard\Sistemas\ApiSistemasContro
 Route::get('/api/infra/fibra', 'Dashboard\Infraestrutura\Fibra\ApiController@evolucaoMalhaFibra')->middleware('logado');
 Route::get('/api/infra/conexao/unidades', 'Dashboard\Infraestrutura\Fibra\ApiController@tipoConexaoUnidades')->middleware('logado');
 
+#cadastro de sistemas e ip
+Route::get('painel/sistemasip', 'Dashboard\sistemasip\ListarSistemasIpController@index')->middleware('logado');
+Route::get('painel/sistemasip/cadastro', 'Dashboard\sistemasip\CadastrarSistemasipController@create')->middleware('logado');
+Route::post('painel/sistemasip/salvar', 'Dashboard\sistemasip\CadastrarSistemasipController@store')->middleware('logado');
+Route::get('painel/sistemasip/editar/{id}', 'Dashboard\sistemasip\EditarSistemasIpController@edit')->middleware('logado');
+Route::post('painel/sistemasip/alterar', 'Dashboard\sistemasip\EditarSistemasIpController@update')->middleware('logado');
+//Route::post('painel/sistemasip/deletar/{id}', 'Dashboard\sistemasip\EditarSistemasIpController@destroy')->middleware('logado');
