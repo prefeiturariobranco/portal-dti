@@ -127,7 +127,6 @@
                     </button>
                 </li>
             </ul>
-
         </nav>
     </div>
     <!-- Top Bar End -->
@@ -342,12 +341,6 @@
                                     <span>Tutoriais</span>
                                 </a>
                             </li>
-                            {{--                                <li>--}}
-                            {{--                                    <a href="/painel/noticias">--}}
-                            {{--                                        <i class="fas fa-newspaper"></i>--}}
-                            {{--                                        <span>Novidades</span>--}}
-                            {{--                                    </a>--}}
-                            {{--                                </li>--}}
                             <li>
                                 <a href="/painel/investimentos" class="waves-effect">
                                     <i class="fas fa-file-invoice-dollar"></i>
@@ -370,7 +363,6 @@
                                     </li>
                                 </ul>
                             </li>
-
                             <!-- Infra -->
                             <li>
                                 <a href="javascript:void(0);" class="waves-effect">
@@ -421,10 +413,6 @@
                         </ul>
                     </li>
                 </ul>
-                </li>
-
-                </ul>
-
             </div>
             <!-- Sidebar END -->
         </div>
