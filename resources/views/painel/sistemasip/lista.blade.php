@@ -38,9 +38,10 @@
                                 <table id="tech-companies-1" class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th>Data</th>
+                                        <th>Nome do sistema</th>
                                         {{--                                        <th>Nome da unidade</th>--}}
-                                        <th>Ações</th>
+                                        <th>IP:</th>
+                                        <th>Ações:</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -49,7 +50,7 @@
                                             <td class="text-left">{{$SistemasIp->nome}}</td>
                                             <td class="text-left">{{$SistemasIp->ip}}
                                             <td>
-                                                <a href="/painel/sistemasip/editar/{$SistemasIp->id}}">
+                                                <a href="/painel/sistemasip/editar/{{$SistemasIp->id}}">
                                                     <button class="btn-sm btn-primary">
                                                         <i class="fas fa-pen-alt"></i>
                                                     </button>
@@ -58,7 +59,6 @@
                                             </td>
                                         </tr>
                                     @endforeach
-
                                     </tbody>
                                 </table>
                             </div>
