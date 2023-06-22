@@ -414,7 +414,7 @@
                             </li>
                             <li>
                                 <a href="/painel/sistemasip" class="waves-effect">
-                                    <i class="fas fa-archive"></i>
+                                    <i class="fas fa-tv"></i>
                                     <span>Sistemas Ip</span>
                                 </a>
                             </li>
