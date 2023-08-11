@@ -62,13 +62,14 @@
                         {{--                        </div>--}}
                         <div class="row" style="margin-bottom: 30px ">
                             @foreach($cat['icone'] as $icons)
+{{--                                @dd(('images/'.str_replace('public/', '', $icons['caminho'])))--}}
                                 <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0"
                                      style="padding: 10px; cursor: pointer"
                                      @if($icons['dinamico'] == 2) onclick="window.open('{{$icons['link']}}', '_blank')"
                                      @else onclick="window.location.assign('{{$icons['link']}}')" @endif>
                                     <div class="icon-box title">
                                         <div class="icon">
-                                            <img class="img-color" style="width: 40px" src="{{asset('storage/'.str_replace('public/', '', $icons['caminho']))}}"
+                                            <img class="img-color" style="width: 40px" src="{{asset($icons['caminho'])}}"
                                                  title="" alt=""/>
                                         </div>
                                         <h4 class="title-box">{{$icons['nome']}}</h4>
@@ -98,7 +99,8 @@
                             @if($contarTutorial <= 3)
                                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
                                     <div class="card img-tuto">
-                                        <a href="{{ asset('storage/'.str_replace('public/', '',$tutorial->imagem)) }}"
+{{--                                        @dd((str_replace('public/', '',$tutorial->imagem)))--}}
+                                        <a href="{{ asset(str_replace('public/', '',$tutorial->imagem)) }}"
                                            data-gall="portfolioGallery" class="venobox" title="{{ $tutorial->titulo }}">
                                             @isset($tutorial->imagem)
                                                 <div class="carousel-item active">
